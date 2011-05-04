@@ -143,7 +143,7 @@ Index: /home/kombajn/Desktop/ow4/trunk/target/linux/lantiq/patches/950-mach-giga
 ++};
 ++
 ++static struct lq_pci_data lq_pci_data = {
-++	.clock      = PCI_CLOCK_EXT,
+++	.clock      = PCI_CLOCK_INT,
 ++	.gpio   = PCI_GNT1 | PCI_REQ1,
 ++	.irq    = {
 ++		[14] = INT_NUM_IM0_IRL0 + 22,
