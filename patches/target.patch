@@ -1,0 +1,208 @@
+Index: /home/kombajn/Desktop/ow4/trunk/target/linux/lantiq/image/Makefile
+===================================================================
+--- /home/kombajn/Desktop/ow4/trunk/target/linux/lantiq/image/Makefile	(revision 26806)
++++ /home/kombajn/Desktop/ow4/trunk/target/linux/lantiq/image/Makefile	(working copy)
+@@ -135,6 +135,14 @@
+ 	$(call Image/Build/$(1),$(1),ARV752DPW22)
+ endef
+ 
++define Image/BuildKernel/Profile/GIGASX76X
++	$(call Image/BuildKernel/Template,GIGASX76X,$(xway_cmdline))
++endef
++
++define Image/Build/Profile/GIGASX76X
++	$(call Image/Build/$(1),$(1),GIGASX76X)
++endef
++
+ define Image/BuildKernel/Profile/Generic
+ 	$(call Image/BuildKernel/Template,EASY4010,$(xway_cmdline))
+ 	$(call Image/BuildKernel/Template,EASY50712,$(xway_cmdline))
+@@ -148,6 +156,7 @@
+ 	$(call Image/BuildKernel/Template,ARV7518PW,$(xway_cmdline))
+ 	$(call Image/BuildKernel/Template,ARV752DPW,$(xway_cmdline))
+ 	$(call Image/BuildKernel/Template,ARV752DPW22,$(xway_cmdline))
++	$(call Image/BuildKernel/Template,GIGASX76X,$(xway_cmdline))
+ 	$(call Image/BuildKernel/Template,NONE)
+ endef
+ 
+@@ -164,6 +173,7 @@
+ 	$(call Image/Build/$(1),$(1),ARV7518PW)
+ 	$(call Image/Build/$(1),$(1),ARV752DPW)
+ 	$(call Image/Build/$(1),$(1),ARV752DPW22)
++	$(call Image/Build/$(1),$(1),GIGASX76X)
+ 	$(call Image/Build/$(1),$(1),NONE)
+ 	$(CP) $(KDIR)/root.$(1) $(BIN_DIR)/$(IMG_PREFIX)-$(1).rootfs
+ endef
+Index: /home/kombajn/Desktop/ow4/trunk/target/linux/lantiq/patches/950-mach-gigasx76x.patch
+===================================================================
+--- /home/kombajn/Desktop/ow4/trunk/target/linux/lantiq/patches/950-mach-gigasx76x.patch	(revision 0)
++++ /home/kombajn/Desktop/ow4/trunk/target/linux/lantiq/patches/950-mach-gigasx76x.patch	(revision 0)
+@@ -0,0 +1,140 @@
++--- a/arch/mips/include/asm/mach-lantiq/machine.h
+++++ b/arch/mips/include/asm/mach-lantiq/machine.h
++@@ -24,4 +24,7 @@
++ 	LANTIQ_MACH_ARV752DPW,		/* Arcor easybox a802 */
++ 	LANTIQ_MACH_ARV752DPW22,	/* Arcor easybox a803 */
++ 	LANTIQ_MACH_ARV7518PW,		/* ASTORIA */
+++
+++	/* Gigaset */
+++	LANTIQ_MACH_GIGASX76X,		/* Gigaset SX76x */
++ };
++--- a/arch/mips/lantiq/xway/Kconfig
+++++ b/arch/mips/lantiq/xway/Kconfig
++@@ -18,6 +18,10 @@
++ 	bool "ARV45XX"
++ 	default y
++ 
+++config LANTIQ_MACH_GIGASX76X
+++	bool "GIGASX76X"
+++	default y
+++
++ endmenu
++ 
++ endif
++--- a/arch/mips/lantiq/xway/Makefile
+++++ b/arch/mips/lantiq/xway/Makefile
++@@ -4,4 +4,5 @@
++ obj-$(CONFIG_LANTIQ_MACH_EASY50712) += mach-easy50712.o
++ obj-$(CONFIG_LANTIQ_MACH_EASY4010) += mach-easy4010.o
++ obj-$(CONFIG_LANTIQ_MACH_ARV45XX) += mach-arv45xx.o
+++obj-$(CONFIG_LANTIQ_MACH_GIGASX76X) += mach-gigasx76x.o
++ obj-y += dev-dwc_otg.o
++--- /dev/null
+++++ b/arch/mips/lantiq/xway/mach-gigasx76x.c
++@@ -0,0 +1,106 @@
+++/*
+++ *  This program is free software; you can redistribute it and/or modify it
+++ *  under the terms of the GNU General Public License version 2 as published
+++ *  by the Free Software Foundation.
+++ *
+++ *  Copyright (C) 2010 John Crispin <blogic@openwrt.org>
+++ */
+++
+++#include <linux/init.h>
+++#include <linux/platform_device.h>
+++#include <linux/leds.h>
+++#include <linux/gpio.h>
+++#include <linux/gpio_buttons.h>
+++#include <linux/mtd/mtd.h>
+++#include <linux/mtd/partitions.h>
+++#include <linux/mtd/physmap.h>
+++#include <linux/input.h>
+++#include <linux/pci.h>
+++
+++#include <machine.h>
+++
+++#include <xway.h>
+++#include <lantiq_platform.h>
+++
+++#include "devices.h"
+++#include "dev-dwc_otg.h"
+++
+++#ifdef CONFIG_MTD_PARTITIONS
+++static struct mtd_partition gigasx76x_partitions[] =
+++{
+++	{
+++		.name	= "secondary_env",
+++		.offset	= 0xe000,
+++		.size	= 0x2000,
+++	},
+++	{
+++		.name	= "secondary_boot",
+++		.offset	= 0x10000,
+++		.size	= 0x10000,
+++	},
+++	{
+++		.name	= "uboot",
+++		.offset	= 0x20000,
+++		.size	= 0x10000,
+++	},
+++	{
+++		.name	= "uboot_env",
+++		.offset	= 0x30000,
+++		.size	= 0x20000,
+++	},
+++	{
+++		.name	= "linux",
+++		.offset	= 0x50000,
+++		.size	= 0x7a0000,
+++	},
+++	{
+++		.name	= "board_config",
+++		.offset	= 0x7f0000,
+++		.size	= 0x10000,
+++	},
+++};
+++#endif
+++
+++static struct physmap_flash_data gigasx76x_flash_data = {
+++#ifdef CONFIG_MTD_PARTITIONS
+++	.nr_parts	= ARRAY_SIZE(gigasx76x_partitions),
+++	.parts		= gigasx76x_partitions,
+++#endif
+++};
+++
+++static struct lq_pci_data lq_pci_data = {
+++	.clock      = PCI_CLOCK_EXT,
+++	.gpio   = PCI_GNT1 | PCI_REQ1,
+++	.irq    = {
+++		[14] = INT_NUM_IM0_IRL0 + 22,
+++	},
+++};
+++
+++static struct lq_eth_data lq_eth_data = {
+++	.mii_mode = REV_MII_MODE,
+++};
+++
+++static void __init
+++gigasx76x_init(void)
+++{
+++#define GIGASX76X_EBU			0
+++#define GIGASX76X_USB			13
+++
+++	lq_register_asc(0);
+++	lq_register_asc(1);
+++	lq_register_gpio();
+++	lq_register_gpio_ebu(GIGASX76X_EBU);
+++	lq_register_gpio_stp();
+++	//lq_register_gpio_leds(gigasx76x_leds_gpio, ARRAY_SIZE(gigasx76x_leds_gpio));
+++	//lq_register_gpio_buttons(gigasx76x_gpio_buttons, ARRAY_SIZE(gigasx76x_gpio_buttons));
+++	lq_register_nor(&gigasx76x_flash_data);
+++	lq_register_wdt();
+++	lq_register_pci(&lq_pci_data);
+++	lq_register_ethernet(&lq_eth_data);
+++	xway_register_dwc(GIGASX76X_USB);
+++}
+++
+++MIPS_MACHINE(LANTIQ_MACH_GIGASX76X,
+++			"GIGASX76X",
+++			"GIGASX76X - Gigaset SX761,SX762,SX763",
+++			gigasx76x_init);
+Index: /home/kombajn/Desktop/ow4/trunk/target/linux/lantiq/xway/profiles/003-gigaset.mk
+===================================================================
+--- /home/kombajn/Desktop/ow4/trunk/target/linux/lantiq/xway/profiles/003-gigaset.mk	(revision 0)
++++ /home/kombajn/Desktop/ow4/trunk/target/linux/lantiq/xway/profiles/003-gigaset.mk	(revision 0)
+@@ -0,0 +1,11 @@
++define Profile/GIGASX76X
++  NAME:=GIGASX76X - Gigaset SX761,SX762,SX763
++  PACKAGES:= kmod-usb-core kmod-usb-dwc-otg kmod-leds-gpio \
++	 kmod-ltq-dsl-firmware-b kmod-ledtrig-usbdev 
++endef
++
++define Profile/GIGASX76X/Description
++	Package set optimized for the Gigaset SX76X routers
++endef
++
++$(eval $(call Profile,GIGASX76X))
+Index: /home/kombajn/Desktop/ow4/trunk/target/linux/lantiq/xway/config-default
+===================================================================
+--- /home/kombajn/Desktop/ow4/trunk/target/linux/lantiq/xway/config-default	(revision 26806)
++++ /home/kombajn/Desktop/ow4/trunk/target/linux/lantiq/xway/config-default	(working copy)
+@@ -14,6 +14,7 @@
+ CONFIG_LANTIQ_MACH_EASY4010=y
+ CONFIG_LANTIQ_MACH_EASY50712=y
+ CONFIG_LANTIQ_MACH_EASY50812=y
++CONFIG_LANTIQ_MACH_GIGASX76X=y
+ # CONFIG_LANTIQ_PROM_ASC0 is not set
+ CONFIG_LANTIQ_PROM_ASC1=y
+ CONFIG_RTL8306_PHY=y
