@@ -1,7 +1,7 @@
-Index: /home/kombajn/Desktop/ow4/trunk/target/linux/lantiq/image/Makefile
+Index: target/linux/lantiq/image/Makefile
 ===================================================================
---- /home/kombajn/Desktop/ow4/trunk/target/linux/lantiq/image/Makefile	(revision 26806)
-+++ /home/kombajn/Desktop/ow4/trunk/target/linux/lantiq/image/Makefile	(working copy)
+--- target/linux/lantiq/image/Makefile	(revision 26806)
++++ target/linux/lantiq/image/Makefile	(working copy)
 @@ -135,6 +135,14 @@
  	$(call Image/Build/$(1),$(1),ARV752DPW22)
  endef
@@ -33,10 +33,10 @@ Index: /home/kombajn/Desktop/ow4/trunk/target/linux/lantiq/image/Makefile
  	$(call Image/Build/$(1),$(1),NONE)
  	$(CP) $(KDIR)/root.$(1) $(BIN_DIR)/$(IMG_PREFIX)-$(1).rootfs
  endef
-Index: /home/kombajn/Desktop/ow4/trunk/target/linux/lantiq/patches/950-mach-gigasx76x.patch
+Index: target/linux/lantiq/patches/950-mach-gigasx76x.patch
 ===================================================================
---- /home/kombajn/Desktop/ow4/trunk/target/linux/lantiq/patches/950-mach-gigasx76x.patch	(revision 0)
-+++ /home/kombajn/Desktop/ow4/trunk/target/linux/lantiq/patches/950-mach-gigasx76x.patch	(revision 0)
+--- target/linux/lantiq/patches/950-mach-gigasx76x.patch	(revision 0)
++++ target/linux/lantiq/patches/950-mach-gigasx76x.patch	(revision 0)
 @@ -0,0 +1,140 @@
 +--- a/arch/mips/include/asm/mach-lantiq/machine.h
 ++++ b/arch/mips/include/asm/mach-lantiq/machine.h
@@ -178,10 +178,10 @@ Index: /home/kombajn/Desktop/ow4/trunk/target/linux/lantiq/patches/950-mach-giga
 ++			"GIGASX76X",
 ++			"GIGASX76X - Gigaset SX761,SX762,SX763",
 ++			gigasx76x_init);
-Index: /home/kombajn/Desktop/ow4/trunk/target/linux/lantiq/xway/profiles/003-gigaset.mk
+Index: target/linux/lantiq/xway/profiles/003-gigaset.mk
 ===================================================================
---- /home/kombajn/Desktop/ow4/trunk/target/linux/lantiq/xway/profiles/003-gigaset.mk	(revision 0)
-+++ /home/kombajn/Desktop/ow4/trunk/target/linux/lantiq/xway/profiles/003-gigaset.mk	(revision 0)
+--- target/linux/lantiq/xway/profiles/003-gigaset.mk	(revision 0)
++++ target/linux/lantiq/xway/profiles/003-gigaset.mk	(revision 0)
 @@ -0,0 +1,11 @@
 +define Profile/GIGASX76X
 +  NAME:=GIGASX76X - Gigaset SX761,SX762,SX763
@@ -194,10 +194,10 @@ Index: /home/kombajn/Desktop/ow4/trunk/target/linux/lantiq/xway/profiles/003-gig
 +endef
 +
 +$(eval $(call Profile,GIGASX76X))
-Index: /home/kombajn/Desktop/ow4/trunk/target/linux/lantiq/xway/config-default
+Index: target/linux/lantiq/xway/config-default
 ===================================================================
---- /home/kombajn/Desktop/ow4/trunk/target/linux/lantiq/xway/config-default	(revision 26806)
-+++ /home/kombajn/Desktop/ow4/trunk/target/linux/lantiq/xway/config-default	(working copy)
+--- target/linux/lantiq/xway/config-default	(revision 26806)
++++ target/linux/lantiq/xway/config-default	(working copy)
 @@ -14,6 +14,7 @@
  CONFIG_LANTIQ_MACH_EASY4010=y
  CONFIG_LANTIQ_MACH_EASY50712=y
