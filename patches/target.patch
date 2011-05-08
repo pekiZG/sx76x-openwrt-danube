@@ -71,7 +71,7 @@ Index: target/linux/lantiq/patches/950-mach-gigasx76x.patch
 + obj-y += dev-dwc_otg.o
 +--- /dev/null
 ++++ b/arch/mips/lantiq/xway/mach-gigasx76x.c
-+@@ -0,0 +1,106 @@
++@@ -0,0 +1,99 @@
 ++/*
 ++ *  This program is free software; you can redistribute it and/or modify it
 ++ *  under the terms of the GNU General Public License version 2 as published
@@ -115,12 +115,7 @@ Index: target/linux/lantiq/patches/950-mach-gigasx76x.patch
 ++	{
 ++		.name	= "uboot",
 ++		.offset	= 0x20000,
-++		.size	= 0x10000,
-++	},
-++	{
-++		.name	= "uboot_env",
-++		.offset	= 0x30000,
-++		.size	= 0x20000,
+++		.size	= 0x30000,
 ++	},
 ++	{
 ++		.name	= "linux",
@@ -157,16 +152,14 @@ Index: target/linux/lantiq/patches/950-mach-gigasx76x.patch
 ++static void __init
 ++gigasx76x_init(void)
 ++{
-++#define GIGASX76X_EBU			0
-++#define GIGASX76X_USB			13
+++#define GIGASX76X_USB			29
 ++
-++	lq_register_asc(0);
-++	lq_register_asc(1);
 ++	lq_register_gpio();
-++	lq_register_gpio_ebu(GIGASX76X_EBU);
-++	lq_register_gpio_stp();
+++	lq_register_gpio_stp()
 ++	//lq_register_gpio_leds(gigasx76x_leds_gpio, ARRAY_SIZE(gigasx76x_leds_gpio));
 ++	//lq_register_gpio_buttons(gigasx76x_gpio_buttons, ARRAY_SIZE(gigasx76x_gpio_buttons));
+++	lq_register_asc(0);
+++	lq_register_asc(1);
 ++	lq_register_nor(&gigasx76x_flash_data);
 ++	lq_register_wdt();
 ++	lq_register_pci(&lq_pci_data);
