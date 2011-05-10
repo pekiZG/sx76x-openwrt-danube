@@ -37,7 +37,7 @@ Index: target/linux/lantiq/patches/950-mach-gigasx76x.patch
 ===================================================================
 --- target/linux/lantiq/patches/950-mach-gigasx76x.patch	(revision 0)
 +++ target/linux/lantiq/patches/950-mach-gigasx76x.patch	(revision 0)
-@@ -0,0 +1,140 @@
+@@ -0,0 +1,133 @@
 +--- a/arch/mips/include/asm/mach-lantiq/machine.h
 ++++ b/arch/mips/include/asm/mach-lantiq/machine.h
 +@@ -24,4 +24,7 @@
