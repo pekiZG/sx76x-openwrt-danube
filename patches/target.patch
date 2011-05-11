@@ -155,7 +155,7 @@ Index: target/linux/lantiq/patches/950-mach-gigasx76x.patch
 ++#define GIGASX76X_USB			29
 ++
 ++	lq_register_gpio();
-++	lq_register_gpio_stp()
+++	lq_register_gpio_stp();
 ++	//lq_register_gpio_leds(gigasx76x_leds_gpio, ARRAY_SIZE(gigasx76x_leds_gpio));
 ++	//lq_register_gpio_buttons(gigasx76x_gpio_buttons, ARRAY_SIZE(gigasx76x_gpio_buttons));
 ++	lq_register_asc(0);
