@@ -1,0 +1,80 @@
+Index: files/board/infineon/easy50712/config.mk
+===================================================================
+--- files/board/infineon/easy50712/config.mk	(revision 26775)
++++ files/board/infineon/easy50712/config.mk	(working copy)
+@@ -51,8 +51,8 @@
+ 
+ ifndef TEXT_BASE
+ ## Standard: boot from ebu
+-$(info redefine TEXT_BASE = 0xB0000000 )
+-TEXT_BASE = 0xB0000000
++$(info redefine TEXT_BASE = 0xB0020000 )
++TEXT_BASE = 0xB0020000
+ ## For testing: boot from RAM
+ # TEXT_BASE = 0x80100000
+ endif
+Index: files/include/configs/easy50712.h
+===================================================================
+--- files/include/configs/easy50712.h	(revision 26775)
++++ files/include/configs/easy50712.h	(working copy)
+@@ -42,6 +42,7 @@
+ #define CONFIG_FLASH_CFI_DRIVER	1
+ 
+ #define CONFIG_SYS_INIT_RAM_LOCK_MIPS
++#define CONFIG_SYS_RAMBOOT 1
+ #ifdef CONFIG_SYS_RAMBOOT
+ 	//#warning CONFIG_SYS_RAMBOOT
+ 	#define CONFIG_SKIP_LOWLEVEL_INIT
+Index: files/include/configs/ifx-common.h
+===================================================================
+--- files/include/configs/ifx-common.h	(revision 26775)
++++ files/include/configs/ifx-common.h	(working copy)
+@@ -37,8 +37,7 @@
+ #undef	CONFIG_BOOTARGS
+ #define CONFIG_EXTRA_ENV_SETTINGS					\
+ 	"ram_addr=0x80500000\0"						\
+-	"kernel_addr=0xb0020000\0"					\
+-	"mtdparts=mtdparts=ifx-nor:256k(uboot)ro,64k(uboot_env)ro,64k(kernel),-(rootfs)\0" \
++	"kernel_addr=0xb0050000\0"					\
+ 	"flashargs=setenv bootargs rootfstype=squashfs,jffs2\0"		\
+ 	"nfsargs=setenv bootargs root=/dev/nfs rw "			\
+ 		"nfsroot=${serverip}:${rootpath} \0"			\
+@@ -60,7 +59,7 @@
+ 	"update_uboot=tftp 0x80500000 ${tftppath}u-boot.bin;era 0xb0000000 +${filesize};" \
+ 		"cp.b 0x80500000 0xb0000000 ${filesize}\0" \
+ 	"update_openwrt=tftp ${ram_addr} "				\
+-		"${tftppath}openwrt-ifxmips-squashfs.image;"		\
++		"${tftppath}openwrt-lantiq-xway-GIGASX76X-squashfs.image;"		\
+ 		"era ${kernel_addr} +${filesize};"			\
+ 		"cp.b ${ram_addr} ${kernel_addr} ${filesize}\0"
+ 
+@@ -158,7 +157,7 @@
+ #define CONFIG_ENV_IS_IN_FLASH		1
+ 
+ /* Address and size of Primary Environment Sector	*/
+-#define CONFIG_ENV_ADDR			0xB0010000
++#define CONFIG_ENV_ADDR			0xB0030000
+ #define CONFIG_ENV_SIZE			0x10000
+ 
+ #ifdef CONFIG_FLASH_CFI_DRIVER
+Index: patches/200-httpd.patch
+===================================================================
+--- patches/200-httpd.patch	(revision 26775)
++++ patches/200-httpd.patch	(working copy)
+@@ -5685,13 +5685,13 @@
+  # endif
+ --- a/include/configs/easy50712.h
+ +++ b/include/configs/easy50712.h
+-@@ -114,4 +114,7 @@
++@@ -116,4 +116,7 @@
+  
+  #define CONFIG_CMD_HTTPD		/* enable upgrade via HTTPD */
+  
+-+#define CONFIG_IPADDR		192.168.0.119
+++#define CONFIG_IPADDR		192.168.2.1
+++#define CONFIG_SERVERIP	192.168.2.16
+ +#define CONFIG_ETHADDR		00:01:02:03:04:05
+-+
+  #endif	/* __CONFIG_H */
+ --- a/lib_mips/time.c
+ +++ b/lib_mips/time.c
