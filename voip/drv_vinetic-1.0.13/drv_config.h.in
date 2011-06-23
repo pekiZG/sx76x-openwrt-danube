@@ -1,0 +1,105 @@
+/* drv_config.h.in.  Generated from configure.in by autoheader.  */
+
+/*******************************************************************************
+       Copyright (c) 2005, Infineon Technologies.  All rights reserved.
+
+                               No Warranty
+   Because the program is licensed free of charge, there is no warranty for
+   the program, to the extent permitted by applicable law.  Except when
+   otherwise stated in writing the copyright holders and/or other parties
+   provide the program "as is" without warranty of any kind, either
+   expressed or implied, including, but not limited to, the implied
+   warranties of merchantability and fitness for a particular purpose. The
+   entire risk as to the quality and performance of the program is with
+   you.  should the program prove defective, you assume the cost of all
+   necessary servicing, repair or correction.
+
+   In no event unless required by applicable law or agreed to in writing
+   will any copyright holder, or any other party who may modify and/or
+   redistribute the program as permitted above, be liable to you for
+   damages, including any general, special, incidental or consequential
+   damages arising out of the use or inability to use the program
+   (including but not limited to loss of data or data being rendered
+   inaccurate or losses sustained by you or third parties or a failure of
+   the program to operate with any other programs), even if such holder or
+   other party has been advised of the possibility of such damages.
+ ******************************************************************************/
+#ifndef _DRV_CONFIG_H_
+#define _DRV_CONFIG_H_
+
+
+/* enable debug features as asserts for example */
+#undef DEBUG
+
+/* Enable trace outputs in general. */
+#undef ENABLE_TRACE
+
+/* Enable user configuration. */
+#undef ENABLE_USER_CONFIG
+
+/* Name of package */
+#undef PACKAGE
+
+/* Define to the address where bug reports for this package should be sent. */
+#undef PACKAGE_BUGREPORT
+
+/* Define to the full name of this package. */
+#undef PACKAGE_NAME
+
+/* Define to the full name and version of this package. */
+#undef PACKAGE_STRING
+
+/* Define to the one symbol short name of this package. */
+#undef PACKAGE_TARNAME
+
+/* Define to the version of this package. */
+#undef PACKAGE_VERSION
+
+/* Enable runtime traces as register access. */
+#undef RUNTIME_TRACE
+
+/* Enable TAPI CID support. */
+#undef TAPI_CID
+
+/* Enable TAPI DTMF support. */
+#undef TAPI_DTMF
+
+/* Enable TAPI FAX support. */
+#undef TAPI_FAX_T38
+
+/* Enable GR909 tests. */
+#undef TAPI_GR909
+
+/* Enable line testing. */
+#undef TAPI_LT
+
+/* Enable Voice support. */
+#undef TAPI_VOICE
+
+/* Version number of package */
+#undef VERSION
+
+/* Maximum VINETIC devices to support */
+#undef VINETIC_MAX_DEVICES
+
+/* Enable use of proc filesystem entries (Linux only) */
+#undef VINETIC_USE_PROC
+
+/* Enable 8 Bit bus access. */
+#undef VIN_8BIT
+
+/* Enable including default firmware. */
+#undef VIN_DEFAULT_FW
+
+/* Enable SPI interface, needs user configuration. */
+#undef VIN_SPI
+
+/* Enable support of Vinetic version V1.x. */
+#undef VIN_V14_SUPPORT
+
+/* Enable support of Vinetic version V2.x. */
+#undef VIN_V21_SUPPORT
+
+
+#endif /* _DRV_CONFIG_H_ */
+

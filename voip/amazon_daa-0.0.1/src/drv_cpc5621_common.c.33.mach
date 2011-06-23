@@ -1,0 +1,2735 @@
+
+;; Function Timer_Start
+
+(note:HI 2 0 31 NOTE_INSN_DELETED)
+
+(note:HI 31 2 7 [bb 0] NOTE_INSN_BASIC_BLOCK)
+
+(note:HI 7 31 34 NOTE_INSN_FUNCTION_BEG)
+
+(insn 34 7 35 (nil) (set (reg:SI 2 v0 [187])
+        (const_int 1717960704 [0x66660000])) 166 {movsi_internal} (nil)
+    (nil))
+
+(insn 35 34 13 (nil) (set (reg:SI 2 v0 [187])
+        (ior:SI (reg:SI 2 v0 [187])
+            (const_int 26215 [0x6667]))) 103 {*mips.md:3662} (insn_list 34 (nil))
+    (nil))
+
+(insn:HI 13 35 17 (nil) (parallel [
+            (set (reg:SI 64 hi)
+                (truncate:SI (lshiftrt:DI (mult:DI (sign_extend:DI (reg/v:SI 5 a1 [182]))
+                            (sign_extend:DI (reg:SI 2 v0 [187])))
+                        (const_int 32 [0x20]))))
+            (clobber (reg:SI 65 lo))
+            (clobber (reg:SI 66 accum))
+        ]) 47 {xmulsi3_highpart_internal} (insn_list 35 (nil))
+    (expr_list:REG_DEAD (reg:SI 2 v0 [187])
+        (expr_list:REG_UNUSED (reg:SI 65 lo)
+            (expr_list:REG_UNUSED (reg:SI 66 accum)
+                (nil)))))
+
+(insn:HI 17 13 15 (nil) (set (reg:SI 8 t0 [190])
+        (mem/v/f:SI (symbol_ref:SI ("jiffies")) [0 jiffies+0 S4 A32])) 166 {movsi_internal} (nil)
+    (nil))
+
+(insn:HI 15 17 40 (nil) (set (reg:SI 5 a1 [189])
+        (ashiftrt:SI (reg/v:SI 5 a1 [182])
+            (const_int 31 [0x1f]))) 202 {ashrsi3_internal1} (insn_list:REG_DEP_ANTI 13 (nil))
+    (nil))
+
+(insn/f 40 15 41 (nil) (set (reg/f:SI 29 sp)
+        (minus:SI (reg/f:SI 29 sp)
+            (const_int 24 [0x18]))) 18 {subsi3_internal} (nil)
+    (expr_list:REG_FRAME_RELATED_EXPR (set:SI (reg/f:SI 29 sp)
+            (plus:SI (reg/f:SI 29 sp)
+                (const_int -24 [0xffffffffffffffe8])))
+        (nil)))
+
+(insn/f 41 40 42 (nil) (set (mem/u:SI (plus:SI (reg/f:SI 29 sp)
+                (const_int 16 [0x10])) [0 S4 A32])
+        (reg:SI 31 ra)) 166 {movsi_internal} (insn_list 40 (nil))
+    (expr_list:REG_DEAD (reg:SI 31 ra)
+        (expr_list:REG_FRAME_RELATED_EXPR (set/f:SI (mem:SI (plus:SI (reg/f:SI 29 sp)
+                        (const_int 16 [0x10])) [0 S4 A32])
+                (reg:SI 31 ra))
+            (nil))))
+
+(note 42 41 23 NOTE_INSN_PROLOGUE_END)
+
+(insn:HI 23 42 21 (nil) (set (mem/s/j:SI (plus:SI (reg:SI 4 a0 [181])
+                (const_int 12 [0xc])) [0 <variable>.data+0 S4 A32])
+        (reg/v:SI 7 a3 [184])) 166 {movsi_internal} (insn_list:REG_DEP_ANTI 17 (nil))
+    (expr_list:REG_DEAD (reg/v:SI 7 a3 [184])
+        (nil)))
+
+(insn:HI 21 23 39 (nil) (set (mem/s/j:SI (plus:SI (reg:SI 4 a0 [181])
+                (const_int 16 [0x10])) [0 <variable>.function+0 S4 A32])
+        (reg/v/f:SI 6 a2 [183])) 166 {movsi_internal} (insn_list:REG_DEP_ANTI 17 (nil))
+    (expr_list:REG_DEAD (reg/v/f:SI 6 a2 [183])
+        (nil)))
+
+(insn 39 21 14 (nil) (set (reg:SI 2 v0 [186])
+        (reg:SI 64 hi)) 166 {movsi_internal} (insn_list:REG_DEP_OUTPUT 35 (insn_list 13 (nil)))
+    (expr_list:REG_DEAD (reg:SI 64 hi)
+        (nil)))
+
+(insn:HI 14 39 16 (nil) (set (reg:SI 2 v0 [188])
+        (ashiftrt:SI (reg:SI 2 v0 [186])
+            (const_int 2 [0x2]))) 202 {ashrsi3_internal1} (insn_list 39 (nil))
+    (nil))
+
+(insn:HI 16 14 18 (nil) (set (reg:SI 2 v0 [185])
+        (minus:SI (reg:SI 2 v0 [188])
+            (reg:SI 5 a1 [189]))) 18 {subsi3_internal} (insn_list 15 (insn_list 14 (nil)))
+    (expr_list:REG_DEAD (reg:SI 5 a1 [189])
+        (expr_list:REG_EQUAL (div:SI (reg/v:SI 5 a1 [182])
+                (const_int 10 [0xa]))
+            (nil))))
+
+(insn:HI 18 16 19 (nil) (set (reg:SI 8 t0 [191])
+        (plus:SI (reg:SI 8 t0 [190])
+            (reg:SI 2 v0 [185]))) 4 {addsi3_internal} (insn_list 17 (insn_list 16 (nil)))
+    (expr_list:REG_DEAD (reg:SI 2 v0 [185])
+        (nil)))
+
+(insn:HI 19 18 37 (nil) (set (mem/s/j:SI (plus:SI (reg:SI 4 a0 [181])
+                (const_int 8 [0x8])) [0 <variable>.expires+0 S4 A32])
+        (reg:SI 8 t0 [191])) 166 {movsi_internal} (insn_list 18 (insn_list:REG_DEP_ANTI 17 (nil)))
+    (expr_list:REG_DEAD (reg:SI 8 t0 [191])
+        (nil)))
+
+(insn 37 19 27 (nil) (set (reg/f:SI 2 v0 [192])
+        (symbol_ref:SI ("add_timer"))) 166 {movsi_internal} (insn_list:REG_DEP_ANTI 18 (insn_list:REG_DEP_OUTPUT 16 (nil)))
+    (expr_list:REG_EQUIV (symbol_ref:SI ("add_timer"))
+        (nil)))
+
+(call_insn:HI 27 37 43 (nil) (parallel [
+            (call (mem:SI (reg/f:SI 2 v0 [192]) [0 S4 A32])
+                (const_int 16 [0x10]))
+            (clobber (reg:SI 31 ra))
+        ]) 311 {call_internal3a} (insn_list:REG_DEP_ANTI 17 (insn_list:REG_DEP_ANTI 39 (insn_list:REG_DEP_OUTPUT 13 (insn_list:REG_DEP_OUTPUT 18 (insn_list:REG_DEP_ANTI 16 (insn_list:REG_DEP_OUTPUT 15 (insn_list 40 (insn_list 37 (insn_list 41 (insn_list 23 (insn_list 21 (insn_list 19 (nil)))))))))))))
+    (expr_list:REG_DEAD (reg:SI 4 a0)
+        (expr_list:REG_DEAD (reg/f:SI 2 v0 [192])
+            (expr_list:REG_UNUSED (reg:SI 31 ra)
+                (nil))))
+    (expr_list (use (reg:SI 4 a0))
+        (nil)))
+
+(note 43 27 44 NOTE_INSN_EPILOGUE_BEG)
+
+(insn 44 43 45 (nil) (set (reg:SI 31 ra)
+        (mem/u:SI (plus:SI (reg/f:SI 29 sp)
+                (const_int 16 [0x10])) [0 S4 A32])) 166 {movsi_internal} (insn_list:REG_DEP_ANTI 41 (insn_list 40 (insn_list:REG_DEP_ANTI 27 (nil))))
+    (nil))
+
+(insn 45 44 46 (nil) (unspec_volatile [
+            (const_int 0 [0x0])
+        ] 6) 301 {blockage} (insn_list 13 (insn_list:REG_DEP_ANTI 39 (insn_list 40 (insn_list:REG_DEP_ANTI 41 (insn_list 44 (insn_list 18 (insn_list 15 (insn_list:REG_DEP_ANTI 16 (insn_list:REG_DEP_ANTI 23 (insn_list:REG_DEP_ANTI 21 (insn_list:REG_DEP_ANTI 19 (insn_list 37 (insn_list 27 (nil))))))))))))))
+    (nil))
+
+(insn 46 45 47 (nil) (set (reg/f:SI 29 sp)
+        (plus:SI (reg/f:SI 29 sp)
+            (const_int 24 [0x18]))) 4 {addsi3_internal} (insn_list 45 (nil))
+    (nil))
+
+(jump_insn 47 46 48 (nil) (parallel [
+            (use (reg:SI 31 ra))
+            (return)
+        ]) 303 {return_internal} (insn_list:REG_DEP_ANTI 40 (insn_list:REG_DEP_ANTI 41 (insn_list:REG_DEP_ANTI 34 (insn_list:REG_DEP_ANTI 35 (insn_list:REG_DEP_ANTI 13 (insn_list:REG_DEP_ANTI 39 (insn_list:REG_DEP_ANTI 15 (insn_list:REG_DEP_ANTI 17 (insn_list:REG_DEP_ANTI 23 (insn_list:REG_DEP_ANTI 21 (insn_list:REG_DEP_ANTI 14 (insn_list:REG_DEP_ANTI 16 (insn_list:REG_DEP_ANTI 18 (insn_list:REG_DEP_ANTI 19 (insn_list:REG_DEP_ANTI 37 (insn_list:REG_DEP_ANTI 27 (insn_list:REG_DEP_ANTI 44 (insn_list 46 (insn_list 45 (nil))))))))))))))))))))
+    (expr_list:REG_DEAD (reg:SI 31 ra)
+        (nil)))
+
+(barrier 48 47 36)
+
+(note 36 48 28 NOTE_INSN_DELETED)
+
+(note:HI 28 36 38 NOTE_INSN_FUNCTION_END)
+
+(note 38 28 0 NOTE_INSN_DELETED)
+
+;; Function RingTimerCB
+
+(note:HI 2 0 192 NOTE_INSN_DELETED)
+
+(note:HI 192 2 4 [bb 0] NOTE_INSN_BASIC_BLOCK)
+
+(note:HI 4 192 13 NOTE_INSN_FUNCTION_BEG)
+
+(note:HI 13 4 242 NOTE_INSN_DELETED)
+
+(insn/f 242 13 244 (nil) (set (reg/f:SI 29 sp)
+        (minus:SI (reg/f:SI 29 sp)
+            (const_int 24 [0x18]))) 18 {subsi3_internal} (nil)
+    (expr_list:REG_FRAME_RELATED_EXPR (set:SI (reg/f:SI 29 sp)
+            (plus:SI (reg/f:SI 29 sp)
+                (const_int -24 [0xffffffffffffffe8])))
+        (nil)))
+
+(insn/f 244 242 243 (nil) (set (mem/u:SI (plus:SI (reg/f:SI 29 sp)
+                (const_int 16 [0x10])) [0 S4 A32])
+        (reg:SI 16 s0)) 166 {movsi_internal} (insn_list 242 (nil))
+    (expr_list:REG_DEAD (reg:SI 16 s0)
+        (expr_list:REG_FRAME_RELATED_EXPR (set/f:SI (mem:SI (plus:SI (reg/f:SI 29 sp)
+                        (const_int 16 [0x10])) [0 S4 A32])
+                (reg:SI 16 s0))
+            (nil))))
+
+(insn/f 243 244 245 (nil) (set (mem/u:SI (plus:SI (reg/f:SI 29 sp)
+                (const_int 20 [0x14])) [0 S4 A32])
+        (reg:SI 31 ra)) 166 {movsi_internal} (insn_list 242 (nil))
+    (expr_list:REG_DEAD (reg:SI 31 ra)
+        (expr_list:REG_FRAME_RELATED_EXPR (set/f:SI (mem:SI (plus:SI (reg/f:SI 29 sp)
+                        (const_int 20 [0x14])) [0 S4 A32])
+                (reg:SI 31 ra))
+            (nil))))
+
+(note 245 243 11 NOTE_INSN_PROLOGUE_END)
+
+(insn:HI 11 245 3 0x40739980 (set (reg:SI 2 v0 [183])
+        (mem/s/j:SI (plus:SI (reg:SI 4 a0 [181])
+                (const_int 96 [0x60])) [0 <variable>.Ring.count+0 S4 A32])) 166 {movsi_internal} (insn_list 243 (insn_list 244 (nil)))
+    (expr_list:REG_EQUIV (mem/s/j:SI (plus:SI (reg/v:SI 16 s0 [181])
+                (const_int 96 [0x60])) [0 <variable>.Ring.count+0 S4 A32])
+        (nil)))
+
+(insn:HI 3 11 12 (nil) (set (reg/v:SI 16 s0 [181])
+        (reg:SI 4 a0)) 166 {movsi_internal} (insn_list:REG_DEP_ANTI 244 (nil))
+    (expr_list:REG_DEAD (reg:SI 4 a0)
+        (expr_list:REG_EQUIV (mem/f:SI (reg/f:SI 0 $0) [0 data+0 S4 A32])
+            (nil))))
+
+(insn:HI 12 3 14 0x40739980 (set (reg:SI 4 a0 [184])
+        (mem/f:SI (symbol_ref:SI ("before")) [0 before+0 S4 A32])) 166 {movsi_internal} (insn_list:REG_DEP_ANTI 3 (insn_list:REG_DEP_ANTI 11 (nil)))
+    (nil))
+
+(insn:HI 14 12 15 0x40739980 (set (reg:SI 2 v0 [186])
+        (plus:SI (reg:SI 2 v0 [183])
+            (const_int -1 [0xffffffffffffffff]))) 4 {addsi3_internal} (insn_list 11 (nil))
+    (nil))
+
+(jump_insn:HI 15 14 236 0x40739980 (set (pc)
+        (if_then_else (eq:SI (reg:SI 4 a0 [184])
+                (reg:SI 2 v0 [186]))
+            (label_ref 253)
+            (pc))) 225 {branch_equality} (insn_list:REG_DEP_ANTI 242 (insn_list:REG_DEP_ANTI 3 (insn_list:REG_DEP_ANTI 11 (insn_list 12 (insn_list 14 (insn_list:REG_DEP_ANTI 243 (insn_list:REG_DEP_ANTI 244 (nil))))))))
+    (expr_list:REG_DEAD (reg:SI 2 v0 [186])
+        (expr_list:REG_BR_PROB (const_int 2900 [0xb54])
+            (nil))))
+
+(note:HI 236 15 224 [bb 1] NOTE_INSN_BASIC_BLOCK)
+
+(insn:HI 224 236 26 (nil) (set (reg:SI 2 v0 [228])
+        (mem/f:SI (symbol_ref:SI ("ringFlag")) [0 ringFlag+0 S4 A32])) 166 {movsi_internal} (nil)
+    (nil))
+
+(code_label:HI 26 224 195 253 "" [1 uses])
+
+(note:HI 195 26 28 [bb 2] NOTE_INSN_BASIC_BLOCK)
+
+(insn:HI 28 195 234 0x40739980 (set (reg:SI 5 a1 [188])
+        (mem/s/j:SI (plus:SI (reg/v:SI 16 s0 [181])
+                (const_int 96 [0x60])) [0 <variable>.Ring.count+0 S4 A32])) 166 {movsi_internal} (nil)
+    (nil))
+
+(insn:HI 234 28 30 (nil) (set (reg:SI 3 v1 [227])
+        (reg:SI 5 a1 [188])) 166 {movsi_internal} (insn_list 28 (nil))
+    (nil))
+
+(jump_insn:HI 30 234 196 0x40739980 (set (pc)
+        (if_then_else (eq:SI (reg:SI 5 a1 [188])
+                (reg:SI 4 a0 [184]))
+            (label_ref 218)
+            (pc))) 225 {branch_equality} (insn_list:REG_DEP_ANTI 234 (insn_list 28 (nil)))
+    (expr_list:REG_DEAD (reg:SI 4 a0 [184])
+        (expr_list:REG_BR_PROB (const_int 2900 [0xb54])
+            (nil))))
+
+(note:HI 196 30 35 [bb 3] NOTE_INSN_BASIC_BLOCK)
+
+(jump_insn:HI 35 196 197 0x40739980 (set (pc)
+        (if_then_else (ne:SI (reg:SI 2 v0 [228])
+                (const_int 0 [0x0]))
+            (label_ref 39)
+            (pc))) 221 {branch_zero} (nil)
+    (expr_list:REG_DEAD (reg:SI 2 v0 [228])
+        (expr_list:REG_BR_PROB (const_int 5000 [0x1388])
+            (nil))))
+
+(note:HI 197 35 227 [bb 4] NOTE_INSN_BASIC_BLOCK)
+
+(insn:HI 227 197 38 (nil) (set (reg:SI 2 v0 [228])
+        (const_int 1 [0x1])) 166 {movsi_internal} (nil)
+    (expr_list:REG_EQUAL (const_int 1 [0x1])
+        (nil)))
+
+(insn:HI 38 227 228 0x40739980 (set (mem/f:SI (symbol_ref:SI ("ringFlag")) [0 ringFlag+0 S4 A32])
+        (reg:SI 2 v0 [228])) 166 {movsi_internal} (insn_list 227 (nil))
+    (expr_list:REG_DEAD (reg:SI 2 v0 [228])
+        (expr_list:REG_EQUAL (const_int 1 [0x1])
+            (nil))))
+
+(insn:HI 228 38 39 (nil) (set (reg:SI 3 v1 [227])
+        (mem/s/j:SI (plus:SI (reg/v:SI 16 s0 [181])
+                (const_int 96 [0x60])) [0 <variable>.Ring.count+0 S4 A32])) 166 {movsi_internal} (insn_list 38 (nil))
+    (nil))
+
+(code_label:HI 39 228 198 256 "" [1 uses])
+
+(note:HI 198 39 42 [bb 5] NOTE_INSN_BASIC_BLOCK)
+
+(insn:HI 42 198 47 0x40739980 (set (mem/f:SI (symbol_ref:SI ("before")) [0 before+0 S4 A32])
+        (reg:SI 3 v1 [227])) 166 {movsi_internal} (nil)
+    (expr_list:REG_DEAD (reg:SI 3 v1 [227])
+        (nil)))
+
+(insn:HI 47 42 44 0x40739980 (set (reg:SI 5 a1)
+        (mem/s/j:SI (plus:SI (reg/v:SI 16 s0 [181])
+                (const_int 100 [0x64])) [0 <variable>.Ring.tMin+0 S4 A32])) 166 {movsi_internal} (insn_list 42 (nil))
+    (nil))
+
+(insn:HI 44 47 49 0x40739980 (set (reg/f:SI 4 a0 [193])
+        (plus:SI (reg/v:SI 16 s0 [181])
+            (const_int 104 [0x68]))) 4 {addsi3_internal} (nil)
+    (nil))
+
+(insn:HI 49 44 48 0x40739980 (set (reg:SI 7 a3)
+        (reg/v:SI 16 s0 [181])) 166 {movsi_internal} (nil)
+    (expr_list:REG_DEAD (reg/v:SI 16 s0 [181])
+        (nil)))
+
+(insn:HI 48 49 50 0x40739980 (set (reg:SI 6 a2)
+        (symbol_ref:SI ("RingTimerCB"))) 166 {movsi_internal} (nil)
+    (expr_list:REG_EQUAL (symbol_ref:SI ("RingTimerCB"))
+        (nil)))
+
+(insn:HI 50 48 51 0x40739980 (set (reg/f:SI 2 v0 [195])
+        (symbol_ref:SI ("Timer_Start"))) 166 {movsi_internal} (nil)
+    (expr_list:REG_EQUIV (symbol_ref:SI ("Timer_Start"))
+        (nil)))
+
+(call_insn:HI 51 50 189 0x40739980 (parallel [
+            (call (mem:SI (reg/f:SI 2 v0 [195]) [0 S4 A32])
+                (const_int 16 [0x10]))
+            (clobber (reg:SI 31 ra))
+        ]) 311 {call_internal3a} (insn_list 49 (insn_list 48 (insn_list 47 (insn_list 44 (insn_list 50 (insn_list 42 (nil)))))))
+    (expr_list:REG_DEAD (reg:SI 4 a0)
+        (expr_list:REG_DEAD (reg:SI 5 a1)
+            (expr_list:REG_DEAD (reg:SI 6 a2)
+                (expr_list:REG_DEAD (reg:SI 7 a3)
+                    (expr_list:REG_DEAD (reg/f:SI 2 v0 [195])
+                        (expr_list:REG_UNUSED (reg:SI 31 ra)
+                            (expr_list:REG_EH_REGION (const_int 0 [0x0])
+                                (nil))))))))
+    (expr_list (use (reg:SI 7 a3))
+        (expr_list (use (reg:SI 6 a2))
+            (expr_list (use (reg:SI 5 a1))
+                (expr_list (use (reg:SI 4 a0))
+                    (nil))))))
+
+(note:HI 189 51 191 NOTE_INSN_FUNCTION_END)
+
+(code_label:HI 191 189 217 252 "" [3 uses])
+
+(note:HI 217 191 246 [bb 6] NOTE_INSN_BASIC_BLOCK)
+
+(note 246 217 247 NOTE_INSN_EPILOGUE_BEG)
+
+(insn 247 246 248 (nil) (set (reg:SI 31 ra)
+        (mem/u:SI (plus:SI (reg/f:SI 29 sp)
+                (const_int 20 [0x14])) [0 S4 A32])) 166 {movsi_internal} (nil)
+    (nil))
+
+(insn 248 247 249 (nil) (set (reg:SI 16 s0)
+        (mem/u:SI (plus:SI (reg/f:SI 29 sp)
+                (const_int 16 [0x10])) [0 S4 A32])) 166 {movsi_internal} (nil)
+    (nil))
+
+(insn 249 248 250 (nil) (unspec_volatile [
+            (const_int 0 [0x0])
+        ] 6) 301 {blockage} (insn_list 247 (insn_list 248 (nil)))
+    (nil))
+
+(insn 250 249 251 (nil) (set (reg/f:SI 29 sp)
+        (plus:SI (reg/f:SI 29 sp)
+            (const_int 24 [0x18]))) 4 {addsi3_internal} (insn_list 249 (nil))
+    (nil))
+
+(jump_insn 251 250 252 (nil) (parallel [
+            (use (reg:SI 31 ra))
+            (return)
+        ]) 303 {return_internal} (insn_list:REG_DEP_ANTI 247 (insn_list:REG_DEP_ANTI 248 (insn_list 250 (insn_list 249 (nil)))))
+    (expr_list:REG_DEAD (reg:SI 31 ra)
+        (nil)))
+
+(barrier 252 251 218)
+
+(code_label:HI 218 252 200 268 "" [1 uses])
+
+(note:HI 200 218 60 [bb 7] NOTE_INSN_BASIC_BLOCK)
+
+(jump_insn:HI 60 200 201 0x40739980 (set (pc)
+        (if_then_else (eq:SI (reg:SI 2 v0 [228])
+                (const_int 0 [0x0]))
+            (label_ref 158)
+            (pc))) 221 {branch_zero} (nil)
+    (expr_list:REG_DEAD (reg:SI 2 v0 [228])
+        (expr_list:REG_BR_PROB (const_int 5000 [0x1388])
+            (nil))))
+
+(note:HI 201 60 68 [bb 8] NOTE_INSN_BASIC_BLOCK)
+
+(insn:HI 68 201 80 0x40739a00 (set (reg/v/f:SI 4 a0 [199])
+        (mem/s/j:SI (plus:SI (reg/v:SI 16 s0 [181])
+                (const_int 20 [0x14])) [0 <variable>.ExceSem+0 S4 A32])) 166 {movsi_internal} (nil)
+    (nil))
+
+(insn:HI 80 68 88 0x40739a80 (parallel [
+            (set (reg/v:SI 2 v0 [204])
+                (asm_operands/v:SI (".set push                                   
+.set noreorder           # atomic_sub_return
+1:   ll    %1, %2                           
+     subu  %0, %1, %3                       
+     sc    %0, %2                           
+     beqz  %0, 1b                           
+     subu  %0, %1, %3                       
+     sync                                   
+.set pop                                    
+") ("=&r") 0 [
+                        (const_int 1 [0x1])
+                        (mem/s/v/j:SI (reg/v/f:SI 4 a0 [199]) [0 <variable>.counter+0 S4 A32])
+                    ]
+                     [
+                        (asm_input:SI ("Ir"))
+                        (asm_input:SI ("m"))
+                    ] ("/home/janssenr/fxo/1.5.34_release/source/kernel/opensource/linux_2_4_20/include/asm/atomic.h") 189))
+            (set (reg/v:SI 3 v1 [203])
+                (asm_operands/v:SI (".set push                                   
+.set noreorder           # atomic_sub_return
+1:   ll    %1, %2                           
+     subu  %0, %1, %3                       
+     sc    %0, %2                           
+     beqz  %0, 1b                           
+     subu  %0, %1, %3                       
+     sync                                   
+.set pop                                    
+") ("=&r") 1 [
+                        (const_int 1 [0x1])
+                        (mem/s/v/j:SI (reg/v/f:SI 4 a0 [199]) [0 <variable>.counter+0 S4 A32])
+                    ]
+                     [
+                        (asm_input:SI ("Ir"))
+                        (asm_input:SI ("m"))
+                    ] ("/home/janssenr/fxo/1.5.34_release/source/kernel/opensource/linux_2_4_20/include/asm/atomic.h") 189))
+            (set (mem/s/v/j:SI (reg/v/f:SI 4 a0 [199]) [0 <variable>.counter+0 S4 A32])
+                (asm_operands/v:SI (".set push                                   
+.set noreorder           # atomic_sub_return
+1:   ll    %1, %2                           
+     subu  %0, %1, %3                       
+     sc    %0, %2                           
+     beqz  %0, 1b                           
+     subu  %0, %1, %3                       
+     sync                                   
+.set pop                                    
+") ("=m") 2 [
+                        (const_int 1 [0x1])
+                        (mem/s/v/j:SI (reg/v/f:SI 4 a0 [199]) [0 <variable>.counter+0 S4 A32])
+                    ]
+                     [
+                        (asm_input:SI ("Ir"))
+                        (asm_input:SI ("m"))
+                    ] ("/home/janssenr/fxo/1.5.34_release/source/kernel/opensource/linux_2_4_20/include/asm/atomic.h") 189))
+            (clobber (mem:BLK (scratch) [0 A8]))
+        ]) -1 (insn_list 68 (nil))
+    (expr_list:REG_UNUSED (reg/v:SI 3 v1 [203])
+        (nil)))
+
+(jump_insn:HI 88 80 94 0x40739a00 (set (pc)
+        (if_then_else (lt:SI (reg/v:SI 2 v0 [204])
+                (const_int 0 [0x0]))
+            (label_ref 254)
+            (pc))) 221 {branch_zero} (insn_list:REG_DEP_ANTI 68 (insn_list 80 (nil)))
+    (expr_list:REG_DEAD (reg/v:SI 2 v0 [204])
+        (expr_list:REG_BR_PROB (const_int 1023 [0x3ff])
+            (nil))))
+
+(code_label:HI 94 88 205 261 "" [1 uses])
+
+(note:HI 205 94 99 [bb 9] NOTE_INSN_BASIC_BLOCK)
+
+(insn:HI 99 205 100 0x40739980 (set (reg:SI 2 v0 [206])
+        (mem/s/j:SI (plus:SI (reg/v:SI 16 s0 [181])
+                (const_int 192 [0xc0])) [0 S4 A32])) 166 {movsi_internal} (nil)
+    (expr_list:REG_EQUIV (mem/s/j:SI (plus:SI (reg/v:SI 16 s0 [181])
+                (const_int 192 [0xc0])) [0 S4 A32])
+        (nil)))
+
+(insn:HI 100 99 101 0x40739980 (set (reg:SI 3 v1 [208])
+        (const_int -2147483648 [0xffffffff80000000])) 166 {movsi_internal} (nil)
+    (expr_list:REG_EQUIV (const_int -2147483648 [0xffffffff80000000])
+        (nil)))
+
+(insn:HI 101 100 105 0x40739980 (set (reg:SI 2 v0 [207])
+        (ior:SI (reg:SI 2 v0 [206])
+            (reg:SI 3 v1 [208]))) 103 {*mips.md:3662} (insn_list 100 (insn_list 99 (nil)))
+    (expr_list:REG_DEAD (reg:SI 3 v1 [208])
+        (expr_list:REG_EQUAL (ior:SI (reg:SI 2 v0 [206])
+                (const_int -2147483648 [0xffffffff80000000]))
+            (nil))))
+
+(insn:HI 105 101 106 0x40739980 (set (reg:SI 4 a0 [211])
+        (const_int 134217728 [0x8000000])) 166 {movsi_internal} (nil)
+    (expr_list:REG_EQUIV (const_int 134217728 [0x8000000])
+        (nil)))
+
+(insn:HI 106 105 107 0x40739980 (set (reg:SI 2 v0 [210])
+        (ior:SI (reg:SI 2 v0 [207])
+            (reg:SI 4 a0 [211]))) 103 {*mips.md:3662} (insn_list 105 (insn_list 101 (nil)))
+    (expr_list:REG_DEAD (reg:SI 4 a0 [211])
+        (expr_list:REG_EQUAL (ior:SI (reg:SI 2 v0 [206])
+                (const_int -2013265920 [0xffffffff88000000]))
+            (nil))))
+
+(insn:HI 107 106 113 0x40739980 (set (mem/s/j:SI (plus:SI (reg/v:SI 16 s0 [181])
+                (const_int 192 [0xc0])) [0 S4 A32])
+        (reg:SI 2 v0 [210])) 166 {movsi_internal} (insn_list 106 (insn_list:REG_DEP_ANTI 99 (nil)))
+    (expr_list:REG_DEAD (reg:SI 2 v0 [210])
+        (nil)))
+
+(insn:HI 113 107 125 0x40739b00 (set (reg/v/f:SI 4 a0 [212])
+        (mem/s/j:SI (plus:SI (reg/v:SI 16 s0 [181])
+                (const_int 20 [0x14])) [0 <variable>.ExceSem+0 S4 A32])) 166 {movsi_internal} (insn_list:REG_DEP_ANTI 106 (insn_list:REG_DEP_OUTPUT 105 (nil)))
+    (nil))
+
+(insn:HI 125 113 133 0x40739b80 (parallel [
+            (set (reg/v:SI 2 v0 [217])
+                (asm_operands/v:SI (".set push               # atomic_add_return
+.set noreorder                             
+1:   ll      %1, %2                        
+     addu    %0, %1, %3                    
+     sc      %0, %2                        
+     beqz    %0, 1b                        
+     addu    %0, %1, %3                    
+     sync                                  
+.set pop                                   
+") ("=&r") 0 [
+                        (const_int 1 [0x1])
+                        (mem/s/v/j:SI (reg/v/f:SI 4 a0 [212]) [0 <variable>.counter+0 S4 A32])
+                    ]
+                     [
+                        (asm_input:SI ("Ir"))
+                        (asm_input:SI ("m"))
+                    ] ("/home/janssenr/fxo/1.5.34_release/source/kernel/opensource/linux_2_4_20/include/asm/atomic.h") 168))
+            (set (reg/v:SI 3 v1 [216])
+                (asm_operands/v:SI (".set push               # atomic_add_return
+.set noreorder                             
+1:   ll      %1, %2                        
+     addu    %0, %1, %3                    
+     sc      %0, %2                        
+     beqz    %0, 1b                        
+     addu    %0, %1, %3                    
+     sync                                  
+.set pop                                   
+") ("=&r") 1 [
+                        (const_int 1 [0x1])
+                        (mem/s/v/j:SI (reg/v/f:SI 4 a0 [212]) [0 <variable>.counter+0 S4 A32])
+                    ]
+                     [
+                        (asm_input:SI ("Ir"))
+                        (asm_input:SI ("m"))
+                    ] ("/home/janssenr/fxo/1.5.34_release/source/kernel/opensource/linux_2_4_20/include/asm/atomic.h") 168))
+            (set (mem/s/v/j:SI (reg/v/f:SI 4 a0 [212]) [0 <variable>.counter+0 S4 A32])
+                (asm_operands/v:SI (".set push               # atomic_add_return
+.set noreorder                             
+1:   ll      %1, %2                        
+     addu    %0, %1, %3                    
+     sc      %0, %2                        
+     beqz    %0, 1b                        
+     addu    %0, %1, %3                    
+     sync                                  
+.set pop                                   
+") ("=m") 2 [
+                        (const_int 1 [0x1])
+                        (mem/s/v/j:SI (reg/v/f:SI 4 a0 [212]) [0 <variable>.counter+0 S4 A32])
+                    ]
+                     [
+                        (asm_input:SI ("Ir"))
+                        (asm_input:SI ("m"))
+                    ] ("/home/janssenr/fxo/1.5.34_release/source/kernel/opensource/linux_2_4_20/include/asm/atomic.h") 168))
+            (clobber (mem:BLK (scratch) [0 A8]))
+        ]) -1 (insn_list 100 (insn_list:REG_DEP_ANTI 101 (insn_list 106 (insn_list 107 (insn_list:REG_DEP_ANTI 99 (insn_list 113 (nil)))))))
+    (expr_list:REG_UNUSED (reg/v:SI 3 v1 [216])
+        (nil)))
+
+(jump_insn:HI 133 125 139 0x40739b00 (set (pc)
+        (if_then_else (le:SI (reg/v:SI 2 v0 [217])
+                (const_int 0 [0x0]))
+            (label_ref 255)
+            (pc))) 221 {branch_zero} (insn_list:REG_DEP_ANTI 99 (insn_list:REG_DEP_ANTI 100 (insn_list:REG_DEP_ANTI 101 (insn_list:REG_DEP_ANTI 105 (insn_list:REG_DEP_ANTI 106 (insn_list:REG_DEP_ANTI 107 (insn_list:REG_DEP_ANTI 113 (insn_list 125 (nil)))))))))
+    (expr_list:REG_DEAD (reg/v:SI 2 v0 [217])
+        (expr_list:REG_BR_PROB (const_int 1023 [0x3ff])
+            (nil))))
+
+(code_label:HI 139 133 209 264 "" [1 uses])
+
+(note:HI 209 139 144 [bb 10] NOTE_INSN_BASIC_BLOCK)
+
+(insn:HI 144 209 150 0x40739980 (set (mem/s/j:SI (plus:SI (reg/v:SI 16 s0 [181])
+                (const_int 96 [0x60])) [0 <variable>.Ring.count+0 S4 A32])
+        (const_int 0 [0x0])) 166 {movsi_internal} (nil)
+    (nil))
+
+(insn:HI 150 144 152 0x40739980 (set (reg/f:SI 4 a0 [219])
+        (plus:SI (reg/v:SI 16 s0 [181])
+            (const_int 12 [0xc]))) 4 {addsi3_internal} (nil)
+    (expr_list:REG_DEAD (reg/v:SI 16 s0 [181])
+        (nil)))
+
+(insn:HI 152 150 153 0x40739980 (set (reg:SI 5 a1)
+        (const_int 1 [0x1])) 166 {movsi_internal} (nil)
+    (expr_list:REG_EQUAL (const_int 1 [0x1])
+        (nil)))
+
+(insn:HI 153 152 240 0x40739980 (set (reg:SI 6 a2)
+        (const_int 1 [0x1])) 166 {movsi_internal} (nil)
+    (expr_list:REG_EQUAL (const_int 1 [0x1])
+        (nil)))
+
+(insn 240 153 146 (nil) (set (reg/f:SI 2 v0 [220])
+        (symbol_ref:SI ("__wake_up"))) 166 {movsi_internal} (nil)
+    (expr_list:REG_EQUIV (symbol_ref:SI ("__wake_up"))
+        (nil)))
+
+(insn:HI 146 240 148 0x40739980 (set (mem/f:SI (symbol_ref:SI ("ringFlag")) [0 ringFlag+0 S4 A32])
+        (const_int 0 [0x0])) 166 {movsi_internal} (insn_list:REG_DEP_OUTPUT 144 (nil))
+    (nil))
+
+(insn:HI 148 146 155 0x40739980 (set (mem/f:SI (symbol_ref:SI ("before")) [0 before+0 S4 A32])
+        (const_int 0 [0x0])) 166 {movsi_internal} (insn_list:REG_DEP_OUTPUT 144 (nil))
+    (nil))
+
+(call_insn:HI 155 148 256 0x40739980 (parallel [
+            (call (mem:SI (reg/f:SI 2 v0 [220]) [0 S4 A32])
+                (const_int 16 [0x10]))
+            (clobber (reg:SI 31 ra))
+        ]) 311 {call_internal3a} (insn_list 153 (insn_list 152 (insn_list 150 (insn_list 240 (insn_list 144 (insn_list 146 (insn_list 148 (nil))))))))
+    (expr_list:REG_DEAD (reg:SI 4 a0)
+        (expr_list:REG_DEAD (reg:SI 5 a1)
+            (expr_list:REG_DEAD (reg:SI 6 a2)
+                (expr_list:REG_DEAD (reg/f:SI 2 v0 [220])
+                    (expr_list:REG_UNUSED (reg:SI 31 ra)
+                        (nil))))))
+    (expr_list (use (reg:SI 6 a2))
+        (expr_list (use (reg:SI 5 a1))
+            (expr_list (use (reg:SI 4 a0))
+                (nil)))))
+
+(jump_insn 256 155 257 (nil) (set (pc)
+        (label_ref 191)) -1 (nil)
+    (nil))
+
+(barrier 257 256 255)
+
+(code_label 255 257 207 272 "" [1 uses])
+
+(note:HI 207 255 136 [bb 11] NOTE_INSN_BASIC_BLOCK)
+
+(insn:HI 136 207 137 0x40739b00 (set (reg/f:SI 2 v0 [218])
+        (symbol_ref:SI ("__up"))) 166 {movsi_internal} (nil)
+    (expr_list:REG_EQUIV (symbol_ref:SI ("__up"))
+        (nil)))
+
+(call_insn:HI 137 136 258 0x40739b00 (parallel [
+            (call (mem:SI (reg/f:SI 2 v0 [218]) [0 S4 A32])
+                (const_int 16 [0x10]))
+            (clobber (reg:SI 31 ra))
+        ]) 311 {call_internal3a} (insn_list 136 (nil))
+    (expr_list:REG_DEAD (reg:SI 4 a0)
+        (expr_list:REG_DEAD (reg/f:SI 2 v0 [218])
+            (expr_list:REG_UNUSED (reg:SI 31 ra)
+                (nil))))
+    (expr_list (use (reg:SI 4 a0))
+        (nil)))
+
+(jump_insn 258 137 259 (nil) (set (pc)
+        (label_ref 139)) -1 (nil)
+    (nil))
+
+(barrier 259 258 254)
+
+(code_label 254 259 203 271 "" [1 uses])
+
+(note:HI 203 254 91 [bb 12] NOTE_INSN_BASIC_BLOCK)
+
+(insn:HI 91 203 92 0x40739a00 (set (reg/f:SI 2 v0 [205])
+        (symbol_ref:SI ("__down"))) 166 {movsi_internal} (nil)
+    (expr_list:REG_EQUIV (symbol_ref:SI ("__down"))
+        (nil)))
+
+(call_insn:HI 92 91 260 0x40739a00 (parallel [
+            (call (mem:SI (reg/f:SI 2 v0 [205]) [0 S4 A32])
+                (const_int 16 [0x10]))
+            (clobber (reg:SI 31 ra))
+        ]) 311 {call_internal3a} (insn_list 91 (nil))
+    (expr_list:REG_DEAD (reg:SI 4 a0)
+        (expr_list:REG_DEAD (reg/f:SI 2 v0 [205])
+            (expr_list:REG_UNUSED (reg:SI 31 ra)
+                (nil))))
+    (expr_list (use (reg:SI 4 a0))
+        (nil)))
+
+(jump_insn 260 92 261 (nil) (set (pc)
+        (label_ref 94)) -1 (nil)
+    (nil))
+
+(barrier 261 260 158)
+
+(code_label:HI 158 261 210 258 "" [1 uses])
+
+(note:HI 210 158 165 [bb 13] NOTE_INSN_BASIC_BLOCK)
+
+(insn:HI 165 210 166 0x40739980 (set (reg:SI 2 v0 [221])
+        (mem/f:SI (symbol_ref:SI ("G_nTraceGroupCPC5621_DRV")) [0 G_nTraceGroupCPC5621_DRV+0 S4 A32])) 166 {movsi_internal} (nil)
+    (expr_list:REG_EQUIV (mem/f:SI (symbol_ref:SI ("G_nTraceGroupCPC5621_DRV")) [0 G_nTraceGroupCPC5621_DRV+0 S4 A32])
+        (nil)))
+
+(insn:HI 166 165 167 0x40739980 (set (reg:SI 2 v0 [222])
+        (ltu:SI (reg:SI 2 v0 [221])
+            (const_int 4 [0x4]))) 263 {sltu_si} (insn_list 165 (nil))
+    (nil))
+
+(jump_insn:HI 167 166 178 0x40739980 (set (pc)
+        (if_then_else (eq:SI (reg:SI 2 v0 [222])
+                (const_int 0 [0x0]))
+            (pc)
+            (label_ref 262))) 222 {branch_zero_inverted} (insn_list:REG_DEP_ANTI 165 (insn_list 166 (nil)))
+    (expr_list:REG_DEAD (reg:SI 2 v0 [222])
+        (expr_list:REG_BR_PROB (const_int 3000 [0xbb8])
+            (nil))))
+
+(code_label:HI 178 167 213 266 "" [1 uses])
+
+(note:HI 213 178 180 [bb 14] NOTE_INSN_BASIC_BLOCK)
+
+(insn:HI 180 213 182 0x40739980 (set (mem/f:SI (symbol_ref:SI ("ringFlag")) [0 ringFlag+0 S4 A32])
+        (const_int 0 [0x0])) 166 {movsi_internal} (nil)
+    (nil))
+
+(insn:HI 182 180 184 0x40739980 (set (mem/f:SI (symbol_ref:SI ("before")) [0 before+0 S4 A32])
+        (const_int 0 [0x0])) 166 {movsi_internal} (nil)
+    (nil))
+
+(insn:HI 184 182 263 0x40739980 (set (mem/s/j:SI (plus:SI (reg/v:SI 16 s0 [181])
+                (const_int 96 [0x60])) [0 <variable>.Ring.count+0 S4 A32])
+        (const_int 0 [0x0])) 166 {movsi_internal} (insn_list:REG_DEP_OUTPUT 180 (insn_list:REG_DEP_OUTPUT 182 (nil)))
+    (expr_list:REG_DEAD (reg/v:SI 16 s0 [181])
+        (nil)))
+
+(jump_insn 263 184 264 (nil) (set (pc)
+        (label_ref 191)) -1 (nil)
+    (nil))
+
+(barrier 264 263 262)
+
+(code_label 262 264 211 273 "" [1 uses])
+
+(note:HI 211 262 172 [bb 15] NOTE_INSN_BASIC_BLOCK)
+
+(insn:HI 172 211 174 0x40739980 (set (reg:SI 4 a0)
+        (symbol_ref/f:SI ("*$LC0"))) 166 {movsi_internal} (nil)
+    (expr_list:REG_EQUAL (symbol_ref/f:SI ("*$LC0"))
+        (nil)))
+
+(insn:HI 174 172 175 0x40739980 (set (reg:SI 6 a2)
+        (reg:SI 5 a1)) 166 {movsi_internal} (nil)
+    (nil))
+
+(insn:HI 175 174 176 0x40739980 (set (reg/f:SI 2 v0 [225])
+        (symbol_ref:SI ("printk"))) 166 {movsi_internal} (nil)
+    (expr_list:REG_EQUIV (symbol_ref:SI ("printk"))
+        (nil)))
+
+(call_insn:HI 176 175 265 0x40739980 (parallel [
+            (set (reg:SI 2 v0)
+                (call (mem:SI (reg/f:SI 2 v0 [225]) [0 S4 A32])
+                    (const_int 16 [0x10])))
+            (clobber (reg:SI 31 ra))
+        ]) 319 {call_value_internal3a} (insn_list 174 (insn_list 172 (insn_list 175 (nil))))
+    (expr_list:REG_DEAD (reg:SI 4 a0)
+        (expr_list:REG_DEAD (reg:SI 5 a1)
+            (expr_list:REG_DEAD (reg:SI 6 a2)
+                (expr_list:REG_UNUSED (reg:SI 2 v0)
+                    (expr_list:REG_UNUSED (reg:SI 31 ra)
+                        (nil))))))
+    (expr_list (use (reg:SI 6 a2))
+        (expr_list (use (reg:SI 5 a1))
+            (expr_list (use (reg:SI 4 a0))
+                (nil)))))
+
+(jump_insn 265 176 266 (nil) (set (pc)
+        (label_ref 178)) -1 (nil)
+    (nil))
+
+(barrier 266 265 253)
+
+(code_label 253 266 193 270 "" [1 uses])
+
+(note:HI 193 253 16 [bb 16] NOTE_INSN_BASIC_BLOCK)
+
+(insn:HI 16 193 17 0x40739980 (set (reg:SI 2 v0 [228])
+        (mem/f:SI (symbol_ref:SI ("ringFlag")) [0 ringFlag+0 S4 A32])) 166 {movsi_internal} (nil)
+    (nil))
+
+(jump_insn:HI 17 16 194 0x40739980 (set (pc)
+        (if_then_else (ne:SI (reg:SI 2 v0 [228])
+                (const_int 0 [0x0]))
+            (label_ref 26)
+            (pc))) 221 {branch_zero} (insn_list 16 (nil))
+    (expr_list:REG_BR_PROB (const_int 5000 [0x1388])
+        (nil)))
+
+(note:HI 194 17 21 [bb 17] NOTE_INSN_BASIC_BLOCK)
+
+(insn:HI 21 194 23 0x40739980 (set (mem/s/j:SI (plus:SI (reg/v:SI 16 s0 [181])
+                (const_int 96 [0x60])) [0 <variable>.Ring.count+0 S4 A32])
+        (const_int 0 [0x0])) 166 {movsi_internal} (nil)
+    (expr_list:REG_DEAD (reg/v:SI 16 s0 [181])
+        (nil)))
+
+(insn:HI 23 21 267 0x40739980 (set (mem/f:SI (symbol_ref:SI ("before")) [0 before+0 S4 A32])
+        (const_int 0 [0x0])) 166 {movsi_internal} (insn_list:REG_DEP_OUTPUT 21 (nil))
+    (nil))
+
+(jump_insn 267 23 268 (nil) (set (pc)
+        (label_ref 191)) -1 (nil)
+    (nil))
+
+(barrier 268 267 239)
+
+(note 239 268 241 NOTE_INSN_DELETED)
+
+(note 241 239 0 NOTE_INSN_DELETED)
+
+;; Function Pin_Ring_Callback
+
+(note:HI 2 0 87 NOTE_INSN_DELETED)
+
+(note:HI 87 2 8 [bb 0] NOTE_INSN_BASIC_BLOCK)
+
+(note:HI 8 87 19 NOTE_INSN_FUNCTION_BEG)
+
+(note:HI 19 8 14 NOTE_INSN_DELETED)
+
+(insn:HI 14 19 15 0x407684c0 (set (reg:SI 2 v0 [187])
+        (ashift:SI (reg/v:SI 4 a0 [181])
+            (const_int 3 [0x3]))) 195 {ashlsi3_internal1} (nil)
+    (expr_list:REG_EQUAL (ashift:SI (reg/v:SI 4 a0 [181])
+            (const_int 3 [0x3]))
+        (nil)))
+
+(insn:HI 15 14 107 0x407684c0 (set (reg:SI 2 v0 [188])
+        (plus:SI (reg:SI 2 v0 [187])
+            (reg:SI 5 a1 [182]))) 4 {addsi3_internal} (insn_list 14 (nil))
+    (nil))
+
+(insn/f 107 15 18 (nil) (set (reg/f:SI 29 sp)
+        (minus:SI (reg/f:SI 29 sp)
+            (const_int 24 [0x18]))) 18 {subsi3_internal} (nil)
+    (expr_list:REG_FRAME_RELATED_EXPR (set:SI (reg/f:SI 29 sp)
+            (plus:SI (reg/f:SI 29 sp)
+                (const_int -24 [0xffffffffffffffe8])))
+        (nil)))
+
+(insn:HI 18 107 109 0x407684c0 (set (reg:SI 2 v0 [191])
+        (ashift:SI (reg:SI 2 v0 [188])
+            (const_int 2 [0x2]))) 195 {ashlsi3_internal1} (insn_list 15 (nil))
+    (expr_list:REG_EQUAL (ashift:SI (reg:SI 2 v0 [188])
+            (const_int 2 [0x2]))
+        (nil)))
+
+(insn/f 109 18 20 (nil) (set (mem/u:SI (plus:SI (reg/f:SI 29 sp)
+                (const_int 16 [0x10])) [0 S4 A32])
+        (reg:SI 16 s0)) 166 {movsi_internal} (insn_list 107 (nil))
+    (expr_list:REG_DEAD (reg:SI 16 s0)
+        (expr_list:REG_FRAME_RELATED_EXPR (set/f:SI (mem:SI (plus:SI (reg/f:SI 29 sp)
+                        (const_int 16 [0x10])) [0 S4 A32])
+                (reg:SI 16 s0))
+            (nil))))
+
+(insn:HI 20 109 108 0x407684c0 (set (reg/v/f:SI 16 s0 [185])
+        (mem/s/j:SI (plus:SI (reg:SI 2 v0 [191])
+                (symbol_ref:SI ("CPC5621_Devices"))) [0 CPC5621_Devices S4 A32])) 166 {movsi_internal} (insn_list:REG_DEP_ANTI 109 (insn_list 18 (nil)))
+    (expr_list:REG_DEAD (reg:SI 2 v0 [191])
+        (nil)))
+
+(insn/f 108 20 110 (nil) (set (mem/u:SI (plus:SI (reg/f:SI 29 sp)
+                (const_int 20 [0x14])) [0 S4 A32])
+        (reg:SI 31 ra)) 166 {movsi_internal} (insn_list 107 (nil))
+    (expr_list:REG_DEAD (reg:SI 31 ra)
+        (expr_list:REG_FRAME_RELATED_EXPR (set/f:SI (mem:SI (plus:SI (reg/f:SI 29 sp)
+                        (const_int 20 [0x14])) [0 S4 A32])
+                (reg:SI 31 ra))
+            (nil))))
+
+(note 110 108 4 NOTE_INSN_PROLOGUE_END)
+
+(insn:HI 4 110 22 (nil) (set (reg/v:SI 6 a2 [182])
+        (reg:SI 5 a1)) 166 {movsi_internal} (nil)
+    (expr_list:REG_DEAD (reg:SI 5 a1)
+        (expr_list:REG_EQUIV (mem/f:SI (plus:SI (reg/f:SI 0 $0)
+                    (const_int 4 [0x4])) [0 nCh+0 S4 A32])
+            (nil))))
+
+(jump_insn:HI 22 4 92 0x407684c0 (set (pc)
+        (if_then_else (eq:SI (reg/v/f:SI 16 s0 [185])
+                (const_int 0 [0x0]))
+            (label_ref 118)
+            (pc))) 221 {branch_zero} (insn_list:REG_DEP_ANTI 107 (insn_list:REG_DEP_ANTI 4 (insn_list:REG_DEP_ANTI 14 (insn_list:REG_DEP_ANTI 15 (insn_list:REG_DEP_ANTI 18 (insn_list 20 (insn_list:REG_DEP_ANTI 108 (insn_list:REG_DEP_ANTI 109 (nil)))))))))
+    (expr_list:REG_BR_PROB (const_int 1900 [0x76c])
+        (nil)))
+
+(note:HI 92 22 47 [bb 1] NOTE_INSN_BASIC_BLOCK)
+
+(insn:HI 47 92 48 0x407684c0 (set (reg:SI 2 v0 [197])
+        (mem/s/j:SI (plus:SI (reg/v/f:SI 16 s0 [185])
+                (const_int 96 [0x60])) [0 <variable>.Ring.count+0 S4 A32])) 166 {movsi_internal} (nil)
+    (expr_list:REG_EQUIV (mem/s/j:SI (plus:SI (reg/v/f:SI 16 s0 [185])
+                (const_int 96 [0x60])) [0 <variable>.Ring.count+0 S4 A32])
+        (nil)))
+
+(insn:HI 48 47 103 0x407684c0 (set (reg:SI 3 v1 [198])
+        (plus:SI (reg:SI 2 v0 [197])
+            (const_int 1 [0x1]))) 4 {addsi3_internal} (insn_list 47 (nil))
+    (expr_list:REG_DEAD (reg:SI 2 v0 [197])
+        (nil)))
+
+(insn 103 48 50 (nil) (set (reg:SI 2 v0 [200])
+        (const_int 1 [0x1])) 166 {movsi_internal} (insn_list:REG_DEP_ANTI 48 (insn_list:REG_DEP_OUTPUT 47 (nil)))
+    (expr_list:REG_EQUIV (const_int 1 [0x1])
+        (nil)))
+
+(insn:HI 50 103 52 0x407684c0 (set (mem/s/j:SI (plus:SI (reg/v/f:SI 16 s0 [185])
+                (const_int 96 [0x60])) [0 <variable>.Ring.count+0 S4 A32])
+        (reg:SI 3 v1 [198])) 166 {movsi_internal} (insn_list 48 (insn_list:REG_DEP_ANTI 47 (nil)))
+    (nil))
+
+(jump_insn:HI 52 50 84 0x407684c0 (set (pc)
+        (if_then_else (eq:SI (reg:SI 3 v1 [198])
+                (reg:SI 2 v0 [200]))
+            (label_ref 119)
+            (pc))) 225 {branch_equality} (insn_list:REG_DEP_ANTI 47 (insn_list 48 (insn_list 103 (insn_list:REG_DEP_ANTI 50 (nil)))))
+    (expr_list:REG_DEAD (reg:SI 2 v0 [200])
+        (expr_list:REG_BR_PROB (const_int 2900 [0xb54])
+            (nil))))
+
+(note:HI 84 52 86 NOTE_INSN_FUNCTION_END)
+
+(code_label:HI 86 84 98 278 "" [3 uses])
+
+(note:HI 98 86 111 [bb 2] NOTE_INSN_BASIC_BLOCK)
+
+(note 111 98 112 NOTE_INSN_EPILOGUE_BEG)
+
+(insn 112 111 113 (nil) (set (reg:SI 31 ra)
+        (mem/u:SI (plus:SI (reg/f:SI 29 sp)
+                (const_int 20 [0x14])) [0 S4 A32])) 166 {movsi_internal} (nil)
+    (nil))
+
+(insn 113 112 114 (nil) (set (reg:SI 16 s0)
+        (mem/u:SI (plus:SI (reg/f:SI 29 sp)
+                (const_int 16 [0x10])) [0 S4 A32])) 166 {movsi_internal} (nil)
+    (nil))
+
+(insn 114 113 115 (nil) (unspec_volatile [
+            (const_int 0 [0x0])
+        ] 6) 301 {blockage} (insn_list 112 (insn_list 113 (nil)))
+    (nil))
+
+(insn 115 114 116 (nil) (set (reg/f:SI 29 sp)
+        (plus:SI (reg/f:SI 29 sp)
+            (const_int 24 [0x18]))) 4 {addsi3_internal} (insn_list 114 (nil))
+    (nil))
+
+(jump_insn 116 115 117 (nil) (parallel [
+            (use (reg:SI 31 ra))
+            (return)
+        ]) 303 {return_internal} (insn_list:REG_DEP_ANTI 112 (insn_list:REG_DEP_ANTI 113 (insn_list 115 (insn_list 114 (nil)))))
+    (expr_list:REG_DEAD (reg:SI 31 ra)
+        (nil)))
+
+(barrier 117 116 119)
+
+(code_label 119 117 93 286 "" [1 uses])
+
+(note:HI 93 119 102 [bb 3] NOTE_INSN_BASIC_BLOCK)
+
+(insn 102 93 68 (nil) (set (reg:SI 2 v0 [202])
+        (mem/f:SI (symbol_ref:SI ("G_nTraceGroupCPC5621_DRV")) [0 G_nTraceGroupCPC5621_DRV+0 S4 A32])) 166 {movsi_internal} (nil)
+    (expr_list:REG_EQUIV (mem/f:SI (symbol_ref:SI ("G_nTraceGroupCPC5621_DRV")) [0 G_nTraceGroupCPC5621_DRV+0 S4 A32])
+        (nil)))
+
+(insn:HI 68 102 63 0x407684c0 (set (reg:SI 4 a0)
+        (symbol_ref/f:SI ("*$LC2"))) 166 {movsi_internal} (nil)
+    (expr_list:REG_EQUAL (symbol_ref/f:SI ("*$LC2"))
+        (nil)))
+
+(insn:HI 63 68 57 0x407684c0 (set (reg:SI 2 v0 [203])
+        (ltu:SI (reg:SI 2 v0 [202])
+            (const_int 4 [0x4]))) 263 {sltu_si} (insn_list 102 (nil))
+    (nil))
+
+(insn:HI 57 63 64 0x407684c0 (set (mem/f:SI (symbol_ref:SI ("before")) [0 before+0 S4 A32])
+        (reg:SI 3 v1 [198])) 166 {movsi_internal} (nil)
+    (expr_list:REG_DEAD (reg:SI 3 v1 [198])
+        (nil)))
+
+(jump_insn:HI 64 57 72 0x407684c0 (set (pc)
+        (if_then_else (eq:SI (reg:SI 2 v0 [203])
+                (const_int 0 [0x0]))
+            (pc)
+            (label_ref 120))) 222 {branch_zero_inverted} (insn_list:REG_DEP_ANTI 68 (insn_list:REG_DEP_ANTI 102 (insn_list 63 (insn_list:REG_DEP_ANTI 57 (nil)))))
+    (expr_list:REG_DEAD (reg:SI 2 v0 [203])
+        (expr_list:REG_BR_PROB (const_int 3000 [0xbb8])
+            (nil))))
+
+(code_label:HI 72 64 96 283 "" [1 uses])
+
+(note:HI 96 72 77 [bb 4] NOTE_INSN_BASIC_BLOCK)
+
+(insn:HI 77 96 74 0x407684c0 (set (reg:SI 5 a1)
+        (mem/s/j:SI (plus:SI (reg/v/f:SI 16 s0 [185])
+                (const_int 100 [0x64])) [0 <variable>.Ring.tMin+0 S4 A32])) 166 {movsi_internal} (nil)
+    (nil))
+
+(insn:HI 74 77 79 0x407684c0 (set (reg/f:SI 4 a0 [206])
+        (plus:SI (reg/v/f:SI 16 s0 [185])
+            (const_int 104 [0x68]))) 4 {addsi3_internal} (nil)
+    (nil))
+
+(insn:HI 79 74 78 0x407684c0 (set (reg:SI 7 a3)
+        (reg/v/f:SI 16 s0 [185])) 166 {movsi_internal} (nil)
+    (expr_list:REG_DEAD (reg/v/f:SI 16 s0 [185])
+        (nil)))
+
+(insn:HI 78 79 80 0x407684c0 (set (reg:SI 6 a2)
+        (symbol_ref:SI ("RingTimerCB"))) 166 {movsi_internal} (nil)
+    (expr_list:REG_EQUAL (symbol_ref:SI ("RingTimerCB"))
+        (nil)))
+
+(insn:HI 80 78 81 0x407684c0 (set (reg/f:SI 2 v0 [208])
+        (symbol_ref:SI ("Timer_Start"))) 166 {movsi_internal} (nil)
+    (expr_list:REG_EQUIV (symbol_ref:SI ("Timer_Start"))
+        (nil)))
+
+(call_insn:HI 81 80 121 0x407684c0 (parallel [
+            (call (mem:SI (reg/f:SI 2 v0 [208]) [0 S4 A32])
+                (const_int 16 [0x10]))
+            (clobber (reg:SI 31 ra))
+        ]) 311 {call_internal3a} (insn_list 79 (insn_list 78 (insn_list 77 (insn_list 74 (insn_list 80 (nil))))))
+    (expr_list:REG_DEAD (reg:SI 4 a0)
+        (expr_list:REG_DEAD (reg:SI 5 a1)
+            (expr_list:REG_DEAD (reg:SI 6 a2)
+                (expr_list:REG_DEAD (reg:SI 7 a3)
+                    (expr_list:REG_DEAD (reg/f:SI 2 v0 [208])
+                        (expr_list:REG_UNUSED (reg:SI 31 ra)
+                            (expr_list:REG_EH_REGION (const_int 0 [0x0])
+                                (nil))))))))
+    (expr_list (use (reg:SI 7 a3))
+        (expr_list (use (reg:SI 6 a2))
+            (expr_list (use (reg:SI 5 a1))
+                (expr_list (use (reg:SI 4 a0))
+                    (nil))))))
+
+(jump_insn 121 81 122 (nil) (set (pc)
+        (label_ref 86)) -1 (nil)
+    (nil))
+
+(barrier 122 121 120)
+
+(code_label 120 122 94 287 "" [1 uses])
+
+(note:HI 94 120 101 [bb 5] NOTE_INSN_BASIC_BLOCK)
+
+(insn 101 94 70 (nil) (set (reg/f:SI 2 v0 [205])
+        (symbol_ref:SI ("printk"))) 166 {movsi_internal} (nil)
+    (expr_list:REG_EQUIV (symbol_ref:SI ("printk"))
+        (nil)))
+
+(call_insn:HI 70 101 123 0x407684c0 (parallel [
+            (set (reg:SI 2 v0)
+                (call (mem:SI (reg/f:SI 2 v0 [205]) [0 S4 A32])
+                    (const_int 16 [0x10])))
+            (clobber (reg:SI 31 ra))
+        ]) 319 {call_value_internal3a} (insn_list 101 (nil))
+    (expr_list:REG_DEAD (reg:SI 4 a0)
+        (expr_list:REG_UNUSED (reg:SI 2 v0)
+            (expr_list:REG_UNUSED (reg:SI 31 ra)
+                (nil))))
+    (expr_list (use (reg:SI 4 a0))
+        (nil)))
+
+(jump_insn 123 70 124 (nil) (set (pc)
+        (label_ref 72)) -1 (nil)
+    (nil))
+
+(barrier 124 123 118)
+
+(code_label 118 124 88 285 "" [1 uses])
+
+(note:HI 88 118 105 [bb 6] NOTE_INSN_BASIC_BLOCK)
+
+(insn 105 88 36 (nil) (set (reg:SI 2 v0 [193])
+        (mem/f:SI (symbol_ref:SI ("G_nTraceGroupCPC5621_DRV")) [0 G_nTraceGroupCPC5621_DRV+0 S4 A32])) 166 {movsi_internal} (nil)
+    (expr_list:REG_EQUIV (mem/f:SI (symbol_ref:SI ("G_nTraceGroupCPC5621_DRV")) [0 G_nTraceGroupCPC5621_DRV+0 S4 A32])
+        (nil)))
+
+(insn:HI 36 105 30 0x407684c0 (set (reg:SI 5 a1)
+        (reg/v:SI 4 a0 [181])) 166 {movsi_internal} (nil)
+    (expr_list:REG_DEAD (reg/v:SI 4 a0 [181])
+        (nil)))
+
+(insn:HI 30 36 35 0x407684c0 (set (reg:SI 2 v0 [194])
+        (ltu:SI (reg:SI 2 v0 [193])
+            (const_int 4 [0x4]))) 263 {sltu_si} (insn_list 105 (nil))
+    (nil))
+
+(insn:HI 35 30 31 0x407684c0 (set (reg:SI 4 a0)
+        (symbol_ref/f:SI ("*$LC1"))) 166 {movsi_internal} (insn_list:REG_DEP_ANTI 36 (nil))
+    (expr_list:REG_EQUAL (symbol_ref/f:SI ("*$LC1"))
+        (nil)))
+
+(jump_insn:HI 31 35 89 0x407684c0 (set (pc)
+        (if_then_else (ne:SI (reg:SI 2 v0 [194])
+                (const_int 0 [0x0]))
+            (pc)
+            (label_ref 86))) 222 {branch_zero_inverted} (insn_list:REG_DEP_ANTI 36 (insn_list:REG_DEP_ANTI 35 (insn_list:REG_DEP_ANTI 105 (insn_list 30 (nil)))))
+    (expr_list:REG_DEAD (reg:SI 2 v0 [194])
+        (expr_list:REG_BR_PROB (const_int 7000 [0x1b58])
+            (nil))))
+
+(note:HI 89 31 104 [bb 7] NOTE_INSN_BASIC_BLOCK)
+
+(insn 104 89 39 (nil) (set (reg/f:SI 2 v0 [196])
+        (symbol_ref:SI ("printk"))) 166 {movsi_internal} (nil)
+    (expr_list:REG_EQUIV (symbol_ref:SI ("printk"))
+        (nil)))
+
+(call_insn:HI 39 104 125 0x407684c0 (parallel [
+            (set (reg:SI 2 v0)
+                (call (mem:SI (reg/f:SI 2 v0 [196]) [0 S4 A32])
+                    (const_int 16 [0x10])))
+            (clobber (reg:SI 31 ra))
+        ]) 319 {call_value_internal3a} (insn_list 104 (nil))
+    (expr_list:REG_DEAD (reg:SI 4 a0)
+        (expr_list:REG_DEAD (reg:SI 5 a1)
+            (expr_list:REG_DEAD (reg:SI 6 a2)
+                (expr_list:REG_UNUSED (reg:SI 2 v0)
+                    (expr_list:REG_UNUSED (reg:SI 31 ra)
+                        (nil))))))
+    (expr_list (use (reg:SI 6 a2))
+        (expr_list (use (reg:SI 5 a1))
+            (expr_list (use (reg:SI 4 a0))
+                (nil)))))
+
+(jump_insn 125 39 126 (nil) (set (pc)
+        (label_ref 86)) -1 (nil)
+    (nil))
+
+(barrier 126 125 100)
+
+(note 100 126 106 NOTE_INSN_DELETED)
+
+(note 106 100 0 NOTE_INSN_DELETED)
+
+;; Function BatteryTimerCB
+
+(note:HI 2 0 227 NOTE_INSN_DELETED)
+
+(note:HI 227 2 4 [bb 0] NOTE_INSN_BASIC_BLOCK)
+
+(note:HI 4 227 258 NOTE_INSN_FUNCTION_BEG)
+
+(insn/f 258 4 260 (nil) (set (reg/f:SI 29 sp)
+        (minus:SI (reg/f:SI 29 sp)
+            (const_int 32 [0x20]))) 18 {subsi3_internal} (nil)
+    (expr_list:REG_FRAME_RELATED_EXPR (set:SI (reg/f:SI 29 sp)
+            (plus:SI (reg/f:SI 29 sp)
+                (const_int -32 [0xffffffffffffffe0])))
+        (nil)))
+
+(insn/f 260 258 259 (nil) (set (mem/u:SI (plus:SI (reg/f:SI 29 sp)
+                (const_int 20 [0x14])) [0 S4 A32])
+        (reg:SI 17 s1)) 166 {movsi_internal} (insn_list 258 (nil))
+    (expr_list:REG_DEAD (reg:SI 17 s1)
+        (expr_list:REG_FRAME_RELATED_EXPR (set/f:SI (mem:SI (plus:SI (reg/f:SI 29 sp)
+                        (const_int 20 [0x14])) [0 S4 A32])
+                (reg:SI 17 s1))
+            (nil))))
+
+(insn/f 259 260 261 (nil) (set (mem/u:SI (plus:SI (reg/f:SI 29 sp)
+                (const_int 24 [0x18])) [0 S4 A32])
+        (reg:SI 31 ra)) 166 {movsi_internal} (insn_list 258 (nil))
+    (expr_list:REG_DEAD (reg:SI 31 ra)
+        (expr_list:REG_FRAME_RELATED_EXPR (set/f:SI (mem:SI (plus:SI (reg/f:SI 29 sp)
+                        (const_int 24 [0x18])) [0 S4 A32])
+                (reg:SI 31 ra))
+            (nil))))
+
+(insn/f 261 259 262 (nil) (set (mem/u:SI (plus:SI (reg/f:SI 29 sp)
+                (const_int 16 [0x10])) [0 S4 A32])
+        (reg:SI 16 s0)) 166 {movsi_internal} (insn_list 258 (nil))
+    (expr_list:REG_DEAD (reg:SI 16 s0)
+        (expr_list:REG_FRAME_RELATED_EXPR (set/f:SI (mem:SI (plus:SI (reg/f:SI 29 sp)
+                        (const_int 16 [0x10])) [0 S4 A32])
+                (reg:SI 16 s0))
+            (nil))))
+
+(note 262 261 11 NOTE_INSN_PROLOGUE_END)
+
+(insn:HI 11 262 12 0x40768b00 (set (reg:SI 16 s0 [183])
+        (mem/s/j:SI (plus:SI (reg:SI 4 a0 [181])
+                (const_int 128 [0x80])) [0 <variable>.Bat.count+0 S4 A32])) 166 {movsi_internal} (insn_list 259 (insn_list 260 (insn_list 261 (nil))))
+    (nil))
+
+(insn:HI 12 11 3 0x40768b00 (set (reg:SI 2 v0 [184])
+        (const_int 1 [0x1])) 166 {movsi_internal} (nil)
+    (expr_list:REG_EQUIV (const_int 1 [0x1])
+        (nil)))
+
+(insn:HI 3 12 13 (nil) (set (reg/v:SI 17 s1 [181])
+        (reg:SI 4 a0)) 166 {movsi_internal} (insn_list:REG_DEP_ANTI 260 (nil))
+    (expr_list:REG_EQUIV (mem/f:SI (reg/f:SI 0 $0) [0 data+0 S4 A32])
+        (nil)))
+
+(jump_insn:HI 13 3 109 0x40768b00 (set (pc)
+        (if_then_else (eq:SI (reg:SI 16 s0 [183])
+                (reg:SI 2 v0 [184]))
+            (label_ref 283)
+            (pc))) 225 {branch_equality} (insn_list:REG_DEP_ANTI 258 (insn_list:REG_DEP_ANTI 3 (insn_list 11 (insn_list 12 (insn_list:REG_DEP_ANTI 259 (insn_list:REG_DEP_ANTI 260 (insn_list:REG_DEP_ANTI 261 (nil))))))))
+    (expr_list:REG_DEAD (reg:SI 2 v0 [184])
+        (expr_list:REG_BR_PROB (const_int 2900 [0xb54])
+            (nil))))
+
+(code_label:HI 109 13 238 291 "" [1 uses])
+
+(note:HI 238 109 111 [bb 1] NOTE_INSN_BASIC_BLOCK)
+
+(insn:HI 111 238 112 0x40768b00 (set (reg:SI 3 v1 [208])
+        (mem/s/j:SI (plus:SI (reg/v:SI 17 s1 [181])
+                (const_int 128 [0x80])) [0 <variable>.Bat.count+0 S4 A32])) 166 {movsi_internal} (nil)
+    (expr_list:REG_EQUIV (mem/s/j:SI (plus:SI (reg/v:SI 17 s1 [181])
+                (const_int 128 [0x80])) [0 <variable>.Bat.count+0 S4 A32])
+        (nil)))
+
+(insn:HI 112 111 113 0x40768b00 (set (reg:SI 2 v0 [209])
+        (const_int 2 [0x2])) 166 {movsi_internal} (nil)
+    (expr_list:REG_EQUIV (const_int 2 [0x2])
+        (nil)))
+
+(jump_insn:HI 113 112 216 0x40768b00 (set (pc)
+        (if_then_else (eq:SI (reg:SI 3 v1 [208])
+                (reg:SI 2 v0 [209]))
+            (label_ref 284)
+            (pc))) 225 {branch_equality} (insn_list 111 (insn_list 112 (nil)))
+    (expr_list:REG_DEAD (reg:SI 3 v1 [208])
+        (expr_list:REG_DEAD (reg:SI 2 v0 [209])
+            (expr_list:REG_BR_PROB (const_int 2900 [0xb54])
+                (nil)))))
+
+(code_label:HI 216 113 251 299 "" [1 uses])
+
+(note:HI 251 216 220 [bb 2] NOTE_INSN_BASIC_BLOCK)
+
+(insn:HI 220 251 224 0x40768b00 (set (mem/s/j:SI (plus:SI (reg/v:SI 17 s1 [181])
+                (const_int 128 [0x80])) [0 <variable>.Bat.count+0 S4 A32])
+        (const_int 0 [0x0])) 166 {movsi_internal} (nil)
+    (expr_list:REG_DEAD (reg/v:SI 17 s1 [181])
+        (nil)))
+
+(note:HI 224 220 226 NOTE_INSN_FUNCTION_END)
+
+(code_label:HI 226 224 254 290 "" [2 uses])
+
+(note:HI 254 226 263 [bb 3] NOTE_INSN_BASIC_BLOCK)
+
+(note 263 254 264 NOTE_INSN_EPILOGUE_BEG)
+
+(insn 264 263 265 (nil) (set (reg:SI 31 ra)
+        (mem/u:SI (plus:SI (reg/f:SI 29 sp)
+                (const_int 24 [0x18])) [0 S4 A32])) 166 {movsi_internal} (nil)
+    (nil))
+
+(insn 265 264 266 (nil) (set (reg:SI 17 s1)
+        (mem/u:SI (plus:SI (reg/f:SI 29 sp)
+                (const_int 20 [0x14])) [0 S4 A32])) 166 {movsi_internal} (nil)
+    (nil))
+
+(insn 266 265 267 (nil) (set (reg:SI 16 s0)
+        (mem/u:SI (plus:SI (reg/f:SI 29 sp)
+                (const_int 16 [0x10])) [0 S4 A32])) 166 {movsi_internal} (nil)
+    (nil))
+
+(insn 267 266 268 (nil) (unspec_volatile [
+            (const_int 0 [0x0])
+        ] 6) 301 {blockage} (insn_list 264 (insn_list 265 (insn_list 266 (nil))))
+    (nil))
+
+(insn 268 267 269 (nil) (set (reg/f:SI 29 sp)
+        (plus:SI (reg/f:SI 29 sp)
+            (const_int 32 [0x20]))) 4 {addsi3_internal} (insn_list 267 (nil))
+    (nil))
+
+(jump_insn 269 268 270 (nil) (parallel [
+            (use (reg:SI 31 ra))
+            (return)
+        ]) 303 {return_internal} (insn_list:REG_DEP_ANTI 264 (insn_list:REG_DEP_ANTI 265 (insn_list:REG_DEP_ANTI 266 (insn_list 268 (insn_list 267 (nil))))))
+    (expr_list:REG_DEAD (reg:SI 31 ra)
+        (nil)))
+
+(barrier 270 269 284)
+
+(code_label 284 270 239 311 "" [1 uses])
+
+(note:HI 239 284 114 [bb 4] NOTE_INSN_BASIC_BLOCK)
+
+(insn:HI 114 239 115 0x40768b00 (set (reg:SI 2 v0 [210])
+        (mem/f:SI (symbol_ref:SI ("ringFlag")) [0 ringFlag+0 S4 A32])) 166 {movsi_internal} (nil)
+    (expr_list:REG_EQUIV (mem/f:SI (symbol_ref:SI ("ringFlag")) [0 ringFlag+0 S4 A32])
+        (nil)))
+
+(jump_insn:HI 115 114 240 0x40768b00 (set (pc)
+        (if_then_else (ne:SI (reg:SI 2 v0 [210])
+                (const_int 0 [0x0]))
+            (label_ref 216)
+            (pc))) 221 {branch_zero} (insn_list 114 (nil))
+    (expr_list:REG_DEAD (reg:SI 2 v0 [210])
+        (expr_list:REG_BR_PROB (const_int 5000 [0x1388])
+            (nil))))
+
+(note:HI 240 115 121 [bb 5] NOTE_INSN_BASIC_BLOCK)
+
+(insn:HI 121 240 119 0x40768b00 (set (reg:SI 2 v0 [211])
+        (mem/s/j:SI (plus:SI (reg/v:SI 17 s1 [181])
+                (const_int 88 [0x58])) [0 <variable>.HookMode+0 S4 A32])) 166 {movsi_internal} (nil)
+    (expr_list:REG_EQUIV (mem/s/j:SI (plus:SI (reg/v:SI 17 s1 [181])
+                (const_int 88 [0x58])) [0 <variable>.HookMode+0 S4 A32])
+        (nil)))
+
+(insn:HI 119 121 122 0x40768b00 (set (mem/s/j:SI (plus:SI (reg/v:SI 17 s1 [181])
+                (const_int 128 [0x80])) [0 <variable>.Bat.count+0 S4 A32])
+        (const_int 0 [0x0])) 166 {movsi_internal} (nil)
+    (nil))
+
+(jump_insn:HI 122 119 242 0x40768b00 (set (pc)
+        (if_then_else (eq:SI (reg:SI 2 v0 [211])
+                (const_int 0 [0x0]))
+            (label_ref 226)
+            (pc))) 221 {branch_zero} (insn_list 121 (insn_list:REG_DEP_ANTI 119 (nil)))
+    (expr_list:REG_DEAD (reg:SI 2 v0 [211])
+        (expr_list:REG_BR_PROB (const_int 5000 [0x1388])
+            (nil))))
+
+(note:HI 242 122 132 [bb 6] NOTE_INSN_BASIC_BLOCK)
+
+(insn:HI 132 242 144 0x40768d80 (set (reg/v/f:SI 4 a0 [212])
+        (mem/s/j:SI (plus:SI (reg/v:SI 17 s1 [181])
+                (const_int 20 [0x14])) [0 <variable>.ExceSem+0 S4 A32])) 166 {movsi_internal} (nil)
+    (nil))
+
+(insn:HI 144 132 152 0x40768e00 (parallel [
+            (set (reg/v:SI 2 v0 [217])
+                (asm_operands/v:SI (".set push                                   
+.set noreorder           # atomic_sub_return
+1:   ll    %1, %2                           
+     subu  %0, %1, %3                       
+     sc    %0, %2                           
+     beqz  %0, 1b                           
+     subu  %0, %1, %3                       
+     sync                                   
+.set pop                                    
+") ("=&r") 0 [
+                        (const_int 1 [0x1])
+                        (mem/s/v/j:SI (reg/v/f:SI 4 a0 [212]) [0 <variable>.counter+0 S4 A32])
+                    ]
+                     [
+                        (asm_input:SI ("Ir"))
+                        (asm_input:SI ("m"))
+                    ] ("/home/janssenr/fxo/1.5.34_release/source/kernel/opensource/linux_2_4_20/include/asm/atomic.h") 189))
+            (set (reg/v:SI 3 v1 [216])
+                (asm_operands/v:SI (".set push                                   
+.set noreorder           # atomic_sub_return
+1:   ll    %1, %2                           
+     subu  %0, %1, %3                       
+     sc    %0, %2                           
+     beqz  %0, 1b                           
+     subu  %0, %1, %3                       
+     sync                                   
+.set pop                                    
+") ("=&r") 1 [
+                        (const_int 1 [0x1])
+                        (mem/s/v/j:SI (reg/v/f:SI 4 a0 [212]) [0 <variable>.counter+0 S4 A32])
+                    ]
+                     [
+                        (asm_input:SI ("Ir"))
+                        (asm_input:SI ("m"))
+                    ] ("/home/janssenr/fxo/1.5.34_release/source/kernel/opensource/linux_2_4_20/include/asm/atomic.h") 189))
+            (set (mem/s/v/j:SI (reg/v/f:SI 4 a0 [212]) [0 <variable>.counter+0 S4 A32])
+                (asm_operands/v:SI (".set push                                   
+.set noreorder           # atomic_sub_return
+1:   ll    %1, %2                           
+     subu  %0, %1, %3                       
+     sc    %0, %2                           
+     beqz  %0, 1b                           
+     subu  %0, %1, %3                       
+     sync                                   
+.set pop                                    
+") ("=m") 2 [
+                        (const_int 1 [0x1])
+                        (mem/s/v/j:SI (reg/v/f:SI 4 a0 [212]) [0 <variable>.counter+0 S4 A32])
+                    ]
+                     [
+                        (asm_input:SI ("Ir"))
+                        (asm_input:SI ("m"))
+                    ] ("/home/janssenr/fxo/1.5.34_release/source/kernel/opensource/linux_2_4_20/include/asm/atomic.h") 189))
+            (clobber (mem:BLK (scratch) [0 A8]))
+        ]) -1 (insn_list 132 (nil))
+    (expr_list:REG_UNUSED (reg/v:SI 3 v1 [216])
+        (nil)))
+
+(jump_insn:HI 152 144 158 0x40768d80 (set (pc)
+        (if_then_else (lt:SI (reg/v:SI 2 v0 [217])
+                (const_int 0 [0x0]))
+            (label_ref 285)
+            (pc))) 221 {branch_zero} (insn_list:REG_DEP_ANTI 132 (insn_list 144 (nil)))
+    (expr_list:REG_DEAD (reg/v:SI 2 v0 [217])
+        (expr_list:REG_BR_PROB (const_int 1023 [0x3ff])
+            (nil))))
+
+(code_label:HI 158 152 246 303 "" [1 uses])
+
+(note:HI 246 158 163 [bb 7] NOTE_INSN_BASIC_BLOCK)
+
+(insn:HI 163 246 164 0x40768b00 (set (reg:SI 2 v0 [219])
+        (mem/s/j:SI (plus:SI (reg/v:SI 17 s1 [181])
+                (const_int 192 [0xc0])) [0 S4 A32])) 166 {movsi_internal} (nil)
+    (expr_list:REG_EQUIV (mem/s/j:SI (plus:SI (reg/v:SI 17 s1 [181])
+                (const_int 192 [0xc0])) [0 S4 A32])
+        (nil)))
+
+(insn:HI 164 163 165 0x40768b00 (set (reg:SI 3 v1 [221])
+        (const_int 536870912 [0x20000000])) 166 {movsi_internal} (nil)
+    (expr_list:REG_EQUIV (const_int 536870912 [0x20000000])
+        (nil)))
+
+(insn:HI 165 164 169 0x40768b00 (set (reg:SI 2 v0 [220])
+        (ior:SI (reg:SI 2 v0 [219])
+            (reg:SI 3 v1 [221]))) 103 {*mips.md:3662} (insn_list 164 (insn_list 163 (nil)))
+    (expr_list:REG_DEAD (reg:SI 3 v1 [221])
+        (expr_list:REG_EQUAL (ior:SI (reg:SI 2 v0 [219])
+                (const_int 536870912 [0x20000000]))
+            (nil))))
+
+(insn:HI 169 165 170 0x40768b00 (set (reg:SI 4 a0 [224])
+        (const_int 134217728 [0x8000000])) 166 {movsi_internal} (nil)
+    (expr_list:REG_EQUIV (const_int 134217728 [0x8000000])
+        (nil)))
+
+(insn:HI 170 169 171 0x40768b00 (set (reg:SI 2 v0 [223])
+        (ior:SI (reg:SI 2 v0 [220])
+            (reg:SI 4 a0 [224]))) 103 {*mips.md:3662} (insn_list 169 (insn_list 165 (nil)))
+    (expr_list:REG_DEAD (reg:SI 4 a0 [224])
+        (expr_list:REG_EQUAL (ior:SI (reg:SI 2 v0 [219])
+                (const_int 671088640 [0x28000000]))
+            (nil))))
+
+(insn:HI 171 170 177 0x40768b00 (set (mem/s/j:SI (plus:SI (reg/v:SI 17 s1 [181])
+                (const_int 192 [0xc0])) [0 S4 A32])
+        (reg:SI 2 v0 [223])) 166 {movsi_internal} (insn_list 170 (insn_list:REG_DEP_ANTI 163 (nil)))
+    (expr_list:REG_DEAD (reg:SI 2 v0 [223])
+        (nil)))
+
+(insn:HI 177 171 189 0x40768e80 (set (reg/v/f:SI 4 a0 [225])
+        (mem/s/j:SI (plus:SI (reg/v:SI 17 s1 [181])
+                (const_int 20 [0x14])) [0 <variable>.ExceSem+0 S4 A32])) 166 {movsi_internal} (insn_list:REG_DEP_ANTI 170 (insn_list:REG_DEP_OUTPUT 169 (nil)))
+    (nil))
+
+(insn:HI 189 177 280 0x40768f00 (parallel [
+            (set (reg/v:SI 2 v0 [230])
+                (asm_operands/v:SI (".set push               # atomic_add_return
+.set noreorder                             
+1:   ll      %1, %2                        
+     addu    %0, %1, %3                    
+     sc      %0, %2                        
+     beqz    %0, 1b                        
+     addu    %0, %1, %3                    
+     sync                                  
+.set pop                                   
+") ("=&r") 0 [
+                        (const_int 1 [0x1])
+                        (mem/s/v/j:SI (reg/v/f:SI 4 a0 [225]) [0 <variable>.counter+0 S4 A32])
+                    ]
+                     [
+                        (asm_input:SI ("Ir"))
+                        (asm_input:SI ("m"))
+                    ] ("/home/janssenr/fxo/1.5.34_release/source/kernel/opensource/linux_2_4_20/include/asm/atomic.h") 168))
+            (set (reg/v:SI 3 v1 [229])
+                (asm_operands/v:SI (".set push               # atomic_add_return
+.set noreorder                             
+1:   ll      %1, %2                        
+     addu    %0, %1, %3                    
+     sc      %0, %2                        
+     beqz    %0, 1b                        
+     addu    %0, %1, %3                    
+     sync                                  
+.set pop                                   
+") ("=&r") 1 [
+                        (const_int 1 [0x1])
+                        (mem/s/v/j:SI (reg/v/f:SI 4 a0 [225]) [0 <variable>.counter+0 S4 A32])
+                    ]
+                     [
+                        (asm_input:SI ("Ir"))
+                        (asm_input:SI ("m"))
+                    ] ("/home/janssenr/fxo/1.5.34_release/source/kernel/opensource/linux_2_4_20/include/asm/atomic.h") 168))
+            (set (mem/s/v/j:SI (reg/v/f:SI 4 a0 [225]) [0 <variable>.counter+0 S4 A32])
+                (asm_operands/v:SI (".set push               # atomic_add_return
+.set noreorder                             
+1:   ll      %1, %2                        
+     addu    %0, %1, %3                    
+     sc      %0, %2                        
+     beqz    %0, 1b                        
+     addu    %0, %1, %3                    
+     sync                                  
+.set pop                                   
+") ("=m") 2 [
+                        (const_int 1 [0x1])
+                        (mem/s/v/j:SI (reg/v/f:SI 4 a0 [225]) [0 <variable>.counter+0 S4 A32])
+                    ]
+                     [
+                        (asm_input:SI ("Ir"))
+                        (asm_input:SI ("m"))
+                    ] ("/home/janssenr/fxo/1.5.34_release/source/kernel/opensource/linux_2_4_20/include/asm/atomic.h") 168))
+            (clobber (mem:BLK (scratch) [0 A8]))
+        ]) -1 (insn_list 164 (insn_list:REG_DEP_ANTI 165 (insn_list 170 (insn_list 171 (insn_list:REG_DEP_ANTI 163 (insn_list 177 (nil)))))))
+    (expr_list:REG_UNUSED (reg/v:SI 3 v1 [229])
+        (nil)))
+
+(code_label 280 189 278 309 "" [1 uses])
+
+(note 278 280 197 [bb 8] NOTE_INSN_BASIC_BLOCK)
+
+(jump_insn:HI 197 278 203 0x40768e80 (set (pc)
+        (if_then_else (le:SI (reg/v:SI 2 v0 [230])
+                (const_int 0 [0x0]))
+            (label_ref 286)
+            (pc))) 221 {branch_zero} (nil)
+    (expr_list:REG_DEAD (reg/v:SI 2 v0 [230])
+        (expr_list:REG_BR_PROB (const_int 1023 [0x3ff])
+            (nil))))
+
+(code_label:HI 203 197 250 306 "" [1 uses])
+
+(note:HI 250 203 208 [bb 9] NOTE_INSN_BASIC_BLOCK)
+
+(insn:HI 208 250 210 0x40768b00 (set (reg/f:SI 4 a0 [232])
+        (plus:SI (reg/v:SI 17 s1 [181])
+            (const_int 12 [0xc]))) 4 {addsi3_internal} (nil)
+    (expr_list:REG_DEAD (reg/v:SI 17 s1 [181])
+        (nil)))
+
+(insn:HI 210 208 211 0x40768b00 (set (reg:SI 5 a1)
+        (const_int 1 [0x1])) 166 {movsi_internal} (nil)
+    (expr_list:REG_EQUAL (const_int 1 [0x1])
+        (nil)))
+
+(insn:HI 211 210 212 0x40768b00 (set (reg:SI 6 a2)
+        (const_int 1 [0x1])) 166 {movsi_internal} (nil)
+    (expr_list:REG_EQUAL (const_int 1 [0x1])
+        (nil)))
+
+(insn:HI 212 211 213 0x40768b00 (set (reg/f:SI 2 v0 [233])
+        (symbol_ref:SI ("__wake_up"))) 166 {movsi_internal} (nil)
+    (expr_list:REG_EQUIV (symbol_ref:SI ("__wake_up"))
+        (nil)))
+
+(call_insn:HI 213 212 287 0x40768b00 (parallel [
+            (call (mem:SI (reg/f:SI 2 v0 [233]) [0 S4 A32])
+                (const_int 16 [0x10]))
+            (clobber (reg:SI 31 ra))
+        ]) 311 {call_internal3a} (insn_list 211 (insn_list 210 (insn_list 208 (insn_list 212 (nil)))))
+    (expr_list:REG_DEAD (reg:SI 4 a0)
+        (expr_list:REG_DEAD (reg:SI 5 a1)
+            (expr_list:REG_DEAD (reg:SI 6 a2)
+                (expr_list:REG_DEAD (reg/f:SI 2 v0 [233])
+                    (expr_list:REG_UNUSED (reg:SI 31 ra)
+                        (nil))))))
+    (expr_list (use (reg:SI 6 a2))
+        (expr_list (use (reg:SI 5 a1))
+            (expr_list (use (reg:SI 4 a0))
+                (nil)))))
+
+(jump_insn 287 213 288 (nil) (set (pc)
+        (label_ref 226)) -1 (nil)
+    (nil))
+
+(barrier 288 287 286)
+
+(code_label 286 288 248 313 "" [1 uses])
+
+(note:HI 248 286 200 [bb 10] NOTE_INSN_BASIC_BLOCK)
+
+(insn:HI 200 248 201 0x40768e80 (set (reg/f:SI 2 v0 [231])
+        (symbol_ref:SI ("__up"))) 166 {movsi_internal} (nil)
+    (expr_list:REG_EQUIV (symbol_ref:SI ("__up"))
+        (nil)))
+
+(call_insn:HI 201 200 289 0x40768e80 (parallel [
+            (call (mem:SI (reg/f:SI 2 v0 [231]) [0 S4 A32])
+                (const_int 16 [0x10]))
+            (clobber (reg:SI 31 ra))
+        ]) 311 {call_internal3a} (insn_list 200 (nil))
+    (expr_list:REG_DEAD (reg:SI 4 a0)
+        (expr_list:REG_DEAD (reg/f:SI 2 v0 [231])
+            (expr_list:REG_UNUSED (reg:SI 31 ra)
+                (nil))))
+    (expr_list (use (reg:SI 4 a0))
+        (nil)))
+
+(jump_insn 289 201 290 (nil) (set (pc)
+        (label_ref 203)) -1 (nil)
+    (nil))
+
+(barrier 290 289 285)
+
+(code_label 285 290 244 312 "" [1 uses])
+
+(note:HI 244 285 155 [bb 11] NOTE_INSN_BASIC_BLOCK)
+
+(insn:HI 155 244 156 0x40768d80 (set (reg/f:SI 2 v0 [218])
+        (symbol_ref:SI ("__down"))) 166 {movsi_internal} (nil)
+    (expr_list:REG_EQUIV (symbol_ref:SI ("__down"))
+        (nil)))
+
+(call_insn:HI 156 155 291 0x40768d80 (parallel [
+            (call (mem:SI (reg/f:SI 2 v0 [218]) [0 S4 A32])
+                (const_int 16 [0x10]))
+            (clobber (reg:SI 31 ra))
+        ]) 311 {call_internal3a} (insn_list 155 (nil))
+    (expr_list:REG_DEAD (reg:SI 4 a0)
+        (expr_list:REG_DEAD (reg/f:SI 2 v0 [218])
+            (expr_list:REG_UNUSED (reg:SI 31 ra)
+                (nil))))
+    (expr_list (use (reg:SI 4 a0))
+        (nil)))
+
+(jump_insn 291 156 292 (nil) (set (pc)
+        (label_ref 158)) -1 (nil)
+    (nil))
+
+(barrier 292 291 283)
+
+(code_label 283 292 228 310 "" [1 uses])
+
+(note:HI 228 283 14 [bb 12] NOTE_INSN_BASIC_BLOCK)
+
+(insn:HI 14 228 15 0x40768b00 (set (reg:SI 2 v0 [185])
+        (mem/f:SI (symbol_ref:SI ("ringFlag")) [0 ringFlag+0 S4 A32])) 166 {movsi_internal} (nil)
+    (expr_list:REG_EQUIV (mem/f:SI (symbol_ref:SI ("ringFlag")) [0 ringFlag+0 S4 A32])
+        (nil)))
+
+(jump_insn:HI 15 14 229 0x40768b00 (set (pc)
+        (if_then_else (ne:SI (reg:SI 2 v0 [185])
+                (const_int 0 [0x0]))
+            (label_ref 109)
+            (pc))) 221 {branch_zero} (insn_list 14 (nil))
+    (expr_list:REG_DEAD (reg:SI 2 v0 [185])
+        (expr_list:REG_BR_PROB (const_int 5000 [0x1388])
+            (nil))))
+
+(note:HI 229 15 19 [bb 13] NOTE_INSN_BASIC_BLOCK)
+
+(insn:HI 19 229 25 0x40768b00 (set (mem/s/j:SI (plus:SI (reg:SI 4 a0 [181])
+                (const_int 128 [0x80])) [0 <variable>.Bat.count+0 S4 A32])
+        (const_int 0 [0x0])) 166 {movsi_internal} (nil)
+    (nil))
+
+(insn:HI 25 19 37 0x40768b80 (set (reg/v/f:SI 4 a0 [186])
+        (mem/s/j:SI (plus:SI (reg:SI 4 a0 [181])
+                (const_int 20 [0x14])) [0 <variable>.ExceSem+0 S4 A32])) 166 {movsi_internal} (insn_list:REG_DEP_ANTI 19 (nil))
+    (nil))
+
+(insn:HI 37 25 45 0x40768c00 (parallel [
+            (set (reg/v:SI 2 v0 [191])
+                (asm_operands/v:SI (".set push                                   
+.set noreorder           # atomic_sub_return
+1:   ll    %1, %2                           
+     subu  %0, %1, %3                       
+     sc    %0, %2                           
+     beqz  %0, 1b                           
+     subu  %0, %1, %3                       
+     sync                                   
+.set pop                                    
+") ("=&r") 0 [
+                        (reg:SI 16 s0 [183])
+                        (mem/s/v/j:SI (reg/v/f:SI 4 a0 [186]) [0 <variable>.counter+0 S4 A32])
+                    ]
+                     [
+                        (asm_input:SI ("Ir"))
+                        (asm_input:SI ("m"))
+                    ] ("/home/janssenr/fxo/1.5.34_release/source/kernel/opensource/linux_2_4_20/include/asm/atomic.h") 189))
+            (set (reg/v:SI 3 v1 [190])
+                (asm_operands/v:SI (".set push                                   
+.set noreorder           # atomic_sub_return
+1:   ll    %1, %2                           
+     subu  %0, %1, %3                       
+     sc    %0, %2                           
+     beqz  %0, 1b                           
+     subu  %0, %1, %3                       
+     sync                                   
+.set pop                                    
+") ("=&r") 1 [
+                        (reg:SI 16 s0 [183])
+                        (mem/s/v/j:SI (reg/v/f:SI 4 a0 [186]) [0 <variable>.counter+0 S4 A32])
+                    ]
+                     [
+                        (asm_input:SI ("Ir"))
+                        (asm_input:SI ("m"))
+                    ] ("/home/janssenr/fxo/1.5.34_release/source/kernel/opensource/linux_2_4_20/include/asm/atomic.h") 189))
+            (set (mem/s/v/j:SI (reg/v/f:SI 4 a0 [186]) [0 <variable>.counter+0 S4 A32])
+                (asm_operands/v:SI (".set push                                   
+.set noreorder           # atomic_sub_return
+1:   ll    %1, %2                           
+     subu  %0, %1, %3                       
+     sc    %0, %2                           
+     beqz  %0, 1b                           
+     subu  %0, %1, %3                       
+     sync                                   
+.set pop                                    
+") ("=m") 2 [
+                        (reg:SI 16 s0 [183])
+                        (mem/s/v/j:SI (reg/v/f:SI 4 a0 [186]) [0 <variable>.counter+0 S4 A32])
+                    ]
+                     [
+                        (asm_input:SI ("Ir"))
+                        (asm_input:SI ("m"))
+                    ] ("/home/janssenr/fxo/1.5.34_release/source/kernel/opensource/linux_2_4_20/include/asm/atomic.h") 189))
+            (clobber (mem:BLK (scratch) [0 A8]))
+        ]) -1 (insn_list:REG_DEP_ANTI 19 (insn_list 25 (nil)))
+    (expr_list:REG_UNUSED (reg/v:SI 3 v1 [190])
+        (nil)))
+
+(jump_insn:HI 45 37 51 0x40768b80 (set (pc)
+        (if_then_else (lt:SI (reg/v:SI 2 v0 [191])
+                (const_int 0 [0x0]))
+            (label_ref 293)
+            (pc))) 221 {branch_zero} (insn_list:REG_DEP_ANTI 19 (insn_list:REG_DEP_ANTI 25 (insn_list 37 (nil))))
+    (expr_list:REG_DEAD (reg/v:SI 2 v0 [191])
+        (expr_list:REG_BR_PROB (const_int 1023 [0x3ff])
+            (nil))))
+
+(code_label:HI 51 45 233 294 "" [1 uses])
+
+(note:HI 233 51 56 [bb 14] NOTE_INSN_BASIC_BLOCK)
+
+(insn:HI 56 233 57 0x40768b00 (set (reg:SI 2 v0 [193])
+        (mem/s/j:SI (plus:SI (reg/v:SI 17 s1 [181])
+                (const_int 192 [0xc0])) [0 S4 A32])) 166 {movsi_internal} (nil)
+    (expr_list:REG_EQUIV (mem/s/j:SI (plus:SI (reg/v:SI 17 s1 [181])
+                (const_int 192 [0xc0])) [0 S4 A32])
+        (nil)))
+
+(insn:HI 57 56 58 0x40768b00 (set (reg:SI 3 v1 [195])
+        (const_int 1073741824 [0x40000000])) 166 {movsi_internal} (nil)
+    (expr_list:REG_EQUIV (const_int 1073741824 [0x40000000])
+        (nil)))
+
+(insn:HI 58 57 62 0x40768b00 (set (reg:SI 2 v0 [194])
+        (ior:SI (reg:SI 2 v0 [193])
+            (reg:SI 3 v1 [195]))) 103 {*mips.md:3662} (insn_list 57 (insn_list 56 (nil)))
+    (expr_list:REG_DEAD (reg:SI 3 v1 [195])
+        (expr_list:REG_EQUAL (ior:SI (reg:SI 2 v0 [193])
+                (const_int 1073741824 [0x40000000]))
+            (nil))))
+
+(insn:HI 62 58 63 0x40768b00 (set (reg:SI 4 a0 [198])
+        (const_int 134217728 [0x8000000])) 166 {movsi_internal} (nil)
+    (expr_list:REG_EQUIV (const_int 134217728 [0x8000000])
+        (nil)))
+
+(insn:HI 63 62 64 0x40768b00 (set (reg:SI 2 v0 [197])
+        (ior:SI (reg:SI 2 v0 [194])
+            (reg:SI 4 a0 [198]))) 103 {*mips.md:3662} (insn_list 62 (insn_list 58 (nil)))
+    (expr_list:REG_DEAD (reg:SI 4 a0 [198])
+        (expr_list:REG_EQUAL (ior:SI (reg:SI 2 v0 [193])
+                (const_int 1207959552 [0x48000000]))
+            (nil))))
+
+(insn:HI 64 63 70 0x40768b00 (set (mem/s/j:SI (plus:SI (reg/v:SI 17 s1 [181])
+                (const_int 192 [0xc0])) [0 S4 A32])
+        (reg:SI 2 v0 [197])) 166 {movsi_internal} (insn_list 63 (insn_list:REG_DEP_ANTI 56 (nil)))
+    (expr_list:REG_DEAD (reg:SI 2 v0 [197])
+        (nil)))
+
+(insn:HI 70 64 82 0x40768c80 (set (reg/v/f:SI 4 a0 [199])
+        (mem/s/j:SI (plus:SI (reg/v:SI 17 s1 [181])
+                (const_int 20 [0x14])) [0 <variable>.ExceSem+0 S4 A32])) 166 {movsi_internal} (insn_list:REG_DEP_ANTI 63 (insn_list:REG_DEP_OUTPUT 62 (nil)))
+    (nil))
+
+(insn:HI 82 70 294 0x40768d00 (parallel [
+            (set (reg/v:SI 2 v0 [204])
+                (asm_operands/v:SI (".set push               # atomic_add_return
+.set noreorder                             
+1:   ll      %1, %2                        
+     addu    %0, %1, %3                    
+     sc      %0, %2                        
+     beqz    %0, 1b                        
+     addu    %0, %1, %3                    
+     sync                                  
+.set pop                                   
+") ("=&r") 0 [
+                        (reg:SI 16 s0 [183])
+                        (mem/s/v/j:SI (reg/v/f:SI 4 a0 [199]) [0 <variable>.counter+0 S4 A32])
+                    ]
+                     [
+                        (asm_input:SI ("Ir"))
+                        (asm_input:SI ("m"))
+                    ] ("/home/janssenr/fxo/1.5.34_release/source/kernel/opensource/linux_2_4_20/include/asm/atomic.h") 168))
+            (set (reg/v:SI 3 v1 [203])
+                (asm_operands/v:SI (".set push               # atomic_add_return
+.set noreorder                             
+1:   ll      %1, %2                        
+     addu    %0, %1, %3                    
+     sc      %0, %2                        
+     beqz    %0, 1b                        
+     addu    %0, %1, %3                    
+     sync                                  
+.set pop                                   
+") ("=&r") 1 [
+                        (reg:SI 16 s0 [183])
+                        (mem/s/v/j:SI (reg/v/f:SI 4 a0 [199]) [0 <variable>.counter+0 S4 A32])
+                    ]
+                     [
+                        (asm_input:SI ("Ir"))
+                        (asm_input:SI ("m"))
+                    ] ("/home/janssenr/fxo/1.5.34_release/source/kernel/opensource/linux_2_4_20/include/asm/atomic.h") 168))
+            (set (mem/s/v/j:SI (reg/v/f:SI 4 a0 [199]) [0 <variable>.counter+0 S4 A32])
+                (asm_operands/v:SI (".set push               # atomic_add_return
+.set noreorder                             
+1:   ll      %1, %2                        
+     addu    %0, %1, %3                    
+     sc      %0, %2                        
+     beqz    %0, 1b                        
+     addu    %0, %1, %3                    
+     sync                                  
+.set pop                                   
+") ("=m") 2 [
+                        (reg:SI 16 s0 [183])
+                        (mem/s/v/j:SI (reg/v/f:SI 4 a0 [199]) [0 <variable>.counter+0 S4 A32])
+                    ]
+                     [
+                        (asm_input:SI ("Ir"))
+                        (asm_input:SI ("m"))
+                    ] ("/home/janssenr/fxo/1.5.34_release/source/kernel/opensource/linux_2_4_20/include/asm/atomic.h") 168))
+            (clobber (mem:BLK (scratch) [0 A8]))
+        ]) -1 (insn_list 57 (insn_list:REG_DEP_ANTI 58 (insn_list 63 (insn_list 64 (insn_list:REG_DEP_ANTI 56 (insn_list 70 (nil)))))))
+    (expr_list:REG_DEAD (reg:SI 16 s0 [183])
+        (expr_list:REG_UNUSED (reg/v:SI 3 v1 [203])
+            (nil))))
+
+(jump_insn 294 82 295 (nil) (set (pc)
+        (label_ref 280)) -1 (nil)
+    (nil))
+
+(barrier 295 294 293)
+
+(code_label 293 295 231 314 "" [1 uses])
+
+(note:HI 231 293 48 [bb 15] NOTE_INSN_BASIC_BLOCK)
+
+(insn:HI 48 231 49 0x40768b80 (set (reg/f:SI 2 v0 [192])
+        (symbol_ref:SI ("__down"))) 166 {movsi_internal} (nil)
+    (expr_list:REG_EQUIV (symbol_ref:SI ("__down"))
+        (nil)))
+
+(call_insn:HI 49 48 296 0x40768b80 (parallel [
+            (call (mem:SI (reg/f:SI 2 v0 [192]) [0 S4 A32])
+                (const_int 16 [0x10]))
+            (clobber (reg:SI 31 ra))
+        ]) 311 {call_internal3a} (insn_list 48 (nil))
+    (expr_list:REG_DEAD (reg:SI 4 a0)
+        (expr_list:REG_DEAD (reg/f:SI 2 v0 [192])
+            (expr_list:REG_UNUSED (reg:SI 31 ra)
+                (nil))))
+    (expr_list (use (reg:SI 4 a0))
+        (nil)))
+
+(jump_insn 296 49 297 (nil) (set (pc)
+        (label_ref 51)) -1 (nil)
+    (nil))
+
+(barrier 297 296 256)
+
+(note 256 297 257 NOTE_INSN_DELETED)
+
+(note 257 256 0 NOTE_INSN_DELETED)
+
+;; Function BatteryCidCB
+
+(note:HI 2 0 19 NOTE_INSN_DELETED)
+
+(note:HI 19 2 24 [bb 0] NOTE_INSN_BASIC_BLOCK)
+
+(note 24 19 4 NOTE_INSN_PROLOGUE_END)
+
+(note:HI 4 24 11 NOTE_INSN_FUNCTION_BEG)
+
+(insn:HI 11 4 12 0x407a1d80 (set (reg:SI 2 v0 [183])
+        (const_int 1 [0x1])) 166 {movsi_internal} (nil)
+    (expr_list:REG_EQUIV (const_int 1 [0x1])
+        (nil)))
+
+(insn:HI 12 11 14 0x407a1d80 (set (mem/s/j:SI (plus:SI (reg/v:SI 4 a0 [181])
+                (const_int 92 [0x5c])) [0 <variable>.CidMode+0 S4 A32])
+        (reg:SI 2 v0 [183])) 166 {movsi_internal} (insn_list 11 (nil))
+    (expr_list:REG_DEAD (reg:SI 2 v0 [183])
+        (expr_list:REG_DEAD (reg/v:SI 4 a0 [181])
+            (nil))))
+
+(insn:HI 14 12 25 0x407a1d80 (set (mem/f:SI (symbol_ref:SI ("batFlag")) [0 batFlag+0 S4 A32])
+        (const_int 0 [0x0])) 166 {movsi_internal} (insn_list:REG_DEP_OUTPUT 12 (nil))
+    (nil))
+
+(note 25 14 26 NOTE_INSN_EPILOGUE_BEG)
+
+(jump_insn 26 25 27 (nil) (return) 302 {return} (insn_list:REG_DEP_ANTI 14 (insn_list 11 (insn_list:REG_DEP_ANTI 12 (nil))))
+    (nil))
+
+(barrier 27 26 22)
+
+(note 22 27 16 NOTE_INSN_DELETED)
+
+(note:HI 16 22 23 NOTE_INSN_FUNCTION_END)
+
+(note 23 16 0 NOTE_INSN_DELETED)
+
+;; Function Pin_BatDetc_Callback
+
+(note:HI 2 0 109 NOTE_INSN_DELETED)
+
+(note:HI 109 2 8 [bb 0] NOTE_INSN_BASIC_BLOCK)
+
+(note:HI 8 109 19 NOTE_INSN_FUNCTION_BEG)
+
+(note:HI 19 8 14 NOTE_INSN_DELETED)
+
+(insn:HI 14 19 15 0x407c6100 (set (reg:SI 4 a0 [187])
+        (ashift:SI (reg/v:SI 4 a0 [181])
+            (const_int 3 [0x3]))) 195 {ashlsi3_internal1} (nil)
+    (expr_list:REG_EQUAL (ashift:SI (reg/v:SI 4 a0 [181])
+            (const_int 3 [0x3]))
+        (nil)))
+
+(insn:HI 15 14 18 0x407c6100 (set (reg:SI 4 a0 [188])
+        (plus:SI (reg:SI 4 a0 [187])
+            (reg/v:SI 5 a1 [182]))) 4 {addsi3_internal} (insn_list 14 (nil))
+    (expr_list:REG_DEAD (reg/v:SI 5 a1 [182])
+        (nil)))
+
+(insn:HI 18 15 21 0x407c6100 (set (reg:SI 4 a0 [191])
+        (ashift:SI (reg:SI 4 a0 [188])
+            (const_int 2 [0x2]))) 195 {ashlsi3_internal1} (insn_list 15 (nil))
+    (expr_list:REG_EQUAL (ashift:SI (reg:SI 4 a0 [188])
+            (const_int 2 [0x2]))
+        (nil)))
+
+(insn:HI 21 18 135 0x407c6100 (set (reg/v/f:SI 5 a1 [185])
+        (mem/s/j:SI (plus:SI (reg:SI 4 a0 [191])
+                (const:SI (plus:SI (symbol_ref:SI ("CPC5621_Devices"))
+                        (const_int -4 [0xfffffffffffffffc])))) [0 CPC5621_Devices S4 A32])) 166 {movsi_internal} (insn_list:REG_DEP_ANTI 15 (insn_list 18 (nil)))
+    (expr_list:REG_DEAD (reg:SI 4 a0 [191])
+        (nil)))
+
+(insn/f 135 21 136 (nil) (set (reg/f:SI 29 sp)
+        (minus:SI (reg/f:SI 29 sp)
+            (const_int 24 [0x18]))) 18 {subsi3_internal} (nil)
+    (expr_list:REG_FRAME_RELATED_EXPR (set:SI (reg/f:SI 29 sp)
+            (plus:SI (reg/f:SI 29 sp)
+                (const_int -24 [0xffffffffffffffe8])))
+        (nil)))
+
+(insn/f 136 135 137 (nil) (set (mem/u:SI (plus:SI (reg/f:SI 29 sp)
+                (const_int 16 [0x10])) [0 S4 A32])
+        (reg:SI 31 ra)) 166 {movsi_internal} (insn_list 135 (nil))
+    (expr_list:REG_DEAD (reg:SI 31 ra)
+        (expr_list:REG_FRAME_RELATED_EXPR (set/f:SI (mem:SI (plus:SI (reg/f:SI 29 sp)
+                        (const_int 16 [0x10])) [0 S4 A32])
+                (reg:SI 31 ra))
+            (nil))))
+
+(note 137 136 23 NOTE_INSN_PROLOGUE_END)
+
+(jump_insn:HI 23 137 114 0x407c6100 (set (pc)
+        (if_then_else (eq:SI (reg/v/f:SI 5 a1 [185])
+                (const_int 0 [0x0]))
+            (label_ref 149)
+            (pc))) 221 {branch_zero} (insn_list:REG_DEP_ANTI 135 (insn_list:REG_DEP_ANTI 14 (insn_list:REG_DEP_ANTI 15 (insn_list:REG_DEP_ANTI 18 (insn_list 21 (insn_list:REG_DEP_ANTI 136 (nil)))))))
+    (expr_list:REG_BR_PROB (const_int 1900 [0x76c])
+        (nil)))
+
+(note:HI 114 23 46 [bb 1] NOTE_INSN_BASIC_BLOCK)
+
+(insn:HI 46 114 47 0x407c6100 (set (reg:SI 2 v0 [198])
+        (mem/s/j:SI (plus:SI (reg/v/f:SI 5 a1 [185])
+                (const_int 92 [0x5c])) [0 <variable>.CidMode+0 S4 A32])) 166 {movsi_internal} (nil)
+    (expr_list:REG_EQUIV (mem/s/j:SI (plus:SI (reg/v/f:SI 5 a1 [185])
+                (const_int 92 [0x5c])) [0 <variable>.CidMode+0 S4 A32])
+        (nil)))
+
+(jump_insn:HI 47 46 115 0x407c6100 (set (pc)
+        (if_then_else (ne:SI (reg:SI 2 v0 [198])
+                (const_int 0 [0x0]))
+            (label_ref 78)
+            (pc))) 221 {branch_zero} (insn_list 46 (nil))
+    (expr_list:REG_DEAD (reg:SI 2 v0 [198])
+        (expr_list:REG_BR_PROB (const_int 5000 [0x1388])
+            (nil))))
+
+(note:HI 115 47 51 [bb 2] NOTE_INSN_BASIC_BLOCK)
+
+(insn:HI 51 115 65 0x407c6100 (set (reg:SI 2 v0 [199])
+        (mem/f:SI (symbol_ref:SI ("batFlag")) [0 batFlag+0 S4 A32])) 166 {movsi_internal} (nil)
+    (expr_list:REG_EQUIV (mem/f:SI (symbol_ref:SI ("batFlag")) [0 batFlag+0 S4 A32])
+        (nil)))
+
+(insn:HI 65 51 72 0x407c6100 (set (reg/f:SI 4 a0 [202])
+        (plus:SI (reg/v/f:SI 5 a1 [185])
+            (const_int 136 [0x88]))) 4 {addsi3_internal} (nil)
+    (nil))
+
+(insn:HI 72 65 71 0x407c6100 (set (reg:SI 7 a3)
+        (reg/v/f:SI 5 a1 [185])) 166 {movsi_internal} (nil)
+    (nil))
+
+(insn:HI 71 72 52 0x407c6100 (set (reg:SI 6 a2)
+        (symbol_ref:SI ("BatteryCidCB"))) 166 {movsi_internal} (nil)
+    (expr_list:REG_EQUAL (symbol_ref:SI ("BatteryCidCB"))
+        (nil)))
+
+(jump_insn:HI 52 71 106 0x407c6100 (set (pc)
+        (if_then_else (eq:SI (reg:SI 2 v0 [199])
+                (const_int 0 [0x0]))
+            (label_ref 150)
+            (pc))) 221 {branch_zero} (insn_list:REG_DEP_ANTI 65 (insn_list:REG_DEP_ANTI 72 (insn_list:REG_DEP_ANTI 71 (insn_list 51 (nil)))))
+    (expr_list:REG_DEAD (reg:SI 2 v0 [199])
+        (expr_list:REG_BR_PROB (const_int 3000 [0xbb8])
+            (nil))))
+
+(note:HI 106 52 108 NOTE_INSN_FUNCTION_END)
+
+(code_label:HI 108 106 125 321 "" [5 uses])
+
+(note:HI 125 108 138 [bb 3] NOTE_INSN_BASIC_BLOCK)
+
+(note 138 125 139 NOTE_INSN_EPILOGUE_BEG)
+
+(insn 139 138 140 (nil) (set (reg:SI 31 ra)
+        (mem/u:SI (plus:SI (reg/f:SI 29 sp)
+                (const_int 16 [0x10])) [0 S4 A32])) 166 {movsi_internal} (nil)
+    (nil))
+
+(insn 140 139 141 (nil) (unspec_volatile [
+            (const_int 0 [0x0])
+        ] 6) 301 {blockage} (insn_list 139 (nil))
+    (nil))
+
+(insn 141 140 142 (nil) (set (reg/f:SI 29 sp)
+        (plus:SI (reg/f:SI 29 sp)
+            (const_int 24 [0x18]))) 4 {addsi3_internal} (insn_list 140 (nil))
+    (nil))
+
+(jump_insn 142 141 143 (nil) (parallel [
+            (use (reg:SI 31 ra))
+            (return)
+        ]) 303 {return_internal} (insn_list:REG_DEP_ANTI 139 (insn_list 141 (insn_list 140 (nil))))
+    (expr_list:REG_DEAD (reg:SI 31 ra)
+        (nil)))
+
+(barrier 143 142 150)
+
+(code_label 150 143 118 332 "" [1 uses])
+
+(note:HI 118 150 131 [bb 4] NOTE_INSN_BASIC_BLOCK)
+
+(insn 131 118 62 (nil) (set (reg:SI 2 v0 [201])
+        (const_int 1 [0x1])) 166 {movsi_internal} (nil)
+    (expr_list:REG_EQUIV (const_int 1 [0x1])
+        (nil)))
+
+(insn:HI 62 131 66 0x407c6100 (set (mem/f:SI (symbol_ref:SI ("batFlag")) [0 batFlag+0 S4 A32])
+        (reg:SI 2 v0 [201])) 166 {movsi_internal} (insn_list 131 (nil))
+    (expr_list:REG_DEAD (reg:SI 2 v0 [201])
+        (expr_list:REG_EQUAL (const_int 1 [0x1])
+            (nil))))
+
+(insn:HI 66 62 67 0x407c6100 (set (reg:SI 5 a1 [203])
+        (mem/s/j:SI (plus:SI (reg/v/f:SI 5 a1 [185])
+                (const_int 164 [0xa4])) [0 <variable>.Cid.tMin+0 S4 A32])) 166 {movsi_internal} (insn_list 62 (nil))
+    (nil))
+
+(insn:HI 67 66 146 0x407c6100 (set (reg:SI 5 a1 [204])
+        (plus:SI (reg:SI 5 a1 [203])
+            (const_int 10 [0xa]))) 4 {addsi3_internal} (insn_list 66 (nil))
+    (nil))
+
+(code_label 146 67 144 330 "" [1 uses])
+
+(note 144 146 128 [bb 5] NOTE_INSN_BASIC_BLOCK)
+
+(insn 128 144 102 (nil) (set (reg/f:SI 2 v0 [215])
+        (symbol_ref:SI ("Timer_Start"))) 166 {movsi_internal} (nil)
+    (expr_list:REG_EQUIV (symbol_ref:SI ("Timer_Start"))
+        (nil)))
+
+(call_insn:HI 102 128 151 0x407c6100 (parallel [
+            (call (mem:SI (reg/f:SI 2 v0 [215]) [0 S4 A32])
+                (const_int 16 [0x10]))
+            (clobber (reg:SI 31 ra))
+        ]) 311 {call_internal3a} (insn_list 128 (nil))
+    (expr_list:REG_DEAD (reg:SI 4 a0)
+        (expr_list:REG_DEAD (reg:SI 5 a1)
+            (expr_list:REG_DEAD (reg:SI 6 a2)
+                (expr_list:REG_DEAD (reg:SI 7 a3)
+                    (expr_list:REG_DEAD (reg/f:SI 2 v0 [215])
+                        (expr_list:REG_UNUSED (reg:SI 31 ra)
+                            (expr_list:REG_EH_REGION (const_int 0 [0x0])
+                                (nil))))))))
+    (expr_list (use (reg:SI 7 a3))
+        (expr_list (use (reg:SI 6 a2))
+            (expr_list (use (reg:SI 5 a1))
+                (expr_list (use (reg:SI 4 a0))
+                    (nil))))))
+
+(jump_insn 151 102 152 (nil) (set (pc)
+        (label_ref 108)) -1 (nil)
+    (nil))
+
+(barrier 152 151 78)
+
+(code_label:HI 78 152 120 325 "" [1 uses])
+
+(note:HI 120 78 80 [bb 6] NOTE_INSN_BASIC_BLOCK)
+
+(insn:HI 80 120 81 0x407c6100 (set (reg:SI 2 v0 [207])
+        (mem/s/j:SI (plus:SI (reg/v/f:SI 5 a1 [185])
+                (const_int 96 [0x60])) [0 <variable>.Ring.count+0 S4 A32])) 166 {movsi_internal} (nil)
+    (expr_list:REG_EQUIV (mem/s/j:SI (plus:SI (reg/v/f:SI 5 a1 [185])
+                (const_int 96 [0x60])) [0 <variable>.Ring.count+0 S4 A32])
+        (nil)))
+
+(insn:HI 81 80 82 0x407c6100 (set (reg:SI 2 v0 [208])
+        (ltu:SI (reg:SI 2 v0 [207])
+            (const_int 3 [0x3]))) 263 {sltu_si} (insn_list 80 (nil))
+    (nil))
+
+(jump_insn:HI 82 81 121 0x407c6100 (set (pc)
+        (if_then_else (ne:SI (reg:SI 2 v0 [208])
+                (const_int 0 [0x0]))
+            (pc)
+            (label_ref 108))) 222 {branch_zero_inverted} (insn_list:REG_DEP_ANTI 80 (insn_list 81 (nil)))
+    (expr_list:REG_DEAD (reg:SI 2 v0 [208])
+        (expr_list:REG_BR_PROB (const_int 5000 [0x1388])
+            (nil))))
+
+(note:HI 121 82 86 [bb 7] NOTE_INSN_BASIC_BLOCK)
+
+(insn:HI 86 121 129 0x407c6100 (set (reg:SI 2 v0 [209])
+        (mem/s/j:SI (plus:SI (reg/v/f:SI 5 a1 [185])
+                (const_int 128 [0x80])) [0 <variable>.Bat.count+0 S4 A32])) 166 {movsi_internal} (nil)
+    (expr_list:REG_EQUIV (mem/s/j:SI (plus:SI (reg/v/f:SI 5 a1 [185])
+                (const_int 128 [0x80])) [0 <variable>.Bat.count+0 S4 A32])
+        (nil)))
+
+(insn 129 86 87 (nil) (set (reg:SI 3 v1 [212])
+        (const_int 1 [0x1])) 166 {movsi_internal} (nil)
+    (expr_list:REG_EQUIV (const_int 1 [0x1])
+        (nil)))
+
+(insn:HI 87 129 95 0x407c6100 (set (reg:SI 2 v0 [210])
+        (plus:SI (reg:SI 2 v0 [209])
+            (const_int 1 [0x1]))) 4 {addsi3_internal} (insn_list 86 (nil))
+    (nil))
+
+(insn:HI 95 87 100 0x407c6100 (set (reg/f:SI 4 a0 [213])
+        (plus:SI (reg/v/f:SI 5 a1 [185])
+            (const_int 136 [0x88]))) 4 {addsi3_internal} (nil)
+    (nil))
+
+(insn:HI 100 95 99 0x407c6100 (set (reg:SI 7 a3)
+        (reg/v/f:SI 5 a1 [185])) 166 {movsi_internal} (nil)
+    (nil))
+
+(insn:HI 99 100 89 0x407c6100 (set (reg:SI 6 a2)
+        (symbol_ref:SI ("BatteryTimerCB"))) 166 {movsi_internal} (nil)
+    (expr_list:REG_EQUAL (symbol_ref:SI ("BatteryTimerCB"))
+        (nil)))
+
+(insn:HI 89 99 91 0x407c6100 (set (mem/s/j:SI (plus:SI (reg/v/f:SI 5 a1 [185])
+                (const_int 128 [0x80])) [0 <variable>.Bat.count+0 S4 A32])
+        (reg:SI 2 v0 [210])) 166 {movsi_internal} (insn_list 87 (insn_list:REG_DEP_ANTI 86 (nil)))
+    (nil))
+
+(jump_insn:HI 91 89 122 0x407c6100 (set (pc)
+        (if_then_else (ne:SI (reg:SI 2 v0 [210])
+                (reg:SI 3 v1 [212]))
+            (label_ref 108)
+            (pc))) 225 {branch_equality} (insn_list:REG_DEP_ANTI 86 (insn_list:REG_DEP_ANTI 95 (insn_list:REG_DEP_ANTI 100 (insn_list:REG_DEP_ANTI 99 (insn_list 129 (insn_list 87 (insn_list:REG_DEP_ANTI 89 (nil))))))))
+    (expr_list:REG_DEAD (reg:SI 2 v0 [210])
+        (expr_list:REG_DEAD (reg:SI 3 v1 [212])
+            (expr_list:REG_BR_PROB (const_int 8510 [0x213e])
+                (nil)))))
+
+(note:HI 122 91 98 [bb 8] NOTE_INSN_BASIC_BLOCK)
+
+(insn:HI 98 122 153 0x407c6100 (set (reg:SI 5 a1)
+        (mem/s/j:SI (plus:SI (reg/v/f:SI 5 a1 [185])
+                (const_int 132 [0x84])) [0 <variable>.Bat.tMin+0 S4 A32])) 166 {movsi_internal} (nil)
+    (nil))
+
+(jump_insn 153 98 154 (nil) (set (pc)
+        (label_ref 146)) -1 (nil)
+    (nil))
+
+(barrier 154 153 149)
+
+(code_label 149 154 110 331 "" [1 uses])
+
+(note:HI 110 149 133 [bb 9] NOTE_INSN_BASIC_BLOCK)
+
+(insn 133 110 36 (nil) (set (reg:SI 2 v0 [194])
+        (mem/f:SI (symbol_ref:SI ("G_nTraceGroupCPC5621_DRV")) [0 G_nTraceGroupCPC5621_DRV+0 S4 A32])) 166 {movsi_internal} (nil)
+    (expr_list:REG_EQUIV (mem/f:SI (symbol_ref:SI ("G_nTraceGroupCPC5621_DRV")) [0 G_nTraceGroupCPC5621_DRV+0 S4 A32])
+        (nil)))
+
+(insn:HI 36 133 31 0x407c6100 (set (reg:SI 4 a0)
+        (symbol_ref/f:SI ("*$LC3"))) 166 {movsi_internal} (nil)
+    (expr_list:REG_EQUAL (symbol_ref/f:SI ("*$LC3"))
+        (nil)))
+
+(insn:HI 31 36 32 0x407c6100 (set (reg:SI 2 v0 [195])
+        (ltu:SI (reg:SI 2 v0 [194])
+            (const_int 4 [0x4]))) 263 {sltu_si} (insn_list 133 (nil))
+    (nil))
+
+(jump_insn:HI 32 31 111 0x407c6100 (set (pc)
+        (if_then_else (ne:SI (reg:SI 2 v0 [195])
+                (const_int 0 [0x0]))
+            (pc)
+            (label_ref 108))) 222 {branch_zero_inverted} (insn_list:REG_DEP_ANTI 36 (insn_list:REG_DEP_ANTI 133 (insn_list 31 (nil))))
+    (expr_list:REG_DEAD (reg:SI 2 v0 [195])
+        (expr_list:REG_BR_PROB (const_int 7000 [0x1b58])
+            (nil))))
+
+(note:HI 111 32 132 [bb 10] NOTE_INSN_BASIC_BLOCK)
+
+(insn 132 111 38 (nil) (set (reg/f:SI 2 v0 [197])
+        (symbol_ref:SI ("printk"))) 166 {movsi_internal} (nil)
+    (expr_list:REG_EQUIV (symbol_ref:SI ("printk"))
+        (nil)))
+
+(call_insn:HI 38 132 155 0x407c6100 (parallel [
+            (set (reg:SI 2 v0)
+                (call (mem:SI (reg/f:SI 2 v0 [197]) [0 S4 A32])
+                    (const_int 16 [0x10])))
+            (clobber (reg:SI 31 ra))
+        ]) 319 {call_value_internal3a} (insn_list 132 (nil))
+    (expr_list:REG_DEAD (reg:SI 4 a0)
+        (expr_list:REG_UNUSED (reg:SI 2 v0)
+            (expr_list:REG_UNUSED (reg:SI 31 ra)
+                (nil))))
+    (expr_list (use (reg:SI 4 a0))
+        (nil)))
+
+(jump_insn 155 38 156 (nil) (set (pc)
+        (label_ref 108)) -1 (nil)
+    (nil))
+
+(barrier 156 155 127)
+
+(note 127 156 134 NOTE_INSN_DELETED)
+
+(note 134 127 0 NOTE_INSN_DELETED)
+
+;; Function Pin_PolDetc_Callback
+
+(note:HI 2 0 142 NOTE_INSN_DELETED)
+
+(note:HI 142 2 8 [bb 0] NOTE_INSN_BASIC_BLOCK)
+
+(note:HI 8 142 19 NOTE_INSN_FUNCTION_BEG)
+
+(note:HI 19 8 14 NOTE_INSN_DELETED)
+
+(insn:HI 14 19 15 0x407c6500 (set (reg:SI 4 a0 [187])
+        (ashift:SI (reg/v:SI 4 a0 [181])
+            (const_int 3 [0x3]))) 195 {ashlsi3_internal1} (nil)
+    (expr_list:REG_EQUAL (ashift:SI (reg/v:SI 4 a0 [181])
+            (const_int 3 [0x3]))
+        (nil)))
+
+(insn:HI 15 14 169 0x407c6500 (set (reg:SI 4 a0 [188])
+        (plus:SI (reg:SI 4 a0 [187])
+            (reg/v:SI 5 a1 [182]))) 4 {addsi3_internal} (insn_list 14 (nil))
+    (expr_list:REG_DEAD (reg/v:SI 5 a1 [182])
+        (nil)))
+
+(insn/f 169 15 18 (nil) (set (reg/f:SI 29 sp)
+        (minus:SI (reg/f:SI 29 sp)
+            (const_int 24 [0x18]))) 18 {subsi3_internal} (nil)
+    (expr_list:REG_FRAME_RELATED_EXPR (set:SI (reg/f:SI 29 sp)
+            (plus:SI (reg/f:SI 29 sp)
+                (const_int -24 [0xffffffffffffffe8])))
+        (nil)))
+
+(insn:HI 18 169 171 0x407c6500 (set (reg:SI 4 a0 [191])
+        (ashift:SI (reg:SI 4 a0 [188])
+            (const_int 2 [0x2]))) 195 {ashlsi3_internal1} (insn_list 15 (nil))
+    (expr_list:REG_EQUAL (ashift:SI (reg:SI 4 a0 [188])
+            (const_int 2 [0x2]))
+        (nil)))
+
+(insn/f 171 18 21 (nil) (set (mem/u:SI (plus:SI (reg/f:SI 29 sp)
+                (const_int 16 [0x10])) [0 S4 A32])
+        (reg:SI 16 s0)) 166 {movsi_internal} (insn_list 169 (nil))
+    (expr_list:REG_DEAD (reg:SI 16 s0)
+        (expr_list:REG_FRAME_RELATED_EXPR (set/f:SI (mem:SI (plus:SI (reg/f:SI 29 sp)
+                        (const_int 16 [0x10])) [0 S4 A32])
+                (reg:SI 16 s0))
+            (nil))))
+
+(insn:HI 21 171 170 0x407c6500 (set (reg/v/f:SI 16 s0 [185])
+        (mem/s/j:SI (plus:SI (reg:SI 4 a0 [191])
+                (const:SI (plus:SI (symbol_ref:SI ("CPC5621_Devices"))
+                        (const_int -4 [0xfffffffffffffffc])))) [0 CPC5621_Devices S4 A32])) 166 {movsi_internal} (insn_list:REG_DEP_ANTI 171 (insn_list 18 (nil)))
+    (expr_list:REG_DEAD (reg:SI 4 a0 [191])
+        (nil)))
+
+(insn/f 170 21 172 (nil) (set (mem/u:SI (plus:SI (reg/f:SI 29 sp)
+                (const_int 20 [0x14])) [0 S4 A32])
+        (reg:SI 31 ra)) 166 {movsi_internal} (insn_list 169 (nil))
+    (expr_list:REG_DEAD (reg:SI 31 ra)
+        (expr_list:REG_FRAME_RELATED_EXPR (set/f:SI (mem:SI (plus:SI (reg/f:SI 29 sp)
+                        (const_int 20 [0x14])) [0 S4 A32])
+                (reg:SI 31 ra))
+            (nil))))
+
+(note 172 170 23 NOTE_INSN_PROLOGUE_END)
+
+(jump_insn:HI 23 172 147 0x407c6500 (set (pc)
+        (if_then_else (eq:SI (reg/v/f:SI 16 s0 [185])
+                (const_int 0 [0x0]))
+            (label_ref 180)
+            (pc))) 221 {branch_zero} (insn_list:REG_DEP_ANTI 169 (insn_list:REG_DEP_ANTI 14 (insn_list:REG_DEP_ANTI 15 (insn_list:REG_DEP_ANTI 18 (insn_list 21 (insn_list:REG_DEP_ANTI 170 (insn_list:REG_DEP_ANTI 171 (nil))))))))
+    (expr_list:REG_BR_PROB (const_int 1900 [0x76c])
+        (nil)))
+
+(note:HI 147 23 46 [bb 1] NOTE_INSN_BASIC_BLOCK)
+
+(insn:HI 46 147 47 0x407c6500 (set (reg:SI 2 v0 [198])
+        (mem/s/j:SI (plus:SI (reg/v/f:SI 16 s0 [185])
+                (const_int 88 [0x58])) [0 <variable>.HookMode+0 S4 A32])) 166 {movsi_internal} (nil)
+    (expr_list:REG_EQUIV (mem/s/j:SI (plus:SI (reg/v/f:SI 16 s0 [185])
+                (const_int 88 [0x58])) [0 <variable>.HookMode+0 S4 A32])
+        (nil)))
+
+(jump_insn:HI 47 46 148 0x407c6500 (set (pc)
+        (if_then_else (ne:SI (reg:SI 2 v0 [198])
+                (const_int 0 [0x0]))
+            (label_ref 141)
+            (pc))) 221 {branch_zero} (insn_list 46 (nil))
+    (expr_list:REG_DEAD (reg:SI 2 v0 [198])
+        (expr_list:REG_BR_PROB (const_int 5000 [0x1388])
+            (nil))))
+
+(note:HI 148 47 55 [bb 2] NOTE_INSN_BASIC_BLOCK)
+
+(insn:HI 55 148 67 0x407c6580 (set (reg/v/f:SI 4 a0 [199])
+        (mem/s/j:SI (plus:SI (reg/v/f:SI 16 s0 [185])
+                (const_int 20 [0x14])) [0 <variable>.ExceSem+0 S4 A32])) 166 {movsi_internal} (nil)
+    (nil))
+
+(insn:HI 67 55 75 0x407c6600 (parallel [
+            (set (reg/v:SI 2 v0 [204])
+                (asm_operands/v:SI (".set push                                   
+.set noreorder           # atomic_sub_return
+1:   ll    %1, %2                           
+     subu  %0, %1, %3                       
+     sc    %0, %2                           
+     beqz  %0, 1b                           
+     subu  %0, %1, %3                       
+     sync                                   
+.set pop                                    
+") ("=&r") 0 [
+                        (const_int 1 [0x1])
+                        (mem/s/v/j:SI (reg/v/f:SI 4 a0 [199]) [0 <variable>.counter+0 S4 A32])
+                    ]
+                     [
+                        (asm_input:SI ("Ir"))
+                        (asm_input:SI ("m"))
+                    ] ("/home/janssenr/fxo/1.5.34_release/source/kernel/opensource/linux_2_4_20/include/asm/atomic.h") 189))
+            (set (reg/v:SI 3 v1 [203])
+                (asm_operands/v:SI (".set push                                   
+.set noreorder           # atomic_sub_return
+1:   ll    %1, %2                           
+     subu  %0, %1, %3                       
+     sc    %0, %2                           
+     beqz  %0, 1b                           
+     subu  %0, %1, %3                       
+     sync                                   
+.set pop                                    
+") ("=&r") 1 [
+                        (const_int 1 [0x1])
+                        (mem/s/v/j:SI (reg/v/f:SI 4 a0 [199]) [0 <variable>.counter+0 S4 A32])
+                    ]
+                     [
+                        (asm_input:SI ("Ir"))
+                        (asm_input:SI ("m"))
+                    ] ("/home/janssenr/fxo/1.5.34_release/source/kernel/opensource/linux_2_4_20/include/asm/atomic.h") 189))
+            (set (mem/s/v/j:SI (reg/v/f:SI 4 a0 [199]) [0 <variable>.counter+0 S4 A32])
+                (asm_operands/v:SI (".set push                                   
+.set noreorder           # atomic_sub_return
+1:   ll    %1, %2                           
+     subu  %0, %1, %3                       
+     sc    %0, %2                           
+     beqz  %0, 1b                           
+     subu  %0, %1, %3                       
+     sync                                   
+.set pop                                    
+") ("=m") 2 [
+                        (const_int 1 [0x1])
+                        (mem/s/v/j:SI (reg/v/f:SI 4 a0 [199]) [0 <variable>.counter+0 S4 A32])
+                    ]
+                     [
+                        (asm_input:SI ("Ir"))
+                        (asm_input:SI ("m"))
+                    ] ("/home/janssenr/fxo/1.5.34_release/source/kernel/opensource/linux_2_4_20/include/asm/atomic.h") 189))
+            (clobber (mem:BLK (scratch) [0 A8]))
+        ]) -1 (insn_list 55 (nil))
+    (expr_list:REG_UNUSED (reg/v:SI 3 v1 [203])
+        (nil)))
+
+(jump_insn:HI 75 67 81 0x407c6580 (set (pc)
+        (if_then_else (lt:SI (reg/v:SI 2 v0 [204])
+                (const_int 0 [0x0]))
+            (label_ref 181)
+            (pc))) 221 {branch_zero} (insn_list:REG_DEP_ANTI 55 (insn_list 67 (nil)))
+    (expr_list:REG_DEAD (reg/v:SI 2 v0 [204])
+        (expr_list:REG_BR_PROB (const_int 1023 [0x3ff])
+            (nil))))
+
+(code_label:HI 81 75 152 341 "" [1 uses])
+
+(note:HI 152 81 86 [bb 3] NOTE_INSN_BASIC_BLOCK)
+
+(insn:HI 86 152 164 0x407c6500 (set (reg:SI 2 v0 [206])
+        (mem/s/j:SI (plus:SI (reg/v/f:SI 16 s0 [185])
+                (const_int 192 [0xc0])) [0 S4 A32])) 166 {movsi_internal} (nil)
+    (expr_list:REG_EQUIV (mem/s/j:SI (plus:SI (reg/v/f:SI 16 s0 [185])
+                (const_int 192 [0xc0])) [0 S4 A32])
+        (nil)))
+
+(insn 164 86 88 (nil) (set (reg:SI 3 v1 [208])
+        (const_int 536870912 [0x20000000])) 166 {movsi_internal} (nil)
+    (expr_list:REG_EQUIV (const_int 536870912 [0x20000000])
+        (nil)))
+
+(insn:HI 88 164 163 0x407c6500 (set (reg:SI 2 v0 [207])
+        (ior:SI (reg:SI 2 v0 [206])
+            (reg:SI 3 v1 [208]))) 103 {*mips.md:3662} (insn_list 164 (insn_list 86 (nil)))
+    (expr_list:REG_DEAD (reg:SI 3 v1 [208])
+        (expr_list:REG_EQUAL (ior:SI (reg:SI 2 v0 [206])
+                (const_int 536870912 [0x20000000]))
+            (nil))))
+
+(insn 163 88 93 (nil) (set (reg:SI 5 a1 [211])
+        (const_int 134217728 [0x8000000])) 166 {movsi_internal} (nil)
+    (expr_list:REG_EQUIV (const_int 134217728 [0x8000000])
+        (nil)))
+
+(insn:HI 93 163 100 0x407c6500 (set (reg:SI 2 v0 [210])
+        (ior:SI (reg:SI 2 v0 [207])
+            (reg:SI 5 a1 [211]))) 103 {*mips.md:3662} (insn_list 163 (insn_list 88 (nil)))
+    (expr_list:REG_DEAD (reg:SI 5 a1 [211])
+        (expr_list:REG_EQUIV (mem/s/j:SI (plus:SI (reg/v/f:SI 16 s0 [185])
+                    (const_int 192 [0xc0])) [0 S4 A32])
+            (expr_list:REG_EQUAL (ior:SI (reg:SI 2 v0 [206])
+                    (const_int 671088640 [0x28000000]))
+                (nil)))))
+
+(insn:HI 100 93 94 0x407c6680 (set (reg/v/f:SI 4 a0 [212])
+        (mem/s/j:SI (plus:SI (reg/v/f:SI 16 s0 [185])
+                (const_int 20 [0x14])) [0 <variable>.ExceSem+0 S4 A32])) 166 {movsi_internal} (nil)
+    (nil))
+
+(insn:HI 94 100 112 0x407c6500 (set (mem/s/j:SI (plus:SI (reg/v/f:SI 16 s0 [185])
+                (const_int 192 [0xc0])) [0 S4 A32])
+        (reg:SI 2 v0 [210])) 166 {movsi_internal} (insn_list 93 (insn_list:REG_DEP_ANTI 86 (nil)))
+    (expr_list:REG_DEAD (reg:SI 2 v0 [210])
+        (nil)))
+
+(insn:HI 112 94 120 0x407c6700 (parallel [
+            (set (reg/v:SI 3 v1 [217])
+                (asm_operands/v:SI (".set push               # atomic_add_return
+.set noreorder                             
+1:   ll      %1, %2                        
+     addu    %0, %1, %3                    
+     sc      %0, %2                        
+     beqz    %0, 1b                        
+     addu    %0, %1, %3                    
+     sync                                  
+.set pop                                   
+") ("=&r") 0 [
+                        (const_int 1 [0x1])
+                        (mem/s/v/j:SI (reg/v/f:SI 4 a0 [212]) [0 <variable>.counter+0 S4 A32])
+                    ]
+                     [
+                        (asm_input:SI ("Ir"))
+                        (asm_input:SI ("m"))
+                    ] ("/home/janssenr/fxo/1.5.34_release/source/kernel/opensource/linux_2_4_20/include/asm/atomic.h") 168))
+            (set (reg/v:SI 5 a1 [216])
+                (asm_operands/v:SI (".set push               # atomic_add_return
+.set noreorder                             
+1:   ll      %1, %2                        
+     addu    %0, %1, %3                    
+     sc      %0, %2                        
+     beqz    %0, 1b                        
+     addu    %0, %1, %3                    
+     sync                                  
+.set pop                                   
+") ("=&r") 1 [
+                        (const_int 1 [0x1])
+                        (mem/s/v/j:SI (reg/v/f:SI 4 a0 [212]) [0 <variable>.counter+0 S4 A32])
+                    ]
+                     [
+                        (asm_input:SI ("Ir"))
+                        (asm_input:SI ("m"))
+                    ] ("/home/janssenr/fxo/1.5.34_release/source/kernel/opensource/linux_2_4_20/include/asm/atomic.h") 168))
+            (set (mem/s/v/j:SI (reg/v/f:SI 4 a0 [212]) [0 <variable>.counter+0 S4 A32])
+                (asm_operands/v:SI (".set push               # atomic_add_return
+.set noreorder                             
+1:   ll      %1, %2                        
+     addu    %0, %1, %3                    
+     sc      %0, %2                        
+     beqz    %0, 1b                        
+     addu    %0, %1, %3                    
+     sync                                  
+.set pop                                   
+") ("=m") 2 [
+                        (const_int 1 [0x1])
+                        (mem/s/v/j:SI (reg/v/f:SI 4 a0 [212]) [0 <variable>.counter+0 S4 A32])
+                    ]
+                     [
+                        (asm_input:SI ("Ir"))
+                        (asm_input:SI ("m"))
+                    ] ("/home/janssenr/fxo/1.5.34_release/source/kernel/opensource/linux_2_4_20/include/asm/atomic.h") 168))
+            (clobber (mem:BLK (scratch) [0 A8]))
+        ]) -1 (insn_list 163 (insn_list 164 (insn_list:REG_DEP_ANTI 88 (insn_list 93 (insn_list 94 (insn_list:REG_DEP_ANTI 86 (insn_list 100 (nil))))))))
+    (expr_list:REG_UNUSED (reg/v:SI 5 a1 [216])
+        (nil)))
+
+(jump_insn:HI 120 112 126 0x407c6680 (set (pc)
+        (if_then_else (le:SI (reg/v:SI 3 v1 [217])
+                (const_int 0 [0x0]))
+            (label_ref 182)
+            (pc))) 221 {branch_zero} (insn_list:REG_DEP_ANTI 86 (insn_list:REG_DEP_ANTI 100 (insn_list:REG_DEP_ANTI 164 (insn_list:REG_DEP_ANTI 88 (insn_list:REG_DEP_ANTI 163 (insn_list:REG_DEP_ANTI 93 (insn_list:REG_DEP_ANTI 94 (insn_list 112 (nil)))))))))
+    (expr_list:REG_DEAD (reg/v:SI 3 v1 [217])
+        (expr_list:REG_BR_PROB (const_int 1023 [0x3ff])
+            (nil))))
+
+(code_label:HI 126 120 156 344 "" [1 uses])
+
+(note:HI 156 126 131 [bb 4] NOTE_INSN_BASIC_BLOCK)
+
+(insn:HI 131 156 133 0x407c6500 (set (reg/f:SI 4 a0 [219])
+        (plus:SI (reg/v/f:SI 16 s0 [185])
+            (const_int 12 [0xc]))) 4 {addsi3_internal} (nil)
+    (expr_list:REG_DEAD (reg/v/f:SI 16 s0 [185])
+        (nil)))
+
+(insn:HI 133 131 134 0x407c6500 (set (reg:SI 5 a1)
+        (const_int 1 [0x1])) 166 {movsi_internal} (nil)
+    (expr_list:REG_EQUAL (const_int 1 [0x1])
+        (nil)))
+
+(insn:HI 134 133 161 0x407c6500 (set (reg:SI 6 a2)
+        (const_int 1 [0x1])) 166 {movsi_internal} (nil)
+    (expr_list:REG_EQUAL (const_int 1 [0x1])
+        (nil)))
+
+(insn 161 134 136 (nil) (set (reg/f:SI 2 v0 [220])
+        (symbol_ref:SI ("__wake_up"))) 166 {movsi_internal} (nil)
+    (expr_list:REG_EQUIV (symbol_ref:SI ("__wake_up"))
+        (nil)))
+
+(call_insn:HI 136 161 139 0x407c6500 (parallel [
+            (call (mem:SI (reg/f:SI 2 v0 [220]) [0 S4 A32])
+                (const_int 16 [0x10]))
+            (clobber (reg:SI 31 ra))
+        ]) 311 {call_internal3a} (insn_list 134 (insn_list 133 (insn_list 131 (insn_list 161 (nil)))))
+    (expr_list:REG_DEAD (reg:SI 4 a0)
+        (expr_list:REG_DEAD (reg:SI 5 a1)
+            (expr_list:REG_DEAD (reg:SI 6 a2)
+                (expr_list:REG_DEAD (reg/f:SI 2 v0 [220])
+                    (expr_list:REG_UNUSED (reg:SI 31 ra)
+                        (nil))))))
+    (expr_list (use (reg:SI 6 a2))
+        (expr_list (use (reg:SI 5 a1))
+            (expr_list (use (reg:SI 4 a0))
+                (nil)))))
+
+(note:HI 139 136 141 NOTE_INSN_FUNCTION_END)
+
+(code_label:HI 141 139 158 334 "" [3 uses])
+
+(note:HI 158 141 173 [bb 5] NOTE_INSN_BASIC_BLOCK)
+
+(note 173 158 174 NOTE_INSN_EPILOGUE_BEG)
+
+(insn 174 173 175 (nil) (set (reg:SI 31 ra)
+        (mem/u:SI (plus:SI (reg/f:SI 29 sp)
+                (const_int 20 [0x14])) [0 S4 A32])) 166 {movsi_internal} (nil)
+    (nil))
+
+(insn 175 174 176 (nil) (set (reg:SI 16 s0)
+        (mem/u:SI (plus:SI (reg/f:SI 29 sp)
+                (const_int 16 [0x10])) [0 S4 A32])) 166 {movsi_internal} (nil)
+    (nil))
+
+(insn 176 175 177 (nil) (unspec_volatile [
+            (const_int 0 [0x0])
+        ] 6) 301 {blockage} (insn_list 174 (insn_list 175 (nil)))
+    (nil))
+
+(insn 177 176 178 (nil) (set (reg/f:SI 29 sp)
+        (plus:SI (reg/f:SI 29 sp)
+            (const_int 24 [0x18]))) 4 {addsi3_internal} (insn_list 176 (nil))
+    (nil))
+
+(jump_insn 178 177 179 (nil) (parallel [
+            (use (reg:SI 31 ra))
+            (return)
+        ]) 303 {return_internal} (insn_list:REG_DEP_ANTI 174 (insn_list:REG_DEP_ANTI 175 (insn_list 177 (insn_list 176 (nil)))))
+    (expr_list:REG_DEAD (reg:SI 31 ra)
+        (nil)))
+
+(barrier 179 178 182)
+
+(code_label 182 179 154 347 "" [1 uses])
+
+(note:HI 154 182 162 [bb 6] NOTE_INSN_BASIC_BLOCK)
+
+(insn 162 154 124 (nil) (set (reg/f:SI 2 v0 [218])
+        (symbol_ref:SI ("__up"))) 166 {movsi_internal} (nil)
+    (expr_list:REG_EQUIV (symbol_ref:SI ("__up"))
+        (nil)))
+
+(call_insn:HI 124 162 183 0x407c6680 (parallel [
+            (call (mem:SI (reg/f:SI 2 v0 [218]) [0 S4 A32])
+                (const_int 16 [0x10]))
+            (clobber (reg:SI 31 ra))
+        ]) 311 {call_internal3a} (insn_list 162 (nil))
+    (expr_list:REG_DEAD (reg:SI 4 a0)
+        (expr_list:REG_DEAD (reg/f:SI 2 v0 [218])
+            (expr_list:REG_UNUSED (reg:SI 31 ra)
+                (nil))))
+    (expr_list (use (reg:SI 4 a0))
+        (nil)))
+
+(jump_insn 183 124 184 (nil) (set (pc)
+        (label_ref 126)) -1 (nil)
+    (nil))
+
+(barrier 184 183 181)
+
+(code_label 181 184 150 346 "" [1 uses])
+
+(note:HI 150 181 165 [bb 7] NOTE_INSN_BASIC_BLOCK)
+
+(insn 165 150 79 (nil) (set (reg/f:SI 2 v0 [205])
+        (symbol_ref:SI ("__down"))) 166 {movsi_internal} (nil)
+    (expr_list:REG_EQUIV (symbol_ref:SI ("__down"))
+        (nil)))
+
+(call_insn:HI 79 165 185 0x407c6580 (parallel [
+            (call (mem:SI (reg/f:SI 2 v0 [205]) [0 S4 A32])
+                (const_int 16 [0x10]))
+            (clobber (reg:SI 31 ra))
+        ]) 311 {call_internal3a} (insn_list 165 (nil))
+    (expr_list:REG_DEAD (reg:SI 4 a0)
+        (expr_list:REG_DEAD (reg/f:SI 2 v0 [205])
+            (expr_list:REG_UNUSED (reg:SI 31 ra)
+                (nil))))
+    (expr_list (use (reg:SI 4 a0))
+        (nil)))
+
+(jump_insn 185 79 186 (nil) (set (pc)
+        (label_ref 81)) -1 (nil)
+    (nil))
+
+(barrier 186 185 180)
+
+(code_label 180 186 143 345 "" [1 uses])
+
+(note:HI 143 180 167 [bb 8] NOTE_INSN_BASIC_BLOCK)
+
+(insn 167 143 36 (nil) (set (reg:SI 2 v0 [194])
+        (mem/f:SI (symbol_ref:SI ("G_nTraceGroupCPC5621_DRV")) [0 G_nTraceGroupCPC5621_DRV+0 S4 A32])) 166 {movsi_internal} (nil)
+    (expr_list:REG_EQUIV (mem/f:SI (symbol_ref:SI ("G_nTraceGroupCPC5621_DRV")) [0 G_nTraceGroupCPC5621_DRV+0 S4 A32])
+        (nil)))
+
+(insn:HI 36 167 31 0x407c6500 (set (reg:SI 4 a0)
+        (symbol_ref/f:SI ("*$LC4"))) 166 {movsi_internal} (nil)
+    (expr_list:REG_EQUAL (symbol_ref/f:SI ("*$LC4"))
+        (nil)))
+
+(insn:HI 31 36 32 0x407c6500 (set (reg:SI 2 v0 [195])
+        (ltu:SI (reg:SI 2 v0 [194])
+            (const_int 4 [0x4]))) 263 {sltu_si} (insn_list 167 (nil))
+    (nil))
+
+(jump_insn:HI 32 31 144 0x407c6500 (set (pc)
+        (if_then_else (ne:SI (reg:SI 2 v0 [195])
+                (const_int 0 [0x0]))
+            (pc)
+            (label_ref 141))) 222 {branch_zero_inverted} (insn_list:REG_DEP_ANTI 36 (insn_list:REG_DEP_ANTI 167 (insn_list 31 (nil))))
+    (expr_list:REG_DEAD (reg:SI 2 v0 [195])
+        (expr_list:REG_BR_PROB (const_int 7000 [0x1b58])
+            (nil))))
+
+(note:HI 144 32 166 [bb 9] NOTE_INSN_BASIC_BLOCK)
+
+(insn 166 144 38 (nil) (set (reg/f:SI 2 v0 [197])
+        (symbol_ref:SI ("printk"))) 166 {movsi_internal} (nil)
+    (expr_list:REG_EQUIV (symbol_ref:SI ("printk"))
+        (nil)))
+
+(call_insn:HI 38 166 187 0x407c6500 (parallel [
+            (set (reg:SI 2 v0)
+                (call (mem:SI (reg/f:SI 2 v0 [197]) [0 S4 A32])
+                    (const_int 16 [0x10])))
+            (clobber (reg:SI 31 ra))
+        ]) 319 {call_value_internal3a} (insn_list 166 (nil))
+    (expr_list:REG_DEAD (reg:SI 4 a0)
+        (expr_list:REG_UNUSED (reg:SI 2 v0)
+            (expr_list:REG_UNUSED (reg:SI 31 ra)
+                (nil))))
+    (expr_list (use (reg:SI 4 a0))
+        (nil)))
+
+(jump_insn 187 38 188 (nil) (set (pc)
+        (label_ref 141)) -1 (nil)
+    (nil))
+
+(barrier 188 187 160)
+
+(note 160 188 168 NOTE_INSN_DELETED)
+
+(note 168 160 0 NOTE_INSN_DELETED)

@@ -1,0 +1,121 @@
+******************************************************************************
+       Copyright (c) 2003, Infineon Technologies.  All rights reserved.
+
+                               No Warranty
+   Because the program is licensed free of charge, there is no warranty for
+   the program, to the extent permitted by applicable law.  Except when
+   otherwise stated in writing the copyright holders and/or other parties
+   provide the program "as is" without warranty of any kind, either
+   expressed or implied, including, but not limited to, the implied
+   warranties of merchantability and fitness for a particular purpose. The
+   entire risk as to the quality and performance of the program is with
+   you.  should the program prove defective, you assume the cost of all
+   necessary servicing, repair or correction.
+
+   In no event unless required by applicable law or agreed to in writing
+   will any copyright holder, or any other party who may modify and/or
+   redistribute the program as permitted above, be liable to you for
+   damages, including any general, special, incidental or consequential
+   damages arising out of the use or inability to use the program
+   (including but not limited to loss of data or data being rendered
+   inaccurate or losses sustained by you or third parties or a failure of
+   the program to operate with any other programs), even if such holder or
+   other party has been advised of the possibility of such damages.
+
+******************************************************************************
+
+The autogen tool is verified with the MPC (Embedix), AMAZON, AM5120. Montavista
+is not yet verified.
+
+1. HOW TO COMPILE
+
+1.1 VxWorks / GNU
+Pls. use the Tornado project drv_vinetic.wpj
+
+1.2 VxWorks / GreenHills
+currently not supported
+
+1.3 Linux
+Execute the following commands. If you have to regenerate the automake files pls
+use the autogen.sh instead of configure script .
+
+VINETIC-CPE, Version 2.x
+------------------------
+./configure --build=i686-pc-linux --host=powerpc-linux-uclibc --enable-warnings --enable-kernelincl=/home/${USER}/linux/include --enable-trace --enable-2cpe --with-access-mode=MOTOROLA
+or
+./configure --build=i686-pc-linux --host=powerpc-linux-uclibc --enable-warnings --enable-kernelincl=/home/${USER}/linux/include --enable-trace --enable-2cpe --with-access-mode=INTEL_DEMUX
+or
+./configure --build=i686-pc-linux --host=powerpc-linux-uclibc --enable-warnings --enable-kernelincl=/home/${USER}/linux/include --enable-trace --enable-2cpe --with-access-mode=INTEL_MUX
+or
+./configure --build=i686-pc-linux --host=powerpc-linux-uclibc --enable-warnings --enable-kernelincl=/home/${USER}/linux/include --enable-trace --enable-2cpe --with-access-mode=SPI
+
+make clean all
+or
+make clean install
+
+
+VINETIC-4VIP,M,S family
+-----------------------
+./configure --build=i686-pc-linux --host=powerpc-linux --enable-warnings --enable-kernelincl=/export/easy334_linux/include --enable-lt --enable-v1 --enable-v2 --enable-trace --enable-incl-bin
+ucClibc:
+./configure --build=i686-pc-linux --host=powerpc-linux-uclibc --enable-warnings --enable-kernelincl=~/projects/uclibc/buildroot/build_powerpc/linux-2.4.26-erik/include --enable-lt --enable-v1 --enable-v2 --enable-trace --enable-incl-bin --prefix=/exports/${USER}_ppc/opt/ifx
+
+To modify compiler switches change the environment variable CFLAGS. For example: CFLAGS=-DDEFAULT_LM_NORMAL
+
+make
+
+1.3.2 Example for AM5120 board
+export CC=/export/tools/bin/mipsel-linux-gcc
+
+>> VINETIC-4VIP,M,S family
+./configure --build=i686-pc-linux --host=mipsel-linux --enable-warnings --enable-kernelincl=/export/ADM5120/linux-2.4.20-MVS/include --enable-trace --enable-incl-bin --disable-v2 --enable-8bit
+
+>> VINETIC-CPE, Version 2.x
+./configure --build=i686-pc-linux --host=mipsel-linux --enable-warnings --enable-kernelincl=/export/ADM5120/linux-2.4.20-MVS/include --enable-trace --enable-2cpe --with-access-mode=INTEL_DEMUX --with-access-width=8
+
+
+1.3.3 Example for AMAZON board
+export CC=/root/uclibc-tool/toolchain/gcc-3.3.x/toolchain_mips/bin/mips-linux-gcc
+
+>> VINETIC-4VIP,M,S family
+./configure --build=i686-pc-linux --host=mips-linux --enable-warnings --enable-kernelincl=$HOME/projects/amazon/source/kernel/opensource/linux_2_4_20_mvl/include --enable-boardname=AMAZON --enable-spi --enable-trace --enable-incl-bin
+
+
+
+1.3.4 Adding compiler flags
+To compile a driver with debug symbols, the CFLAGS environment variable should be set to "-O1 -g3" before running the configure script. To switch back to an optimized driver, set CFLAGS to "-O2".
+
+with debug symbols
+export CFLAGS="-O1 -g3"
+
+with compiler optimization and without debug symbols (it's not sufficient to unset CFLGAS after having switched to debug symbols).
+export CFLAGS="-O2"
+
+
+
+2. HOW TO GET DOCUMENTATION
+change to ./doc directory and execute
+
+doxygen doxyconfig
+
+3. USER ADAPTATIONS
+
+For user specific adaptations (macros for instance), a file named 
+drv_config_user.default.h is provided with blank macros. 
+
+This file must be copied into the target build directory and renamed into 
+drv_config_user.h.
+
+After doing so, compiling with extra flag "ENABLE_USER_CONFIG" (set with option
+--enable-user-config if using automake) enables the driver to use user specific
+settings.
+
+4. FEATURE LIST
+
+The feature list for all driver interfaces is depicted in the file FEATURES.
+Refer to that file for an overview of all ioctl commands which are supported
+by the driver.
+
+
+
+

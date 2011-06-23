@@ -1,0 +1,640 @@
+
+AC_REVISION($Revision: 1.9 $)
+
+AC_INIT([VINETIC Device Driver],[1.1.12],[],[drv_vinetic])
+AC_CONFIG_SRCDIR(src/drv_vinetic_main.c)
+AM_INIT_AUTOMAKE
+
+# save the configure arguments
+CONFIGURE_OPTIONS="$ac_configure_args"
+AC_SUBST(CONFIGURE_OPTIONS)
+
+AC_CONFIG_HEADER(drv_config.h)
+
+if [ $CFLAGS == "" ] ; then
+   CFLAGS="-O2"
+fi
+
+AC_PROG_CC
+
+AH_TOP(
+[/******************************************************************************
+
+                               Copyright (c) 2005
+                            Infineon Technologies AG
+                  St. Martin Strasse 53; 81669 Munich, Germany
+
+  THE DELIVERY OF THIS SOFTWARE AS WELL AS THE HEREBY GRANTED NON-EXCLUSIVE,
+  WORLDWIDE LICENSE TO USE, COPY, MODIFY, DISTRIBUTE AND SUBLICENSE THIS
+  SOFTWARE IS FREE OF CHARGE.
+
+  THE LICENSED SOFTWARE IS PROVIDED "AS IS" AND INFINEON EXPRESSLY DISCLAIMS
+  ALL REPRESENTATIONS AND WARRANTIES, WHETHER EXPRESS OR IMPLIED, INCLUDING
+  WITHOUT LIMITATION, WARRANTIES OR REPRESENTATIONS OF WORKMANSHIP,
+  MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, DURABILITY, THAT THE
+  OPERATING OF THE LICENSED SOFTWARE WILL BE ERROR FREE OR FREE OF ANY THIRD
+  PARTY CLAIMS, INCLUDING WITHOUT LIMITATION CLAIMS OF THIRD PARTY INTELLECTUAL
+  PROPERTY INFRINGEMENT.
+
+  EXCEPT FOR ANY LIABILITY DUE TO WILLFUL ACTS OR GROSS NEGLIGENCE AND EXCEPT
+  FOR ANY PERSONAL INJURY INFINEON SHALL IN NO EVENT BE LIABLE FOR ANY CLAIM
+  OR DAMAGES OF ANY KIND, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+  ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+  DEALINGS IN THE SOFTWARE.
+
+ ******************************************************************************/
+#ifndef _DRV_CONFIG_H_
+#define _DRV_CONFIG_H_]
+)
+
+AH_BOTTOM([
+#endif /* _DRV_CONFIG_H_ */
+])
+
+AC_DEFINE_UNQUOTED([VIN_CONFIGURE_STR], ["$ac_configure_args"], [configure options string])
+
+dnl enable compiler warnings
+AM_CONDITIONAL(WARNINGS, false)
+AC_ARG_ENABLE(warnings,
+    AC_HELP_STRING(
+        [--enable-warnings],
+        [enable compiler warnings (GCC only)]
+    ),
+    [
+        AM_CONDITIONAL(WARNINGS, true)
+    ]
+)
+
+
+dnl enable debugging mode
+AC_ARG_ENABLE(debug,
+    AC_HELP_STRING(
+        [--enable-debug],
+        [enable debug features]
+    ),
+    [
+        if test $enableval = 'yes'; then
+            AC_DEFINE([DEBUG],[1],[enable debug features as asserts for example])
+            AM_CONDITIONAL(DEBUG, true)
+            CFLAGS="-O1 -g3"
+        else
+            AM_CONDITIONAL(DEBUG, false)
+        fi
+    ],
+    [
+        AM_CONDITIONAL(DEBUG, false)
+    ]
+)
+
+dnl enable use of proc filesystem entries
+AC_ARG_ENABLE(proc,
+    AC_HELP_STRING(
+        [--enable-proc],
+        [enable use of proc filesystem entries]
+    ),
+    [
+        if test $enableval = 'yes'; then
+            AC_MSG_RESULT(enable use of proc filesystem entries (Linux only))
+            AC_DEFINE([VINETIC_USE_PROC],[1],[enable use of proc filesystem entries (Linux only)])
+        fi
+    ],
+    [
+        AC_MSG_RESULT(enable use of proc filesystem entries (Linux only))
+        AC_DEFINE([VINETIC_USE_PROC],[1],[enable use of proc filesystem entries (Linux only)])
+    ]
+)
+
+dnl enable user configuration
+AC_ARG_ENABLE(user-config,
+    AC_HELP_STRING(
+        [--enable-user-config],
+        [enable user configuration]
+    ),
+    [
+       AC_MSG_RESULT(enable user configuration)
+       AC_DEFINE([ENABLE_USER_CONFIG],[1],[enable user configuration.])
+    ]
+)
+
+dnl set kernel include path
+DEFAULT_KERNEL_INCL_PATH='${HOME}/linux/include'
+AC_ARG_ENABLE(kernelincl,
+    AC_HELP_STRING(
+        [--enable-kernelincl=x],
+        [set the target kernel include path]
+    ),
+    [
+        if test -n $enableval; then
+           echo enable including of LINUX kernel headers from $enableval
+           AC_SUBST([KERNEL_INCL_PATH],[$enableval])
+        else
+           echo enable including of LINUX kernel headers from $DEFAULT_KERNEL_INCL_PATH
+           AC_SUBST([KERNEL_INCL_PATH],[$DEFAULT_KERNEL_INCL_PATH])
+        fi
+    ],
+    [
+        AC_MSG_ERROR([Please specify the kernel include path with --enable-kernelincl=path]);
+    ]
+)
+
+MAX_DEVICES=1
+dnl set the maximum number of devices supported
+AC_ARG_WITH(max-devices,
+    AC_HELP_STRING(
+        [--with-max-devices=val],
+        [maximum VINETIC devices to support.]
+    ),
+    [
+	    if test "$withval" = yes; then
+		    AC_MSG_ERROR([Please provide a value for the maximum devices]);
+	    fi
+	    AC_MSG_RESULT([enable support for $withval device(s)])
+        MAX_DEVICES=$withval
+    ],
+    [
+        AC_MSG_RESULT([enable support for 1 device (default), set max devices with --with-max-devices=val])
+    ]
+)
+dnl make sure this is defined even if option is not given!
+AC_DEFINE_UNQUOTED([VINETIC_MAX_DEVICES],[$MAX_DEVICES],[Maximum VINETIC devices to support])
+
+dnl enable evaluation features
+AM_CONDITIONAL(EVALUATION, false)
+AC_ARG_ENABLE(eval,
+    AC_HELP_STRING(
+        [--enable-eval],
+        [enable evaluation features]
+    ),
+    [
+       if test $enableval = 'yes'; then
+          AC_MSG_RESULT(enable evaluation features.)
+          AC_DEFINE([EVALUATION],[1],[enable evaluation features e.g. for testing with WinEASY])
+          AM_CONDITIONAL(EVALUATION, true)
+       else
+          AC_MSG_RESULT(disable evaluation features)
+       fi
+    ]
+)
+
+dnl enable runtime traces
+AC_ARG_ENABLE(trace,
+   AC_HELP_STRING(
+      [--enable-trace],
+      [enable runtime traces]
+   ),
+   [
+      if test $enableval = 'yes'; then
+	    AC_MSG_RESULT(enable runtime traces)
+        AC_DEFINE([ENABLE_TRACE],[1],[enable trace outputs in general])
+        AC_DEFINE([RUNTIME_TRACE],[1],[enable runtime traces as register access])
+      else
+         AC_MSG_RESULT(disable runtime traces)
+      fi
+    ]
+)
+
+dnl enable 8 Bit bus access (not VINETIC-2CPE, version 2.1)
+AC_ARG_ENABLE(8bit,
+    AC_HELP_STRING(
+        [--enable-8bit],
+        [enable 8 Bit bus access]
+    ),
+    [
+	    AC_MSG_RESULT(enable 8 Bit bus access)
+        AC_DEFINE([VIN_8BIT],[1],[enable 8 Bit bus access])
+    ]
+)
+
+dnl enable SPI interface
+AC_ARG_ENABLE(spi,
+    AC_HELP_STRING(
+        [--enable-spi],
+        [enable SPI interface]
+    ),
+    [
+	   AC_MSG_RESULT(enable SPI interface.)
+       AC_DEFINE([VIN_SPI],[1],[enable SPI interface, needs user configuration])
+       AC_MSG_RESULT(enable user configuration for SPI support)
+       AC_DEFINE([ENABLE_USER_CONFIG],[1],[enable user configuration])
+    ]
+)
+
+dnl enable Vinetic V1.x support
+AC_ARG_ENABLE(v1,
+    AC_HELP_STRING(
+      [--enable-v1],
+      [enable Vinetic V1.x support]
+    ),
+    [
+        if test $enableval = 'yes'; then
+            AC_MSG_RESULT(enable Vinetic V1.x support)
+            AC_DEFINE([VIN_V14_SUPPORT],[1],[enable Vinetic V1.x support])
+        else
+            AC_MSG_RESULT(disable Vinetic V1.x support)
+        fi
+    ],
+    [
+        dnl Enable automatically:
+	    AC_MSG_RESULT([enable Vinetic V1.x support (default), disable with --disable-v1])
+        AC_DEFINE([VIN_V14_SUPPORT],[1],[enable Vinetic V1.x support])
+    ]
+)
+
+dnl enable Vinetic V2.x support
+AC_ARG_ENABLE(v2,
+    AC_HELP_STRING(
+      [--enable-v2],
+      [enable Vinetic V2.x support]
+    ),
+    [
+        if test $enableval = 'yes'; then
+            AC_MSG_RESULT(enable Vinetic V2.x support)
+            AC_DEFINE([VIN_V21_SUPPORT],[1],[enable Vinetic V2.x support])
+        else
+            AC_MSG_RESULT(disable Vinetic V2.x support)
+        fi
+    ],
+    [
+        dnl enable automatically:
+	    AC_MSG_RESULT([enable Vinetic V2.x support (default), disable with --disable-v2])
+        AC_DEFINE([VIN_V21_SUPPORT],[1],[enable Vinetic V2.x support])
+    ]
+)
+
+dnl TAPI features
+AM_CONDITIONAL(TAPI, false)
+
+dnl enable TAPI linetesting features
+AC_ARG_ENABLE(lt,
+   AC_HELP_STRING(
+      [--enable-lt],
+      [enable line testing services including GR909]
+   ),
+   [
+      if test $enableval = 'yes'; then
+         AC_DEFINE([TAPI],[1],[enable TAPI Interface])
+         AM_CONDITIONAL(TAPI, true)
+	      AC_MSG_RESULT(enable TAPI line testing services)
+         AC_DEFINE([TAPI_LT],[1],[enable line testing])
+         AC_DEFINE([TAPI_GR909],[1],[enable TAPI GR909 tests])
+      else
+	      AC_MSG_RESULT(disable line testing services)
+      fi
+   ]
+)
+
+dnl enable TAPI Voice support
+AC_ARG_ENABLE(voice,
+    AC_HELP_STRING(
+        [--enable-voice],
+        [enable Voice support]
+    ),
+    [
+        if test $enableval = 'yes'; then
+            AC_DEFINE([TAPI],[1],[enable TAPI interface])
+            AM_CONDITIONAL(TAPI, true)
+            AC_MSG_RESULT(enable TAPI Voice support)
+            AC_DEFINE([TAPI_VOICE],[1],[enable Voice support])
+        else
+            AC_MSG_RESULT(disable Voice support)
+        fi
+    ],
+    [
+        dnl Enable automatically:
+        AC_MSG_RESULT([enable TAPI Voice support (default), disable with --disable-voice])
+        AC_DEFINE([TAPI],[1],[enable TAPI interface])
+        AM_CONDITIONAL(TAPI, true)
+        AC_DEFINE([TAPI_VOICE],[1],[enable Voice support])
+    ]
+)
+
+dnl enable TAPI DTMF support
+AC_ARG_ENABLE(dtmf,
+    AC_HELP_STRING(
+        [--enable-dtmf],
+        [enable TAPI DTMF support]
+    ),
+    [
+        if test $enableval = 'yes'; then
+            AC_DEFINE([TAPI],[1],[enable TAPI interface])
+            AM_CONDITIONAL(TAPI, true)
+            AC_MSG_RESULT(enable TAPI DTMF support)
+            AC_DEFINE([TAPI_DTMF],[1],[enable TAPI DTMF support])
+        else
+            AC_MSG_RESULT(disable TAPI DTMF support)
+        fi
+    ],
+    [
+        dnl enable automatically:
+        AC_MSG_RESULT([enable TAPI DTMF support (default), disable with --disable-dtmf])
+        AC_DEFINE([TAPI],[1],[enable TAPI Interface])
+        AM_CONDITIONAL(TAPI, true)
+        AC_DEFINE([TAPI_DTMF],[1],[enable TAPI DTMF support])
+    ]
+)
+
+dnl enable TAPI CID support
+AC_ARG_ENABLE(cid,
+    AC_HELP_STRING(
+        [--enable-cid],
+        [enable TAPI CID support]
+    ),
+    [
+        if test $enableval = 'yes'; then
+            AC_DEFINE([TAPI],[1],[enable TAPI Interface])
+            AM_CONDITIONAL(TAPI, true)
+            AC_MSG_RESULT(enable TAPI CID support.)
+            AC_DEFINE([TAPI_CID],[1],[enable TAPI CID support])
+        else
+            AC_MSG_RESULT(disable TAPI CID support.)
+        fi
+    ],
+    [
+        dnl enable automatically:
+        AC_MSG_RESULT([enable TAPI CID support (default), disable with --disable-cid])
+        AC_DEFINE([TAPI],[1],[enable TAPI Interface])
+        AM_CONDITIONAL(TAPI, true)
+        AC_DEFINE([TAPI_CID],[1],[enable TAPI CID support])
+    ]
+)
+
+dnl enable TAPI FAX support
+AC_ARG_ENABLE(fax,
+    AC_HELP_STRING(
+        [--enable-fax],
+        [enable TAPI T.38 FAX support]
+    ),
+    [
+        if test $enableval = 'yes'; then
+            AC_DEFINE([TAPI],[1],[enable TAPI Interface])
+            AM_CONDITIONAL(TAPI, true)
+            AC_MSG_RESULT(enable TAPI FAX support)
+            AC_DEFINE([TAPI_FAX_T38],[1],[enable TAPI FAX support])
+        else
+            AC_MSG_RESULT(disable TAPI FAX support)
+        fi
+    ],
+    [
+        dnl Enable automatically:
+        AC_MSG_RESULT([enable TAPI FAX support (default), disable with --disable-fax])
+        AC_DEFINE([TAPI],[1],[enable TAPI Interface])
+        AM_CONDITIONAL(TAPI, true)
+        AC_DEFINE([TAPI_FAX_T38],[1],[enable TAPI FAX support])
+    ]
+)
+
+dnl enable including default VINETIC firmware
+AC_ARG_ENABLE(incl-bin,
+    AC_HELP_STRING(
+        [--enable-incl-bin],
+        [enable including default VINETIC firmware]
+    ),
+    [
+        if test $enableval = 'yes'; then
+        AC_MSG_RESULT(enable including default VINETIC firmware)
+        AC_DEFINE([VIN_DEFAULT_FW],[1],[enable including default firmware])
+        else
+            AC_MSG_RESULT(disable including default VINETIC firmware)
+        fi
+    ]
+)
+
+AM_CONDITIONAL(VINETIC_2CPE, false)
+dnl choose between VINETIC type 2CPE and the rest...
+AC_ARG_ENABLE(2cpe,
+   AC_HELP_STRING(
+   	[--enable-2cpe],
+      [configure for VINETIC 2CPE or VINETIC family]
+   ),
+   [
+      if test $enableval = 'yes'; then
+         AC_MSG_RESULT([enable VINETIC 2CPE support, disabled VINETIC v1.x and v2.x support(!)])
+         AC_DEFINE([VIN_2CPE],[1],[enable Vinetic 2CPE support])
+         AM_CONDITIONAL(VINETIC_2CPE, true)
+         VIN2CPE=yes
+      else
+         AC_MSG_RESULT([enable VINETIC family support, disabled VINETIC 2CPE support (!)])
+         AM_CONDITIONAL(VINETIC_2CPE, false)
+         VIN2CPE=no
+      fi
+   ],
+   [
+      AC_MSG_RESULT([enable VINETIC family support (default), activate VINETIC 2CPE support with --enable-2cpe])
+	  AC_MSG_RESULT([       => support for VINETIC 2CPE, version 2.1 will be disabled implicitly(!)])
+      AM_CONDITIONAL(VINETIC_2CPE, false)
+      VIN2CPE=no
+   ]
+)
+
+
+dnl special option if your controller's endianess does not match the bus endianess (see VINETIC-2CPE device driver documentation)
+AC_ARG_ENABLE(byte-swap,
+   AC_HELP_STRING(
+   	[--enable-byte-swap],
+      [special option for VINETIC-2CPE version 2.x, to do byte swapping inside the VINETIC-2CPE.
+	   This option might be useful, if your controller's endianess does not match the bus endianess, e.g.
+	   you run a MIPS controller in big endian mode. In this case you still have intel bus accesses
+	   with little endian and would require byte swapping. With this switch you don't need to change the
+	   device driver code.]
+   ),
+   [
+      if test $enableval = 'yes'; then
+         AC_MSG_RESULT([enable byte swapping (!)])
+         AC_DEFINE([VIN_BYTE_SWAP],[1],[special option to enable byte swapping inside VINETIC-2CPE])
+      else
+         AC_MSG_RESULT([enable normal byte order (default), enable byte swapping with --enable-byte-swap])
+      fi
+   ],
+   [
+      AC_MSG_RESULT([enable normal byte order (default), enable byte swapping with --enable-byte-swapp])
+   ]
+)
+
+dnl set the access mode for VINETIC
+AC_ARG_WITH(access-mode,
+	AC_HELP_STRING(
+		[--with-access-mode=val],
+		[define the access mode (MOTOROLA, INTEL_MUX, INTEL_MUX, INTEL_DEMUX or SPI).
+		 See option --enable-byte-swap if your controller's endianess doesn't match the bus
+		 endianess.
+		]
+	),
+	[
+		if test "$withval" = yes; then
+			AC_MSG_ERROR([Please provide a value for access mode (MOTOROLA, INTEL_MUX, INTEL_MUX, INTEL_DEMUX, SPI) ]);
+		fi
+        if test "${VIN2CPE}" = yes; then
+		   case $withval in
+			   MOTOROLA)
+				   AC_MSG_RESULT(enable access mode VIN_ACCESS_MODE_MOTOROLA);
+				   VIN_ACC_MODE=VIN_ACCESS_MODE_MOTOROLA;
+				   VIN_ACC_MODE_SHORT=MOTOROLA;
+				   ;;
+			   INTEL_MUX)
+				   AC_MSG_RESULT(enable access mode VIN_ACCESS_MODE_INTEL_MUX);
+				   VIN_ACC_MODE=VIN_ACCESS_MODE_INTEL_MUX;
+				   VIN_ACC_MODE_SHORT=INTEL_MUX;
+				   ;;
+			   INTEL_DEMUX)
+				   AC_MSG_RESULT(enable access mode VIN_ACCESS_MODE_INTEL_DEMUX);
+				   VIN_ACC_MODE=VIN_ACCESS_MODE_INTEL_DEMUX;
+				   VIN_ACC_MODE_SHORT=INTEL_DEMUX;
+				   ;;
+			   SPI)
+                   AC_MSG_RESULT(enable SPI interface)
+                   AC_DEFINE([VIN_SPI],[1],[enable SPI interface, requires user configuration])
+                   AC_MSG_RESULT(enable user configuration for SPI support)
+                   AC_DEFINE([ENABLE_USER_CONFIG],[1],[enable user configuration])
+				   AC_MSG_RESULT(enable access mode VIN_ACCESS_MODE_SPI);
+				   VIN_ACC_MODE=VIN_ACCESS_MODE_SPI;
+				   VIN_ACC_MODE_SHORT=SPI;
+				   ;;
+			   EVALUATION)
+                   AC_MSG_RESULT(enable evaluation features)
+                   AC_DEFINE([EVALUATION],[1],[enable evaluation features e.g. for testing with WinEASY])
+                   AM_CONDITIONAL(EVALUATION, true)
+	               AC_MSG_RESULT(enable SPI interface)
+                   AC_DEFINE([VIN_SPI],[1],[enable SPI interface, needs user configuration])
+                   AC_MSG_RESULT(enable user configuration for SPI support)
+                   AC_DEFINE([ENABLE_USER_CONFIG],[1],[enable user configuration])
+				   AC_MSG_RESULT(enable access mode VIN_ACCESS_MODE_EVALUATION);
+				   VIN_ACC_MODE=VIN_ACCESS_MODE_EVALUATION;
+				   VIN_ACC_MODE_SHORT=EVALUATION;
+				  ;;
+			   *)
+				  AC_MSG_ERROR([Please provide a value for access mode (MOTOROLA, INTEL_MUX, INTEL_MUX, INTEL_DEMUX, SPI)]);
+				  ;;
+		   esac
+      else
+         AC_MSG_RESULT([       flag "--with-access-mode" will be ignored (only required for VINETIC 2CPE)]);
+	     fi
+	],
+	[
+      if test "${VIN2CPE}" = yes; then
+			  AC_MSG_ERROR([Please provide a value for access mode (MOTOROLA, INTEL_MUX, INTEL_MUX, INTEL_DEMUX, SPI)]);
+      fi
+	]
+)
+AC_DEFINE_UNQUOTED([VIN_ACCESS_MODE],[$VIN_ACC_MODE],[Vinetic access mode this driver will support])
+
+
+dnl set the access width for VINETIC
+AC_ARG_WITH(access-width,
+	AC_HELP_STRING(
+		[--with-access-width=val],
+		[define the access width the device driver does (16=16bit (default), 8=8bit).
+		 From device driver's view all accesses to the VINETIC are 16 bit (register size). In
+		 case the VINETIC provides only a 8bit bus interface you have two choices depending on
+		 your system: a) the VINETIC device driver still does 16bit accesses and the memory
+		 controller cares to do two 8bit bus accesses (with the correct timing) or b) if your
+		 memory controller cannot be configured this way, you can force the VINETIC device
+		 driver to do only 8bit accesses. In this case the VINETIC device driver will do two
+		 8bit accesses in accordance to the controller's endianess.
+		 See option --enable-byte-swap if your controller's endianess doesn't match the bus
+		 endianess.
+		 Please note: The interface for SPI is defined to always use 8bit accesses.]
+	),
+	[
+		if test "$withval" = yes; then
+			AC_MSG_ERROR([Please provide a value for access width (16=16bit (default), 8=8bit)]);
+		fi
+        if test "${VIN2CPE}" = yes; then
+		   case $withval in
+			   8)
+				   AC_MSG_RESULT(enable access width 8bit);
+				   VIN_ACC_WIDTH=VIN_ACCESS_WIDTH_8;
+				   VIN_ACC_WIDTH_SHORT=8;
+				   ;;
+			   16)
+				   AC_MSG_RESULT(enable access width 16bit);
+				   VIN_ACC_WIDTH=VIN_ACCESS_WIDTH_16;
+				   VIN_ACC_WIDTH_SHORT=16;
+				   ;;
+			   *)
+				  AC_MSG_ERROR([Please provide a value for access width (16=16bit (default), 8=8bit)]);
+				  ;;
+		   esac
+      	else
+		   # VINETIC VIP/M/C/S family doesn't support this option
+           AC_MSG_RESULT([       flag "--with-access-width" will be ignored (only required for VINETIC 2CPE)]);
+	    fi
+	],
+	[
+      if test "${VIN2CPE}" = yes; then
+          AC_MSG_RESULT(enable access width 16bit (default), change access width with --with-access-width=val);
+	      VIN_ACC_WIDTH=VIN_ACCESS_WIDTH_16;
+	      VIN_ACC_WIDTH_SHORT=16;
+      fi
+	]
+)
+AC_DEFINE_UNQUOTED([VIN_ACCESS_WIDTH],[$VIN_ACC_WIDTH],[Vinetic access width this driver will support])
+AC_DEFINE_UNQUOTED([VIN_ACCESS_MODE_STR], ["${VIN_ACC_WIDTH_SHORT}bit $VIN_ACC_MODE_SHORT"], [Vinetic access mode string])
+
+
+
+AM_CONDITIONAL(EVENT_LOGGER_DEBUG, false)
+dnl enable event logger debugging
+AC_ARG_ENABLE(el_debug,
+    AC_HELP_STRING(
+      [--enable-el_debug],
+      [enable event logger debugging (requires additional eventlogger package)]
+   ),
+   [
+      if test $enableval = 'yes'; then
+         AC_MSG_RESULT([enabled event logger debugging])
+         AC_DEFINE([EVENT_LOGGER_DEBUG],[1],[enabled event logger debugging])
+         AM_CONDITIONAL(EVENT_LOGGER_DEBUG, true)
+      else
+         AC_MSG_RESULT([disabled event logger debugging])
+         AM_CONDITIONAL(EVENT_LOGGER_DEBUG, false)
+      fi
+   ],
+   [
+      AM_CONDITIONAL(EVENT_LOGGER_DEBUG, false)
+   ]
+)
+
+## Target host specific compilation flags
+case "${host}" in
+   mips_fp_be)
+      CFLAGS="$CFLAGS -fno-strict-aliasing -fno-common -fomit-frame-pointer \
+         -G 0 -mno-abicalls -fno-pic -pipe -mtune=r4600 -mips2 -Wa,--trap \
+         -DMODVERSIONS -DEXPORT_SYMTAB"
+      ;;
+   mips-linux)
+      CFLAGS="$CFLAGS -fno-strict-aliasing -fno-common -fomit-frame-pointer \
+         -G 0 -mno-abicalls -fno-pic -pipe -mtune=r4600 -mips2 -Wa,--trap \
+         -mlong-calls -DMODVERSIONS -DEXPORT_SYMTAB"
+      ;;
+   mipsel-linux)
+      CFLAGS="$CFLAGS -fno-strict-aliasing -fno-common -fomit-frame-pointer \
+         -mno-abicalls -fno-pic -pipe -mips2 -Wa,--trap  -Wa,--trap \
+         -D__linux__ -D_MIPS_ISA=6 -D_MIPS_SZLONG=32 -D_MIPS_SZPTR=32 \
+         -D_MIPS_SZINT=32 -D__MIPSEL__ -DUTS_MACHINE='"mips"' -mlong-calls"
+      ;;
+   powerpc-linux-uclibc)
+      CFLAGS="$CFLAGS -fno-strict-aliasing -fno-common -fomit-frame-pointer"
+      ;;
+   *)
+      ;;
+esac
+
+AC_CONFIG_FILES([Makefile])
+AC_CONFIG_FILES([2cpe/Makefile])
+AC_CONFIG_FILES([vip/Makefile])
+
+AC_OUTPUT
+
+echo \
+"------------------------------------------------------------------------
+Configuration:
+
+  Source code location: ${srcdir}
+  Compiler:             ${CC}
+  Compiler flags:       ${CFLAGS}
+  Host System Type:     ${host}
+  Install path:         ${prefix}
+Settings:
+  KERNEL_INCL_PATH:     ${KERNEL_INCL_PATH}
+------------------------------------------------------------------------"
+

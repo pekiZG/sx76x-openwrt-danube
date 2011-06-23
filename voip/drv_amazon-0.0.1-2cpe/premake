@@ -1,0 +1,2 @@
+./autogen.sh --build=i686-pc-linux --host=mips-linux --enable-warnings \
+--enable-kernelincl=`pwd`/../../../../source/kernel/opensource/linux_2_4_20/include --enable-incl-bin --enable-vineticincl=`pwd`/../drv_vinetic/src 

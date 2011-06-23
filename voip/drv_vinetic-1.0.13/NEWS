@@ -1,0 +1,561 @@
+version 1.0.13, 2005-08-01
+----------------------------
+CHG Updated embedded controller download to V3.13.05 for VINETIC® -4M/C 
+    Version 2.2 and V4.04.12 for VINETIC® -S Version 2.1
+
+version 1.0.12, 2005-07-29
+----------------------------
+FIX Event report for RFC2833 event packets from network did not work correctly.
+
+version 1.0.11, 2005-07-27
+----------------------------
+CHG PHONE_DTMF_OOB now makes no check on the used coder
+CHG The driver supports to differentiate the between interrupt line and global
+	interrupts. If the driver is not set to polling mode and no interrupt line
+	is configured, the global interrupt is locked instead. Interrupts are
+	unlocked when the critical software part is done.
+CHG Change the parameter of the structure 'TAPI_PHONE_AGC' to lower-case.
+FIX DTMF event were not reported for TAPI channel 5 and 6 of one VINETIC device.
+FIX The TAPI event 'TAPI_SIGNAL_CIDENDTX' was reported to early for FSK
+	transmission mode. Now the event is reported when the CID transmission is
+	completed for DTMF and FSK.
+
+version 1.0.10, 2005-07-15
+----------------------------
+CHG Compile for VINETIC S improved
+FIX Test access defines missing
+
+version 1.0.9, 2005-07-14
+----------------------------
+CHG Remove T.38 signal detection code, which leads to problems
+FIX No ALM LEC configuration in case of any VINETIC S
+FIX Inconsistent Jitter buffer setting fixed between init and call to
+    IFXPHONE_JB_CONF.  Bits PJE and DVF were reset.
+FIX While handling IFXPHONE_INIT, tapi driver configures CID transmitter to
+    send CID to both Adder-1 and Adder-2 (SIGNL_baseConf). It is now by default
+    configured to be sent to ALM only.
+CHG CPT detection implemention changed to new tone api.
+FIX Inconsitency of signal connection on multiple tapi initializations fixed
+
+version 1.0.8, 2005-07-01
+----------------------------
+NEW Add the 'TAPI_PHONE_STATUS.signal' event 'TAPI_SIGNAL_CIDENDTX' to
+    indicate that the Caller-ID is transmitted successfully. For DTMF, the
+    event is generated when the transmission is complete. For FSK, the event
+    is generated when the last bytes are written to the VINETIC.
+    Note: Here the end of transmission comes delayed after the event occurs.
+NEW Add the 'TAPI_PHONE_STATUS.line' event 'TAPI_LINESTATUS_RINGFINISHED' to
+    indicate that the initial ringing hat ended. This event is used in order
+    to synchronize the CID1 scenario on application level.
+NEW Add the 'TAPI_PHONE_STATUS.error' flag to signalize runtime errors to host.
+    Error events are defined in TAPI_ERROR enumeration.
+FIX Add a workaround with new driver API in order to change the different line
+    modes. The VINETIC 2.1 does not recognize the automodes correctly.
+    The linemodes 'TAPI_LINEFEED_NORMAL_LOW' and 'TAPI_LINEFEED_REVERSED_LOW'
+    are added to change to short line manually.
+    The new event 'TAPI_LINESTATUS_FEEDLOWBATT' indicates that the change to
+    low feeding has to be done manually.
+FIX CID Appearance check is done accordingly in the scenario
+    <initial ringing> <periodical ringing with cid tx>
+FIX Runtime error TAPI_ERROR_RINGCADENCE_CIDTX is set in TAPI_PHONE_STATUS.error
+    and asserted in case the ring pause time is not enough.
+
+version 1.0.7, 2005-06-30
+----------------------------
+CHG Linetesting improvements for SLIC LCP merged from 0.11 project
+
+version 1.0.6, 2005-06-23
+----------------------------
+CHG IFXPHONE_REC_START/IFXPHONE_REC_STOP only enables/disables the encoder. The
+    decoder is enabled/disabled by IFXPHONE_PLAY_START/IFXPHONE_PLAY_STOP
+CHG Old stuff for Hook recognition and Pulse dialing removed.
+FIX new module connection implementation now also supports local and external
+    conferencing
+CHG PHONE_VAD now does not return an error if activated with G.729E.
+FIX in PHONE_VAD: Always apply the VAD setting not matter which coder is used
+FIX Wake up application on blocking ring after off hook. Previously the
+    application had to wait till the max rings has expired no matter if off
+    hook appeared or not.
+FIX Requesting the RTCP statistics of the device by usind
+    'TAPI_LL_Phone_RTCP_PrepareStatistics' and
+    'TAPI_LL_Phone_RTCP_GatherStatistics' in the interrupt context fixed.
+    Driver wrote to long message to the mailbox in order to request an update.
+CHG The PHI programs for 8 bit and for V1.3 are now internally selected by
+    the driver according to the configured access mode
+CHG DTMF Generator was configured that tones will be generated in transmit
+    and receive direction after a DTMF event occures. Tones are now only
+    generated in recieve direction (adder-2, to the subscriber)
+CHG On the IFXPHONE_RTCP_STATISTICS command the field ssrc gets now the value
+    which was configured previously by IFXPHONE_RTP_CONF (stored in driver)
+CHG Dail and Packet FIFO allocation and freeing modified
+CHG IFXPHONE_TONE_TABLE_CONF now applies to the driver no longer to devices
+    (global table)
+CHG Play on UTG and TG at the same time now possible. Minimal resource
+    management implemented. The tone play and stop service must specify
+    which resource to be used: TAPI_TONE_SRC_TG or TAPI_TONE_SRC_DSP.
+    Default uses DSP on VIP/M/C and TG on S.
+FIX When invalid chip information received, the driver returned no error
+    on init.
+FIX TAPI_NONE as mode for IFXPHONE_INIT does not call Basic_xConf()
+CHG RUNTIME_TRACE available without EVALUATION
+FIX IrqPollMode is initialized/reset correctly if no IRQ is configured
+NEW Added IFXPHONE_TONE_PLAY_NET for data fds. The playout of tones
+    simultaneously on different sources (TG and UTG) is not supported.
+    Also the playout of local and network tones at the same time is not
+    supported. Composed tones are not supported for source TG.
+FIX add parameter check for IFXPHONE_x_ADD / IFXPHONE_x_REMOVE
+FIX in the driver feature IFXPHONE_SET_PCM_CONFIG / IFXPHONE_SET_PCM_ACTIVATION
+    (Deactivation and higher Timeslots were not working properly)
+NEW Added LEC resource management to the driver. It shares the available LEC
+    resources between the ALM-Modules and the PCM-Modules.
+    The resource management is used by the driver feature
+    IFXPHONE_LECCONF / IFXPHONE_LECCONF_PCM
+
+version 1.0.5.0, 2005-05-03
+----------------------------
+FIX TAPI_LINEFEED_PARKED is now power down VBATH mode (was sleep power down)
+
+version 1.0.4.0, 2005-05-02
+----------------------------
+NEW Tone-API with modulation and cadence steps on UTG and tone generator
+    (limited) on local phone
+FIX CRAM buffer check. Description: If the CRAM buffer sizes for format1
+    do not match the download is still done, which leads to inconsistent
+    mailbox state
+FIX Bug Fix for PCM advanced connection -> special handling for PCM module
+    to Signaling
+NEW new interface to send CID independent of ringing (IFXPHONE_CID_INFO_TX)
+    Attention: uses new, more flexible data structure!
+CHG Firmware message handling (incl. ASYNC_CMD) improved
+NEW IFXPHONE_HIGH_LEVEL added to support output signals with level higher
+    than 3.14 dBm
+NEW Implemented RFC 2833 firmware feature with ETU (event transmission unit).
+    The driver now reports events that are played out masked be eventDetect bit
+    in the exception bit structure. Event transmission of ATD and UTD features
+    is also supported
+NEW Interface to enable/change LEC settings for PCM interface
+    (IFXPHONE_LECCONF_PCM/IFXPHONE_GETLECCONF_PCM). This feature includes
+    setting of the correct default coefficients.
+CHG The meaning of nGainRx and nGainTx in TAPI_PHONE_VOLUME changes.
+    Instead of having 4 predefined values (OFF, LOW, MEDIUM, HIGH), now
+    gain range -24 dB up to +24 dB is supported writing directly the dB value.
+    A value of -255 indicates OFF.
+
+version 1.0.3.0, 2005-04-14
+----------------------------
+CHG The warning about SYNC_FAIL reason of hardware interrupt is not shown in
+    DS_BASIC_INIT state, since this interrupt reason after reset it is a chip
+    errata.
+
+version 1.0.2.0, 2005-04-12
+----------------------------
+CHG Linetesting Capacitance measurement, changed delay for 200V/s slope to 85ms
+FIX added missing copy_from_user calls for binary pointers from user app
+
+version 1.0.1.0, 2005-04-08
+----------------------------
+FIX shared interrupt supported for linux
+FIX warnings removed for GCC > V3.3.x and Greenhills
+
+version 1.0.0.1, 2005-03-30
+----------------------------
+NEW Improved capability list for various types and firmware variants
+NEW Supports 6 coder channel
+NEW Device Reset interface implemented. This interface is to be used by the
+    application code to reset internal device data structure after a chip
+    reset was done.
+CHG Conferencing implementation. Signaling module is now attached to coder module.
+NEW PCM adding to analog module or to data (coder + signaling) possible
+NEW Removed board specific elements ...
+
+version 0.11.8.4, 2005-04-07
+----------------------------
+FIX length of CRAM coefficients always in words for FIO_VINETIC_DOWNLOAD_CRAM
+FIX Default values were not correct
+FIX Firmware download was expected be not needed for VINETIC-C
+CHG Added a protection for packets with invalid command headers
+
+version 0.11.8.3, 2005-03-31
+----------------------------
+FIX Event payload type of zero returns error. Default is events enabled
+FIX Seizure and Mark bit configuration for CID1 and CID2
+FIX CAS level is set to -18 dB
+FIX Lock/Unlock Mutex removed from Fax Demodulator function
+CHG Accept PCM-Rate=0 in IFXPHONE_SET_PCM_CONFIG for doing no check
+NEW Event payload type is configured to 98 on initialization
+
+version 0.11.8.2, 2005-03-11
+----------------------------
+NEW Embedded Controller image for 4M/4C updated to version v3.13.3_rel2
+FIX Driver crash at Tapi Init if Firmware supports more than 4 coder
+    (i.e AAL FW v192.15.10)
+
+version 0.11.8.1, 2005-03-02
+----------------------------
+NEW Default RTP Firmware is Version V20.15.56.V14
+FIX Ringing Configuration bugfix for TAPI Ringing Modes
+    INTERNAL_UNBALANCED_ROT and INTERNAL_UNBALANCED_ROR
+FIX Ringing Operating Mode bugfix for TAPI Ringing Modes
+    INTERNAL_UNBALANCED_ROT and INTERNAL_UNBALANCED_ROR
+
+version 0.11.7.1, 2005-02-28
+----------------------------
+CHG Adapted default values for firmware according to recommendation
+FIX Metering Configuration (UTPs CR200008171 and CR200008541)
+
+version 0.11.6.1, 2005-02-10
+----------------------------
+NEW CID1 NTT (Japan) implemented and working
+FIX Use only every 2nd pcm channel on Vinetic V1.4 to support 16bit linear
+    mode for all chips using TAPI interface.
+NEW V8bis signal detection support in IFXPHONE_ENABLE_SIGDETECT
+FIX Avoid IFXPHONE_INIT to reset the flag "bIsPoll"
+FIX Inconsitent cache structure for jitter buffer. Peak jitter estimation
+    is now enabled for voice. Scaling factor changed to 16.
+
+version 0.11.5.1, 2005-02-04
+----------------------------
+CHG On IFXPHONE_RTP_CONF if event transmission is not selected the event
+    payload type is not changed. Previously it was always set (also to zero).
+CHG On IFXPHONE_RTP_CONF and PHONE_DTMF_OOB if event transmission is not
+    selected event payload type zero always returns an error.
+NEW Check resource for CPT, return err if not available
+NEW Capabilities for signal detection
+NEW Chip types are evaluated and stored after firmware download
+NEW Added multi task protection around signal detection configuration
+FIX Problems of internal data corruption in case of Write Cmd usage
+    for Alm and Coder Channel (CR8091)
+CHG PCM configuration for IFXPHONE_INIT updated (PCM_PHONE and PCM_DSP)
+FIX Remove dependency between PCM configuration and PCM activation.
+FIX Store new PCM config and activation status (TAPI) only after successful
+    check by LL (Vinetic) function.
+CHG Check allocated PCM timeslots during activation and deactivation,
+    not during configuration.
+
+version 0.11.4.1, 2005-01-27
+----------------------------
+FIX for predefined tones: Stopping was not possible
+FIX Cid transparent buffer is copied into kernel space now (Linux)
+FIX flag for "need wakeup" was sometimes cleared without wakeup
+    but application task still waiting in select function
+
+version 0.11.3.1, 2005-01-21
+----------------------------
+NEW CID2 for Japan implemented
+CHG Removed fixed setting of VIN_V14_SUPPORT (only set as default if none of
+    VIN_V14_SUPPORT or VIN_V21_SUPPORT was set from makefile)
+CHG Cleanup dependencies between compiler switches, allows better reduction
+    of driver features (e.g. PCM only for VIN 4S)
+NEW Support of VINETIC 4S V2.2
+DEL Removed option DC Calibration from VINETIC Init message,
+    to have a clean split between chip and channel error domains.
+    The DC calibration belongs to the channel error domain while VINETIC
+    Init belongs to the chip error domain.
+    Applications should use the separate Offset Calibration ioctl to calibrate
+    channels after chip initialisation.
+FIX Event transmission bug after DTMF CID fixed.
+FIX Amplitude modulation workaround for firmware problem of clearing
+    status bits. Between each AM signal detection it is required to call
+    IFXPHONE_DISABLE_SIGDETECT and IFXPHONE_ENABLE_SIGDETECT
+NEW Call progress tone detection implemented based on simple tone API
+FIX First verification of simple tone API done
+NEW Ground key high validation: On GNDKH the line is switched off and
+    switched back after 10 ms. First GNDKH is ignored if no further GNDKHs
+    are reported after switching on the line again.
+CHG tooling interrupt information is only stored in FIFO if report is switched on
+
+version 0.10.3.2, 2004-12-22
+----------------------------
+NEW Patch for new Jitter Buffer Configuration.
+NEW Patch for new Jitter Buffer Statistics
+NEW Patch for CNG spectral noise (PHONE_VAD on sets NS and CNG to 1)
+FIX for tone detection: channel 1 and higher was not detecting CED.
+    Only the first and third phase reversals will be detected.
+
+version 0.10.3, 2004-12-07
+--------------------------
+FIX TAPI_Phone_GetStatus
+
+KNOWN PROBLEMS
+   - GR909 :
+   * Blocking waits are used because of the required time accuracy for settling
+     time and sampling. For a multichannel service with voice ongoing, this is
+     killing because the packets will not be dropped in time. Also the use of a
+     non blocking wait (with sheduler) doesn't garantee that time requirements
+     will be meet and introduces measurement inacurracy. This implies a concept
+     change for GR909 feature in the future (i.e  Gr909 in Chip and not on
+     embedded software side).
+   * A concept to recognise if a foreign voltage is pending before doing the
+     measurement is required, as the ground key recognition isn't reliable.
+     In fact, they are situations where Vinetic doesn't send the ground key event
+     although an external (foreign) voltage is pending.
+
+version 0.10.2, 2004-12-03
+--------------------------
+NEW All GR909 Measurements succesfully evaluated on Vinetic 1.4.
+    Time requirement of 2 sec and measurements accuracy of 10% are met.
+    Timing:
+    - Foreign Voltage (Hazardeous & FEMF)    : 350 ms
+    - Resistive Fault                        : 825 ms
+    - Receiver Offhook                       : 240 ms
+    - Ringer Load                            : 210 ms
+    Total: 1625 ms out of 2000 ms (= 2 sec)
+NEW CID Type 2 implemented (USA spec TIA/EIA-777).
+FIX Implementation for packet read for 8 bit Intel interface corrected
+FIX Exception mask was not evaluated in IFXPHONE_STATUS. If digits occured the
+    fifo was always read. Now the reading of the fifo can be masked and digits
+    can be queried with PHONE_GET_DTMF or PHONE_GET_PULSE.
+FIX Pulse digit was not set to any value if fifo is empty. Now it returns -1
+    if no digits are in.
+FIX Event transmission bug in correlation with DTMF CID fixed.
+FIX GR909 Receiver Offhook Resistive Faults tests were inaccurate because of
+    missing coefficient table for IK (constant current) for Vinetic 1.4.
+FIX GR909 AC Voltage measurements were innacurate because level meter results
+    sampling was done without 1 ms time intervall.
+CHG GR909 Receiver Offhook measurements are done for 15 mA and 30 mA IK
+CHG During GR909 AC voltage measurements, samples are (right) shifted by 2 to
+    avoid 32-bit overflow during samples addition. In the final formula, this
+    shift is taken in count to remove the shift : left shift by 2. Doing so
+    makes it possible to measure voltages until 220 Vrms with the specified
+    precision (10 %).
+CHG Ground Key Recognition is the trigger of GR909 voltage measurements. Because
+    it is possible that no ground key is issued by vinetic although an external
+    voltage is pending, the ground key flag is stored after first recognition
+    and reseted only after a successfull measurement.
+
+KNOWN PROBLEMS
+   - GR909 :
+   * Blocking waits are used because of the required time accuracy for settling
+     time and sampling. For a multichannel service with voice ongoing, this is
+     killing because the packets will not be dropped in time. Also the use of a
+     non blocking wait (with sheduler) doesn't garantee that time requirements
+     will be meet and introduces measurement inacurracy. This implies a concept
+     change for GR909 feature in the future (i.e  Gr909 in Chip and not on
+     embedded software side).
+   * A concept to recognise if a foreign voltage is pending before doing the
+     measurement is required, as the ground key recognition isn't reliable.
+     In fact, they are situations where Vinetic doesn't send the ground key event
+     although an external (foreign) voltage is pending.
+
+version 0.9.17, 2004-11-xx
+--------------------------
+NEW All GR909 Measurements succesfully evaluated on Vinetic 1.4.
+    Time requirement of 2 sec and measurements accuracy of 10% are met.
+    Timing:
+    - Foreign Voltage (Hazardeous & FEMF)    : 350 ms
+    - Resistive Fault                        : 825 ms
+    - Receiver Offhook                       : 240 ms
+    - Ringer Load                              : 210 ms
+    Total: 1625 ms out of 2000 ms (= 2 sec)
+NEW CID Type 2 implemented (USA spec TIA/EIA-777).
+FIX Implementation for packet read for 8 bit Intel interface corrected
+FIX Exception mask was not evaluated in IFXPHONE_STATUS. If digits occured the
+    fifo was always read. Now the reading of the fifo can be masked and digits
+    can be queried with PHONE_GET_DTMF or PHONE_GET_PULSE.
+FIX Pulse digit was not set to any value if fifo is empty. Now it returns -1
+    if no digits are in.
+FIX Event transmission bug in correlation with DTMF CID fixed.
+FIX GR909 Receiver Offhook Resistive Faults tests were inaccurate because of
+    missing coefficient table for IK (constant current) for Vinetic 1.4.
+FIX GR909 AC Voltage measurements were innacurate because level meter results
+    sampling was done without 1 ms time intervall.
+CHG GR909 Receiver Offhook measurements are done for 15 mA and 30 mA IK
+CHG During GR909 AC voltage measurements, samples are (right) shifted by 2 to
+    avoid 32-bit overflow during samples addition. In the final formula, this
+    shift is taken in count to remove the shift : left shift by 2. Doing so
+    makes it possible to measure voltages until 220 Vrms with the specified
+    precision (10 %).
+CHG Ground Key Recognition is the trigger of GR909 voltage measurements. Because
+    it is possible that no ground key is issued by vinetic although an external
+    voltage is pending, the ground key flag is stored after first recognition
+    and reseted only after a successfull measurement.
+
+KNOWN PROBLEMS
+   - GR909 :
+   * Blocking waits are used because of the required time accuracy for settling
+     time and sampling. For a multichannel service with voice ongoing, this is
+     killing because the packets will not be dropped in time. Also the use of a
+     non blocking wait (with sheduler) doesn't garantee that time requirements
+     will be meet and introduces measurement inacurracy. This implies a concept
+     change for GR909 feature in the future (i.e  Gr909 in Chip and not on
+     embedded software side).
+   * A concept to recognise if a foreign voltage is pending before doing the
+     measurement is required, as the ground key recognition isn't reliable.
+     In fact, they are situations where Vinetic doesn't send the ground key event
+     although an external (foreign) voltage is pending.
+
+
+
+
+version 0.9.16, 2004-11-10
+--------------------------
+NEW  CID DTMF
+NEW  LT battery voltage measurements for VMB3324
+NEW  LT2.1 AC measurements (see known problems)
+NEW  EVAL read out Vinetic chip version in 8bit mode
+     (required to detect all chip versions correctly)
+NEW  ARC Patch 2.14.16
+FIX  compile flag -TAPI_LT
+FIX  Capacitance measurement, changed formula to calculate the average current
+FIX  Runtime trace for SC_OPMODE were wrong, bit CMD1_OM was missing (only)
+     in the trace.
+
+KNOWN PROBLEMS
+   - The SNR measurement for the VINETIC 2.1 will only work correctly for
+     1004 Hz, lm_filter coefficients for all other frequencies have to be
+     replaced when provided...
+   - VINETIC 1.4: On fast CPUs the board specific WAIT_FOR_READY_FLAG macro has
+     to be adapted to wait t_srd = 125ns before the ready bit is polled after
+     each command. See VINETIC-4VIP Prel. Data Sheet DS1, Page 42ff.
+   - Vinetic 2.1: Linetesting measurements do not work in Power Down Resistive
+     Mode and Sleep Power Down Resistive Mode. A workaround is available, but
+     not yet implemented.
+   - All TAPI tones for Vinetic 2.1 will not be correct.
+
+TEST COVERAGE
+   +-------------------------------------------------------------------------+
+   | PLEASE NOTE THAT THIS VERSION WAS NOT COMPLETELY TESTED AND IS NOT A    |
+   | PRODUCTIVE RELEASE.                                                     |
+   +-------------------------------------------------------------------------+
+   The following tests were executed:
+   VINETIC Init V1.4 ok, V2.1 ok
+   TAPI Init    V1.4 ok, V2.1 ok
+   Pulse Dial V1.4 ok, V2.1 ok
+   DTMF Dial V1.4 ok, V2.1 ok
+   Hook Events V1.4 ok, V2.1 ok
+   Ringing V1.4 ok, V2.1 ok
+   Active Mode V1.4 ok, V2.1 ok
+   CID DTMF   V1.4 ok, V2.1 ok
+   CID FSK I  V1.4 ok, V2.1 ok
+   Voice Streaming Irq ch a,b V1.4 ok, V2.1 ok
+   Codec PTE Test for RTP Settings V1.4 ok, V2.1 ok
+   VAD V1.4 ok, V2.1 ok
+   LT Current    V1.4 ok, V2.1 ok
+   LT Voltage    V1.4 ok, V2.1 ok
+   LT Resistance    V1.4 ok, V2.1 ok
+   LT Capacitance    V1.4 ok, V2.1 ok
+   LT Battery Voltage  V1.4 ok, V2.1 ok
+   LT AC Measurements  V1.4 ok, V2.1 ok
+
+version 0.9.15, 2004-10-06
+--------------------------
+NEW  LT 2.1 configurable integration time for (battery-)voltage, current and
+     resistance measurement
+NEW  LT 2.1 resistance RC measurement
+NEW  CRAM format 2.2 (adds configuration for TSTR2 register)
+     Moved setting of CRAM download related registers (BCR1,2, TSTR2)
+     to driver level.
+     Note: The ioctl distinguishes now between the CRAM download format
+     version VINETIC_IO_CRAM_FORMAT_2_1 and VINETIC_IO_CRAM_FORMAT_2_2;
+     VINETIC_IO_CRAM_FORMAT_2 was removed.
+NEW  Packets interrupts are masked when the driver is configured for polling
+CHG  Payload assignment in that way, that PT for SID is 13 for G711
+     and G726. For other codecs its the same PT for the SID as for coder data
+     (CR200007149)
+FIX  LT universal "AC level" measurement does not change the lm_filter type
+     setting to enable filter characteristics measurements
+FIX  mailbox could become corrupted when a packet overflow occured
+FIX  offset calibration for Vin2.1 was left with DC_SLIC + LM_PREGAIN OFR value
+     (bug introduced in internal version 0.9.14.2)
+FIX  AAL firmware coder channel configuration was wrong
+FIX  default AAL profile was configured to decode G.711 A-Law while the coder
+     used u-Law. Now the decoder uses u-Law as well.
+FIX  decoding of channel number for downstream packets in polling mode;
+     channel numbers 16++ were not decoded correctly
+FIX  Linux hangs in CmdRead (introduced in internal version 0.9.14.2)
+FIX  bug fix in tapi init: in case DS_DEV_INIT is not set, initialization
+     ignores this state and continues, what can lead to a software error
+     if the firmware wasn't yet downloaded.
+FIX  added overflow protection for packet inbox (i.e. free mailbox space is
+     checked before data is written) [patched 2004-10-20]
+
+KNOWN PROBLEMS
+   - The lm_filter overflows for large levels. This will be fixed with a later
+     ARC patch. Until this patch becomes available, the lm_filter is disabled
+     for the gaintracking and SNR signal measurement.
+   - The current lm_filter coefficients cannot be used for Notch filters which
+     are required for SNR measurements. Until proper lm_filter coefficients
+     are available, the SNR measurement will not show correct results.
+   - Battery voltage measurements are not implemented for VMB3324.
+   - VINETIC 1.4: On fast CPUs the board specific WAIT_FOR_READY_FLAG macro has
+     to be adapted to wait t_srd = 125ns before the ready bit is polled after
+     each command. See VINETIC-4VIP Prel. Data Sheet DS1, Page 42ff.
+
+TEST COVERAGE
+   +-------------------------------------------------------------------------+
+   | PLEASE NOTE THAT THIS VERSION WAS NOT COMPLETELY TESTED AND IS NOT A    |
+   | PRODUCTIVE RELEASE.                                                     |
+   +-------------------------------------------------------------------------+
+  The following tests were executed
+   - only Polling mode was tested
+   - Initialisation of all chips / TAPI Init
+   - Voice connections, Voice Quality
+   - Hook events
+   - DTMF events
+
+version 0.9.14, 2004-09-08
+--------------------------
+- Fixed a semaphore problem in StopDevice
+- Mailbox protection against concurent tasks access improved
+- Buffer handing for polled streaming moved to application for more flexibility.
+  Handler can be set with function pointer
+- Changed offset compensation function (added possibility to do DC_SLIC and
+  DC_Praefi compensation at once)
+- Interleaved polling improved
+- Fixed noise during voltage measurements for Vinetic V1.4
+- Implemented SID Payload always 13 when assigning coder payload types
+- Bug fix: receivers SSRC not returned, was acutually located in
+  ssrc and not in rssrc
+- Implemented payload type assignment for coder G729E
+- Gr909 implementation adapted to support VxWorks
+- fixed Vinetic 1.4 capacitance measurement
+- Tapi Volume partially implemented : features TX/RX low-medium-high-mute
+  implemented, features only rx-muted or only tx_muted not implemented
+
+version 0.9.12, 2004-08-06
+-------------------------
+- VxWorks: ioctl mutex semaphore removed
+- Signal detection implemented and module tested
+- CID Receiver feature working whith Fw version 2062.20 RTP
+- TAPI Init does NOT set the line to active high! It must be done with PHONE_SET_LINE
+- Tapi Cid Sending bug fix: In case of Odd number of CID data,
+  last byte wasn't copied in cid buffer
+- Added phone volume with supported values 1 .. 3. Not yet tested
+- If chip version is higher, the version is set to last known
+  version assuming the next chip is compatible with V2.1
+- TAPI DTMF_OOB: added option for only in band. Not yet tested
+- set LM-SEL to DC current on IT on VINETIC_Init
+- fixed problem with AAL profile, 2 ranges was not working
+- error handling for default firmware for V2.1 improved. Build
+  in firmware now returns error, cause it matches for VIP V.14
+- ignore interrupt bits 0x30 for Vinetic V2.1
+- Implementation of OTEMP and device reset exception
+- NLP added for LEC configuration
+- TAPI_VERSION_CHECK added
+
+version 0.9.10, 2004-07-06
+-------------------------
+- Arc Patch V1.3 included for VINETIC 4M
+- Added Vin 2.1 Capacitance Measurement and Offset Calibration
+- CRAM download for 4M implemented and tested
+- Auto Download command always done in case of V2.1
+
+version 0.9.3, 2004-06-22
+-------------------------
+- Ifxphone_Data_Add/Remove for coder fully implemented
+- Ifxphone_Phone_Add/Remove implemented
+- Changed TAPI event handling on file descriptor 0. Old style with Linux exception file
+  descriptors available with compiler switch EXCHFD_SUPPORT
+- Implemented IFXPHONE_PHONE_STATUS
+- Get Capabilites changed to new interface spec
+- PHONE_RING_START with CID: CLI or absence of CLI are mandatory for CID.
+  If flag isn't set, error will be returned and CID will not be sent.
+- Hook state machine times modified. Flash hook is now detected
+- AC Voltage with DC Levelmeter and DC Resistance Measurement fixed
+- Switch firmware payload to little endian in case of little endian architecture
+- Firmware download adapted for Vinetic V.21
+- internal write interface modified, that the buffer is offset for the two command words.
+  Enables no copy for VxWorks
+- Select clean up more OS independend
+- Fifo and buffer handling with function pointer in pDev
+- phone/data mapping structures renamed

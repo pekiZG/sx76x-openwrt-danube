@@ -1,0 +1,101 @@
+******************************************************************************
+       Copyright (c) 2005, Infineon Technologies.  All rights reserved.
+
+                               No Warranty
+   Because the program is licensed free of charge, there is no warranty for 
+   the program, to the extent permitted by applicable law.  Except when     
+   otherwise stated in writing the copyright holders and/or other parties   
+   provide the program "as is" without warranty of any kind, either         
+   expressed or implied, including, but not limited to, the implied         
+   warranties of merchantability and fitness for a particular purpose. The  
+   entire risk as to the quality and performance of the program is with     
+   you.  should the program prove defective, you assume the cost of all     
+   necessary servicing, repair or correction.                               
+                                                                            
+   In no event unless required by applicable law or agreed to in writing    
+   will any copyright holder, or any other party who may modify and/or
+   redistribute the program as permitted above, be liable to you for        
+   damages, including any general, special, incidental or consequential     
+   damages arising out of the use or inability to use the program           
+   (including but not limited to loss of data or data being rendered        
+   inaccurate or losses sustained by you or third parties or a failure of   
+   the program to operate with any other programs), even if such holder or  
+   other party has been advised of the possibility of such damages. 
+
+******************************************************************************
+
+1. HOW TO COMPILE
+-----------------
+
+1.1 VxWorks / GNU
+
+Pls. use the Tornado project drv_vinboard.wpj (located in top directory)
+
+1.2 Linux
+
+Execute following commands after filling the missing infomations
+
+a) ./configure --build=i686-pc-linux --host=powerpc-linux --enable-warnings --enable-trace
+   - if you must specify your linux kernel includes, 
+     add option "--enable-kernelincl=<your kernel include>"
+     (default is /home/${user}/linux/include)
+   - in case you work with devfs, your kernel supports this and sets the 
+     appropriate flg for you. You don't need to set the compiler switch yourself
+  
+b) make
+c) make install
+
+Note: 
+- If you have to regenerate the automake files pls use the autogen.sh instead of configure script .
+- To modify compiler switches, change the environment variable CFLAGS (i.e CFLAGS="-D<your flag>")
+- You can execute the configure script within a build directory if you want to keep objects files
+  and source files separated.
+
+2. HOW TO GET DOCUMENTATION
+---------------------------
+
+change to ./doc directory and execute
+
+doxygen doxyconfig
+
+3. ABOUT DEVICES 
+----------------
+
+3.1 VxWorks
+
+device name : /dev/vinboard/0  
+Note        : the device will be created by the driver at installation
+
+3.2 Linux (No devfs)
+
+device name  : /dev/vinboard/0 
+Device Major : given at insmod: "insmod major_number=<your major number>"
+Device Minor : 0
+Note         : On your target (MPC)
+               a) create directory vinboard   : 
+                  mkdir /dev/vinboard
+               b) create node "0" in directory :
+                  cd /dev/vinboard
+                  mknod 0 c major_number 0
+3.3 Linux (devfs)
+
+device name  : /dev/vinboard/0 
+Device Major : given at insmod: "insmod major_number=<your major number>"
+Note         : Device will be created at insmod.
+
+4. (Quick) Tests 
+----------------
+
+4.1 VxWorks
+
+1- use the test project file under drv_vinboard/tests and generate an a.out file
+2- download the out file and invoke functions from the VxWorks shell
+
+Note: You must call the function providing the file descriptors as first.
+
+4.2 Linux
+---------
+
+1- build Linux binary "make -f Makefile.linux install"
+2- On your target shell, enter "./bt" in your binary directory for help
+3- Process your tests according to help options

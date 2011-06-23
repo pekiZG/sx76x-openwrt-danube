@@ -1,0 +1,2 @@
+./configure --build=i686-pc-linux --host=mips-linux --enable-kernelincl=`pwd`/../../../kernel/opensource/linux_2_4_20/include --enable-duslicincl=`pwd`/../duslic-0.0.1/src 
+

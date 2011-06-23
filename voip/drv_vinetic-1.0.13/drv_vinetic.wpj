@@ -1,0 +1,500 @@
+Document file - DO NOT EDIT
+
+<BEGIN> BUILD_PPC860gnu_BUILDRULE
+archive
+<END>
+
+<BEGIN> BUILD_PPC860gnu_MACRO_AR
+arppc
+<END>
+
+<BEGIN> BUILD_PPC860gnu_MACRO_ARCHIVE
+$(PRJ_DIR)/PPC860gnu/drv_vinetic.a
+<END>
+
+<BEGIN> BUILD_PPC860gnu_MACRO_AS
+ccppc
+<END>
+
+<BEGIN> BUILD_PPC860gnu_MACRO_CC
+ccppc
+<END>
+
+<BEGIN> BUILD_PPC860gnu_MACRO_CFLAGS
+-O2 \
+	-mcpu=860 \
+	-ansi \
+	-nostdinc \
+	-DRW_MULTI_THREAD \
+	-DRUNTIME_TRACE \
+	-DINCLUDE_POSIX_TIMERS \
+	-D_REENTRANT \
+	-fvolatile \
+	-fno-builtin \
+	-fno-for-scope \
+	-DVINETIC_MAX_DEVICES=2 \
+	-DVXWORKS \
+	-DTAPI \
+	-DTAPI_LT \
+	-DTAPI_VOICE \
+	-DTAPI_CID \
+	-DTAPI_DTMF \
+	-DTAPI_GR909 \
+	-DVIN_DEFAULT_FW \
+	-DVIN_V14_SUPPORT \
+	-DVIN_V21_SUPPORT \
+	-DVIN_DEFAULT_FW \
+	-DVIN_POLL \
+	-DCPU=PPC860 \
+	-Wall \
+	-Wunused \
+	-Wuninitialized \
+	-I$(WIND_BASE)/target/h \
+	-I$(PRJ_DIR)/src \
+	-I$(PRJ_DIR) \
+	-I$(PRJ_DIR)/src/bin_images \
+	-I$(PRJ_DIR)/src/common/src \
+	-I$(PRJ_DIR)/src/tapi/src \
+	-I$(PRJ_DIR)/src/mpc/src \
+	-I$(PRJ_DIR)/src/lib/lib_bufferpool \
+	-I$(PRJ_DIR)/src/lib/lib_fifo \
+	-I$(PRJ_DIR)/src/mpc/src \
+	-I.
+<END>
+
+<BEGIN> BUILD_PPC860gnu_MACRO_CFLAGS_AS
+-g \
+	-mcpu=860 \
+	-ansi \
+	-nostdinc \
+	-fvolatile \
+	-fno-builtin \
+	-fno-for-scope \
+	-P \
+	-x \
+	assembler-with-cpp \
+	-I. \
+	-I$(WIND_BASE)/target/h \
+	-DCPU=PPC860
+<END>
+
+<BEGIN> BUILD_PPC860gnu_MACRO_CPP
+ccppc -E -P -xc
+<END>
+
+<BEGIN> BUILD_PPC860gnu_MACRO_LD
+ldppc
+<END>
+
+<BEGIN> BUILD_PPC860gnu_MACRO_LDDEPS
+
+<END>
+
+<BEGIN> BUILD_PPC860gnu_MACRO_LDFLAGS
+-X -N
+<END>
+
+<BEGIN> BUILD_PPC860gnu_MACRO_LD_PARTIAL_FLAGS
+-X -r
+<END>
+
+<BEGIN> BUILD_PPC860gnu_MACRO_NM
+nmppc
+<END>
+
+<BEGIN> BUILD_PPC860gnu_MACRO_OPTION_DEFINE_MACRO
+-D
+<END>
+
+<BEGIN> BUILD_PPC860gnu_MACRO_OPTION_INCLUDE_DIR
+-I
+<END>
+
+<BEGIN> BUILD_PPC860gnu_MACRO_POST_BUILD_RULE
+
+<END>
+
+<BEGIN> BUILD_PPC860gnu_MACRO_PRJ_LIBS
+
+<END>
+
+<BEGIN> BUILD_PPC860gnu_MACRO_SIZE
+sizeppc
+<END>
+
+<BEGIN> BUILD_PPC860gnu_RO_DEPEND_PATH
+{$(WIND_BASE)/target/h/} {$(WIND_BASE)/target/src/} {$(WIND_BASE)/target/config/}
+<END>
+
+<BEGIN> BUILD_PPC860gnu_TC
+::tc_PPC860gnu
+<END>
+
+<BEGIN> BUILD_RULE_archive
+
+<END>
+
+<BEGIN> BUILD_RULE_drv_vinetic.out
+
+<END>
+
+<BEGIN> BUILD_RULE_objects
+
+<END>
+
+<BEGIN> BUILD__CURRENT
+PPC860gnu
+<END>
+
+<BEGIN> BUILD__LIST
+PPC860gnu
+<END>
+
+<BEGIN> CORE_INFO_TYPE
+::prj_vxApp
+<END>
+
+<BEGIN> CORE_INFO_VERSION
+2.0
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/src/drv_vinetic_con.c_objects
+drv_vinetic_con.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/src/drv_vinetic_con.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/src/common/src/sys_drv_debug.c_objects
+sys_drv_debug.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/src/common/src/sys_drv_debug.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/src/common/src/sys_drv_delaylib_vxworks.c_objects
+sys_drv_delaylib_vxworks.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/src/common/src/sys_drv_delaylib_vxworks.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/src/common/src/sys_drv_fifo.c_objects
+sys_drv_fifo.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/src/common/src/sys_drv_fifo.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/src/common/src/sys_drv_timerlib_vxworks.c_objects
+sys_drv_timerlib_vxworks.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/src/common/src/sys_drv_timerlib_vxworks.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/src/drv_vinetic_api.c_objects
+drv_vinetic_api.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/src/drv_vinetic_api.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/src/drv_vinetic_basic.c_objects
+drv_vinetic_basic.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/src/drv_vinetic_basic.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/src/drv_vinetic_cid.c_objects
+drv_vinetic_cid.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/src/drv_vinetic_cid.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/src/drv_vinetic_cram.c_objects
+drv_vinetic_cram.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/src/drv_vinetic_cram.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/src/drv_vinetic_dspconf.c_objects
+drv_vinetic_dspconf.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/src/drv_vinetic_dspconf.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/src/drv_vinetic_dwnld.c_objects
+drv_vinetic_dwnld.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/src/drv_vinetic_dwnld.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/src/drv_vinetic_gpio.c_objects
+drv_vinetic_gpio.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/src/drv_vinetic_gpio.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/src/drv_vinetic_gr909.c_objects
+drv_vinetic_gr909.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/src/drv_vinetic_gr909.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/src/drv_vinetic_int.c_objects
+drv_vinetic_int.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/src/drv_vinetic_int.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/src/drv_vinetic_lt.c_objects
+drv_vinetic_lt.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/src/drv_vinetic_lt.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/src/drv_vinetic_main.c_objects
+drv_vinetic_main.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/src/drv_vinetic_main.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/src/drv_vinetic_misc.c_objects
+drv_vinetic_misc.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/src/drv_vinetic_misc.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/src/drv_vinetic_parallel.c_objects
+drv_vinetic_parallel.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/src/drv_vinetic_parallel.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/src/drv_vinetic_polled.c_objects
+drv_vinetic_polled.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/src/drv_vinetic_polled.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/src/drv_vinetic_stream.c_objects
+drv_vinetic_stream.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/src/drv_vinetic_stream.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/src/drv_vinetic_tapi.c_objects
+drv_vinetic_tapi.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/src/drv_vinetic_tapi.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/src/drv_vinetic_vxworks.c_objects
+drv_vinetic_vxworks.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/src/drv_vinetic_vxworks.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/src/lib/lib_fifo/lib_fifo.c_objects
+lib_fifo.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/src/lib/lib_fifo/lib_fifo.c_tool
+C/C++ compiler
+<END>
+
+
+<BEGIN> FILE_$(PRJ_DIR)/src/src/drv_tapi_voice.c_objects
+drv_tapi_voice.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/src/src/drv_tapi_voice.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/src/drv_vinetic_tone.c_objects
+drv_vinetic_tone.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/src/drv_vinetic_tone.c_tool
+C/C++ compiler
+<END>
+<BEGIN> FILE_$(PRJ_DIR)/src/tapi/src/drv_tapi_cid.c_objects
+drv_tapi_cid.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/src/tapi/src/drv_tapi_cid.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/src/tapi/src/drv_tapi_dial.c_objects
+drv_tapi_dial.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/src/tapi/src/drv_tapi_dial.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/src/tapi/src/drv_tapi_event.c_objects
+drv_tapi_event.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/src/tapi/src/drv_tapi_event.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/src/tapi/src/drv_tapi_main.c_objects
+drv_tapi_main.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/src/tapi/src/drv_tapi_main.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/src/tapi/src/drv_tapi_meter.c_objects
+drv_tapi_meter.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/src/tapi/src/drv_tapi_meter.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/src/tapi/src/drv_tapi_misc.c_objects
+drv_tapi_misc.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/src/tapi/src/drv_tapi_misc.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/src/tapi/src/drv_tapi_opcontrol.c_objects
+drv_tapi_opcontrol.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/src/tapi/src/drv_tapi_opcontrol.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/src/tapi/src/drv_tapi_pcm.c_objects
+drv_tapi_pcm.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/src/tapi/src/drv_tapi_pcm.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/src/tapi/src/drv_tapi_ring.c_objects
+drv_tapi_ring.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/src/tapi/src/drv_tapi_ring.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/src/tapi/src/drv_tapi_tone.c_objects
+drv_tapi_tone.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/src/tapi/src/drv_tapi_tone.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/src/tapi/src/drv_tapi_voice.c_objects
+drv_tapi_voice.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/src/tapi/src/drv_tapi_voice.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/src/tapi/src/drv_tapi_vxworks.c_objects
+drv_tapi_vxworks.o
+<END>
+
+<BEGIN> FILE_$(PRJ_DIR)/src/tapi/src/drv_tapi_vxworks.c_tool
+C/C++ compiler
+<END>
+
+<BEGIN> PROJECT_FILES
+$(PRJ_DIR)/src/drv_vinetic_basic.c \
+	$(PRJ_DIR)/src/drv_vinetic_cid.c \
+	$(PRJ_DIR)/src/drv_vinetic_cram.c \
+	$(PRJ_DIR)/src/drv_vinetic_dwnld.c \
+	$(PRJ_DIR)/src/drv_vinetic_gr909.c \
+	$(PRJ_DIR)/src/drv_vinetic_dspconf.c \
+	$(PRJ_DIR)/src/drv_vinetic_gpio.c \
+	$(PRJ_DIR)/src/drv_vinetic_misc.c \
+	$(PRJ_DIR)/src/drv_vinetic_parallel.c \
+	$(PRJ_DIR)/src/drv_vinetic_stream.c \
+	$(PRJ_DIR)/src/drv_vinetic_main.c \
+	$(PRJ_DIR)/src/drv_vinetic_tapi.c \
+	$(PRJ_DIR)/src/drv_vinetic_tone.c \
+	$(PRJ_DIR)/src/drv_vinetic_vxworks.c \
+	$(PRJ_DIR)/src/drv_vinetic_int.c \
+	$(PRJ_DIR)/src/drv_vinetic_api.c \
+	$(PRJ_DIR)/src/common/src/sys_drv_debug.c \
+	$(PRJ_DIR)/src/drv_vinetic_lt.c \
+	$(PRJ_DIR)/src/tapi/src/drv_tapi_voice.c \
+	$(PRJ_DIR)/src/drv_vinetic_polled.c \
+	$(PRJ_DIR)/src/lib/lib_fifo/lib_fifo.c \
+	$(PRJ_DIR)/src/tapi/src/drv_tapi_main.c \
+	$(PRJ_DIR)/src/tapi/src/drv_tapi_dial.c \
+	$(PRJ_DIR)/src/tapi/src/drv_tapi_event.c \
+	$(PRJ_DIR)/src/tapi/src/drv_tapi_meter.c \
+	$(PRJ_DIR)/src/tapi/src/drv_tapi_misc.c \
+	$(PRJ_DIR)/src/tapi/src/drv_tapi_opcontrol.c \
+	$(PRJ_DIR)/src/tapi/src/drv_tapi_pcm.c \
+	$(PRJ_DIR)/src/tapi/src/drv_tapi_ring.c \
+	$(PRJ_DIR)/src/tapi/src/drv_tapi_tone.c \
+	$(PRJ_DIR)/src/tapi/src/drv_tapi_vxworks.c \
+	$(PRJ_DIR)/src/common/src/sys_drv_delaylib_vxworks.c \
+	$(PRJ_DIR)/src/common/src/sys_drv_fifo.c \
+	$(PRJ_DIR)/src/common/src/sys_drv_timerlib_vxworks.c \
+	$(PRJ_DIR)/src/tapi/src/drv_tapi_cid.c \
+	$(PRJ_DIR)/src/drv_vinetic_con.c
+<END>
+
+<BEGIN> userComments
+<Enter description here>
+<END>
+
+

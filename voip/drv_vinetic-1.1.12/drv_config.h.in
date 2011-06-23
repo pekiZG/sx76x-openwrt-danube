@@ -1,0 +1,133 @@
+/* drv_config.h.in.  Generated from configure.in by autoheader.  */
+
+/******************************************************************************
+
+                               Copyright (c) 2005
+                            Infineon Technologies AG
+                  St. Martin Strasse 53; 81669 Munich, Germany
+
+  THE DELIVERY OF THIS SOFTWARE AS WELL AS THE HEREBY GRANTED NON-EXCLUSIVE,
+  WORLDWIDE LICENSE TO USE, COPY, MODIFY, DISTRIBUTE AND SUBLICENSE THIS
+  SOFTWARE IS FREE OF CHARGE.
+
+  THE LICENSED SOFTWARE IS PROVIDED "AS IS" AND INFINEON EXPRESSLY DISCLAIMS
+  ALL REPRESENTATIONS AND WARRANTIES, WHETHER EXPRESS OR IMPLIED, INCLUDING
+  WITHOUT LIMITATION, WARRANTIES OR REPRESENTATIONS OF WORKMANSHIP,
+  MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, DURABILITY, THAT THE
+  OPERATING OF THE LICENSED SOFTWARE WILL BE ERROR FREE OR FREE OF ANY THIRD
+  PARTY CLAIMS, INCLUDING WITHOUT LIMITATION CLAIMS OF THIRD PARTY INTELLECTUAL
+  PROPERTY INFRINGEMENT.
+
+  EXCEPT FOR ANY LIABILITY DUE TO WILLFUL ACTS OR GROSS NEGLIGENCE AND EXCEPT
+  FOR ANY PERSONAL INJURY INFINEON SHALL IN NO EVENT BE LIABLE FOR ANY CLAIM
+  OR DAMAGES OF ANY KIND, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+  ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+  DEALINGS IN THE SOFTWARE.
+
+ ******************************************************************************/
+#ifndef _DRV_CONFIG_H_
+#define _DRV_CONFIG_H_
+
+
+/* enable debug features as asserts for example */
+#undef DEBUG
+
+/* enable trace outputs in general */
+#undef ENABLE_TRACE
+
+/* enable user configuration */
+#undef ENABLE_USER_CONFIG
+
+/* enable evaluation features e.g. for testing with WinEASY */
+#undef EVALUATION
+
+/* enabled event logger debugging */
+#undef EVENT_LOGGER_DEBUG
+
+/* Name of package */
+#undef PACKAGE
+
+/* Define to the address where bug reports for this package should be sent. */
+#undef PACKAGE_BUGREPORT
+
+/* Define to the full name of this package. */
+#undef PACKAGE_NAME
+
+/* Define to the full name and version of this package. */
+#undef PACKAGE_STRING
+
+/* Define to the one symbol short name of this package. */
+#undef PACKAGE_TARNAME
+
+/* Define to the version of this package. */
+#undef PACKAGE_VERSION
+
+/* enable runtime traces as register access */
+#undef RUNTIME_TRACE
+
+/* enable TAPI Interface */
+#undef TAPI
+
+/* enable TAPI CID support */
+#undef TAPI_CID
+
+/* enable TAPI DTMF support */
+#undef TAPI_DTMF
+
+/* enable TAPI FAX support */
+#undef TAPI_FAX_T38
+
+/* enable TAPI GR909 tests */
+#undef TAPI_GR909
+
+/* enable line testing */
+#undef TAPI_LT
+
+/* enable Voice support */
+#undef TAPI_VOICE
+
+/* Version number of package */
+#undef VERSION
+
+/* Maximum VINETIC devices to support */
+#undef VINETIC_MAX_DEVICES
+
+/* enable use of proc filesystem entries (Linux only) */
+#undef VINETIC_USE_PROC
+
+/* enable Vinetic 2CPE support */
+#undef VIN_2CPE
+
+/* enable 8 Bit bus access */
+#undef VIN_8BIT
+
+/* Vinetic access mode this driver will support */
+#undef VIN_ACCESS_MODE
+
+/* Vinetic access mode string */
+#undef VIN_ACCESS_MODE_STR
+
+/* Vinetic access width this driver will support */
+#undef VIN_ACCESS_WIDTH
+
+/* special option to enable byte swapping inside VINETIC-2CPE */
+#undef VIN_BYTE_SWAP
+
+/* configure options string */
+#undef VIN_CONFIGURE_STR
+
+/* enable including default firmware */
+#undef VIN_DEFAULT_FW
+
+/* enable SPI interface, needs user configuration */
+#undef VIN_SPI
+
+/* enable Vinetic V1.x support */
+#undef VIN_V14_SUPPORT
+
+/* enable Vinetic V2.x support */
+#undef VIN_V21_SUPPORT
+
+
+#endif /* _DRV_CONFIG_H_ */
+

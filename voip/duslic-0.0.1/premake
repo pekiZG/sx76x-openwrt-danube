@@ -1,0 +1,1 @@
+./configure --host=mips-linux --enable-kernelincl=`pwd`/../../../kernel/opensource/linux_2_4_20/include --enable-vineticincl=`pwd`/../drv_vinetic-1.0.13/src --enable-boardname=AMAZON 

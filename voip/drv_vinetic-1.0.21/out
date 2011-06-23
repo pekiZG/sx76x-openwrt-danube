@@ -1,0 +1,309 @@
+src/Makefile.am:125: drv_vinetic_CFLAGS was already defined in condition DEBUG_FALSE, which is implied by condition TRUE
+
+  drv_vinetic_CFLAGS (User, where = src/Makefile.am:125) +=
+  {
+    DEBUG_TRUE => -O1 -g3
+    DEBUG_FALSE => 
+  }
+In file included from drv_vinetic_api.h:30,
+                 from drv_vinetic_api.c:43:
+drv_api.h:114:29: drv_config_user.h: No such file or directory
+In file included from drv_vinetic_api.h:32,
+                 from drv_vinetic_api.c:43:
+drv_vinetic.h:1264: error: duplicate member `rw'
+drv_vinetic.h:1265: error: duplicate member `res0'
+drv_vinetic.h:1266: error: duplicate member `bc'
+drv_vinetic.h:1267: error: duplicate member `cmd'
+drv_vinetic.h:1268: error: duplicate member `res'
+drv_vinetic.h:1269: error: duplicate member `ch'
+drv_vinetic.h:1271: error: duplicate member `mod'
+drv_vinetic.h:1272: error: duplicate member `ecmd'
+drv_vinetic.h:1273: error: duplicate member `length'
+drv_vinetic.h:1275: error: duplicate member `en'
+drv_vinetic.h:1276: error: duplicate member `res1'
+drv_vinetic.h:1277: error: duplicate member `i1'
+drv_vinetic.h:1279: error: duplicate member `gain_x'
+drv_vinetic.h:1280: error: duplicate member `gain_r'
+drv_vinetic.h:1282: error: duplicate member `res2'
+drv_vinetic.h:1283: error: duplicate member `i2'
+drv_vinetic.h:1284: error: duplicate member `res3'
+drv_vinetic.h:1285: error: duplicate member `i3'
+drv_vinetic.h:1287: error: duplicate member `res4'
+drv_vinetic.h:1288: error: duplicate member `i4'
+drv_vinetic.h:1289: error: duplicate member `res5'
+drv_vinetic.h:1290: error: duplicate member `i5'
+drv_vinetic.h:1343: error: duplicate member `rw'
+drv_vinetic.h:1344: error: duplicate member `res0'
+drv_vinetic.h:1345: error: duplicate member `bc'
+drv_vinetic.h:1346: error: duplicate member `cmd'
+drv_vinetic.h:1347: error: duplicate member `res'
+drv_vinetic.h:1348: error: duplicate member `ch'
+drv_vinetic.h:1350: error: duplicate member `mod'
+drv_vinetic.h:1351: error: duplicate member `ecmd'
+drv_vinetic.h:1352: error: duplicate member `length'
+drv_vinetic.h:1354: error: duplicate member `en'
+drv_vinetic.h:1355: error: duplicate member `cod'
+drv_vinetic.h:1356: error: duplicate member `codnr'
+drv_vinetic.h:1357: error: duplicate member `hp'
+drv_vinetic.h:1358: error: duplicate member `bp'
+drv_vinetic.h:1359: error: duplicate member `i1'
+drv_vinetic.h:1361: error: duplicate member `x_hw'
+drv_vinetic.h:1362: error: duplicate member `xts'
+drv_vinetic.h:1363: error: duplicate member `r_hw'
+drv_vinetic.h:1364: error: duplicate member `rts'
+drv_vinetic.h:1366: error: duplicate member `gain_1'
+drv_vinetic.h:1367: error: duplicate member `gain_2'
+drv_vinetic.h:1369: error: duplicate member `res1'
+drv_vinetic.h:1370: error: duplicate member `i2'
+drv_vinetic.h:1371: error: duplicate member `res2'
+drv_vinetic.h:1372: error: duplicate member `i3'
+drv_vinetic.h:1374: error: duplicate member `res3'
+drv_vinetic.h:1375: error: duplicate member `i4'
+drv_vinetic.h:1376: error: duplicate member `res4'
+drv_vinetic.h:1377: error: duplicate member `i5'
+drv_vinetic.h:1408: error: duplicate member `rw'
+drv_vinetic.h:1409: error: duplicate member `res0'
+drv_vinetic.h:1410: error: duplicate member `bc'
+drv_vinetic.h:1411: error: duplicate member `cmd'
+drv_vinetic.h:1412: error: duplicate member `res'
+drv_vinetic.h:1413: error: duplicate member `ch'
+drv_vinetic.h:1415: error: duplicate member `mod'
+drv_vinetic.h:1416: error: duplicate member `ecmd'
+drv_vinetic.h:1417: error: duplicate member `length'
+drv_vinetic.h:1419: error: duplicate member `en'
+drv_vinetic.h:1420: error: duplicate member `res1'
+drv_vinetic.h:1421: error: duplicate member `i1'
+drv_vinetic.h:1422: error: duplicate member `res2'
+drv_vinetic.h:1423: error: duplicate member `i2'
+drv_vinetic.h:1478: error: duplicate member `rw'
+drv_vinetic.h:1479: error: duplicate member `res0'
+drv_vinetic.h:1480: error: duplicate member `bc'
+drv_vinetic.h:1481: error: duplicate member `cmd'
+drv_vinetic.h:1482: error: duplicate member `res'
+drv_vinetic.h:1483: error: duplicate member `ch'
+drv_vinetic.h:1485: error: duplicate member `mod'
+drv_vinetic.h:1486: error: duplicate member `ecmd'
+drv_vinetic.h:1487: error: duplicate member `length'
+drv_vinetic.h:1489: error: duplicate member `en'
+drv_vinetic.h:1490: error: duplicate member `res1'
+drv_vinetic.h:1491: error: duplicate member `codnr'
+drv_vinetic.h:1492: error: duplicate member `ns'
+drv_vinetic.h:1493: error: duplicate member `res2'
+drv_vinetic.h:1494: error: duplicate member `i1'
+drv_vinetic.h:1496: error: duplicate member `hp'
+drv_vinetic.h:1497: error: duplicate member `pf'
+drv_vinetic.h:1498: error: duplicate member `cng'
+drv_vinetic.h:1499: error: duplicate member `bfi'
+drv_vinetic.h:1500: error: duplicate member `dec'
+drv_vinetic.h:1501: error: duplicate member `im'
+drv_vinetic.h:1502: error: duplicate member `pst'
+drv_vinetic.h:1503: error: duplicate member `sc'
+drv_vinetic.h:1504: error: duplicate member `pte'
+drv_vinetic.h:1505: error: duplicate member `enc'
+drv_vinetic.h:1507: error: duplicate member `gain1'
+drv_vinetic.h:1508: error: duplicate member `gain2'
+drv_vinetic.h:1510: error: duplicate member `res3'
+drv_vinetic.h:1511: error: duplicate member `i2'
+drv_vinetic.h:1512: error: duplicate member `res4'
+drv_vinetic.h:1513: error: duplicate member `i3'
+drv_vinetic.h:1515: error: duplicate member `res5'
+drv_vinetic.h:1516: error: duplicate member `i4'
+drv_vinetic.h:1517: error: duplicate member `res6'
+drv_vinetic.h:1518: error: duplicate member `i5'
+drv_vinetic.h:1549: error: duplicate member `rw'
+drv_vinetic.h:1550: error: duplicate member `sc'
+drv_vinetic.h:1551: error: duplicate member `bc'
+drv_vinetic.h:1552: error: duplicate member `cmd'
+drv_vinetic.h:1553: error: duplicate member `res'
+drv_vinetic.h:1554: error: duplicate member `ch'
+drv_vinetic.h:1556: error: duplicate member `mod'
+drv_vinetic.h:1557: error: duplicate member `ecmd'
+drv_vinetic.h:1558: error: duplicate member `length'
+drv_vinetic.h:1560: error: duplicate member `en'
+drv_vinetic.h:1561: error: duplicate member `et'
+drv_vinetic.h:1562: error: duplicate member `res2'
+drv_vinetic.h:1563: error: duplicate member `md'
+drv_vinetic.h:1564: error: duplicate member `is'
+drv_vinetic.h:1565: error: duplicate member `resnr'
+drv_vinetic.h:1600: error: duplicate member `rw'
+drv_vinetic.h:1601: error: duplicate member `sc'
+drv_vinetic.h:1602: error: duplicate member `bc'
+drv_vinetic.h:1603: error: duplicate member `cmd'
+drv_vinetic.h:1604: error: duplicate member `res'
+drv_vinetic.h:1605: error: duplicate member `ch'
+drv_vinetic.h:1607: error: duplicate member `cmdmod'
+drv_vinetic.h:1608: error: duplicate member `ecmd'
+drv_vinetic.h:1609: error: duplicate member `length'
+drv_vinetic.h:1611: error: duplicate member `en'
+drv_vinetic.h:1612: error: duplicate member `et'
+drv_vinetic.h:1613: error: duplicate member `res2'
+drv_vinetic.h:1614: error: duplicate member `ad'
+drv_vinetic.h:1615: error: duplicate member `mod'
+drv_vinetic.h:1616: error: duplicate member `fg'
+drv_vinetic.h:1617: error: duplicate member `res3'
+drv_vinetic.h:1618: error: duplicate member `adda'
+drv_vinetic.h:1619: error: duplicate member `addb'
+drv_vinetic.h:1620: error: duplicate member `resnr'
+drv_vinetic.h:1654: error: duplicate member `rw'
+drv_vinetic.h:1655: error: duplicate member `sc'
+drv_vinetic.h:1656: error: duplicate member `bc'
+drv_vinetic.h:1657: error: duplicate member `cmd'
+drv_vinetic.h:1658: error: duplicate member `res'
+drv_vinetic.h:1659: error: duplicate member `ch'
+drv_vinetic.h:1661: error: duplicate member `mod'
+drv_vinetic.h:1662: error: duplicate member `ecmd'
+drv_vinetic.h:1663: error: duplicate member `length'
+drv_vinetic.h:1665: error: duplicate member `en'
+drv_vinetic.h:1666: error: duplicate member `sm'
+drv_vinetic.h:1667: error: duplicate member `sq'
+drv_vinetic.h:1668: error: duplicate member `log'
+drv_vinetic.h:1669: error: duplicate member `res2'
+drv_vinetic.h:1670: error: duplicate member `a1'
+drv_vinetic.h:1671: error: duplicate member `a2'
+drv_vinetic.h:1672: error: duplicate member `utgnr'
+drv_vinetic.h:1716: error: duplicate member `rw'
+drv_vinetic.h:1717: error: duplicate member `res0'
+drv_vinetic.h:1718: error: duplicate member `bc'
+drv_vinetic.h:1719: error: duplicate member `cmd'
+drv_vinetic.h:1720: error: duplicate member `res'
+drv_vinetic.h:1721: error: duplicate member `ch'
+drv_vinetic.h:1723: error: duplicate member `mod'
+drv_vinetic.h:1724: error: duplicate member `ecmd'
+drv_vinetic.h:1725: error: duplicate member `length'
+drv_vinetic.h:1727: error: duplicate member `ssrch'
+drv_vinetic.h:1729: error: duplicate member `ssrcl'
+drv_vinetic.h:1731: error: duplicate member `res2'
+drv_vinetic.h:1733: error: duplicate member `res3'
+drv_vinetic.h:1734: error: duplicate member `eventPt'
+drv_vinetic.h:1736: error: duplicate member `vblock'
+drv_vinetic.h:1737: error: duplicate member `res4'
+drv_vinetic.h:1738: error: duplicate member `evMaskTOG'
+drv_vinetic.h:1739: error: duplicate member `coderCh'
+drv_vinetic.h:1740: error: duplicate member `a1'
+drv_vinetic.h:1741: error: duplicate member `a2'
+drv_vinetic.h:1743: error: duplicate member `res5'
+drv_vinetic.h:1744: error: duplicate member `evMaskTrig'
+In file included from drv_vinetic_api.c:43:
+drv_vinetic_api.h:864: error: parse error before "Timer_ID"
+drv_vinetic_api.h:864: warning: no semicolon at end of struct or union
+drv_vinetic_api.h:868: error: parse error before '}' token
+drv_vinetic_api.h:868: warning: data definition has no type or storage class
+drv_vinetic_api.h:893: error: parse error before "IFXOS_event_t"
+drv_vinetic_api.h:893: warning: no semicolon at end of struct or union
+drv_vinetic_api.h:894: warning: data definition has no type or storage class
+drv_vinetic_api.h:899: error: parse error before "wqRead"
+drv_vinetic_api.h:899: warning: data definition has no type or storage class
+drv_vinetic_api.h:900: error: parse error before "wqWrite"
+drv_vinetic_api.h:900: warning: data definition has no type or storage class
+drv_vinetic_api.h:913: error: parse error before "chAcc"
+drv_vinetic_api.h:913: warning: data definition has no type or storage class
+drv_vinetic_api.h:915: error: parse error before "SelRead"
+drv_vinetic_api.h:915: warning: data definition has no type or storage class
+drv_vinetic_api.h:1028: error: parse error before '}' token
+drv_vinetic_api.h:1045: error: parse error before "IFXOS_mutex_t"
+drv_vinetic_api.h:1045: warning: no semicolon at end of struct or union
+drv_vinetic_api.h:1050: error: parse error before '}' token
+drv_vinetic_api.h:1153: error: parse error before "IFXOS_mutex_t"
+drv_vinetic_api.h:1153: warning: no semicolon at end of struct or union
+drv_vinetic_api.h:1156: warning: data definition has no type or storage class
+drv_vinetic_api.h:1165: error: parse error before "EventList"
+drv_vinetic_api.h:1165: warning: data definition has no type or storage class
+drv_vinetic_api.h:1209: error: parse error before '}' token
+drv_vinetic_api.c: In function `ObxmlPoll':
+drv_vinetic_api.c:136: error: dereferencing pointer to incomplete type
+drv_vinetic_api.c:142: error: dereferencing pointer to incomplete type
+drv_vinetic_api.c:147: error: dereferencing pointer to incomplete type
+drv_vinetic_api.c:152: error: dereferencing pointer to incomplete type
+drv_vinetic_api.c:171: error: dereferencing pointer to incomplete type
+drv_vinetic_api.c: In function `waitMbxSpace':
+drv_vinetic_api.c:210: error: dereferencing pointer to incomplete type
+drv_vinetic_api.c:213: error: dereferencing pointer to incomplete type
+drv_vinetic_api.c:225: error: dereferencing pointer to incomplete type
+drv_vinetic_api.c:228: error: dereferencing pointer to incomplete type
+drv_vinetic_api.c:232: error: dereferencing pointer to incomplete type
+drv_vinetic_api.c: In function `ScWrite':
+drv_vinetic_api.c:270: error: dereferencing pointer to incomplete type
+drv_vinetic_api.c:273: error: dereferencing pointer to incomplete type
+drv_vinetic_api.c:277: error: dereferencing pointer to incomplete type
+drv_vinetic_api.c:284: error: dereferencing pointer to incomplete type
+drv_vinetic_api.c:289: error: dereferencing pointer to incomplete type
+drv_vinetic_api.c:294: error: dereferencing pointer to incomplete type
+drv_vinetic_api.c: In function `ScRead':
+drv_vinetic_api.c:329: error: dereferencing pointer to incomplete type
+drv_vinetic_api.c:332: error: dereferencing pointer to incomplete type
+drv_vinetic_api.c:336: error: dereferencing pointer to incomplete type
+drv_vinetic_api.c:339: error: dereferencing pointer to incomplete type
+drv_vinetic_api.c:343: error: dereferencing pointer to incomplete type
+drv_vinetic_api.c:348: error: dereferencing pointer to incomplete type
+drv_vinetic_api.c: In function `RegRead':
+drv_vinetic_api.c:438: error: dereferencing pointer to incomplete type
+drv_vinetic_api.c:453: error: dereferencing pointer to incomplete type
+drv_vinetic_api.c: In function `CmdWrite':
+drv_vinetic_api.c:535: error: dereferencing pointer to incomplete type
+drv_vinetic_api.c:551: error: dereferencing pointer to incomplete type
+drv_vinetic_api.c:559: error: dereferencing pointer to incomplete type
+drv_vinetic_api.c:562: error: dereferencing pointer to incomplete type
+drv_vinetic_api.c:569: error: dereferencing pointer to incomplete type
+drv_vinetic_api.c:574: error: dereferencing pointer to incomplete type
+drv_vinetic_api.c:581: error: dereferencing pointer to incomplete type
+drv_vinetic_api.c: In function `CmdWriteIsr':
+drv_vinetic_api.c:632: error: dereferencing pointer to incomplete type
+drv_vinetic_api.c:637: error: dereferencing pointer to incomplete type
+drv_vinetic_api.c:640: error: dereferencing pointer to incomplete type
+drv_vinetic_api.c:644: error: dereferencing pointer to incomplete type
+drv_vinetic_api.c: In function `CmdRead':
+drv_vinetic_api.c:686: error: dereferencing pointer to incomplete type
+drv_vinetic_api.c:695: error: dereferencing pointer to incomplete type
+drv_vinetic_api.c:715: error: dereferencing pointer to incomplete type
+drv_vinetic_api.c:731: error: dereferencing pointer to incomplete type
+drv_vinetic_api.c:733: error: dereferencing pointer to incomplete type
+drv_vinetic_api.c:798: error: dereferencing pointer to incomplete type
+drv_vinetic_api.c:803: error: dereferencing pointer to incomplete type
+drv_vinetic_api.c:808: error: dereferencing pointer to incomplete type
+drv_vinetic_api.c: In function `DispatchCmd':
+drv_vinetic_api.c:922: error: dereferencing pointer to incomplete type
+drv_vinetic_api.c:924: error: dereferencing pointer to incomplete type
+drv_vinetic_api.c:928: error: dereferencing pointer to incomplete type
+drv_vinetic_api.c:931: error: dereferencing pointer to incomplete type
+drv_vinetic_api.c:935: error: dereferencing pointer to incomplete type
+drv_vinetic_api.c:938: error: dereferencing pointer to incomplete type
+drv_vinetic_api.c:942: error: dereferencing pointer to incomplete type
+drv_vinetic_api.c:945: error: dereferencing pointer to incomplete type
+drv_vinetic_api.c:949: error: dereferencing pointer to incomplete type
+drv_vinetic_api.c:952: error: dereferencing pointer to incomplete type
+drv_vinetic_api.c:956: error: dereferencing pointer to incomplete type
+drv_vinetic_api.c:959: error: dereferencing pointer to incomplete type
+drv_vinetic_api.c:961: error: dereferencing pointer to incomplete type
+drv_vinetic_api.c: In function `wrReg':
+drv_vinetic_api.c:1177: error: dereferencing pointer to incomplete type
+drv_vinetic_api.c:1184: error: dereferencing pointer to incomplete type
+drv_vinetic_api.c:1185: error: dereferencing pointer to incomplete type
+drv_vinetic_api.c:1192: error: dereferencing pointer to incomplete type
+drv_vinetic_api.c:1196: error: dereferencing pointer to incomplete type
+drv_vinetic_api.c:1196: error: dereferencing pointer to incomplete type
+drv_vinetic_api.c: In function `rdReg':
+drv_vinetic_api.c:1220: error: dereferencing pointer to incomplete type
+drv_vinetic_api.c:1227: error: dereferencing pointer to incomplete type
+drv_vinetic_api.c:1227: error: dereferencing pointer to incomplete type
+drv_vinetic_api.c: In function `setRegVal':
+drv_vinetic_api.c:1258: error: `NULL' undeclared (first use in this function)
+drv_vinetic_api.c:1258: error: (Each undeclared identifier is reported only once
+drv_vinetic_api.c:1258: error: for each function it appears in.)
+drv_vinetic_api.c:1260: error: dereferencing pointer to incomplete type
+drv_vinetic_api.c: In function `getRegVal':
+drv_vinetic_api.c:1304: error: `NULL' undeclared (first use in this function)
+drv_vinetic_api.c:1306: error: dereferencing pointer to incomplete type
+drv_vinetic_api.c: In function `storeRegVal':
+drv_vinetic_api.c:1348: error: dereferencing pointer to incomplete type
+drv_vinetic_api.c:1349: error: dereferencing pointer to incomplete type
+drv_vinetic_api.c: In function `restoreRegVal':
+drv_vinetic_api.c:1387: error: dereferencing pointer to incomplete type
+drv_vinetic_api.c:1388: error: dereferencing pointer to incomplete type
+drv_vinetic_api.c:1394: error: dereferencing pointer to incomplete type
+drv_vinetic_api.c:1398: error: dereferencing pointer to incomplete type
+drv_vinetic_api.c:1398: error: dereferencing pointer to incomplete type
+drv_vinetic_api.c: At top level:
+drv_vinetic_api.h:1163: error: storage size of `pChannel' isn't known
+make[2]: *** [drv_vinetic-drv_vinetic_api.o] Error 1
+make[1]: *** [all-recursive] Error 1
+make: *** [all] Error 2
