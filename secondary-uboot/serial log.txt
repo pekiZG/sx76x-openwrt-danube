@@ -1,0 +1,51 @@
+ROM VER: 1.0.3
+CFG 01
+Read EEPROMX
+ X
+
+
+SHC Danube-External-Flash-Boot - Version V1.2
+Mem-config:
+Flash:  8MB- 8MBx1
+Ram:   32MB-32MBx1
+
+Low level dbg is active...
+
+CPU0
+MEMS
+
+    -- Danube Primary loader --
+    Version        : 4.1.24.52.12
+    Build Profile    : sx76x_danube_a
+    Build Date    : Jun 10 2009 - 17:11:31
+
+    --> Extract primary loader            [  OK  ]
+    --> Validate secondary loader (FLASH)        [  OK  ]
+
+    -- Danube Secondary loader --
+    Version        : 4.1.26.52.0
+    Build Profile    : sx76x_danube_b
+    Build Date    : Jun 16 2008 - 18:02:01
+
+    --> Extract secondary loader            [  OK  ]
+
+U-Boot 2010.03 (Jul 02 2011 - 16:26:08)
+
+Board: unknown, chip part number 0x12B V1.3, DDR Speed 166 MHz, CPU Speed 333 MHz
+DRAM:  32 MB
+Flash:  8 MB
+*** Warning - bad CRC, using default environment
+
+Net:   lq_cpe_eth
+Hit any key to stop autoboot:  2  1  0
+## Booting kernel from Legacy Image at b0050000 ...
+   Image Name:   MIPS OpenWrt Linux-2.6.39.2
+   Created:      2011-07-02  14:56:31 UTC
+   Image Type:   MIPS Linux Kernel Image (lzma compressed)
+   Data Size:    923794 Bytes = 902.1 kB
+   Load Address: 80002000
+   Entry Point:  80002000
+   Verifying Checksum ... OK
+   Uncompressing Kernel Image ... OK
+
+Starting kernel ...
