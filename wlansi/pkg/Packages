@@ -1,0 +1,152 @@
+Package: netprofscripts
+Version: 0.1-1
+Depends: libc, busybox
+Provides: 
+Source: package/net/netprofscripts
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: lantiq
+Installed-Size: 522
+Filename: ./netprofscripts_0.1-1_lantiq.ipk
+Size: 1153
+MD5Sum: f3585699e34b7e8f42e9bb310ba06429
+Description:  Network profiling scripts
+
+Package: nodewatcher-clients
+Version: 0.1-1
+Depends: libc, nodewatcher-core, nullhttpd
+Provides: 
+Source: package/utils/nodewatcher-clients
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: lantiq
+Installed-Size: 22668
+Filename: ./nodewatcher-clients_0.1-1_lantiq.ipk
+Size: 23322
+MD5Sum: 47496132da5cdc0eca2dfa29d73ac4ac
+Description:  nodewatcher-clients
+
+Package: nodewatcher-core
+Version: 0.4-2
+Depends: libc, busybox, cronscripts, tc, ip
+Provides: 
+Source: package/utils/nodewatcher-core
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: lantiq
+Installed-Size: 4084
+Filename: ./nodewatcher-core_0.4-2_lantiq.ipk
+Size: 4686
+MD5Sum: b00518421aca548cb71bd141e5d52fb5
+Description:  nodewatcher-core
+
+Package: nodewatcher-watchdog
+Version: 0.1-1
+Depends: libc, nodewatcher-core, cronscripts
+Provides: 
+Source: package/utils/nodewatcher-watchdog
+Section: utils
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: lantiq
+Installed-Size: 1423
+Filename: ./nodewatcher-watchdog_0.1-1_lantiq.ipk
+Size: 2070
+MD5Sum: 5e7e3cc5f3e0ff64039fa3061f50976e
+Description:  nodewatcher-watchdog
+
+Package: ntpclient
+Version: 2007_365-2
+Depends: libc, librt
+Provides: 
+Source: package/net/ntpclient
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: lantiq
+Installed-Size: 11749
+Filename: ./ntpclient_2007_365-2_lantiq.ipk
+Size: 12317
+MD5Sum: 824be04353f695802103737e38f8811d
+Description:  NTP client for setting system time from NTP servers.
+
+Package: nullhttpd
+Version: 0.1-9
+Depends: libc, nodewatcher-core
+Provides: 
+Source: package/net/nullhttpd
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: lantiq
+Installed-Size: 11036
+Filename: ./nullhttpd_0.1-9_lantiq.ipk
+Size: 11688
+MD5Sum: dd7d879a0ffbe34ff5737a26383e3a76
+Description:  Null HTTP daemon
+
+Package: olsrd
+Version: 0.6.3-3
+Depends: libc, libpthread
+Provides: 
+Source: package/net/olsrd
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: Saverio Proto <zioproto@gmail.com>
+Architecture: lantiq
+Installed-Size: 109647
+Filename: ./olsrd_0.6.3-3_lantiq.ipk
+Size: 110191
+MD5Sum: eb89ecba14847bd2c34f659413d12e21
+Description:  OLSR (Optimized Link State Routing) daemon
+
+Package: policy-routing
+Version: 0.1-2
+Depends: libc, ip
+Provides: 
+Source: package/net/policy-routing
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: lantiq
+Installed-Size: 997
+Filename: ./policy-routing_0.1-2_lantiq.ipk
+Size: 1615
+MD5Sum: e62605841d4cc720c736d7946ceee02d
+Description:  Policy routing scripts
+
+Package: tunneldigger
+Version: 0.2-2
+Depends: libc, libnl-tiny, kmod-l2tp, kmod-l2tp-ip, kmod-l2tp-eth, librt
+Provides: 
+Source: package/net/tunneldigger
+Section: net
+Status: unknown ok not-installed
+Essential: no
+Priority: optional
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Architecture: lantiq
+Installed-Size: 6324
+Filename: ./tunneldigger_0.2-2_lantiq.ipk
+Size: 6968
+MD5Sum: 453ba77547d6ac50edf5ac720508c6f6
+Description:  L2TPv3 tunnel broker client
