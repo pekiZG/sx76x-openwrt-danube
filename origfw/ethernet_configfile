@@ -1,0 +1,4338 @@
+<o version="4.3.52.19.00" file_type="active" name="IGD" attr="5408">
+<o name="V_Logging" attr="5408">
+<b name="DefaultConfiguration" attr="6692">0</b>
+<i name="SyslogServerAddressMethod" attr="6692">0</i>
+<s name="SyslogServerAddress" attr="6692">127.0.0.1</s>
+<i name="SyslogServerPortNumber" attr="6692">514</i>
+<b name="ReportEmergencyToSNMPTrapManager" attr="5408">0</b>
+<i name="ReportToSyslogServer" attr="6692">248</i>
+<i name="ReportToLocalLogfile" attr="6692">248</i>
+<i name="ReportToLocalMaintenanceConsole" attr="6692">248</i>
+<i name="LocalReportFormat" attr="6692">long</i>
+<i name="DateAndTimeFormat" attr="6692">default</i>
+<i name="OldEventReporting" attr="6692">on</i>
+<b name="EnableKernelLogging" attr="6692">1</b>
+<i name="MaximumSizeLocalEventLog" attr="6692">500</i>
+<b name="FiltersEnabled" attr="6692">1</b>
+<b name="DebugLevelFiltering" attr="6692">1</b>
+<t name="Filters" attr="6692">
+<o name="1" attr="6692">
+<b name="Enable" attr="6692">0</b>
+<i name="Level" attr="6692">3</i>
+<s name="Originator" attr="6692">scm-*-*-*</s>
+</o>
+<o name="2" attr="6692">
+<b name="Enable" attr="6692">0</b>
+<i name="Level" attr="6692">3</i>
+<s name="Originator" attr="6692">cma-*-*-*</s>
+</o>
+<o name="3" attr="6692">
+<b name="Enable" attr="6692">1</b>
+<i name="Level" attr="6692">3</i>
+<s name="Originator" attr="6692">scm-030-*-*</s>
+</o>
+<o name="4" attr="6692">
+<b name="Enable" attr="6692">1</b>
+<i name="Level" attr="6692">3</i>
+<s name="Originator" attr="6692">scm-031-*-*</s>
+</o>
+<o name="5" attr="6692">
+<b name="Enable" attr="6692">1</b>
+<i name="Level" attr="6692">3</i>
+<s name="Originator" attr="6692">scm-036-*-*</s>
+</o>
+<o name="6" attr="6692">
+<b name="Enable" attr="6692">1</b>
+<i name="Level" attr="6692">3</i>
+<s name="Originator" attr="6692">scm-037-*-*</s>
+</o>
+<o name="7" attr="6692">
+<b name="Enable" attr="6692">1</b>
+<i name="Level" attr="6692">3</i>
+<s name="Originator" attr="6692">scm-038*-*</s>
+</o>
+<o name="8" attr="6692">
+<b name="Enable" attr="6692">1</b>
+<i name="Level" attr="6692">3</i>
+<s name="Originator" attr="6692">scm-040-*-*</s>
+</o>
+<o name="9" attr="6692">
+<b name="Enable" attr="6692">1</b>
+<i name="Level" attr="6692">3</i>
+<s name="Originator" attr="6692">scm-048-*-*</s>
+</o>
+<o name="10" attr="6692">
+<b name="Enable" attr="6692">1</b>
+<i name="Level" attr="6692">3</i>
+<s name="Originator" attr="6692">scm-049-*-*</s>
+</o>
+<o name="11" attr="6692">
+<b name="Enable" attr="6692">1</b>
+<i name="Level" attr="6692">3</i>
+<s name="Originator" attr="6692">scm-052-*-*</s>
+</o>
+<o name="12" attr="6692">
+<b name="Enable" attr="6692">1</b>
+<i name="Level" attr="6692">3</i>
+<s name="Originator" attr="6692">scm-053-*-*</s>
+</o>
+<o name="13" attr="6692">
+<b name="Enable" attr="6692">1</b>
+<i name="Level" attr="6692">3</i>
+<s name="Originator" attr="6692">scm-056*-*</s>
+</o>
+<o name="14" attr="6692">
+<b name="Enable" attr="6692">1</b>
+<i name="Level" attr="6692">3</i>
+<s name="Originator" attr="6692">scm-073-*-*</s>
+</o>
+<o name="15" attr="6692">
+<b name="Enable" attr="6692">1</b>
+<i name="Level" attr="6692">3</i>
+<s name="Originator" attr="6692">scm-074-*-*</s>
+</o>
+<o name="16" attr="6692">
+<b name="Enable" attr="6692">1</b>
+<i name="Level" attr="6692">3</i>
+<s name="Originator" attr="6692">scm-075-*-*</s>
+</o>
+<o name="17" attr="6692">
+<b name="Enable" attr="6692">1</b>
+<i name="Level" attr="6692">3</i>
+<s name="Originator" attr="6692">scm-076-*-*</s>
+</o>
+<o name="18" attr="6692">
+<b name="Enable" attr="6692">1</b>
+<i name="Level" attr="6692">3</i>
+<s name="Originator" attr="6692">scm-079-*-*</s>
+</o>
+<o name="19" attr="6692">
+<b name="Enable" attr="6692">1</b>
+<i name="Level" attr="6692">3</i>
+<s name="Originator" attr="6692">scm-080-*-*</s>
+</o>
+<o name="20" attr="6692">
+<b name="Enable" attr="6692">1</b>
+<i name="Level" attr="6692">3</i>
+<s name="Originator" attr="6692">scm-081-*-*</s>
+</o>
+<o name="21" attr="6692">
+<b name="Enable" attr="6692">1</b>
+<i name="Level" attr="6692">3</i>
+<s name="Originator" attr="6692">scm-082-*-*</s>
+</o>
+<o name="22" attr="6692">
+<b name="Enable" attr="6692">1</b>
+<i name="Level" attr="6692">3</i>
+<s name="Originator" attr="6692">scm-084-*-*</s>
+</o>
+<o name="23" attr="6692">
+<b name="Enable" attr="6692">1</b>
+<i name="Level" attr="6692">3</i>
+<s name="Originator" attr="6692">cma-013-*-*</s>
+</o>
+<o name="24" attr="6692">
+<b name="Enable" attr="6692">1</b>
+<i name="Level" attr="6692">3</i>
+<s name="Originator" attr="6692">cma-014-*-*</s>
+</o>
+<o name="25" attr="6692">
+<b name="Enable" attr="6692">1</b>
+<i name="Level" attr="6692">3</i>
+<s name="Originator" attr="6692">cma-016-*-*</s>
+</o>
+<o name="26" attr="6692">
+<b name="Enable" attr="6692">1</b>
+<i name="Level" attr="6692">3</i>
+<s name="Originator" attr="6692">cma-017-*-*</s>
+</o>
+<o name="27" attr="6692">
+<b name="Enable" attr="6692">1</b>
+<i name="Level" attr="6692">3</i>
+<s name="Originator" attr="6692">cma-018-*-*</s>
+</o>
+<o name="28" attr="6692">
+<b name="Enable" attr="6692">1</b>
+<i name="Level" attr="6692">3</i>
+<s name="Originator" attr="6692">cma-019-*-*</s>
+</o>
+<o name="29" attr="6692">
+<b name="Enable" attr="6692">1</b>
+<i name="Level" attr="6692">3</i>
+<s name="Originator" attr="6692">cma-021-*-*</s>
+</o>
+</t>
+</o>
+<o name="V_PasswordService" attr="5408">
+<o name="Administrator" attr="548">
+<s name="Name" attr="6692">administrator</s>
+</o>
+<o name="Operator" attr="10788">
+<s name="Name" attr="6692">operator</s>
+</o>
+<o name="Subscriber" attr="5408">
+<s name="Name" attr="6692">subscriber</s>
+</o>
+</o>
+<o name="Layer3Forwarding" attr="6692">
+<b name="V_AdvancedRoutingEnable" attr="72228">1</b>
+<s name="DefaultConnectionService" attr="6692"></s>
+<t name="Forwarding" attr="6692">
+<o name="1" attr="6692">
+<b name="Enable" attr="6692">1</b>
+<s name="V_Name" attr="6692">upnp_route</s>
+<s name="DestIPAddress" attr="6692">239.255.255.250</s>
+<s name="DestSubnetMask" attr="6692">255.255.255.255</s>
+<s name="SourceIPAddress" attr="6692"></s>
+<s name="SourceSubnetMask" attr="6692"></s>
+<s name="GatewayIPAddress" attr="6692"></s>
+<s name="Interface" attr="6692">IGD.LANDevice.1.LANHostConfigManagement.IPInterface.1</s>
+<s name="V_RoutingTable" attr="6692">main</s>
+<i name="ForwardingMetric" attr="6692">-1</i>
+</o>
+</t>
+<t name="V_RoutingTable" attr="6692">
+</t>
+<t name="V_RoutingPolicy" attr="6692">
+</t>
+</o>
+<o name="Layer2Bridging" attr="6692">
+<t name="Bridge" attr="6692">
+</t>
+</o>
+<o name="V_EthernetSwitchADM6996" attr="5408">
+<o name="Configuration" attr="5408">
+<t name="Ports" attr="5408">
+<o name="1" attr="5408">
+<b name="AutoNegotiation" attr="6692">1</b>
+<i name="MaxBitRate" attr="6692">100</i>
+<i name="DuplexMode" attr="6692">Full</i>
+</o>
+<o name="2" attr="5408">
+<b name="AutoNegotiation" attr="6692">1</b>
+<i name="MaxBitRate" attr="6692">100</i>
+<i name="DuplexMode" attr="6692">Full</i>
+</o>
+<o name="3" attr="5408">
+<b name="AutoNegotiation" attr="6692">1</b>
+<i name="MaxBitRate" attr="6692">100</i>
+<i name="DuplexMode" attr="6692">Full</i>
+</o>
+<o name="4" attr="5408">
+<b name="AutoNegotiation" attr="6692">1</b>
+<i name="MaxBitRate" attr="6692">100</i>
+<i name="DuplexMode" attr="6692">Full</i>
+</o>
+</t>
+</o>
+<o name="Status" attr="5408">
+</o>
+<o name="VLAN" attr="5408">
+<b name="Enable" attr="6692">1</b>
+<i name="Mode" attr="6692">Tag</i>
+<b name="VID000Replacement" attr="6692">0</b>
+<b name="VID001Replacement" attr="6692">1</b>
+<b name="VIDFFFReplacement" attr="6692">0</b>
+<b name="PriorityChange" attr="6692">0</b>
+<t name="Ports" attr="5408">
+<o name="1" attr="5408">
+<b name="Enable" attr="6692">1</b>
+<i name="VID" attr="6692">2</i>
+</o>
+<o name="2" attr="5408">
+<b name="Enable" attr="6692">1</b>
+<i name="VID" attr="6692">2</i>
+</o>
+<o name="3" attr="5408">
+<b name="Enable" attr="6692">1</b>
+<i name="VID" attr="6692">2</i>
+</o>
+<o name="4" attr="5408">
+<b name="Enable" attr="6692">1</b>
+<i name="VID" attr="6692">100</i>
+</o>
+</t>
+<t name="VLANFiltersPort" attr="5408">
+<o name="1" attr="5408">
+<b name="Enable" attr="6692">0</b>
+<i name="PortMask" attr="6692">0</i>
+<i name="PortMaskTag" attr="6692">0</i>
+<i name="Priority" attr="6692">0</i>
+</o>
+<o name="2" attr="5408">
+<b name="Enable" attr="6692">0</b>
+<i name="PortMask" attr="6692">0</i>
+<i name="PortMaskTag" attr="6692">0</i>
+<i name="Priority" attr="6692">0</i>
+</o>
+<o name="3" attr="5408">
+<b name="Enable" attr="6692">0</b>
+<i name="PortMask" attr="6692">0</i>
+<i name="PortMaskTag" attr="6692">0</i>
+<i name="Priority" attr="6692">0</i>
+</o>
+<o name="4" attr="5408">
+<b name="Enable" attr="6692">0</b>
+<i name="PortMask" attr="6692">0</i>
+<i name="PortMaskTag" attr="6692">0</i>
+<i name="Priority" attr="6692">0</i>
+</o>
+</t>
+<t name="VLANFiltersTag" attr="5408">
+<o name="1" attr="5408">
+<b name="Enable" attr="6692">1</b>
+<i name="PortMask" attr="6692">8</i>
+<i name="PortMaskTag" attr="6692">0</i>
+<i name="Priority" attr="6692">0</i>
+<i name="VID" attr="6692">100</i>
+</o>
+<o name="2" attr="5408">
+<b name="Enable" attr="6692">1</b>
+<i name="PortMask" attr="6692">8</i>
+<i name="PortMaskTag" attr="6692">8</i>
+<i name="Priority" attr="6692">0</i>
+<i name="VID" attr="6692">101</i>
+</o>
+<o name="3" attr="5408">
+<b name="Enable" attr="6692">1</b>
+<i name="PortMask" attr="6692">7</i>
+<i name="PortMaskTag" attr="6692">0</i>
+<i name="Priority" attr="6692">0</i>
+<i name="VID" attr="6692">2</i>
+</o>
+<o name="4" attr="5408">
+<b name="Enable" attr="6692">1</b>
+<i name="PortMask" attr="6692">8</i>
+<i name="PortMaskTag" attr="6692">8</i>
+<i name="Priority" attr="6692">0</i>
+<i name="VID" attr="6692">103</i>
+</o>
+<o name="5" attr="5408">
+<b name="Enable" attr="6692">0</b>
+<i name="PortMask" attr="6692">0</i>
+<i name="PortMaskTag" attr="6692">0</i>
+<i name="Priority" attr="6692">0</i>
+<i name="VID" attr="6692">1</i>
+</o>
+<o name="6" attr="5408">
+<b name="Enable" attr="6692">0</b>
+<i name="PortMask" attr="6692">0</i>
+<i name="PortMaskTag" attr="6692">0</i>
+<i name="Priority" attr="6692">0</i>
+<i name="VID" attr="6692">1</i>
+</o>
+<o name="7" attr="5408">
+<b name="Enable" attr="6692">0</b>
+<i name="PortMask" attr="6692">0</i>
+<i name="PortMaskTag" attr="6692">0</i>
+<i name="Priority" attr="6692">0</i>
+<i name="VID" attr="6692">1</i>
+</o>
+<o name="8" attr="5408">
+<b name="Enable" attr="6692">0</b>
+<i name="PortMask" attr="6692">0</i>
+<i name="PortMaskTag" attr="6692">0</i>
+<i name="Priority" attr="6692">0</i>
+<i name="VID" attr="6692">1</i>
+</o>
+<o name="9" attr="5408">
+<b name="Enable" attr="6692">0</b>
+<i name="PortMask" attr="6692">0</i>
+<i name="PortMaskTag" attr="6692">0</i>
+<i name="Priority" attr="6692">0</i>
+<i name="VID" attr="6692">1</i>
+</o>
+<o name="10" attr="5408">
+<b name="Enable" attr="6692">0</b>
+<i name="PortMask" attr="6692">0</i>
+<i name="PortMaskTag" attr="6692">0</i>
+<i name="Priority" attr="6692">0</i>
+<i name="VID" attr="6692">1</i>
+</o>
+<o name="11" attr="5408">
+<b name="Enable" attr="6692">0</b>
+<i name="PortMask" attr="6692">0</i>
+<i name="PortMaskTag" attr="6692">0</i>
+<i name="Priority" attr="6692">0</i>
+<i name="VID" attr="6692">1</i>
+</o>
+<o name="12" attr="5408">
+<b name="Enable" attr="6692">0</b>
+<i name="PortMask" attr="6692">0</i>
+<i name="PortMaskTag" attr="6692">0</i>
+<i name="Priority" attr="6692">0</i>
+<i name="VID" attr="6692">1</i>
+</o>
+<o name="13" attr="5408">
+<b name="Enable" attr="6692">0</b>
+<i name="PortMask" attr="6692">0</i>
+<i name="PortMaskTag" attr="6692">0</i>
+<i name="Priority" attr="6692">0</i>
+<i name="VID" attr="6692">1</i>
+</o>
+<o name="14" attr="5408">
+<b name="Enable" attr="6692">0</b>
+<i name="PortMask" attr="6692">0</i>
+<i name="PortMaskTag" attr="6692">0</i>
+<i name="Priority" attr="6692">0</i>
+<i name="VID" attr="6692">1</i>
+</o>
+<o name="15" attr="5408">
+<b name="Enable" attr="6692">0</b>
+<i name="PortMask" attr="6692">0</i>
+<i name="PortMaskTag" attr="6692">0</i>
+<i name="Priority" attr="6692">0</i>
+<i name="VID" attr="6692">1</i>
+</o>
+<o name="16" attr="5408">
+<b name="Enable" attr="6692">0</b>
+<i name="PortMask" attr="6692">0</i>
+<i name="PortMaskTag" attr="6692">0</i>
+<i name="Priority" attr="6692">0</i>
+<i name="VID" attr="6692">1</i>
+</o>
+</t>
+</o>
+<o name="Register" attr="5408">
+</o>
+</o>
+<t name="WANDevice" attr="5408">
+<o name="1" attr="6692">
+<o name="WANCommonInterfaceConfig" attr="5408">
+<b name="EnabledForInternet" attr="72228">1</b>
+<b name="V_MultipleConnectionsAllowed" attr="6692">1</b>
+</o>
+<o name="WANDSLInterfaceConfig" attr="5408">
+<o name="Stats" attr="5408">
+<o name="Total" attr="5408">
+</o>
+<o name="Showtime" attr="5408">
+</o>
+</o>
+<b name="Enable" attr="6692">0</b>
+<i name="V_DslMode" attr="6692">Automatic</i>
+<b name="V_LowerSubCarriers" attr="6692">0</b>
+<b name="V_PowerCutBack" attr="6692">1</b>
+<b name="V_AturInpModeSelect" attr="6692">0</b>
+<b name="V_SRASwitchedOff" attr="6692">0</b>
+<b name="V_APDSwitchedOff" attr="6692">0</b>
+</o>
+<o name="WANEthernetInterfaceConfig" attr="5408">
+<b name="Enable" attr="6692">1</b>
+<s name="MaxBitRate" attr="6692">Auto</s>
+<s name="DuplexMode" attr="6692">Auto</s>
+<b name="V_RenewOnDisconnect" attr="6692">1</b>
+</o>
+<o name="WANDSLConnectionManagement" attr="5408">
+</o>
+<o name="WANDSLDiagnostics" attr="5408">
+</o>
+<t name="WANConnectionDevice" attr="6692">
+<o name="1" attr="6692">
+<o name="WANDSLLinkConfig" attr="5408">
+<b name="Enable" attr="6692">0</b>
+<i name="LinkType" attr="6692">PPPoE</i>
+<s name="DestinationAddress" attr="6692">1/32</s>
+<i name="ATMEncapsulation" attr="6692">LLC</i>
+<s name="VCSearchList" attr="6692"></s>
+<i name="ATMQoS" attr="6692">UBR</i>
+<i name="ATMPeakCellRate" attr="6692">1</i>
+<i name="ATMMaximumBurstSize" attr="6692">1</i>
+<i name="ATMSustainableCellRate" attr="6692">1</i>
+<i name="V_ATMCellDelayVariation" attr="6692">15</i>
+<s name="V_MACAddress" attr="6692"></s>
+</o>
+<o name="WANATMF5LoopbackDiagnostics" attr="5408">
+<i name="NumberOfRepetitions" attr="6692">1</i>
+<i name="Timeout" attr="6692">1</i>
+</o>
+<t name="WANIPConnection" attr="6692">
+<inactive/>
+</t>
+<t name="WANPPPConnection" attr="6692">
+<o name="1" attr="6692">
+<b name="Enable" attr="6692">1</b>
+<s name="ConnectionType" attr="6692">IP_Routed</s>
+<s name="Name" attr="6692">Internet</s>
+<i name="IdleDisconnectTime" attr="6692">180</i>
+<b name="RSIPAvailable" attr="5408">0</b>
+<b name="NATEnabled" attr="6692">1</b>
+<s name="Username" attr="6692"></s>
+<s name="Password" attr="6692"></s>
+<s name="PPPAuthenticationProtocol" attr="6692">PAPCHAP</s>
+<i name="MaxMRUSize" attr="6692">1492</i>
+<b name="DNSEnabled" attr="6692">1</b>
+<b name="DNSOverrideAllowed" attr="6692">1</b>
+<s name="DNSServers" attr="6692"></s>
+<s name="MACAddress" attr="6692"></s>
+<b name="MACAddressOverride" attr="6692">0</b>
+<s name="PPPoEACName" attr="6692"></s>
+<s name="PPPoEServiceName" attr="6692"></s>
+<s name="ConnectionTrigger" attr="6692">AlwaysOn</s>
+<s name="RouteProtocolRx" attr="6692">Off</s>
+<i name="PPPLCPEcho" attr="5408">30</i>
+<i name="PPPLCPEchoRetry" attr="5408">10</i>
+<s name="V_LinkName" attr="36">ppp_0</s>
+<s name="V_ProviderName" attr="6692">99</s>
+<s name="V_PeerIPAddress" attr="6692"></s>
+<s name="V_LocalIPAddress" attr="6692"></s>
+<i name="V_MaxMTUSize" attr="6692">1492</i>
+<b name="RIPEnable" attr="6692">0</b>
+<t name="V_LANRelayInterface" attr="6692">
+</t>
+<t name="PortMapping" attr="6692">
+</t>
+<o name="V_DynDNS" attr="5408">
+<b name="Enable" attr="6692">0</b>
+<i name="ServiceProvider" attr="6692">dyndns</i>
+<s name="DomainName" attr="6692"></s>
+<s name="UserName" attr="6692"></s>
+<s name="Password" attr="6692"></s>
+<s name="Proxy" attr="6692"></s>
+</o>
+<t name="V_PortTriggering" attr="6692">
+</t>
+<b name="V_IGMPEnabled" attr="6692">0</b>
+<b name="V_AutoDisconnectEnable" attr="6692">0</b>
+<s name="V_AutoDisconnectTimePeriod" attr="6692"></s>
+<b name="V_PassiveLCP" attr="6692">1</b>
+<b name="V_ReportErrorCauses" attr="6692">0</b>
+<b name="V_IsMngmtRestricted" attr="5408">0</b>
+</o>
+</t>
+<o name="V_WANVlanInterfaceConfig" attr="6692">
+<s name="Name" attr="6692">vlan100</s>
+<i name="VlanTag" attr="6692">100</i>
+<i name="VlanPriority" attr="6692">0</i>
+<b name="Enable" attr="6692">1</b>
+<s name="BaseInterface" attr="6692"></s>
+<s name="MACAddress" attr="6692">+0</s>
+</o>
+<s name="V_WANConnectionType" attr="6692">VLAN</s>
+</o>
+<o name="2" attr="6692">
+<o name="WANDSLLinkConfig" attr="5408">
+<b name="Enable" attr="6692">0</b>
+<i name="LinkType" attr="6692">PPPoE</i>
+<s name="DestinationAddress" attr="6692">1/32</s>
+<i name="ATMEncapsulation" attr="6692">LLC</i>
+<s name="VCSearchList" attr="6692"></s>
+<i name="ATMQoS" attr="6692">UBR</i>
+<i name="ATMPeakCellRate" attr="6692">1</i>
+<i name="ATMMaximumBurstSize" attr="6692">1</i>
+<i name="ATMSustainableCellRate" attr="6692">1</i>
+<i name="V_ATMCellDelayVariation" attr="6692">15</i>
+<s name="V_MACAddress" attr="6692">+6</s>
+</o>
+<o name="WANATMF5LoopbackDiagnostics" attr="5408">
+<i name="NumberOfRepetitions" attr="6692">1</i>
+<i name="Timeout" attr="6692">1</i>
+</o>
+<t name="WANIPConnection" attr="6692">
+<o name="1" attr="6692">
+<b name="Enable" attr="6692">1</b>
+<s name="ConnectionType" attr="6692">IP_Routed</s>
+<s name="Name" attr="6692">voip</s>
+<b name="RSIPAvailable" attr="5408">0</b>
+<b name="V_IGMPEnabled" attr="6692">0</b>
+<b name="NATEnabled" attr="6692">1</b>
+<t name="PortMapping" attr="6692">
+</t>
+<s name="AddressingType" attr="6692">DHCP</s>
+<s name="ExternalIPAddress" attr="88628"></s>
+<s name="SubnetMask" attr="6692"></s>
+<s name="DefaultGateway" attr="6692"></s>
+<b name="DNSEnabled" attr="6692">0</b>
+<b name="DNSOverrideAllowed" attr="6692">1</b>
+<s name="DNSServers" attr="6692"></s>
+<o name="V_DynDNS" attr="5408">
+<b name="Enable" attr="6692">0</b>
+<i name="ServiceProvider" attr="6692">dyndns</i>
+<s name="DomainName" attr="6692"></s>
+<s name="UserName" attr="6692"></s>
+<s name="Password" attr="6692"></s>
+<s name="Proxy" attr="6692"></s>
+</o>
+<i name="MaxMTUSize" attr="6692">1500</i>
+<s name="MACAddress" attr="6692">00:01:E3:8F:2D:99</s>
+<b name="MACAddressOverride" attr="6692">0</b>
+<s name="ConnectionTrigger" attr="6692"></s>
+<s name="RouteProtocolRx" attr="6692">Off</s>
+<s name="V_ProviderName" attr="6692">myprovider</s>
+<b name="RIPEnable" attr="6692">0</b>
+<o name="Stats" attr="6692">
+</o>
+<t name="V_PortTriggering" attr="6692">
+</t>
+<s name="V_VendorClass" attr="6692">IADsx763</s>
+<b name="V_EnableDhcpBroadcastReply" attr="6692">0</b>
+<b name="V_EnableClasslessStaticRoute" attr="6692">0</b>
+</o>
+</t>
+<t name="WANPPPConnection" attr="6692">
+</t>
+<o name="V_WANVlanInterfaceConfig" attr="6692">
+<s name="Name" attr="6692">vlan101</s>
+<i name="VlanTag" attr="6692">101</i>
+<i name="VlanPriority" attr="6692">5</i>
+<b name="Enable" attr="6692">1</b>
+<s name="BaseInterface" attr="6692"></s>
+<s name="MACAddress" attr="6692">+0</s>
+</o>
+<s name="V_WANConnectionType" attr="6692">Vlan</s>
+</o>
+<o name="3" attr="6692">
+<o name="WANDSLLinkConfig" attr="5408">
+<b name="Enable" attr="6692">0</b>
+<i name="LinkType" attr="6692">PPPoE</i>
+<s name="DestinationAddress" attr="6692">1/32</s>
+<i name="ATMEncapsulation" attr="6692">LLC</i>
+<s name="VCSearchList" attr="6692"></s>
+<i name="ATMQoS" attr="6692">UBR</i>
+<i name="ATMPeakCellRate" attr="6692">1</i>
+<i name="ATMMaximumBurstSize" attr="6692">1</i>
+<i name="ATMSustainableCellRate" attr="6692">1</i>
+<i name="V_ATMCellDelayVariation" attr="6692">15</i>
+<s name="V_MACAddress" attr="6692">+6</s>
+</o>
+<o name="WANATMF5LoopbackDiagnostics" attr="5408">
+<i name="NumberOfRepetitions" attr="6692">1</i>
+<i name="Timeout" attr="6692">1</i>
+</o>
+<t name="WANIPConnection" attr="6692">
+<o name="1" attr="6692">
+<b name="Enable" attr="6692">1</b>
+<s name="ConnectionType" attr="6692">IP_Routed</s>
+<s name="Name" attr="6692">TR069</s>
+<b name="RSIPAvailable" attr="5408">0</b>
+<b name="V_IGMPEnabled" attr="6692">0</b>
+<b name="NATEnabled" attr="6692">1</b>
+<t name="PortMapping" attr="6692">
+</t>
+<s name="AddressingType" attr="6692">DHCP</s>
+<s name="ExternalIPAddress" attr="88628"></s>
+<s name="SubnetMask" attr="6692"></s>
+<s name="DefaultGateway" attr="6692"></s>
+<b name="DNSEnabled" attr="6692">0</b>
+<b name="DNSOverrideAllowed" attr="6692">1</b>
+<s name="DNSServers" attr="6692"></s>
+<o name="V_DynDNS" attr="5408">
+<b name="Enable" attr="6692">0</b>
+<i name="ServiceProvider" attr="6692">dyndns</i>
+<s name="DomainName" attr="6692"></s>
+<s name="UserName" attr="6692"></s>
+<s name="Password" attr="6692"></s>
+<s name="Proxy" attr="6692"></s>
+</o>
+<i name="MaxMTUSize" attr="6692">1500</i>
+<s name="MACAddress" attr="6692">00:01:E3:8F:2D:99</s>
+<b name="MACAddressOverride" attr="6692">0</b>
+<s name="ConnectionTrigger" attr="6692"></s>
+<s name="RouteProtocolRx" attr="6692">Off</s>
+<s name="V_ProviderName" attr="6692">myprovider</s>
+<b name="RIPEnable" attr="6692">0</b>
+<o name="Stats" attr="6692">
+</o>
+<t name="V_PortTriggering" attr="6692">
+</t>
+<s name="V_VendorClass" attr="6692">IADsx763</s>
+<b name="V_EnableDhcpBroadcastReply" attr="6692">0</b>
+<b name="V_EnableClasslessStaticRoute" attr="6692">0</b>
+</o>
+</t>
+<t name="WANPPPConnection" attr="6692">
+</t>
+<o name="V_WANVlanInterfaceConfig" attr="6692">
+<s name="Name" attr="6692">vlan103</s>
+<i name="VlanTag" attr="6692">103</i>
+<i name="VlanPriority" attr="6692">0</i>
+<b name="Enable" attr="6692">1</b>
+<s name="BaseInterface" attr="6692"></s>
+<s name="MACAddress" attr="6692">+0</s>
+</o>
+<s name="V_WANConnectionType" attr="6692">Vlan</s>
+</o>
+</t>
+</o>
+</t>
+<o name="DeviceInfo" attr="5408">
+<s name="ProvisioningCode" attr="23092"></s>
+<s name="V_LocationCountryCode" attr="6692">DE</s>
+</o>
+<o name="DeviceConfig" attr="5408">
+<i name="V_ProvisioningMode" attr="6692">Dormant</i>
+<s name="V_ProvisioningInterface" attr="6692"></s>
+<i name="V_InterfaceTimeout" attr="6692">60</i>
+<b name="V_WaitTimeSync" attr="6692">0</b>
+<i name="V_TR69ProvisioningTimeout" attr="6692">300000</i>
+<s name="V_StaticProvisioningURI" attr="6692"></s>
+<s name="V_Username" attr="6692"></s>
+<s name="V_Password" attr="6692"></s>
+<i name="V_DownloadProtocol" attr="6692">HTTP</i>
+<s name="V_ConfigVersion" attr="6692">DFCG_generic_ethernet</s>
+<o name="V_SystemHostname" attr="6692">
+<s name="Name" attr="6692"></s>
+<s name="Interface" attr="6692"></s>
+</o>
+<i name="V_WANAccessType" attr="6692">ethernet</i>
+<i name="V_MaxWDSCount" attr="6692">3</i>
+</o>
+<o name="V_SWImageMngmt" attr="5408">
+<i name="Protocol" attr="6692">HTTP</i>
+<s name="Server" attr="6692">update.gigaset.net</s>
+<s name="Username" attr="6692"></s>
+<s name="Password" attr="6692"></s>
+<s name="RequestedImageName" attr="6692"></s>
+<i name="Timeout1" attr="6692">0</i>
+<i name="Timeout2" attr="6692">0</i>
+<b name="AutoUpdateEnable" attr="6692">0</b>
+<s name="AutoUpdateModes" attr="6692">mngmt-req</s>
+<s name="AutoUpdateInterface" attr="6692"></s>
+<i name="AutoUpdateTimeout" attr="6692">60</i>
+<o name="Update" attr="5408">
+<i name="UpdatePossibility" attr="6692">both</i>
+<i name="UpdateSource" attr="6692">server</i>
+<i name="CheckPeriod" attr="6692">MONTHLY</i>
+<s name="About" attr="5408"></s>
+</o>
+</o>
+<o name="V_Diagnostics" attr="5408">
+<b name="EnableSystemDiagnostics" attr="6692">1</b>
+<b name="EnableNetworkDiagnostics" attr="6692">1</b>
+<b name="EnableTelephonyDiagnostics" attr="6692">1</b>
+<b name="EnableLoggingData" attr="6692">1</b>
+<b name="EnableConfigurationData" attr="6692">1</b>
+<s name="DiagnosticServer" attr="6692"></s>
+<o name="SystemDiagnostics" attr="5408">
+</o>
+<o name="NetworkDiagnostics" attr="5408">
+</o>
+<o name="TelephonyDiagnostics" attr="5408">
+<o name="VoiceStatistics" attr="5408">
+</o>
+</o>
+<o name="SyslogData" attr="5408">
+</o>
+<o name="ConfigurationData" attr="5408">
+</o>
+<t name="ExtDiagnostics" attr="6692">
+</t>
+</o>
+<o name="Time" attr="5408">
+<s name="NTPServer1" attr="6692">zg1.ntp.carnet.hr</s>
+<s name="NTPServer2" attr="6692">zg2.ntp.carnet.hr</s>
+<s name="NTPServer3" attr="6692">2.pool.ntp.org</s>
+<s name="NTPServer4" attr="6692"></s>
+<s name="NTPServer5" attr="6692"></s>
+<s name="LocalTimeZone" attr="6692">+00:00</s>
+<s name="LocalTimeZoneName" attr="6692">UTC</s>
+<b name="DaylightSavingsUsed" attr="6692">0</b>
+<s name="DaylightSavingsStart" attr="6692">0000-00-00T00:00:00</s>
+<s name="DaylightSavingsEnd" attr="6692">0000-00-00T00:00:00</s>
+<s name="V_DaylightSavingOffset" attr="6692">01:00</s>
+<i name="V_ServerAddressMethod" attr="6692">DHCP</i>
+<s name="V_Interface" attr="6692"></s>
+<i name="V_Dateformat" attr="6692">DDMM</i>
+<i name="V_Timeformat" attr="6692">hh:mm:ss</i>
+<i name="V_SyncMode" attr="6692">NTP</i>
+<i name="V_SyncInterval" attr="6692">86399</i>
+<b name="V_UseTimeZoneFile" attr="6692">0</b>
+<i name="V_TimeZoneFile" attr="6692">UTC</i>
+</o>
+<o name="ManagementServer" attr="5408">
+<s name="URL" attr="23092"></s>
+<s name="V_PreviousURL" attr="32"></s>
+<b name="PeriodicInformEnable" attr="6692">0</b>
+<i name="PeriodicInformInterval" attr="6692">240</i>
+<s name="PeriodicInformTime" attr="6692">0001-01-01T00:00:00</s>
+<s name="ParameterKey" attr="5416"></s>
+<s name="ConnectionRequestUsername" attr="6692"></s>
+<s name="ConnectionRequestPassword" attr="6692"></s>
+<b name="UpgradesManaged" attr="6692">0</b>
+<i name="V_ConnectionRequestPort" attr="6692">8085</i>
+<i name="V_ConnectionRequestAuthentication" attr="6692">Digest</i>
+<s name="V_Interface" attr="6692"></s>
+<b name="V_Enable" attr="6692">0</b>
+<b name="V_WaitForNTPSync" attr="6692">0</b>
+<b name="V_DisableSessionLock" attr="36">0</b>
+<b name="V_AlwaysDHCPDiscovery" attr="6692">0</b>
+</o>
+<o name="Services" attr="5408">
+<i name="VoiceServiceNumberOfEntries" attr="5408">1</i>
+<t name="VoiceService" attr="5408">
+<o name="1" attr="5408">
+<i name="VoiceProfileNumberOfEntries" attr="5408">0</i>
+<b name="Enable" attr="6692">1</b>
+<o name="Capabilities" attr="5408">
+<i name="MaxProfileCount" attr="5408">6</i>
+<i name="MaxLineCount" attr="5408">6</i>
+<i name="MaxSessionsPerLine" attr="5408">6</i>
+<i name="MaxSessionCount" attr="5408">6</i>
+<s name="SignalingProtocols" attr="5408">SIP/2.0</s>
+<s name="Regions" attr="5408">Unknown</s>
+<b name="RTCP" attr="5408">1</b>
+<b name="SRTP" attr="5408">0</b>
+<b name="RTPRedundancy" attr="5408">0</b>
+<b name="DSCPCoupled" attr="5408">0</b>
+<b name="EthernetTaggingCoupled" attr="5408">0</b>
+<b name="PSTNSoftSwitchOver" attr="5408">1</b>
+<b name="FaxT38" attr="5408">1</b>
+<b name="FaxPassThrough" attr="5408">1</b>
+<b name="ModemPassThrough" attr="5408">1</b>
+<b name="ToneGeneration" attr="5408">1</b>
+<b name="RingGeneration" attr="5408">1</b>
+<b name="NumberingPlan" attr="5408">0</b>
+<b name="ButtonMap" attr="5408">0</b>
+<b name="VoicePortTests" attr="5408">0</b>
+<o name="SIP" attr="5408">
+<s name="Role" attr="5408">UserAgent</s>
+<s name="Extensions" attr="5408">INFO,NOTIFY,SUBSCRIBE,PUBLISH,PRACK,UPDATE,REFER</s>
+<s name="Transports" attr="5408">UDP,TCP</s>
+<s name="URISchemes" attr="5408">sip</s>
+<b name="EventSubscription" attr="5408">0</b>
+<b name="ResponseMap" attr="5408">0</b>
+</o>
+<t name="Codecs" attr="5408">
+<o name="1" attr="5408">
+<i name="EntryID" attr="5408">1</i>
+<s name="Codec" attr="5408">G.711MuLaw</s>
+<i name="BitRate" attr="5408">64000</i>
+<s name="PacketizationPeriod" attr="5408">5,10,20</s>
+<b name="SilenceSuppression" attr="5408">1</b>
+</o>
+<o name="2" attr="5408">
+<i name="EntryID" attr="5408">2</i>
+<s name="Codec" attr="5408">G.711ALaw</s>
+<i name="BitRate" attr="5408">64000</i>
+<s name="PacketizationPeriod" attr="5408">5,10,20</s>
+<b name="SilenceSuppression" attr="5408">1</b>
+</o>
+<o name="3" attr="5408">
+<i name="EntryID" attr="5408">3</i>
+<s name="Codec" attr="5408">G.726</s>
+<i name="BitRate" attr="5408">16000</i>
+<s name="PacketizationPeriod" attr="5408">5,10,20</s>
+<b name="SilenceSuppression" attr="5408">1</b>
+</o>
+<o name="4" attr="5408">
+<i name="EntryID" attr="5408">4</i>
+<s name="Codec" attr="5408">G.726</s>
+<i name="BitRate" attr="5408">24000</i>
+<s name="PacketizationPeriod" attr="5408">5,10,20</s>
+<b name="SilenceSuppression" attr="5408">1</b>
+</o>
+<o name="5" attr="5408">
+<i name="EntryID" attr="5408">5</i>
+<s name="Codec" attr="5408">G.726</s>
+<i name="BitRate" attr="5408">32000</i>
+<s name="PacketizationPeriod" attr="5408">5,10,20</s>
+<b name="SilenceSuppression" attr="5408">1</b>
+</o>
+<o name="6" attr="5408">
+<i name="EntryID" attr="5408">6</i>
+<s name="Codec" attr="5408">G.726</s>
+<i name="BitRate" attr="5408">40000</i>
+<s name="PacketizationPeriod" attr="5408">5,10,20</s>
+<b name="SilenceSuppression" attr="5408">1</b>
+</o>
+<o name="7" attr="5408">
+<i name="EntryID" attr="5408">7</i>
+<s name="Codec" attr="5408">G.729</s>
+<i name="BitRate" attr="5408">8000</i>
+<s name="PacketizationPeriod" attr="5408">10,20</s>
+<b name="SilenceSuppression" attr="5408">0</b>
+</o>
+<o name="8" attr="5408">
+<i name="EntryID" attr="5408">8</i>
+<s name="Codec" attr="5408">G.729a</s>
+<i name="BitRate" attr="5408">8000</i>
+<s name="PacketizationPeriod" attr="5408">10,20</s>
+<b name="SilenceSuppression" attr="5408">1</b>
+</o>
+<o name="9" attr="5408">
+<i name="EntryID" attr="5408">9</i>
+<s name="Codec" attr="5408">G.729e</s>
+<i name="BitRate" attr="5408">11200</i>
+<s name="PacketizationPeriod" attr="5408">10,20</s>
+<b name="SilenceSuppression" attr="5408">0</b>
+</o>
+<o name="10" attr="5408">
+<i name="EntryID" attr="5408">10</i>
+<s name="Codec" attr="5408">G.728</s>
+<i name="BitRate" attr="5408">16000</i>
+<s name="PacketizationPeriod" attr="5408">5,10,20</s>
+<b name="SilenceSuppression" attr="5408">0</b>
+</o>
+<o name="11" attr="5408">
+<i name="EntryID" attr="5408">11</i>
+<s name="Codec" attr="5408">G.723.1</s>
+<i name="BitRate" attr="5408">5300</i>
+<s name="PacketizationPeriod" attr="5408">30</s>
+<b name="SilenceSuppression" attr="5408">1</b>
+</o>
+<o name="12" attr="5408">
+<i name="EntryID" attr="5408">12</i>
+<s name="Codec" attr="5408">G.723.1</s>
+<i name="BitRate" attr="5408">6300</i>
+<s name="PacketizationPeriod" attr="5408">30</s>
+<b name="SilenceSuppression" attr="5408">1</b>
+</o>
+<o name="13" attr="5408">
+<i name="EntryID" attr="5408">13</i>
+<s name="Codec" attr="5408">G.722</s>
+<i name="BitRate" attr="5408">64000</i>
+<s name="PacketizationPeriod" attr="5408">20</s>
+<b name="SilenceSuppression" attr="5408">1</b>
+</o>
+<o name="14" attr="5408">
+<i name="EntryID" attr="5408">14</i>
+<s name="Codec" attr="5408">G.722.1</s>
+<i name="BitRate" attr="5408">32000</i>
+<s name="PacketizationPeriod" attr="5408">20</s>
+<b name="SilenceSuppression" attr="5408">1</b>
+</o>
+<o name="15" attr="5408">
+<i name="EntryID" attr="5408">15</i>
+<s name="Codec" attr="5408">G.722.2</s>
+<i name="BitRate" attr="5408">16000</i>
+<s name="PacketizationPeriod" attr="5408">20</s>
+<b name="SilenceSuppression" attr="5408">1</b>
+</o>
+<o name="16" attr="5408">
+<i name="EntryID" attr="5408">16</i>
+<s name="Codec" attr="5408">GSM-FR</s>
+<i name="BitRate" attr="5408">13000</i>
+<s name="PacketizationPeriod" attr="5408">20</s>
+<b name="SilenceSuppression" attr="5408">1</b>
+</o>
+<o name="17" attr="5408">
+<i name="EntryID" attr="5408">17</i>
+<s name="Codec" attr="5408">GSM-HR</s>
+<i name="BitRate" attr="5408">11400</i>
+<s name="PacketizationPeriod" attr="5408">20</s>
+<b name="SilenceSuppression" attr="5408">1</b>
+</o>
+<o name="18" attr="5408">
+<i name="EntryID" attr="5408">18</i>
+<s name="Codec" attr="5408">GSM-EFR</s>
+<i name="BitRate" attr="5408">12200</i>
+<s name="PacketizationPeriod" attr="5408">20</s>
+<b name="SilenceSuppression" attr="5408">1</b>
+</o>
+<o name="19" attr="5408">
+<i name="EntryID" attr="5408">19</i>
+<s name="Codec" attr="5408">iLBC</s>
+<i name="BitRate" attr="5408">15200</i>
+<s name="PacketizationPeriod" attr="5408">20</s>
+<b name="SilenceSuppression" attr="5408">1</b>
+</o>
+</t>
+</o>
+<t name="VoiceProfile" attr="6692">
+</t>
+<o name="V_CommonConfig" attr="5408">
+<i name="UserDefinedDialRulesNumberOfEntries" attr="5408">0</i>
+<b name="UserDefinedDiallingRuleEnable" attr="6692">1</b>
+<o name="Capabilities" attr="5408">
+<i name="MaxUserDefinedDialRuleCount" attr="5408">20</i>
+<i name="MaxNumberOfQuickDialEntries" attr="5408">20</i>
+<i name="MaxAlertStringCount" attr="5408">4</i>
+<i name="MaxProxyServerCount" attr="5408">4</i>
+<i name="MaxRegistrarServerCount" attr="5408">4</i>
+<i name="MaxOutboundProxyCount" attr="5408">4</i>
+<i name="MaxNumberOfSendMapEntires" attr="5408">6</i>
+<i name="MaxNumberOfRcvMapEntires" attr="5408">7</i>
+<i name="MaxRingCadenceCount" attr="5408">9</i>
+<i name="MaxToneDescriptionCount" attr="5408">25</i>
+<i name="MaxCodecCount" attr="5408">11</i>
+<i name="MaxSipInterfaceCnt" attr="5408">4</i>
+</o>
+<o name="SIP" attr="5408">
+<i name="AlertStringsNumberOfEntries" attr="5408">4</i>
+<i name="ReRegistrationInterval" attr="5408">600</i>
+<i name="RegisterRetryInterval" attr="5408">30</i>
+<i name="MaxForward" attr="6692">70</i>
+<b name="SessionTimer" attr="6692">0</b>
+<i name="MinimumSessionExpirationDelay" attr="6692">90</i>
+<i name="SessionExpirationDelay" attr="6692">180</i>
+<b name="UseUpdateWithSessionRefresh" attr="6692">0</b>
+<i name="FirstRTPPort" attr="6692">10000</i>
+<b name="IncludeUserPhone" attr="6692">0</b>
+<b name="IncludeUserAgent" attr="6692">0</b>
+<b name="CheckSourceIPAddress" attr="6692">0</b>
+<b name="NewHoldMethod" attr="6692">1</b>
+<i name="TimerT1" attr="6692">500</i>
+<i name="TimerT2" attr="6692">4000</i>
+<i name="TimerT4" attr="6692">5000</i>
+<i name="TimerB" attr="6692">32000</i>
+<i name="TimerF" attr="6692">32000</i>
+<i name="ServerOutOfServiceInterval" attr="6692">60</i>
+<b name="SDPTimeNegotiation" attr="6692">1</b>
+<b name="SessionEarlyMediaWith180" attr="6692">1</b>
+<b name="SessionConnectLastEarlyMedia" attr="6692">1</b>
+<b name="SDPAnswerWithOfferIfNoMedia" attr="6692">1</b>
+<b name="PrivacyServiceOn" attr="6692">1</b>
+<b name="PrivacyAnonymizeHeader" attr="6692">0</b>
+<i name="DSCPMark" attr="6692">26</i>
+<t name="AlertStrings" attr="6692">
+<o name="1" attr="6692">
+<s name="AlertString" attr="6692">Bellcore-dr1</s>
+</o>
+<o name="2" attr="6692">
+<s name="AlertString" attr="6692">Bellcore-dr2</s>
+</o>
+<o name="3" attr="6692">
+<s name="AlertString" attr="6692">Bellcore-dr3</s>
+</o>
+<o name="4" attr="6692">
+<s name="AlertString" attr="6692">Bellcore-dr4</s>
+</o>
+</t>
+<b name="Enable" attr="6692">1</b>
+<s name="WanInterface" attr="6692"></s>
+<s name="ActiveVoiceWanInterface" attr="5408">IGD.WANDevice.1.WANConnectionDevice.1.WANIPConnection.1</s>
+<s name="MessagesServer" attr="6692"></s>
+<i name="MessagesServerPort" attr="6692">0</i>
+<i name="MessagesServerSubscriptionDuration" attr="6692">60</i>
+<b name="SupportRFC3407" attr="6692">0</b>
+<o name="Registrar" attr="5408">
+<t name="AllowedClients" attr="6692">
+<o name="1" attr="6692">
+<s name="AuthUserName" attr="6692"></s>
+<s name="AuthPassword" attr="6692"></s>
+<b name="AuthRequired" attr="6692">0</b>
+</o>
+<o name="2" attr="6692">
+<s name="AuthUserName" attr="6692"></s>
+<s name="AuthPassword" attr="6692"></s>
+<b name="AuthRequired" attr="6692">0</b>
+</o>
+<o name="3" attr="6692">
+<s name="AuthUserName" attr="6692"></s>
+<s name="AuthPassword" attr="6692"></s>
+<b name="AuthRequired" attr="6692">0</b>
+</o>
+<o name="4" attr="6692">
+<s name="AuthUserName" attr="6692"></s>
+<s name="AuthPassword" attr="6692"></s>
+<b name="AuthRequired" attr="6692">0</b>
+</o>
+<o name="5" attr="6692">
+<s name="AuthUserName" attr="6692"></s>
+<s name="AuthPassword" attr="6692"></s>
+<b name="AuthRequired" attr="6692">0</b>
+</o>
+<o name="6" attr="6692">
+<s name="AuthUserName" attr="6692"></s>
+<s name="AuthPassword" attr="6692"></s>
+<b name="AuthRequired" attr="6692">0</b>
+</o>
+</t>
+</o>
+</o>
+<o name="CallGroupMngmt" attr="5408">
+<t name="SendMap" attr="5408">
+<o name="1" attr="5408">
+<i name="CCSendUserRef" attr="6692">14</i>
+</o>
+<o name="2" attr="5408">
+<i name="CCSendUserRef" attr="6692">14</i>
+</o>
+<o name="3" attr="5408">
+<i name="CCSendUserRef" attr="6692">14</i>
+</o>
+<o name="4" attr="5408">
+<i name="CCSendUserRef" attr="6692">14</i>
+</o>
+<o name="5" attr="5408">
+<i name="CCSendUserRef" attr="6692">14</i>
+</o>
+<o name="6" attr="5408">
+<i name="CCSendUserRef" attr="6692">14</i>
+</o>
+</t>
+<t name="RcvMap" attr="5408">
+<o name="1" attr="5408">
+<i name="CCUserRefIn" attr="5408">8</i>
+<o name="InternalUserMap" attr="5408">
+<i name="CCRcvUserRef1" attr="6692">1</i>
+<i name="CCRcvUserRef2" attr="6692">2</i>
+<i name="CCRcvUserRef3" attr="6692">3</i>
+<i name="CCRcvUserRef4" attr="6692">4</i>
+<i name="CCRcvUserRef5" attr="6692">5</i>
+<i name="CCRcvUserRef6" attr="6692">6</i>
+</o>
+</o>
+<o name="2" attr="5408">
+<i name="CCUserRefIn" attr="5408">9</i>
+<o name="InternalUserMap" attr="5408">
+<i name="CCRcvUserRef1" attr="6692">1</i>
+<i name="CCRcvUserRef2" attr="6692">2</i>
+<i name="CCRcvUserRef3" attr="6692">3</i>
+<i name="CCRcvUserRef4" attr="6692">4</i>
+<i name="CCRcvUserRef5" attr="6692">5</i>
+<i name="CCRcvUserRef6" attr="6692">6</i>
+</o>
+</o>
+<o name="3" attr="5408">
+<i name="CCUserRefIn" attr="5408">10</i>
+<o name="InternalUserMap" attr="5408">
+<i name="CCRcvUserRef1" attr="6692">1</i>
+<i name="CCRcvUserRef2" attr="6692">2</i>
+<i name="CCRcvUserRef3" attr="6692">3</i>
+<i name="CCRcvUserRef4" attr="6692">4</i>
+<i name="CCRcvUserRef5" attr="6692">5</i>
+<i name="CCRcvUserRef6" attr="6692">6</i>
+</o>
+</o>
+<o name="4" attr="5408">
+<i name="CCUserRefIn" attr="5408">11</i>
+<o name="InternalUserMap" attr="5408">
+<i name="CCRcvUserRef1" attr="6692">1</i>
+<i name="CCRcvUserRef2" attr="6692">2</i>
+<i name="CCRcvUserRef3" attr="6692">3</i>
+<i name="CCRcvUserRef4" attr="6692">4</i>
+<i name="CCRcvUserRef5" attr="6692">5</i>
+<i name="CCRcvUserRef6" attr="6692">6</i>
+</o>
+</o>
+<o name="5" attr="5408">
+<i name="CCUserRefIn" attr="5408">12</i>
+<o name="InternalUserMap" attr="5408">
+<i name="CCRcvUserRef1" attr="6692">1</i>
+<i name="CCRcvUserRef2" attr="6692">2</i>
+<i name="CCRcvUserRef3" attr="6692">3</i>
+<i name="CCRcvUserRef4" attr="6692">4</i>
+<i name="CCRcvUserRef5" attr="6692">5</i>
+<i name="CCRcvUserRef6" attr="6692">6</i>
+</o>
+</o>
+<o name="6" attr="5408">
+<i name="CCUserRefIn" attr="5408">13</i>
+<o name="InternalUserMap" attr="5408">
+<i name="CCRcvUserRef1" attr="6692">1</i>
+<i name="CCRcvUserRef2" attr="6692">2</i>
+<i name="CCRcvUserRef3" attr="6692">3</i>
+<i name="CCRcvUserRef4" attr="6692">4</i>
+<i name="CCRcvUserRef5" attr="6692">5</i>
+<i name="CCRcvUserRef6" attr="6692">6</i>
+</o>
+</o>
+<o name="7" attr="5408">
+<i name="CCUserRefIn" attr="5408">14</i>
+<o name="InternalUserMap" attr="5408">
+<i name="CCRcvUserRef1" attr="6692">1</i>
+<i name="CCRcvUserRef2" attr="6692">2</i>
+<i name="CCRcvUserRef3" attr="6692">3</i>
+<i name="CCRcvUserRef4" attr="6692">4</i>
+<i name="CCRcvUserRef5" attr="6692">5</i>
+<i name="CCRcvUserRef6" attr="6692">6</i>
+</o>
+</o>
+</t>
+</o>
+<o name="AccessCodes" attr="5408">
+<s name="InternalBroadcast" attr="6692">**</s>
+<s name="CallPickUp" attr="6692">*99*</s>
+<s name="NetworkControlledFeature" attr="6692">*#</s>
+<s name="InternalCall" attr="6692">*</s>
+<s name="UseDifferentSendMsn" attr="6692">*0</s>
+<s name="PrefixDigitsNational" attr="6692">0</s>
+<s name="PrefixDigitsInternational" attr="6692">00</s>
+<s name="LocalCountryCode" attr="6692">49</s>
+<s name="QuickDial" attr="6692">*7</s>
+<s name="QuickDialVanity" attr="6692">*8</s>
+</o>
+<o name="AreaCode" attr="5408">
+<s name="AreaCode" attr="6692"></s>
+<b name="AreaCodeEnable" attr="6692">0</b>
+</o>
+<o name="Preselection" attr="5408">
+<s name="PreselectionCode" attr="6692"></s>
+<b name="PreselectionEnable" attr="6692">0</b>
+</o>
+<o name="QuickDial" attr="5408">
+<b name="QuickDialEnable" attr="6692">1</b>
+<i name="QuickDialNumberOfEntries" attr="5408">0</i>
+<t name="QuickDialEntries" attr="6692">
+</t>
+</o>
+<t name="UserDefinedDiallingRules" attr="6692">
+</t>
+<o name="CallSetting" attr="5408">
+<i name="FirstDigitTo" attr="6692">30</i>
+<i name="PartialInterDigitTo" attr="6692">16</i>
+<i name="CriticalInterDigitTo" attr="6692">4</i>
+<i name="OutgoingNoAnswerTo" attr="6692">90</i>
+<i name="IncomingNoAnswerTo" attr="6692">120</i>
+<i name="IncomingCallWaitingTo" attr="6692">120</i>
+<i name="IncomingCFWDNoAnswerTo" attr="6692">20</i>
+<i name="DisconnectTo" attr="6692">30</i>
+<i name="RemoteDisconnectTo" attr="6692">5</i>
+<i name="VMWIRefreshInterval" attr="6692">30</i>
+<i name="VMWIHardwareStableTime" attr="6692">15</i>
+<b name="FlashRelease2While3" attr="6692">0</b>
+<b name="HoldLocalRecall" attr="6692">1</b>
+<b name="HoldRecallWhenPeerRelease" attr="6692">0</b>
+<b name="AllowUnattendedTransfer" attr="6692">1</b>
+<b name="AttendedTransferHoldTarget" attr="6692">0</b>
+<i name="FXOConnectionTimeout" attr="6692">24</i>
+<b name="NetworkControlledServices" attr="6692">0</b>
+<b name="PhoneBasedManagement" attr="6692">0</b>
+</o>
+<o name="CAC" attr="5408">
+<b name="Enable" attr="6692">0</b>
+<i name="MaxExternalCallCount" attr="6692">1</i>
+</o>
+<o name="Hardware" attr="5408">
+<o name="CommonConfig" attr="5408">
+<i name="RingCadenceNumberOfEntries" attr="5408">9</i>
+<i name="CodecNumberOfEntries" attr="5408">9</i>
+<i name="EchoCancelation" attr="6692">2</i>
+<i name="EchoLength" attr="6692">16</i>
+<i name="VolumeFXS" attr="6692">-7</i>
+<i name="VolumeFXO" attr="6692">0</i>
+<i name="GainFXS" attr="6692">0</i>
+<i name="GainFXO" attr="6692">0</i>
+<i name="CallerIdProtocol" attr="6692">2</i>
+<i name="HookFlashDurationMin" attr="6692">80</i>
+<i name="HookFlashDurationMax" attr="6692">200</i>
+<i name="OnHookDurationMin" attr="6692">400</i>
+<i name="OffHookDurationMin" attr="6692">40</i>
+<i name="DTMFOnDuration" attr="6692">60</i>
+<i name="DTMFOffDuration" attr="6692">60</i>
+<i name="DTMFMethod" attr="6692">1</i>
+<i name="DTMFLowLevel" attr="6692">-11</i>
+<i name="DTMFHighLevel" attr="6692">-9</i>
+<i name="Polarity" attr="6692">1</i>
+<i name="VoiceActivityDetection" attr="6692">2</i>
+<i name="JitterTarget" attr="6692">20</i>
+<i name="JitterMin" attr="6692">10</i>
+<i name="JitterMax" attr="6692">100</i>
+<i name="JitterMode" attr="6692">0</i>
+<i name="CallType" attr="6692">1</i>
+<i name="SilenceAfterRing" attr="6692">500</i>
+<i name="RingingPulseLength" attr="6692">250</i>
+<i name="RingingFrequency" attr="6692">25</i>
+<t name="RingCadence" attr="6692">
+<o name="1" attr="6692">
+<i name="EntryId" attr="6692">0</i>
+<s name="RingCadenceType" attr="6692">Ring_Cadence</s>
+<i name="RingBitDuration" attr="6692">250</i>
+<i name="NumBitsToUse" attr="6692">20</i>
+<s name="Cadence" attr="6692">0xF0000000</s>
+</o>
+<o name="2" attr="6692">
+<i name="EntryId" attr="6692">1</i>
+<s name="RingCadenceType" attr="6692">R0_Cadence</s>
+<i name="RingBitDuration" attr="6692">250</i>
+<i name="NumBitsToUse" attr="6692">20</i>
+<s name="Cadence" attr="6692">0xF0000000</s>
+</o>
+<o name="3" attr="6692">
+<i name="EntryId" attr="6692">2</i>
+<s name="RingCadenceType" attr="6692">R1_Cadence</s>
+<i name="RingBitDuration" attr="6692">250</i>
+<i name="NumBitsToUse" attr="6692">20</i>
+<s name="Cadence" attr="6692">0xF0000000</s>
+</o>
+<o name="4" attr="6692">
+<i name="EntryId" attr="6692">3</i>
+<s name="RingCadenceType" attr="6692">R2_Cadence</s>
+<i name="RingBitDuration" attr="6692">250</i>
+<i name="NumBitsToUse" attr="6692">20</i>
+<s name="Cadence" attr="6692">0xF0000000</s>
+</o>
+<o name="5" attr="6692">
+<i name="EntryId" attr="6692">4</i>
+<s name="RingCadenceType" attr="6692">R3_Cadence</s>
+<i name="RingBitDuration" attr="6692">250</i>
+<i name="NumBitsToUse" attr="6692">20</i>
+<s name="Cadence" attr="6692">0xF0000000</s>
+</o>
+<o name="6" attr="6692">
+<i name="EntryId" attr="6692">5</i>
+<s name="RingCadenceType" attr="6692">R4_Cadence</s>
+<i name="RingBitDuration" attr="6692">250</i>
+<i name="NumBitsToUse" attr="6692">20</i>
+<s name="Cadence" attr="6692">0xF0000000</s>
+</o>
+<o name="7" attr="6692">
+<i name="EntryId" attr="6692">6</i>
+<s name="RingCadenceType" attr="6692">R5_Cadence</s>
+<i name="RingBitDuration" attr="6692">250</i>
+<i name="NumBitsToUse" attr="6692">20</i>
+<s name="Cadence" attr="6692">0xF0000000</s>
+</o>
+<o name="8" attr="6692">
+<i name="EntryId" attr="6692">7</i>
+<s name="RingCadenceType" attr="6692">R6_Cadence</s>
+<i name="RingBitDuration" attr="6692">250</i>
+<i name="NumBitsToUse" attr="6692">20</i>
+<s name="Cadence" attr="6692">0xF0000000</s>
+</o>
+<o name="9" attr="6692">
+<i name="EntryId" attr="6692">8</i>
+<s name="RingCadenceType" attr="6692">R7_Cadence</s>
+<i name="RingBitDuration" attr="6692">250</i>
+<i name="NumBitsToUse" attr="6692">20</i>
+<s name="Cadence" attr="6692">0xF0000000</s>
+</o>
+</t>
+<o name="Tone" attr="5408">
+<i name="DescriptionNumberOfEntries" attr="5408">15</i>
+<i name="PatternNumberOfEntries" attr="5408">36</i>
+<t name="Description" attr="6692">
+<o name="1" attr="6692">
+<i name="EntryID" attr="6692">0</i>
+<s name="ToneName" attr="6692">Dial</s>
+<i name="Frequency1" attr="6692">425</i>
+<i name="Power1" attr="6692">150</i>
+<i name="Frequency2" attr="6692">0</i>
+<i name="Power2" attr="6692">0</i>
+<i name="Frequency3" attr="6692">0</i>
+<i name="Power3" attr="6692">0</i>
+<i name="Frequency4" attr="6692">0</i>
+<i name="Power4" attr="6692">0</i>
+<i name="ModulationPower" attr="6692">0</i>
+<i name="TonePattern" attr="6692">1</i>
+<i name="Loopcount" attr="6692">0</i>
+</o>
+<o name="2" attr="6692">
+<i name="EntryID" attr="6692">11</i>
+<s name="ToneName" attr="6692">StutterDial</s>
+<i name="Frequency1" attr="6692">425</i>
+<i name="Power1" attr="6692">150</i>
+<i name="Frequency2" attr="6692">0</i>
+<i name="Power2" attr="6692">0</i>
+<i name="Frequency3" attr="6692">0</i>
+<i name="Power3" attr="6692">0</i>
+<i name="Frequency4" attr="6692">0</i>
+<i name="Power4" attr="6692">0</i>
+<i name="ModulationPower" attr="6692">0</i>
+<i name="TonePattern" attr="6692">2</i>
+<i name="Loopcount" attr="6692">0</i>
+</o>
+<o name="3" attr="6692">
+<i name="EntryID" attr="6692">12</i>
+<s name="ToneName" attr="6692">MessageWaitingIndication</s>
+<i name="Frequency1" attr="6692">425</i>
+<i name="Power1" attr="6692">150</i>
+<i name="Frequency2" attr="6692">0</i>
+<i name="Power2" attr="6692">0</i>
+<i name="Frequency3" attr="6692">0</i>
+<i name="Power3" attr="6692">0</i>
+<i name="Frequency4" attr="6692">0</i>
+<i name="Power4" attr="6692">0</i>
+<i name="ModulationPower" attr="6692">0</i>
+<i name="TonePattern" attr="6692">4</i>
+<i name="Loopcount" attr="6692">0</i>
+</o>
+<o name="4" attr="6692">
+<i name="EntryID" attr="6692">5</i>
+<s name="ToneName" attr="6692">Confirmation</s>
+<i name="Frequency1" attr="6692">698</i>
+<i name="Power1" attr="6692">150</i>
+<i name="Frequency2" attr="6692">784</i>
+<i name="Power2" attr="6692">150</i>
+<i name="Frequency3" attr="6692">880</i>
+<i name="Power3" attr="6692">150</i>
+<i name="Frequency4" attr="6692">988</i>
+<i name="Power4" attr="6692">150</i>
+<i name="ModulationPower" attr="6692">0</i>
+<i name="TonePattern" attr="6692">36</i>
+<i name="Loopcount" attr="6692">0</i>
+</o>
+<o name="5" attr="6692">
+<i name="EntryID" attr="6692">1</i>
+<s name="ToneName" attr="6692">RingBack</s>
+<i name="Frequency1" attr="6692">425</i>
+<i name="Power1" attr="6692">150</i>
+<i name="Frequency2" attr="6692">0</i>
+<i name="Power2" attr="6692">0</i>
+<i name="Frequency3" attr="6692">0</i>
+<i name="Power3" attr="6692">0</i>
+<i name="Frequency4" attr="6692">0</i>
+<i name="Power4" attr="6692">0</i>
+<i name="ModulationPower" attr="6692">0</i>
+<i name="TonePattern" attr="6692">10</i>
+<i name="Loopcount" attr="6692">0</i>
+</o>
+<o name="6" attr="6692">
+<i name="EntryID" attr="6692">4</i>
+<s name="ToneName" attr="6692">Busy</s>
+<i name="Frequency1" attr="6692">425</i>
+<i name="Power1" attr="6692">150</i>
+<i name="Frequency2" attr="6692">0</i>
+<i name="Power2" attr="6692">0</i>
+<i name="Frequency3" attr="6692">0</i>
+<i name="Power3" attr="6692">0</i>
+<i name="Frequency4" attr="6692">0</i>
+<i name="Power4" attr="6692">0</i>
+<i name="ModulationPower" attr="6692">0</i>
+<i name="TonePattern" attr="6692">12</i>
+<i name="Loopcount" attr="6692">0</i>
+</o>
+<o name="7" attr="6692">
+<i name="EntryID" attr="6692">2</i>
+<s name="ToneName" attr="6692">Reorder</s>
+<i name="Frequency1" attr="6692">425</i>
+<i name="Power1" attr="6692">150</i>
+<i name="Frequency2" attr="6692">0</i>
+<i name="Power2" attr="6692">0</i>
+<i name="Frequency3" attr="6692">0</i>
+<i name="Power3" attr="6692">0</i>
+<i name="Frequency4" attr="6692">0</i>
+<i name="Power4" attr="6692">0</i>
+<i name="ModulationPower" attr="6692">0</i>
+<i name="TonePattern" attr="6692">14</i>
+<i name="Loopcount" attr="6692">0</i>
+</o>
+<o name="8" attr="6692">
+<i name="EntryID" attr="6692">7</i>
+<s name="ToneName" attr="6692">CallWaiting1</s>
+<i name="Frequency1" attr="6692">425</i>
+<i name="Power1" attr="6692">150</i>
+<i name="Frequency2" attr="6692">0</i>
+<i name="Power2" attr="6692">0</i>
+<i name="Frequency3" attr="6692">0</i>
+<i name="Power3" attr="6692">0</i>
+<i name="Frequency4" attr="6692">0</i>
+<i name="Power4" attr="6692">0</i>
+<i name="ModulationPower" attr="6692">0</i>
+<i name="TonePattern" attr="6692">16</i>
+<i name="Loopcount" attr="6692">0</i>
+</o>
+<o name="9" attr="6692">
+<i name="EntryID" attr="6692">8</i>
+<s name="ToneName" attr="6692">CallWaiting2</s>
+<i name="Frequency1" attr="6692">425</i>
+<i name="Power1" attr="6692">150</i>
+<i name="Frequency2" attr="6692">0</i>
+<i name="Power2" attr="6692">0</i>
+<i name="Frequency3" attr="6692">0</i>
+<i name="Power3" attr="6692">0</i>
+<i name="Frequency4" attr="6692">0</i>
+<i name="Power4" attr="6692">0</i>
+<i name="ModulationPower" attr="6692">0</i>
+<i name="TonePattern" attr="6692">16</i>
+<i name="Loopcount" attr="6692">1</i>
+</o>
+<o name="10" attr="6692">
+<i name="EntryID" attr="6692">9</i>
+<s name="ToneName" attr="6692">CallWaiting3</s>
+<i name="Frequency1" attr="6692">425</i>
+<i name="Power1" attr="6692">150</i>
+<i name="Frequency2" attr="6692">0</i>
+<i name="Power2" attr="6692">0</i>
+<i name="Frequency3" attr="6692">0</i>
+<i name="Power3" attr="6692">0</i>
+<i name="Frequency4" attr="6692">0</i>
+<i name="Power4" attr="6692">0</i>
+<i name="ModulationPower" attr="6692">0</i>
+<i name="TonePattern" attr="6692">16</i>
+<i name="Loopcount" attr="6692">1</i>
+</o>
+<o name="11" attr="6692">
+<i name="EntryID" attr="6692">10</i>
+<s name="ToneName" attr="6692">CallWaiting4</s>
+<i name="Frequency1" attr="6692">425</i>
+<i name="Power1" attr="6692">150</i>
+<i name="Frequency2" attr="6692">0</i>
+<i name="Power2" attr="6692">0</i>
+<i name="Frequency3" attr="6692">0</i>
+<i name="Power3" attr="6692">0</i>
+<i name="Frequency4" attr="6692">0</i>
+<i name="Power4" attr="6692">0</i>
+<i name="ModulationPower" attr="6692">0</i>
+<i name="TonePattern" attr="6692">16</i>
+<i name="Loopcount" attr="6692">1</i>
+</o>
+<o name="12" attr="6692">
+<i name="EntryID" attr="6692">23</i>
+<s name="ToneName" attr="6692">AlertingSignal</s>
+<i name="Frequency1" attr="6692">2130</i>
+<i name="Power1" attr="6692">150</i>
+<i name="Frequency2" attr="6692">2750</i>
+<i name="Power2" attr="6692">150</i>
+<i name="Frequency3" attr="6692">0</i>
+<i name="Power3" attr="6692">0</i>
+<i name="Frequency4" attr="6692">0</i>
+<i name="Power4" attr="6692">0</i>
+<i name="ModulationPower" attr="6692">0</i>
+<i name="TonePattern" attr="6692">26</i>
+<i name="Loopcount" attr="6692">1</i>
+</o>
+<o name="13" attr="6692">
+<i name="EntryID" attr="6692">13</i>
+<s name="ToneName" attr="6692">Congestion</s>
+<i name="Frequency1" attr="6692">425</i>
+<i name="Power1" attr="6692">150</i>
+<i name="Frequency2" attr="6692">0</i>
+<i name="Power2" attr="6692">0</i>
+<i name="Frequency3" attr="6692">0</i>
+<i name="Power3" attr="6692">0</i>
+<i name="Frequency4" attr="6692">0</i>
+<i name="Power4" attr="6692">0</i>
+<i name="ModulationPower" attr="6692">0</i>
+<i name="TonePattern" attr="6692">14</i>
+<i name="Loopcount" attr="6692">0</i>
+</o>
+<o name="14" attr="6692">
+<i name="EntryID" attr="6692">3</i>
+<s name="ToneName" attr="6692">OffHookWarning</s>
+<i name="Frequency1" attr="6692">425</i>
+<i name="Power1" attr="6692">150</i>
+<i name="Frequency2" attr="6692">0</i>
+<i name="Power2" attr="6692">0</i>
+<i name="Frequency3" attr="6692">0</i>
+<i name="Power3" attr="6692">0</i>
+<i name="Frequency4" attr="6692">0</i>
+<i name="Power4" attr="6692">0</i>
+<i name="ModulationPower" attr="6692">0</i>
+<i name="TonePattern" attr="6692">20</i>
+<i name="Loopcount" attr="6692">0</i>
+</o>
+<o name="15" attr="6692">
+<i name="EntryID" attr="6692">18</i>
+<s name="ToneName" attr="6692">PT5</s>
+<i name="Frequency1" attr="6692">1400</i>
+<i name="Power1" attr="6692">150</i>
+<i name="Frequency2" attr="6692">0</i>
+<i name="Power2" attr="6692">0</i>
+<i name="Frequency3" attr="6692">0</i>
+<i name="Power3" attr="6692">0</i>
+<i name="Frequency4" attr="6692">0</i>
+<i name="Power4" attr="6692">0</i>
+<i name="ModulationPower" attr="6692">0</i>
+<i name="TonePattern" attr="6692">22</i>
+<i name="Loopcount" attr="6692">0</i>
+</o>
+</t>
+<t name="Pattern" attr="6692">
+<o name="1" attr="6692">
+<i name="EntryID" attr="6692">1</i>
+<b name="ToneOn" attr="6692">1</b>
+<i name="Tone" attr="6692">1</i>
+<i name="Duration" attr="6692">2000</i>
+<i name="NextEntryID" attr="6692">0</i>
+<b name="ModulateFrequency1WithFrequency2" attr="6692">0</b>
+</o>
+<o name="2" attr="6692">
+<i name="EntryID" attr="6692">2</i>
+<b name="ToneOn" attr="6692">1</b>
+<i name="Tone" attr="6692">1</i>
+<i name="Duration" attr="6692">100</i>
+<i name="NextEntryID" attr="6692">3</i>
+<b name="ModulateFrequency1WithFrequency2" attr="6692">0</b>
+</o>
+<o name="3" attr="6692">
+<i name="EntryID" attr="6692">3</i>
+<b name="ToneOn" attr="6692">0</b>
+<i name="Tone" attr="6692">1</i>
+<i name="Duration" attr="6692">100</i>
+<i name="NextEntryID" attr="6692">0</i>
+<b name="ModulateFrequency1WithFrequency2" attr="6692">0</b>
+</o>
+<o name="4" attr="6692">
+<i name="EntryID" attr="6692">4</i>
+<b name="ToneOn" attr="6692">1</b>
+<i name="Tone" attr="6692">1</i>
+<i name="Duration" attr="6692">1000</i>
+<i name="NextEntryID" attr="6692">5</i>
+<b name="ModulateFrequency1WithFrequency2" attr="6692">0</b>
+</o>
+<o name="5" attr="6692">
+<i name="EntryID" attr="6692">5</i>
+<b name="ToneOn" attr="6692">0</b>
+<i name="Tone" attr="6692">1</i>
+<i name="Duration" attr="6692">250</i>
+<i name="NextEntryID" attr="6692">0</i>
+<b name="ModulateFrequency1WithFrequency2" attr="6692">0</b>
+</o>
+<o name="6" attr="6692">
+<i name="EntryID" attr="6692">6</i>
+<b name="ToneOn" attr="6692">1</b>
+<i name="Tone" attr="6692">1</i>
+<i name="Duration" attr="6692">80</i>
+<i name="NextEntryID" attr="6692">7</i>
+<b name="ModulateFrequency1WithFrequency2" attr="6692">0</b>
+</o>
+<o name="7" attr="6692">
+<i name="EntryID" attr="6692">7</i>
+<b name="ToneOn" attr="6692">1</b>
+<i name="Tone" attr="6692">2</i>
+<i name="Duration" attr="6692">80</i>
+<i name="NextEntryID" attr="6692">8</i>
+<b name="ModulateFrequency1WithFrequency2" attr="6692">0</b>
+</o>
+<o name="8" attr="6692">
+<i name="EntryID" attr="6692">8</i>
+<b name="ToneOn" attr="6692">1</b>
+<i name="Tone" attr="6692">4</i>
+<i name="Duration" attr="6692">80</i>
+<i name="NextEntryID" attr="6692">9</i>
+<b name="ModulateFrequency1WithFrequency2" attr="6692">0</b>
+</o>
+<o name="9" attr="6692">
+<i name="EntryID" attr="6692">9</i>
+<b name="ToneOn" attr="6692">1</b>
+<i name="Tone" attr="6692">8</i>
+<i name="Duration" attr="6692">80</i>
+<i name="NextEntryID" attr="6692">35</i>
+<b name="ModulateFrequency1WithFrequency2" attr="6692">0</b>
+</o>
+<o name="10" attr="6692">
+<i name="EntryID" attr="6692">10</i>
+<b name="ToneOn" attr="6692">1</b>
+<i name="Tone" attr="6692">1</i>
+<i name="Duration" attr="6692">1000</i>
+<i name="NextEntryID" attr="6692">11</i>
+<b name="ModulateFrequency1WithFrequency2" attr="6692">0</b>
+</o>
+<o name="11" attr="6692">
+<i name="EntryID" attr="6692">11</i>
+<b name="ToneOn" attr="6692">0</b>
+<i name="Tone" attr="6692">1</i>
+<i name="Duration" attr="6692">4000</i>
+<i name="NextEntryID" attr="6692">0</i>
+<b name="ModulateFrequency1WithFrequency2" attr="6692">0</b>
+</o>
+<o name="12" attr="6692">
+<i name="EntryID" attr="6692">12</i>
+<b name="ToneOn" attr="6692">1</b>
+<i name="Tone" attr="6692">1</i>
+<i name="Duration" attr="6692">480</i>
+<i name="NextEntryID" attr="6692">13</i>
+<b name="ModulateFrequency1WithFrequency2" attr="6692">0</b>
+</o>
+<o name="13" attr="6692">
+<i name="EntryID" attr="6692">13</i>
+<b name="ToneOn" attr="6692">0</b>
+<i name="Tone" attr="6692">1</i>
+<i name="Duration" attr="6692">480</i>
+<i name="NextEntryID" attr="6692">0</i>
+<b name="ModulateFrequency1WithFrequency2" attr="6692">0</b>
+</o>
+<o name="14" attr="6692">
+<i name="EntryID" attr="6692">14</i>
+<b name="ToneOn" attr="6692">1</b>
+<i name="Tone" attr="6692">1</i>
+<i name="Duration" attr="6692">240</i>
+<i name="NextEntryID" attr="6692">15</i>
+<b name="ModulateFrequency1WithFrequency2" attr="6692">0</b>
+</o>
+<o name="15" attr="6692">
+<i name="EntryID" attr="6692">15</i>
+<b name="ToneOn" attr="6692">0</b>
+<i name="Tone" attr="6692">1</i>
+<i name="Duration" attr="6692">240</i>
+<i name="NextEntryID" attr="6692">0</i>
+<b name="ModulateFrequency1WithFrequency2" attr="6692">0</b>
+</o>
+<o name="16" attr="6692">
+<i name="EntryID" attr="6692">16</i>
+<b name="ToneOn" attr="6692">1</b>
+<i name="Tone" attr="6692">1</i>
+<i name="Duration" attr="6692">200</i>
+<i name="NextEntryID" attr="6692">17</i>
+<b name="ModulateFrequency1WithFrequency2" attr="6692">0</b>
+</o>
+<o name="17" attr="6692">
+<i name="EntryID" attr="6692">17</i>
+<b name="ToneOn" attr="6692">0</b>
+<i name="Tone" attr="6692">1</i>
+<i name="Duration" attr="6692">5000</i>
+<i name="NextEntryID" attr="6692">0</i>
+<b name="ModulateFrequency1WithFrequency2" attr="6692">0</b>
+</o>
+<o name="18" attr="6692">
+<i name="EntryID" attr="6692">18</i>
+<b name="ToneOn" attr="6692">1</b>
+<i name="Tone" attr="6692">1</i>
+<i name="Duration" attr="6692">200</i>
+<i name="NextEntryID" attr="6692">19</i>
+<b name="ModulateFrequency1WithFrequency2" attr="6692">0</b>
+</o>
+<o name="19" attr="6692">
+<i name="EntryID" attr="6692">19</i>
+<b name="ToneOn" attr="6692">0</b>
+<i name="Tone" attr="6692">1</i>
+<i name="Duration" attr="6692">5000</i>
+<i name="NextEntryID" attr="6692">0</i>
+<b name="ModulateFrequency1WithFrequency2" attr="6692">0</b>
+</o>
+<o name="20" attr="6692">
+<i name="EntryID" attr="6692">20</i>
+<b name="ToneOn" attr="6692">1</b>
+<i name="Tone" attr="6692">1</i>
+<i name="Duration" attr="6692">320</i>
+<i name="NextEntryID" attr="6692">21</i>
+<b name="ModulateFrequency1WithFrequency2" attr="6692">0</b>
+</o>
+<o name="21" attr="6692">
+<i name="EntryID" attr="6692">21</i>
+<b name="ToneOn" attr="6692">0</b>
+<i name="Tone" attr="6692">1</i>
+<i name="Duration" attr="6692">320</i>
+<i name="NextEntryID" attr="6692">0</i>
+<b name="ModulateFrequency1WithFrequency2" attr="6692">0</b>
+</o>
+<o name="22" attr="6692">
+<i name="EntryID" attr="6692">22</i>
+<b name="ToneOn" attr="6692">1</b>
+<i name="Tone" attr="6692">1</i>
+<i name="Duration" attr="6692">400</i>
+<i name="NextEntryID" attr="6692">23</i>
+<b name="ModulateFrequency1WithFrequency2" attr="6692">0</b>
+</o>
+<o name="23" attr="6692">
+<i name="EntryID" attr="6692">23</i>
+<b name="ToneOn" attr="6692">0</b>
+<i name="Tone" attr="6692">1</i>
+<i name="Duration" attr="6692">9500</i>
+<i name="NextEntryID" attr="6692">0</i>
+<b name="ModulateFrequency1WithFrequency2" attr="6692">0</b>
+</o>
+<o name="24" attr="6692">
+<i name="EntryID" attr="6692">24</i>
+<b name="ToneOn" attr="6692">1</b>
+<i name="Tone" attr="6692">1</i>
+<i name="Duration" attr="6692">100</i>
+<i name="NextEntryID" attr="6692">25</i>
+<b name="ModulateFrequency1WithFrequency2" attr="6692">0</b>
+</o>
+<o name="25" attr="6692">
+<i name="EntryID" attr="6692">25</i>
+<b name="ToneOn" attr="6692">0</b>
+<i name="Tone" attr="6692">1</i>
+<i name="Duration" attr="6692">10000</i>
+<i name="NextEntryID" attr="6692">0</i>
+<b name="ModulateFrequency1WithFrequency2" attr="6692">0</b>
+</o>
+<o name="26" attr="6692">
+<i name="EntryID" attr="6692">26</i>
+<b name="ToneOn" attr="6692">1</b>
+<i name="Tone" attr="6692">3</i>
+<i name="Duration" attr="6692">100</i>
+<i name="NextEntryID" attr="6692">0</i>
+<b name="ModulateFrequency1WithFrequency2" attr="6692">0</b>
+</o>
+<o name="27" attr="6692">
+<i name="EntryID" attr="6692">27</i>
+<b name="ToneOn" attr="6692">1</b>
+<i name="Tone" attr="6692">1</i>
+<i name="Duration" attr="6692">100</i>
+<i name="NextEntryID" attr="6692">28</i>
+<b name="ModulateFrequency1WithFrequency2" attr="6692">0</b>
+</o>
+<o name="28" attr="6692">
+<i name="EntryID" attr="6692">28</i>
+<b name="ToneOn" attr="6692">0</b>
+<i name="Tone" attr="6692">1</i>
+<i name="Duration" attr="6692">100</i>
+<i name="NextEntryID" attr="6692">0</i>
+<b name="ModulateFrequency1WithFrequency2" attr="6692">0</b>
+</o>
+<o name="29" attr="6692">
+<i name="EntryID" attr="6692">29</i>
+<b name="ToneOn" attr="6692">1</b>
+<i name="Tone" attr="6692">1</i>
+<i name="Duration" attr="6692">250</i>
+<i name="NextEntryID" attr="6692">30</i>
+<b name="ModulateFrequency1WithFrequency2" attr="6692">0</b>
+</o>
+<o name="30" attr="6692">
+<i name="EntryID" attr="6692">30</i>
+<b name="ToneOn" attr="6692">1</b>
+<i name="Tone" attr="6692">2</i>
+<i name="Duration" attr="6692">400</i>
+<i name="NextEntryID" attr="6692">31</i>
+<b name="ModulateFrequency1WithFrequency2" attr="6692">0</b>
+</o>
+<o name="31" attr="6692">
+<i name="EntryID" attr="6692">31</i>
+<b name="ToneOn" attr="6692">1</b>
+<i name="Tone" attr="6692">4</i>
+<i name="Duration" attr="6692">400</i>
+<i name="NextEntryID" attr="6692">0</i>
+<b name="ModulateFrequency1WithFrequency2" attr="6692">0</b>
+</o>
+<o name="32" attr="6692">
+<i name="EntryID" attr="6692">32</i>
+<b name="ToneOn" attr="6692">1</b>
+<i name="Tone" attr="6692">1</i>
+<i name="Duration" attr="6692">1200</i>
+<i name="NextEntryID" attr="6692">0</i>
+<b name="ModulateFrequency1WithFrequency2" attr="6692">0</b>
+</o>
+<o name="33" attr="6692">
+<i name="EntryID" attr="6692">33</i>
+<b name="ToneOn" attr="6692">1</b>
+<i name="Tone" attr="6692">1</i>
+<i name="Duration" attr="6692">40</i>
+<i name="NextEntryID" attr="6692">34</i>
+<b name="ModulateFrequency1WithFrequency2" attr="6692">0</b>
+</o>
+<o name="34" attr="6692">
+<i name="EntryID" attr="6692">34</i>
+<b name="ToneOn" attr="6692">0</b>
+<i name="Tone" attr="6692">1</i>
+<i name="Duration" attr="6692">40</i>
+<i name="NextEntryID" attr="6692">0</i>
+<b name="ModulateFrequency1WithFrequency2" attr="6692">0</b>
+</o>
+<o name="35" attr="6692">
+<i name="EntryID" attr="6692">35</i>
+<b name="ToneOn" attr="6692">0</b>
+<i name="Tone" attr="6692">1</i>
+<i name="Duration" attr="6692">6000</i>
+<i name="NextEntryID" attr="6692">0</i>
+<b name="ModulateFrequency1WithFrequency2" attr="6692">0</b>
+</o>
+<o name="36" attr="6692">
+<i name="EntryID" attr="6692">36</i>
+<b name="ToneOn" attr="6692">0</b>
+<i name="Tone" attr="6692">1</i>
+<i name="Duration" attr="6692">900</i>
+<i name="NextEntryID" attr="6692">6</i>
+<b name="ModulateFrequency1WithFrequency2" attr="6692">0</b>
+</o>
+</t>
+</o>
+<t name="Codecs" attr="5408">
+<o name="1" attr="5408">
+<i name="EntryID" attr="5408">4</i>
+<s name="Codec" attr="5408">G711_ULAW</s>
+<i name="PacketizationPeriod" attr="6692">20</i>
+<i name="Bitrate" attr="6692">64000</i>
+<b name="SilenceSupression" attr="6692">1</b>
+</o>
+<o name="2" attr="5408">
+<i name="EntryID" attr="5408">2</i>
+<s name="Codec" attr="5408">G711_ALAW</s>
+<i name="PacketizationPeriod" attr="6692">20</i>
+<i name="Bitrate" attr="6692">64000</i>
+<b name="SilenceSupression" attr="6692">1</b>
+</o>
+<o name="3" attr="5408">
+<i name="EntryID" attr="5408">7</i>
+<s name="Codec" attr="5408">G726_16</s>
+<i name="PacketizationPeriod" attr="6692">20</i>
+<i name="Bitrate" attr="6692">16000</i>
+<b name="SilenceSupression" attr="6692">1</b>
+</o>
+<o name="4" attr="5408">
+<i name="EntryID" attr="5408">8</i>
+<s name="Codec" attr="5408">G726_24</s>
+<i name="PacketizationPeriod" attr="6692">20</i>
+<i name="Bitrate" attr="6692">24000</i>
+<b name="SilenceSupression" attr="6692">1</b>
+</o>
+<o name="5" attr="5408">
+<i name="EntryID" attr="5408">9</i>
+<s name="Codec" attr="5408">G726_32</s>
+<i name="PacketizationPeriod" attr="6692">20</i>
+<i name="Bitrate" attr="6692">32000</i>
+<b name="SilenceSupression" attr="6692">1</b>
+</o>
+<o name="6" attr="5408">
+<i name="EntryID" attr="5408">10</i>
+<s name="Codec" attr="5408">G726_40</s>
+<i name="PacketizationPeriod" attr="6692">20</i>
+<i name="Bitrate" attr="6692">40000</i>
+<b name="SilenceSupression" attr="6692">1</b>
+</o>
+<o name="7" attr="5408">
+<i name="EntryID" attr="5408">6</i>
+<s name="Codec" attr="5408">G7231</s>
+<i name="PacketizationPeriod" attr="6692">20</i>
+<i name="Bitrate" attr="6692">5300</i>
+<b name="SilenceSupression" attr="6692">1</b>
+</o>
+<o name="8" attr="5408">
+<i name="EntryID" attr="5408">6</i>
+<s name="Codec" attr="5408">G7231</s>
+<i name="PacketizationPeriod" attr="6692">20</i>
+<i name="Bitrate" attr="6692">6300</i>
+<b name="SilenceSupression" attr="6692">1</b>
+</o>
+<o name="9" attr="5408">
+<i name="EntryID" attr="5408">12</i>
+<s name="Codec" attr="5408">G729</s>
+<i name="PacketizationPeriod" attr="6692">20</i>
+<i name="Bitrate" attr="6692">8000</i>
+<b name="SilenceSupression" attr="6692">1</b>
+</o>
+</t>
+<b name="EnableOptimizeCodecList" attr="5408">0</b>
+<i name="TelephonyLineSettingFXS" attr="6692">1</i>
+<i name="TelephonyLineSettingFXO" attr="6692">1</i>
+<i name="RFC2833PayloadType" attr="6692">101</i>
+<i name="DSCPMark" attr="6692">46</i>
+<i name="FSKDetectionLevel" attr="6692">-30</i>
+<i name="FSKDetectionTimeout" attr="6692">3000</i>
+<i name="FSKDetectionMinSeizureBits" attr="6692">200</i>
+<i name="FSKDetectionMinMarkBitsOffhook" attr="6692">54</i>
+<i name="FSKDetectionMinMarkBitsOnhook" attr="6692">54</i>
+<i name="FSKSeizureBits" attr="6692">300</i>
+<i name="FSKMarkBitsOffhook" attr="6692">80</i>
+<i name="FSKMarkBitsOnhook" attr="6692">180</i>
+<i name="DTMFDetectionMaxInterdigitTime" attr="6692">250</i>
+<i name="OnhookAlertMethod" attr="6692">FirstRing</i>
+<i name="OffhookAlertMethod" attr="6692">DualTone</i>
+<i name="FXOAlertMethod" attr="6692">FirstRing</i>
+<i name="DTMFCIDCountrySettings" attr="6692">Netherlands</i>
+<i name="CIDDetectionVolumeAttenuation" attr="6692">0</i>
+<b name="CIDCallWaitingEnabled" attr="6692">1</b>
+<i name="CIDTransmitVolume" attr="6692">-7</i>
+<i name="EncoderVolume" attr="6692">0</i>
+<i name="DecoderVolume" attr="6692">0</i>
+<i name="DTMFDetectionLevel" attr="6692">-30</i>
+</o>
+<o name="EndpointConfig" attr="5408">
+<i name="EndpointFXSNumberOfEntries" attr="5408">2</i>
+<i name="EndpointFXONumberOfEntries" attr="5408">1</i>
+<t name="FXS" attr="5408">
+<o name="1" attr="5408">
+<b name="EnableDisplay" attr="6692">1</b>
+<i name="IntervalBetweenCEDAndFaxOrModemTone" attr="6692">4000</i>
+<b name="T38ImmediateSwitchoverEnabled" attr="6692">1</b>
+<b name="SwitchToG711AfterCedTone" attr="6692">0</b>
+</o>
+<o name="2" attr="5408">
+<b name="EnableDisplay" attr="6692">1</b>
+<i name="IntervalBetweenCEDAndFaxOrModemTone" attr="6692">4000</i>
+<b name="T38ImmediateSwitchoverEnabled" attr="6692">1</b>
+<b name="SwitchToG711AfterCedTone" attr="6692">0</b>
+</o>
+</t>
+<t name="FXO" attr="5408">
+<o name="1" attr="5408">
+<i name="PeriodBetweenIncomingRingings" attr="6692">7000</i>
+<b name="WaitForIncomingCID" attr="6692">1</b>
+<i name="DialtoneDetectionExpirationInterval" attr="6692">3000</i>
+<b name="DialtoneDetectionEnabled" attr="6692">1</b>
+<i name="DialtoneDetectionSubstituteDelay" attr="6692">3000</i>
+</o>
+</t>
+</o>
+</o>
+<o name="T38" attr="5408">
+<b name="Enable" attr="6692">1</b>
+<i name="Version" attr="6692">0</i>
+<i name="MaxBitRate" attr="6692">14400</i>
+<b name="FillBitRemoval" attr="6692">1</b>
+<b name="MMRTranscoding" attr="6692">1</b>
+<b name="JBIGTranscoding" attr="6692">1</b>
+<i name="DataRateManagementMethod" attr="6692">Local</i>
+<i name="MaxBufferSize" attr="6692">65535</i>
+<i name="MaxDatagramSize" attr="6692">65535</i>
+<i name="ErrorCorrection" attr="6692">UDP_FEC</i>
+</o>
+</o>
+<o name="V_Internal" attr="5408">
+<i name="DiallingProfileNumberOfEntries" attr="5408">2</i>
+<i name="SIPProfileNumberOfEntries" attr="5408">5</i>
+<i name="UserNumberOfEntries" attr="5408">6</i>
+<t name="IntUserIdNames" attr="5408">
+<o name="1" attr="5408">
+<s name="IntUserName" attr="6692">Phone 1</s>
+</o>
+<o name="2" attr="5408">
+<s name="IntUserName" attr="6692">Phone 2</s>
+</o>
+<o name="3" attr="5408">
+<s name="IntUserName" attr="6692">Phone 3</s>
+</o>
+<o name="4" attr="5408">
+<s name="IntUserName" attr="6692">Phone 4</s>
+</o>
+<o name="5" attr="5408">
+<s name="IntUserName" attr="6692">Phone 5</s>
+</o>
+<o name="6" attr="5408">
+<s name="IntUserName" attr="6692">Phone 6</s>
+</o>
+<o name="7" attr="5408">
+<s name="IntUserName" attr="6692">RGW</s>
+</o>
+<o name="8" attr="5408">
+<s name="IntUserName" attr="6692"></s>
+</o>
+<o name="9" attr="5408">
+<s name="IntUserName" attr="6692"></s>
+</o>
+<o name="10" attr="5408">
+<s name="IntUserName" attr="6692"></s>
+</o>
+<o name="11" attr="5408">
+<s name="IntUserName" attr="6692"></s>
+</o>
+<o name="12" attr="5408">
+<s name="IntUserName" attr="6692"></s>
+</o>
+<o name="13" attr="5408">
+<s name="IntUserName" attr="6692"></s>
+</o>
+<o name="14" attr="5408">
+<s name="IntUserName" attr="6692">Fixed Line</s>
+</o>
+</t>
+<t name="UserFeature" attr="5408">
+<o name="1" attr="5408">
+<b name="CallPickUpEnable" attr="6692">1</b>
+<b name="AutoInternCallForkingEnable" attr="6692">1</b>
+<b name="AddExtraClipInfoEnable" attr="6692">1</b>
+</o>
+<o name="2" attr="5408">
+<b name="CallPickUpEnable" attr="6692">1</b>
+<b name="AutoInternCallForkingEnable" attr="6692">1</b>
+<b name="AddExtraClipInfoEnable" attr="6692">1</b>
+</o>
+<o name="3" attr="5408">
+<b name="CallPickUpEnable" attr="6692">1</b>
+<b name="AutoInternCallForkingEnable" attr="6692">1</b>
+<b name="AddExtraClipInfoEnable" attr="6692">1</b>
+</o>
+<o name="4" attr="5408">
+<b name="CallPickUpEnable" attr="6692">1</b>
+<b name="AutoInternCallForkingEnable" attr="6692">1</b>
+<b name="AddExtraClipInfoEnable" attr="6692">1</b>
+</o>
+<o name="5" attr="5408">
+<b name="CallPickUpEnable" attr="6692">1</b>
+<b name="AutoInternCallForkingEnable" attr="6692">1</b>
+<b name="AddExtraClipInfoEnable" attr="6692">1</b>
+</o>
+<o name="6" attr="5408">
+<b name="CallPickUpEnable" attr="6692">1</b>
+<b name="AutoInternCallForkingEnable" attr="6692">1</b>
+<b name="AddExtraClipInfoEnable" attr="6692">1</b>
+</o>
+</t>
+<t name="DiallingProfile" attr="5408">
+<o name="1" attr="5408">
+<s name="ExternDigitMap" attr="6692">(x.T|x.E|*21*|#21#|*61*|#61#|*67*|#67#|#77#|*43#|#43#|*26#|#26#|*31#|*51#|#51#|*52#|#52#|**|*99*|*0[0-6]x.E|*0[0-6]x.T|*0[0-6]*#[0123456789*#].T|*#[0123456789*#].T|*0[0-6]**x.E|*0[0-6]**x.T|*00E|*00T|*7xxT|*7xx#|*8x.T|*8x.#)</s>
+<s name="InternDigitMap" attr="6692">(*[1-6][ET])</s>
+<b name="AllowIPDialling" attr="6692">0</b>
+<s name="RejectCW" attr="6692">0</s>
+<s name="EndConsultationCall" attr="6692">1</s>
+<s name="ToggleCall" attr="6692">2</s>
+<s name="3PartyConference" attr="6692">3</s>
+<s name="CallTransfer" attr="6692">4</s>
+<s name="CLIRPermanentOn" attr="6692">*51#</s>
+<s name="CLIROff" attr="6692">#51#</s>
+<s name="CLIRForNextCall" attr="6692">*31#</s>
+<s name="DoNotDisturbOn" attr="6692">*26#</s>
+<s name="DoNotDisturbOff" attr="6692">#26#</s>
+<s name="CFUToInternal" attr="6692">*21*</s>
+<s name="CFUOff" attr="6692">#21#</s>
+<s name="CFBToInternal" attr="6692">*67*</s>
+<s name="CFBOff" attr="6692">#67#</s>
+<s name="CFNRToInternal" attr="6692">*61*</s>
+<s name="CFNROff" attr="6692">#61#</s>
+<s name="CFxOff" attr="6692">#77#</s>
+<s name="CWOn" attr="6692">*43#</s>
+<s name="CWOff" attr="6692">#43#</s>
+<s name="WifiOn" attr="6692">*52#</s>
+<s name="WifiOff" attr="6692">#52#</s>
+<s name="NetworkControlledFeature" attr="6692">*#</s>
+<b name="SendLastDigitOut" attr="6692">0</b>
+<b name="EndOfDialingNewMethod" attr="6692">1</b>
+<b name="FXOFallback" attr="6692">0</b>
+</o>
+<o name="2" attr="5408">
+<s name="ExternDigitMap" attr="6692">(x.T|x.E|*21*|#21#|*61*|#61#|*67*|#67#|#77#|*43#|#43#|*26#|#26#|*31#|*51#|#51#|*52#|#52#|**|*99*|*0[0-6]x.E|*0[0-6]x.T|*0[0-6]*#[0123456789*#].T|*#[0123456789*#].T|*0[0-6]**x.E|*0[0-6]**x.T|*00E|*00T|*7xxT|*7xx#|*8x.T|*8x.#)</s>
+<s name="InternDigitMap" attr="6692">(*[1-6][ET])</s>
+<b name="AllowIPDialling" attr="6692">0</b>
+<s name="RejectCW" attr="6692">0</s>
+<s name="EndConsultationCall" attr="6692">1</s>
+<s name="ToggleCall" attr="6692">2</s>
+<s name="3PartyConference" attr="6692">3</s>
+<s name="CallTransfer" attr="6692">4</s>
+<s name="CLIRPermanentOn" attr="6692">*51#</s>
+<s name="CLIROff" attr="6692">#51#</s>
+<s name="CLIRForNextCall" attr="6692">*31#</s>
+<s name="DoNotDisturbOn" attr="6692">*26#</s>
+<s name="DoNotDisturbOff" attr="6692">#26#</s>
+<s name="CFUToInternal" attr="6692">*21*</s>
+<s name="CFUOff" attr="6692">#21#</s>
+<s name="CFBToInternal" attr="6692">*67*</s>
+<s name="CFBOff" attr="6692">#67#</s>
+<s name="CFNRToInternal" attr="6692">*61*</s>
+<s name="CFNROff" attr="6692">#61#</s>
+<s name="CFxOff" attr="6692">#77#</s>
+<s name="CWOn" attr="6692">*43#</s>
+<s name="CWOff" attr="6692">#43#</s>
+<s name="WifiOn" attr="6692">*52#</s>
+<s name="WifiOff" attr="6692">#52#</s>
+<s name="NetworkControlledFeature" attr="6692">*#</s>
+<b name="SendLastDigitOut" attr="6692">0</b>
+<b name="EndOfDialingNewMethod" attr="6692">1</b>
+<b name="FXOFallback" attr="6692">0</b>
+</o>
+</t>
+<t name="SIPProfile" attr="5408">
+<o name="1" attr="5408">
+<i name="ProxyServerNumberOfEntries" attr="5408">0</i>
+<i name="OutboundProxyNumberOfEntries" attr="5408">0</i>
+<i name="RegistrarServerNumberOfEntries" attr="5408">0</i>
+<i name="InterfaceNumberOfEntries" attr="5408">1</i>
+<s name="ProfileName" attr="6692">InternalNetworkProfile</s>
+<s name="SIPDomain" attr="5408">192.168.2.1</s>
+<s name="SIPRealm" attr="6692">Gigaset</s>
+<b name="RegistrationEnable" attr="6692">0</b>
+<b name="SupportsLooseRouting" attr="6692">0</b>
+<b name="UseDNSSRV" attr="6692">0</b>
+<i name="CodecPacketizationInterval" attr="6692">12</i>
+<s name="PresenceServer" attr="6692"></s>
+<s name="TransportProtocol" attr="6692">UDP</s>
+<i name="SIPListeningPort" attr="6692">5060</i>
+<b name="DetermineUserByTransport" attr="6692">1</b>
+<b name="Send100Trying" attr="6692">1</b>
+<b name="ProxyProfile" attr="6692">1</b>
+<t name="Interfaces" attr="6692">
+<o name="1" attr="6692">
+<s name="Interface" attr="6692">IGD.LANDevice.1.LANHostConfigManagement.IPInterface.1</s>
+</o>
+</t>
+<t name="ProxyServers" attr="6692">
+</t>
+<t name="OutboundProxys" attr="6692">
+</t>
+<t name="RegistrarServers" attr="6692">
+</t>
+<b name="AllowConstVersionInSDP" attr="6692">0</b>
+</o>
+<o name="2" attr="5408">
+<i name="ProxyServerNumberOfEntries" attr="5408">1</i>
+<i name="OutboundProxyNumberOfEntries" attr="5408">0</i>
+<i name="RegistrarServerNumberOfEntries" attr="5408">1</i>
+<i name="InterfaceNumberOfEntries" attr="5408">1</i>
+<s name="ProfileName" attr="6692">FXSsNetworkProfile</s>
+<s name="SIPDomain" attr="5408">192.168.2.1</s>
+<s name="SIPRealm" attr="6692">Gigaset</s>
+<b name="RegistrationEnable" attr="6692">1</b>
+<b name="SupportsLooseRouting" attr="6692">0</b>
+<b name="UseDNSSRV" attr="6692">0</b>
+<i name="CodecPacketizationInterval" attr="6692">12</i>
+<s name="PresenceServer" attr="6692"></s>
+<s name="TransportProtocol" attr="6692">UDP</s>
+<i name="SIPListeningPort" attr="6692">5059</i>
+<b name="DetermineUserByTransport" attr="6692">0</b>
+<b name="Send100Trying" attr="6692">1</b>
+<b name="ProxyProfile" attr="6692">0</b>
+<t name="Interfaces" attr="6692">
+<o name="1" attr="6692">
+<s name="Interface" attr="6692"></s>
+</o>
+</t>
+<t name="ProxyServers" attr="6692">
+<o name="1" attr="6692">
+<i name="ProxyServerPort" attr="6692">0</i>
+</o>
+</t>
+<t name="OutboundProxys" attr="6692">
+</t>
+<t name="RegistrarServers" attr="6692">
+<o name="1" attr="6692">
+<i name="RegistrarServerPort" attr="6692">0</i>
+</o>
+</t>
+<b name="AllowConstVersionInSDP" attr="6692">0</b>
+</o>
+<o name="3" attr="5408">
+<i name="ProxyServerNumberOfEntries" attr="5408">1</i>
+<i name="OutboundProxyNumberOfEntries" attr="5408">0</i>
+<i name="RegistrarServerNumberOfEntries" attr="5408">1</i>
+<i name="InterfaceNumberOfEntries" attr="5408">1</i>
+<s name="ProfileName" attr="6692">RGWNetworkProfile</s>
+<s name="SIPDomain" attr="5408">192.168.2.1</s>
+<s name="SIPRealm" attr="6692">Gigaset</s>
+<b name="RegistrationEnable" attr="6692">1</b>
+<b name="SupportsLooseRouting" attr="6692">1</b>
+<b name="UseDNSSRV" attr="6692">1</b>
+<i name="CodecPacketizationInterval" attr="6692">20</i>
+<s name="PresenceServer" attr="6692"></s>
+<s name="TransportProtocol" attr="6692">UDP</s>
+<i name="SIPListeningPort" attr="6692">5057</i>
+<b name="DetermineUserByTransport" attr="6692">1</b>
+<b name="Send100Trying" attr="6692">1</b>
+<b name="ProxyProfile" attr="6692">0</b>
+<t name="Interfaces" attr="6692">
+<o name="1" attr="6692">
+<s name="Interface" attr="6692"></s>
+</o>
+</t>
+<t name="ProxyServers" attr="6692">
+<o name="1" attr="6692">
+<i name="ProxyServerPort" attr="6692">5060</i>
+</o>
+</t>
+<t name="OutboundProxys" attr="6692">
+</t>
+<t name="RegistrarServers" attr="6692">
+<o name="1" attr="6692">
+<i name="RegistrarServerPort" attr="6692">5060</i>
+</o>
+</t>
+<b name="AllowConstVersionInSDP" attr="6692">0</b>
+</o>
+<o name="4" attr="5408">
+<i name="ProxyServerNumberOfEntries" attr="5408">1</i>
+<i name="OutboundProxyNumberOfEntries" attr="5408">0</i>
+<i name="RegistrarServerNumberOfEntries" attr="5408">0</i>
+<i name="InterfaceNumberOfEntries" attr="5408">1</i>
+<s name="ProfileName" attr="6692">FXONetworkProfile</s>
+<s name="SIPDomain" attr="5408">192.168.2.1</s>
+<s name="SIPRealm" attr="6692">Gigaset</s>
+<b name="RegistrationEnable" attr="6692">0</b>
+<b name="SupportsLooseRouting" attr="6692">0</b>
+<b name="UseDNSSRV" attr="6692">1</b>
+<i name="CodecPacketizationInterval" attr="6692">20</i>
+<s name="PresenceServer" attr="6692"></s>
+<s name="TransportProtocol" attr="6692">UDP</s>
+<i name="SIPListeningPort" attr="6692">5058</i>
+<b name="DetermineUserByTransport" attr="6692">1</b>
+<b name="Send100Trying" attr="6692">1</b>
+<b name="ProxyProfile" attr="6692">0</b>
+<t name="Interfaces" attr="6692">
+<o name="1" attr="6692">
+<s name="Interface" attr="6692"></s>
+</o>
+</t>
+<t name="ProxyServers" attr="6692">
+<o name="1" attr="6692">
+<i name="ProxyServerPort" attr="6692">5056</i>
+</o>
+</t>
+<t name="OutboundProxys" attr="6692">
+</t>
+<t name="RegistrarServers" attr="6692">
+</t>
+<b name="AllowConstVersionInSDP" attr="6692">0</b>
+</o>
+<o name="5" attr="5408">
+<i name="ProxyServerNumberOfEntries" attr="5408">1</i>
+<i name="OutboundProxyNumberOfEntries" attr="5408">0</i>
+<i name="RegistrarServerNumberOfEntries" attr="5408">0</i>
+<i name="InterfaceNumberOfEntries" attr="5408">1</i>
+<s name="ProfileName" attr="6692">PSTNNetworkProfile</s>
+<s name="SIPDomain" attr="5408">192.168.2.1</s>
+<s name="SIPRealm" attr="6692">Gigaset</s>
+<b name="RegistrationEnable" attr="6692">0</b>
+<b name="SupportsLooseRouting" attr="6692">0</b>
+<b name="UseDNSSRV" attr="6692">1</b>
+<i name="CodecPacketizationInterval" attr="6692">20</i>
+<s name="PresenceServer" attr="6692"></s>
+<s name="TransportProtocol" attr="6692">UDP</s>
+<i name="SIPListeningPort" attr="6692">5056</i>
+<b name="DetermineUserByTransport" attr="6692">1</b>
+<b name="Send100Trying" attr="6692">1</b>
+<b name="ProxyProfile" attr="6692">1</b>
+<t name="Interfaces" attr="6692">
+<o name="1" attr="6692">
+<s name="Interface" attr="6692"></s>
+</o>
+</t>
+<t name="ProxyServers" attr="6692">
+<o name="1" attr="6692">
+<i name="ProxyServerPort" attr="6692">5058</i>
+</o>
+</t>
+<t name="OutboundProxys" attr="6692">
+</t>
+<t name="RegistrarServers" attr="6692">
+</t>
+<b name="AllowConstVersionInSDP" attr="6692">0</b>
+</o>
+</t>
+<t name="User" attr="5408">
+<o name="1" attr="5408">
+<o name="Configuration" attr="5408">
+<i name="UserReference" attr="5408">0</i>
+<s name="UserId" attr="6692"></s>
+<s name="CallerIDName" attr="6692"></s>
+<s name="AuthUserName" attr="6692"></s>
+<s name="AuthPassword" attr="6692"></s>
+<i name="SipProfileIndex" attr="6692">0</i>
+<i name="DialProfileIndex" attr="6692">3</i>
+<b name="SipUserEnable" attr="6692">1</b>
+<b name="CallWaitingEnable" attr="6692">0</b>
+<b name="DoNotDisturbEnable" attr="6692">0</b>
+<b name="ClirEnable" attr="6692">0</b>
+<b name="CFUEnable" attr="6692">0</b>
+<s name="CFUDest" attr="6692"></s>
+<b name="CFNREnable" attr="6692">0</b>
+<s name="CFNRDest" attr="6692"></s>
+<b name="CFBEnable" attr="6692">0</b>
+<s name="CFBDest" attr="6692"></s>
+</o>
+</o>
+<o name="2" attr="5408">
+<o name="Configuration" attr="5408">
+<i name="UserReference" attr="5408">1</i>
+<s name="UserId" attr="6692">*1</s>
+<s name="CallerIDName" attr="6692">Phone 1</s>
+<s name="AuthUserName" attr="6692"></s>
+<s name="AuthPassword" attr="6692"></s>
+<i name="SipProfileIndex" attr="6692">1</i>
+<i name="DialProfileIndex" attr="6692">0</i>
+<b name="SipUserEnable" attr="6692">1</b>
+<b name="CallWaitingEnable" attr="6692">1</b>
+<b name="DoNotDisturbEnable" attr="6692">0</b>
+<b name="ClirEnable" attr="6692">0</b>
+<b name="CFUEnable" attr="6692">0</b>
+<s name="CFUDest" attr="6692"></s>
+<b name="CFNREnable" attr="6692">0</b>
+<s name="CFNRDest" attr="6692"></s>
+<b name="CFBEnable" attr="6692">0</b>
+<s name="CFBDest" attr="6692"></s>
+</o>
+</o>
+<o name="3" attr="5408">
+<o name="Configuration" attr="5408">
+<i name="UserReference" attr="5408">2</i>
+<s name="UserId" attr="6692">*2</s>
+<s name="CallerIDName" attr="6692">Phone 2</s>
+<s name="AuthUserName" attr="6692"></s>
+<s name="AuthPassword" attr="6692"></s>
+<i name="SipProfileIndex" attr="6692">1</i>
+<i name="DialProfileIndex" attr="6692">1</i>
+<b name="SipUserEnable" attr="6692">1</b>
+<b name="CallWaitingEnable" attr="6692">1</b>
+<b name="DoNotDisturbEnable" attr="6692">0</b>
+<b name="ClirEnable" attr="6692">0</b>
+<b name="CFUEnable" attr="6692">0</b>
+<s name="CFUDest" attr="6692"></s>
+<b name="CFNREnable" attr="6692">0</b>
+<s name="CFNRDest" attr="6692"></s>
+<b name="CFBEnable" attr="6692">0</b>
+<s name="CFBDest" attr="6692"></s>
+</o>
+</o>
+<o name="4" attr="5408">
+<o name="Configuration" attr="5408">
+<i name="UserReference" attr="5408">4</i>
+<s name="UserId" attr="6692">RGW</s>
+<s name="CallerIDName" attr="6692"></s>
+<s name="AuthUserName" attr="6692"></s>
+<s name="AuthPassword" attr="6692"></s>
+<i name="SipProfileIndex" attr="6692">2</i>
+<i name="DialProfileIndex" attr="6692">3</i>
+<b name="SipUserEnable" attr="6692">0</b>
+<b name="CallWaitingEnable" attr="6692">0</b>
+<b name="DoNotDisturbEnable" attr="6692">0</b>
+<b name="ClirEnable" attr="6692">0</b>
+<b name="CFUEnable" attr="6692">0</b>
+<s name="CFUDest" attr="6692"></s>
+<b name="CFNREnable" attr="6692">0</b>
+<s name="CFNRDest" attr="6692"></s>
+<b name="CFBEnable" attr="6692">0</b>
+<s name="CFBDest" attr="6692"></s>
+</o>
+</o>
+<o name="5" attr="5408">
+<o name="Configuration" attr="5408">
+<i name="UserReference" attr="5408">3</i>
+<s name="UserId" attr="6692">FXO</s>
+<s name="CallerIDName" attr="6692"></s>
+<s name="AuthUserName" attr="6692"></s>
+<s name="AuthPassword" attr="6692"></s>
+<i name="SipProfileIndex" attr="6692">3</i>
+<i name="DialProfileIndex" attr="6692">3</i>
+<b name="SipUserEnable" attr="6692">1</b>
+<b name="CallWaitingEnable" attr="6692">0</b>
+<b name="DoNotDisturbEnable" attr="6692">0</b>
+<b name="ClirEnable" attr="6692">0</b>
+<b name="CFUEnable" attr="6692">0</b>
+<s name="CFUDest" attr="6692"></s>
+<b name="CFNREnable" attr="6692">0</b>
+<s name="CFNRDest" attr="6692"></s>
+<b name="CFBEnable" attr="6692">0</b>
+<s name="CFBDest" attr="6692"></s>
+</o>
+</o>
+<o name="6" attr="5408">
+<o name="Configuration" attr="5408">
+<i name="UserReference" attr="5408">11</i>
+<s name="UserId" attr="6692">PSTNNumber</s>
+<s name="CallerIDName" attr="6692"></s>
+<s name="AuthUserName" attr="6692"></s>
+<s name="AuthPassword" attr="6692"></s>
+<i name="SipProfileIndex" attr="6692">4</i>
+<i name="DialProfileIndex" attr="6692">3</i>
+<b name="SipUserEnable" attr="6692">1</b>
+<b name="CallWaitingEnable" attr="6692">0</b>
+<b name="DoNotDisturbEnable" attr="6692">0</b>
+<b name="ClirEnable" attr="6692">0</b>
+<b name="CFUEnable" attr="6692">0</b>
+<s name="CFUDest" attr="6692"></s>
+<b name="CFNREnable" attr="6692">0</b>
+<s name="CFNRDest" attr="6692"></s>
+<b name="CFBEnable" attr="6692">0</b>
+<s name="CFBDest" attr="6692"></s>
+</o>
+</o>
+</t>
+<o name="CallLog" attr="5408">
+<b name="CallLogEnable" attr="6692">0</b>
+<i name="CallLogCopyTime" attr="6692">86400000</i>
+</o>
+</o>
+</o>
+</t>
+<o name="V_ApplicationLevelGateway" attr="5408">
+<o name="SIP" attr="5408">
+<b name="Enable" attr="6692">0</b>
+<i name="SipPort" attr="6692">5060</i>
+<i name="WanListeningPortMin" attr="6692">5065</i>
+<i name="WanListeningPortMax" attr="6692">5070</i>
+<i name="IPProtocol" attr="6692">UDP</i>
+<s name="WanInterface" attr="6692"></s>
+</o>
+<o name="STUN" attr="5408">
+<b name="Enable" attr="6692">0</b>
+<i name="Port" attr="6692">3478</i>
+</o>
+</o>
+<o name="V_Iptv" attr="6692">
+<b name="Enable" attr="6692">0</b>
+<t name="IpTvDevice" attr="6692">
+</t>
+</o>
+<o name="V_RTPSessionDiscovery" attr="5408">
+<b name="Enabled" attr="6692">1</b>
+<i name="SessionTableSize" attr="6692">20</i>
+<i name="RegistryTableSize" attr="6692">20</i>
+<i name="SIPPortNumber" attr="6692">5060</i>
+<i name="TimeoutPreparing" attr="6692">600</i>
+<i name="TimeoutActive" attr="6692">86400</i>
+<t name="Ifaces" attr="6692">
+<o name="1" attr="5408">
+<b name="Enabled" attr="6692">1</b>
+<s name="TR69Name" attr="6692">IGD.LANDevice.1.LANHostConfigManagement.IPInterface.1</s>
+<b name="Promiscuous" attr="6692">0</b>
+</o>
+</t>
+<o name="SessionClass" attr="5408">
+<s name="TR69Name" attr="6692">IGD.QueueManagement.V_DynamicClassification.1</s>
+<i name="DSCPMark" attr="6692">46</i>
+<s name="SDPMediaType" attr="6692">audio</s>
+</o>
+<b name="RestrictToValidProxyServers" attr="6692">0</b>
+<t name="ValidProxyServers" attr="6692">
+<o name="1" attr="5408">
+<b name="Enabled" attr="6692">1</b>
+<s name="Name" attr="6692">tel.t-online.de</s>
+</o>
+</t>
+<o name="SIPClass" attr="5408">
+<s name="TR69Name" attr="6692">IGD.QueueManagement.V_DynamicClassification.2</s>
+<i name="DSCPMark" attr="6692">26</i>
+</o>
+<o name="State" attr="5408">
+<o name="SessionClass" attr="5408">
+</o>
+<o name="SIPClass" attr="5408">
+</o>
+</o>
+</o>
+<o name="V_HostService" attr="5408">
+<b name="Enabled" attr="6692">1</b>
+<i name="BurstIntervalSec" attr="6692">900</i>
+<i name="WaitIntervalMSec" attr="6692">3</i>
+<i name="MsgPerBurst" attr="6692">10</i>
+<i name="ShortBurstIntervalMSec" attr="6692">1750</i>
+</o>
+<o name="V_PortRelayService" attr="5408">
+<b name="Enabled" attr="6692">1</b>
+<t name="PortService" attr="6692">
+<o name="1" attr="6692">
+<b name="Enabled" attr="6692">1</b>
+<s name="ServiceName" attr="6692">UPNP</s>
+<s name="Interface" attr="6692">IGD.LANDevice.1.LANHostConfigManagement.IPInterface.1</s>
+<i name="ListeningPort" attr="6692">1900</i>
+<s name="RedirectPorts" attr="6692">1901,1902</s>
+</o>
+</t>
+</o>
+</o>
+<o name="LANConfigSecurity" attr="5408">
+<s name="ConfigPassword" attr="6692"></s>
+</o>
+<t name="LANDevice" attr="6692">
+<o name="1" attr="6692">
+<t name="WLANConfiguration" attr="6692">
+<o name="1" attr="6692">
+<b name="Enable" attr="6692">1</b>
+<s name="MaxBitRate" attr="6692">Auto</s>
+<i name="Channel" attr="6692">0</i>
+<s name="SSID" attr="6692">Siemens SX763</s>
+<i name="BeaconType" attr="6692">None</i>
+<b name="MACAddressControlEnabled" attr="6692">0</b>
+<i name="WEPKeyIndex" attr="6692">1</i>
+<s name="KeyPassphrase" attr="6692"></s>
+<i name="BasicEncryptionModes" attr="6692">WEPEncryption</i>
+<i name="BasicAuthenticationMode" attr="6692">None</i>
+<i name="WPAEncryptionModes" attr="6692">TKIPEncryption</i>
+<i name="WPAAuthenticationMode" attr="6692">PSKAuthentication</i>
+<i name="IEEE11iEncryptionModes" attr="6692">AESEncryption</i>
+<i name="IEEE11iAuthenticationMode" attr="6692">PSKAuthentication</i>
+<s name="BasicDataTransmitRates" attr="6692">1</s>
+<s name="OperationalDataTransmitRates" attr="6692">1,2,5.5,11,6,9,12,18,24,36,48,54</s>
+<b name="BeaconAdvertisementEnabled" attr="6692">1</b>
+<b name="RadioEnabled" attr="6692">1</b>
+<b name="AutoRateFallBackEnabled" attr="6692">1</b>
+<s name="LocationDescription" attr="6692"></s>
+<i name="DeviceOperationMode" attr="6692">InfrastructureAccessPoint</i>
+<s name="PeerBSSID" attr="6692">00:00:00:00:00:00</s>
+<t name="AssociatedDevice" attr="6692">
+</t>
+<t name="WEPKey" attr="6692">
+<o name="1" attr="5408">
+<s name="WEPKey" attr="6692"></s>
+</o>
+<o name="2" attr="5408">
+<s name="WEPKey" attr="6692"></s>
+</o>
+<o name="3" attr="5408">
+<s name="WEPKey" attr="6692"></s>
+</o>
+<o name="4" attr="5408">
+<s name="WEPKey" attr="6692"></s>
+</o>
+</t>
+<t name="PreSharedKey" attr="5408">
+<o name="1" attr="5408">
+<s name="PreSharedKey" attr="6692"></s>
+<s name="KeyPassphrase" attr="6692"></s>
+</o>
+<o name="2" attr="5408">
+<s name="PreSharedKey" attr="6692"></s>
+<s name="KeyPassphrase" attr="6692"></s>
+</o>
+<o name="3" attr="5408">
+<s name="PreSharedKey" attr="6692"></s>
+<s name="KeyPassphrase" attr="6692"></s>
+</o>
+<o name="4" attr="5408">
+<s name="PreSharedKey" attr="6692"></s>
+<s name="KeyPassphrase" attr="6692"></s>
+</o>
+<o name="5" attr="5408">
+<s name="PreSharedKey" attr="6692"></s>
+<s name="KeyPassphrase" attr="6692"></s>
+</o>
+<o name="6" attr="5408">
+<s name="PreSharedKey" attr="6692"></s>
+<s name="KeyPassphrase" attr="6692"></s>
+</o>
+<o name="7" attr="5408">
+<s name="PreSharedKey" attr="6692"></s>
+<s name="KeyPassphrase" attr="6692"></s>
+</o>
+<o name="8" attr="5408">
+<s name="PreSharedKey" attr="6692"></s>
+<s name="KeyPassphrase" attr="6692"></s>
+</o>
+<o name="9" attr="5408">
+<s name="PreSharedKey" attr="6692"></s>
+<s name="KeyPassphrase" attr="6692"></s>
+</o>
+<o name="10" attr="5408">
+<s name="PreSharedKey" attr="6692"></s>
+<s name="KeyPassphrase" attr="6692"></s>
+</o>
+</t>
+<s name="V_RadiusServerIPAddress" attr="6692"></s>
+<i name="V_RadiusServerPortNumber" attr="6692">1812</i>
+<s name="V_RadiusServerSecretKey" attr="6692"></s>
+<b name="V_WDSEnable" attr="6692">0</b>
+<b name="V_XREnable" attr="6692">0</b>
+<i name="V_TXPower" attr="6692">100</i>
+<i name="V_SuperGmode" attr="6692">None</i>
+<i name="V_WEPAuthenticationType" attr="6692">Open</i>
+<i name="V_KeyType" attr="6692">ASCII</i>
+<i name="V_WEPKeyLength" attr="6692">64</i>
+<i name="V_DTIMPeriod" attr="6692">1</i>
+<i name="V_BeaconInterval" attr="6692">100</i>
+<i name="V_RTSCTSThreshold" attr="6692">2346</i>
+<i name="V_FragmentationThreshold" attr="6692">2346</i>
+<i name="V_RadioPolicy" attr="6692">Mixed</i>
+<b name="V_EnableIsolation" attr="6692">0</b>
+<b name="V_EnableMaster" attr="6692">1</b>
+<b name="V_EnableMasterWPS" attr="6692">1</b>
+<o name="V_WPS" attr="5408">
+<b name="Enable" attr="6692">1</b>
+<o name="ConfigMethods" attr="5408">
+<b name="PBC" attr="6692">1</b>
+<b name="SendOwnPin" attr="6692">1</b>
+<b name="EnterPartnerDevicePin" attr="6692">1</b>
+<b name="UPnP" attr="6692">1</b>
+</o>
+<s name="APPin" attr="6692">73457107</s>
+<s name="FactoryAPPin" attr="5408"></s>
+<b name="EnableHwPBC" attr="6692">1</b>
+<s name="GenSSIDPrefix" attr="6692">Gigaset_</s>
+<s name="UUID" attr="5408">42b72e49542749a8a50be9d090f834ed</s>
+<i name="ConfigStatus" attr="6692">AP with Proxy and Registrar</i>
+<i name="SetupLockedThreshold" attr="6692">1000</i>
+</o>
+<b name="V_EnableMasterWDS" attr="6692">1</b>
+<o name="V_WDS" attr="5408">
+</o>
+</o>
+<o name="2" attr="6692">
+<b name="Enable" attr="6692">0</b>
+<s name="MaxBitRate" attr="6692">Auto</s>
+<i name="Channel" attr="6692">0</i>
+<s name="SSID" attr="6692">ConnectionPoint</s>
+<i name="BeaconType" attr="6692">None</i>
+<b name="MACAddressControlEnabled" attr="6692">0</b>
+<i name="WEPKeyIndex" attr="6692">1</i>
+<s name="KeyPassphrase" attr="6692"></s>
+<i name="BasicEncryptionModes" attr="6692">WEPEncryption</i>
+<i name="BasicAuthenticationMode" attr="6692">None</i>
+<i name="WPAEncryptionModes" attr="6692">TKIPEncryption</i>
+<i name="WPAAuthenticationMode" attr="6692">PSKAuthentication</i>
+<i name="IEEE11iEncryptionModes" attr="6692">AESEncryption</i>
+<i name="IEEE11iAuthenticationMode" attr="6692">PSKAuthentication</i>
+<s name="BasicDataTransmitRates" attr="6692">1</s>
+<s name="OperationalDataTransmitRates" attr="6692">1,2,5.5,11,6,9,12,18,24,36,48,54</s>
+<b name="BeaconAdvertisementEnabled" attr="6692">1</b>
+<b name="RadioEnabled" attr="6692">1</b>
+<b name="AutoRateFallBackEnabled" attr="6692">1</b>
+<s name="LocationDescription" attr="6692"></s>
+<i name="DeviceOperationMode" attr="6692">WirelessBridge</i>
+<s name="PeerBSSID" attr="6692">00:00:00:00:00:00</s>
+<t name="AssociatedDevice" attr="6692">
+</t>
+<t name="WEPKey" attr="6692">
+<o name="1" attr="5408">
+<s name="WEPKey" attr="6692"></s>
+</o>
+<o name="2" attr="5408">
+<s name="WEPKey" attr="6692"></s>
+</o>
+<o name="3" attr="5408">
+<s name="WEPKey" attr="6692"></s>
+</o>
+<o name="4" attr="5408">
+<s name="WEPKey" attr="6692"></s>
+</o>
+</t>
+<t name="PreSharedKey" attr="5408">
+<o name="1" attr="5408">
+<s name="PreSharedKey" attr="6692"></s>
+<s name="KeyPassphrase" attr="6692"></s>
+</o>
+<o name="2" attr="5408">
+<s name="PreSharedKey" attr="6692"></s>
+<s name="KeyPassphrase" attr="6692"></s>
+</o>
+<o name="3" attr="5408">
+<s name="PreSharedKey" attr="6692"></s>
+<s name="KeyPassphrase" attr="6692"></s>
+</o>
+<o name="4" attr="5408">
+<s name="PreSharedKey" attr="6692"></s>
+<s name="KeyPassphrase" attr="6692"></s>
+</o>
+<o name="5" attr="5408">
+<s name="PreSharedKey" attr="6692"></s>
+<s name="KeyPassphrase" attr="6692"></s>
+</o>
+<o name="6" attr="5408">
+<s name="PreSharedKey" attr="6692"></s>
+<s name="KeyPassphrase" attr="6692"></s>
+</o>
+<o name="7" attr="5408">
+<s name="PreSharedKey" attr="6692"></s>
+<s name="KeyPassphrase" attr="6692"></s>
+</o>
+<o name="8" attr="5408">
+<s name="PreSharedKey" attr="6692"></s>
+<s name="KeyPassphrase" attr="6692"></s>
+</o>
+<o name="9" attr="5408">
+<s name="PreSharedKey" attr="6692"></s>
+<s name="KeyPassphrase" attr="6692"></s>
+</o>
+<o name="10" attr="5408">
+<s name="PreSharedKey" attr="6692"></s>
+<s name="KeyPassphrase" attr="6692"></s>
+</o>
+</t>
+<s name="V_RadiusServerIPAddress" attr="6692"></s>
+<i name="V_RadiusServerPortNumber" attr="6692">1812</i>
+<s name="V_RadiusServerSecretKey" attr="6692"></s>
+<b name="V_WDSEnable" attr="6692">1</b>
+<b name="V_XREnable" attr="6692">0</b>
+<i name="V_TXPower" attr="6692">100</i>
+<i name="V_SuperGmode" attr="6692">None</i>
+<i name="V_WEPAuthenticationType" attr="6692">Open</i>
+<i name="V_KeyType" attr="6692">ASCII</i>
+<i name="V_WEPKeyLength" attr="6692">64</i>
+<i name="V_DTIMPeriod" attr="6692">1</i>
+<i name="V_BeaconInterval" attr="6692">100</i>
+<i name="V_RTSCTSThreshold" attr="6692">2346</i>
+<i name="V_FragmentationThreshold" attr="6692">2346</i>
+<i name="V_RadioPolicy" attr="6692">Mixed</i>
+<b name="V_EnableIsolation" attr="6692">0</b>
+<b name="V_EnableMaster" attr="6692">0</b>
+<b name="V_EnableMasterWPS" attr="6692">0</b>
+<o name="V_WPS" attr="5408">
+<b name="Enable" attr="6692">1</b>
+<o name="ConfigMethods" attr="5408">
+<b name="PBC" attr="6692">1</b>
+<b name="SendOwnPin" attr="6692">1</b>
+<b name="EnterPartnerDevicePin" attr="6692">1</b>
+<b name="UPnP" attr="6692">1</b>
+</o>
+<s name="APPin" attr="6692"></s>
+<s name="FactoryAPPin" attr="5408"></s>
+<b name="EnableHwPBC" attr="6692">1</b>
+<s name="GenSSIDPrefix" attr="6692"></s>
+<s name="UUID" attr="5408"></s>
+<i name="ConfigStatus" attr="6692">Unconfigured</i>
+<i name="SetupLockedThreshold" attr="6692">0</i>
+</o>
+<b name="V_EnableMasterWDS" attr="6692">0</b>
+<o name="V_WDS" attr="5408">
+</o>
+</o>
+<o name="3" attr="6692">
+<b name="Enable" attr="6692">0</b>
+<s name="MaxBitRate" attr="6692">Auto</s>
+<i name="Channel" attr="6692">0</i>
+<s name="SSID" attr="6692">ConnectionPoint</s>
+<i name="BeaconType" attr="6692">None</i>
+<b name="MACAddressControlEnabled" attr="6692">0</b>
+<i name="WEPKeyIndex" attr="6692">1</i>
+<s name="KeyPassphrase" attr="6692"></s>
+<i name="BasicEncryptionModes" attr="6692">WEPEncryption</i>
+<i name="BasicAuthenticationMode" attr="6692">None</i>
+<i name="WPAEncryptionModes" attr="6692">TKIPEncryption</i>
+<i name="WPAAuthenticationMode" attr="6692">PSKAuthentication</i>
+<i name="IEEE11iEncryptionModes" attr="6692">AESEncryption</i>
+<i name="IEEE11iAuthenticationMode" attr="6692">PSKAuthentication</i>
+<s name="BasicDataTransmitRates" attr="6692">1</s>
+<s name="OperationalDataTransmitRates" attr="6692">1,2,5.5,11,6,9,12,18,24,36,48,54</s>
+<b name="BeaconAdvertisementEnabled" attr="6692">1</b>
+<b name="RadioEnabled" attr="6692">1</b>
+<b name="AutoRateFallBackEnabled" attr="6692">1</b>
+<s name="LocationDescription" attr="6692"></s>
+<i name="DeviceOperationMode" attr="6692">WirelessBridge</i>
+<s name="PeerBSSID" attr="6692">00:00:00:00:00:00</s>
+<t name="AssociatedDevice" attr="6692">
+</t>
+<t name="WEPKey" attr="6692">
+<o name="1" attr="5408">
+<s name="WEPKey" attr="6692"></s>
+</o>
+<o name="2" attr="5408">
+<s name="WEPKey" attr="6692"></s>
+</o>
+<o name="3" attr="5408">
+<s name="WEPKey" attr="6692"></s>
+</o>
+<o name="4" attr="5408">
+<s name="WEPKey" attr="6692"></s>
+</o>
+</t>
+<t name="PreSharedKey" attr="5408">
+<o name="1" attr="5408">
+<s name="PreSharedKey" attr="6692"></s>
+<s name="KeyPassphrase" attr="6692"></s>
+</o>
+<o name="2" attr="5408">
+<s name="PreSharedKey" attr="6692"></s>
+<s name="KeyPassphrase" attr="6692"></s>
+</o>
+<o name="3" attr="5408">
+<s name="PreSharedKey" attr="6692"></s>
+<s name="KeyPassphrase" attr="6692"></s>
+</o>
+<o name="4" attr="5408">
+<s name="PreSharedKey" attr="6692"></s>
+<s name="KeyPassphrase" attr="6692"></s>
+</o>
+<o name="5" attr="5408">
+<s name="PreSharedKey" attr="6692"></s>
+<s name="KeyPassphrase" attr="6692"></s>
+</o>
+<o name="6" attr="5408">
+<s name="PreSharedKey" attr="6692"></s>
+<s name="KeyPassphrase" attr="6692"></s>
+</o>
+<o name="7" attr="5408">
+<s name="PreSharedKey" attr="6692"></s>
+<s name="KeyPassphrase" attr="6692"></s>
+</o>
+<o name="8" attr="5408">
+<s name="PreSharedKey" attr="6692"></s>
+<s name="KeyPassphrase" attr="6692"></s>
+</o>
+<o name="9" attr="5408">
+<s name="PreSharedKey" attr="6692"></s>
+<s name="KeyPassphrase" attr="6692"></s>
+</o>
+<o name="10" attr="5408">
+<s name="PreSharedKey" attr="6692"></s>
+<s name="KeyPassphrase" attr="6692"></s>
+</o>
+</t>
+<s name="V_RadiusServerIPAddress" attr="6692"></s>
+<i name="V_RadiusServerPortNumber" attr="6692">1812</i>
+<s name="V_RadiusServerSecretKey" attr="6692"></s>
+<b name="V_WDSEnable" attr="6692">1</b>
+<b name="V_XREnable" attr="6692">0</b>
+<i name="V_TXPower" attr="6692">100</i>
+<i name="V_SuperGmode" attr="6692">None</i>
+<i name="V_WEPAuthenticationType" attr="6692">Open</i>
+<i name="V_KeyType" attr="6692">ASCII</i>
+<i name="V_WEPKeyLength" attr="6692">64</i>
+<i name="V_DTIMPeriod" attr="6692">1</i>
+<i name="V_BeaconInterval" attr="6692">100</i>
+<i name="V_RTSCTSThreshold" attr="6692">2346</i>
+<i name="V_FragmentationThreshold" attr="6692">2346</i>
+<i name="V_RadioPolicy" attr="6692">Mixed</i>
+<b name="V_EnableIsolation" attr="6692">0</b>
+<b name="V_EnableMaster" attr="6692">0</b>
+<b name="V_EnableMasterWPS" attr="6692">0</b>
+<o name="V_WPS" attr="5408">
+<b name="Enable" attr="6692">1</b>
+<o name="ConfigMethods" attr="5408">
+<b name="PBC" attr="6692">1</b>
+<b name="SendOwnPin" attr="6692">1</b>
+<b name="EnterPartnerDevicePin" attr="6692">1</b>
+<b name="UPnP" attr="6692">1</b>
+</o>
+<s name="APPin" attr="6692"></s>
+<s name="FactoryAPPin" attr="5408"></s>
+<b name="EnableHwPBC" attr="6692">1</b>
+<s name="GenSSIDPrefix" attr="6692"></s>
+<s name="UUID" attr="5408"></s>
+<i name="ConfigStatus" attr="6692">Unconfigured</i>
+<i name="SetupLockedThreshold" attr="6692">0</i>
+</o>
+<b name="V_EnableMasterWDS" attr="6692">0</b>
+<o name="V_WDS" attr="5408">
+</o>
+</o>
+<o name="4" attr="6692">
+<b name="Enable" attr="6692">0</b>
+<s name="MaxBitRate" attr="6692">Auto</s>
+<i name="Channel" attr="6692">0</i>
+<s name="SSID" attr="6692">ConnectionPoint</s>
+<i name="BeaconType" attr="6692">None</i>
+<b name="MACAddressControlEnabled" attr="6692">0</b>
+<i name="WEPKeyIndex" attr="6692">1</i>
+<s name="KeyPassphrase" attr="6692"></s>
+<i name="BasicEncryptionModes" attr="6692">WEPEncryption</i>
+<i name="BasicAuthenticationMode" attr="6692">None</i>
+<i name="WPAEncryptionModes" attr="6692">TKIPEncryption</i>
+<i name="WPAAuthenticationMode" attr="6692">PSKAuthentication</i>
+<i name="IEEE11iEncryptionModes" attr="6692">AESEncryption</i>
+<i name="IEEE11iAuthenticationMode" attr="6692">PSKAuthentication</i>
+<s name="BasicDataTransmitRates" attr="6692">1</s>
+<s name="OperationalDataTransmitRates" attr="6692">1,2,5.5,11,6,9,12,18,24,36,48,54</s>
+<b name="BeaconAdvertisementEnabled" attr="6692">1</b>
+<b name="RadioEnabled" attr="6692">1</b>
+<b name="AutoRateFallBackEnabled" attr="6692">1</b>
+<s name="LocationDescription" attr="6692"></s>
+<i name="DeviceOperationMode" attr="6692">WirelessBridge</i>
+<s name="PeerBSSID" attr="6692">00:00:00:00:00:00</s>
+<t name="AssociatedDevice" attr="6692">
+</t>
+<t name="WEPKey" attr="6692">
+<o name="1" attr="5408">
+<s name="WEPKey" attr="6692"></s>
+</o>
+<o name="2" attr="5408">
+<s name="WEPKey" attr="6692"></s>
+</o>
+<o name="3" attr="5408">
+<s name="WEPKey" attr="6692"></s>
+</o>
+<o name="4" attr="5408">
+<s name="WEPKey" attr="6692"></s>
+</o>
+</t>
+<t name="PreSharedKey" attr="5408">
+<o name="1" attr="5408">
+<s name="PreSharedKey" attr="6692"></s>
+<s name="KeyPassphrase" attr="6692"></s>
+</o>
+<o name="2" attr="5408">
+<s name="PreSharedKey" attr="6692"></s>
+<s name="KeyPassphrase" attr="6692"></s>
+</o>
+<o name="3" attr="5408">
+<s name="PreSharedKey" attr="6692"></s>
+<s name="KeyPassphrase" attr="6692"></s>
+</o>
+<o name="4" attr="5408">
+<s name="PreSharedKey" attr="6692"></s>
+<s name="KeyPassphrase" attr="6692"></s>
+</o>
+<o name="5" attr="5408">
+<s name="PreSharedKey" attr="6692"></s>
+<s name="KeyPassphrase" attr="6692"></s>
+</o>
+<o name="6" attr="5408">
+<s name="PreSharedKey" attr="6692"></s>
+<s name="KeyPassphrase" attr="6692"></s>
+</o>
+<o name="7" attr="5408">
+<s name="PreSharedKey" attr="6692"></s>
+<s name="KeyPassphrase" attr="6692"></s>
+</o>
+<o name="8" attr="5408">
+<s name="PreSharedKey" attr="6692"></s>
+<s name="KeyPassphrase" attr="6692"></s>
+</o>
+<o name="9" attr="5408">
+<s name="PreSharedKey" attr="6692"></s>
+<s name="KeyPassphrase" attr="6692"></s>
+</o>
+<o name="10" attr="5408">
+<s name="PreSharedKey" attr="6692"></s>
+<s name="KeyPassphrase" attr="6692"></s>
+</o>
+</t>
+<s name="V_RadiusServerIPAddress" attr="6692"></s>
+<i name="V_RadiusServerPortNumber" attr="6692">1812</i>
+<s name="V_RadiusServerSecretKey" attr="6692"></s>
+<b name="V_WDSEnable" attr="6692">1</b>
+<b name="V_XREnable" attr="6692">0</b>
+<i name="V_TXPower" attr="6692">100</i>
+<i name="V_SuperGmode" attr="6692">None</i>
+<i name="V_WEPAuthenticationType" attr="6692">Open</i>
+<i name="V_KeyType" attr="6692">ASCII</i>
+<i name="V_WEPKeyLength" attr="6692">64</i>
+<i name="V_DTIMPeriod" attr="6692">1</i>
+<i name="V_BeaconInterval" attr="6692">100</i>
+<i name="V_RTSCTSThreshold" attr="6692">2346</i>
+<i name="V_FragmentationThreshold" attr="6692">2346</i>
+<i name="V_RadioPolicy" attr="6692">Mixed</i>
+<b name="V_EnableIsolation" attr="6692">0</b>
+<b name="V_EnableMaster" attr="6692">0</b>
+<b name="V_EnableMasterWPS" attr="6692">0</b>
+<o name="V_WPS" attr="5408">
+<b name="Enable" attr="6692">1</b>
+<o name="ConfigMethods" attr="5408">
+<b name="PBC" attr="6692">1</b>
+<b name="SendOwnPin" attr="6692">1</b>
+<b name="EnterPartnerDevicePin" attr="6692">1</b>
+<b name="UPnP" attr="6692">1</b>
+</o>
+<s name="APPin" attr="6692"></s>
+<s name="FactoryAPPin" attr="5408"></s>
+<b name="EnableHwPBC" attr="6692">1</b>
+<s name="GenSSIDPrefix" attr="6692"></s>
+<s name="UUID" attr="5408"></s>
+<i name="ConfigStatus" attr="6692">Unconfigured</i>
+<i name="SetupLockedThreshold" attr="6692">0</i>
+</o>
+<b name="V_EnableMasterWDS" attr="6692">0</b>
+<o name="V_WDS" attr="5408">
+</o>
+</o>
+</t>
+<o name="LANHostConfigManagement" attr="5408">
+<b name="DHCPServerConfigurable" attr="6692">0</b>
+<b name="DHCPServerEnable" attr="6692">1</b>
+<b name="DHCPRelay" attr="6692">0</b>
+<o name="V_DHCPRelayConfig" attr="5408">
+<s name="DHCPRelayServer" attr="6692"></s>
+<s name="DHCPRelayWanInterface" attr="6692"></s>
+<s name="DHCPRelayMode" attr="6692"></s>
+<i name="DHCPRelayHopCount" attr="6692">10</i>
+</o>
+<s name="MinAddress" attr="6692">192.168.2.17</s>
+<s name="MaxAddress" attr="6692">192.168.2.253</s>
+<s name="ReservedAddresses" attr="6692"></s>
+<s name="SubnetMask" attr="6692">255.255.255.0</s>
+<s name="DNSServers" attr="6692"></s>
+<s name="DomainName" attr="6692">dummy.porta.gigaset.net</s>
+<s name="IPRouters" attr="6692"></s>
+<i name="DHCPLeaseTime" attr="6692">1800</i>
+<s name="UseAllocatedWAN" attr="6692"></s>
+<s name="AllowedMACAddresses" attr="6692"></s>
+<b name="V_Authoritative" attr="6692">1</b>
+<s name="V_Subnet" attr="6692"></s>
+<b name="V_DNSUpdate" attr="6692">1</b>
+<t name="V_Option" attr="6692">
+</t>
+<o name="V_DNS" attr="6692">
+<b name="Enable" attr="6692">1</b>
+<b name="Shared" attr="6692">0</b>
+<i name="CacheSize" attr="6692">300000</i>
+<s name="ParentServers" attr="6692"></s>
+<b name="UseWanServers" attr="6692">1</b>
+<b name="UseRootServers" attr="6692">0</b>
+<b name="DhcpConnection" attr="6692">1</b>
+<b name="ForwardOnly" attr="6692">1</b>
+<s name="SendIP" attr="6692"></s>
+<b name="AllowInternal" attr="6692">1</b>
+<t name="WanServer" attr="6692">
+</t>
+<t name="StaticIP" attr="6692">
+</t>
+</o>
+<t name="IPInterface" attr="6692">
+<o name="1" attr="6692">
+<b name="Enable" attr="6692">1</b>
+<s name="Name" attr="6692">Lan</s>
+<s name="IPInterfaceAddressingType" attr="6692">Static</s>
+<s name="IPInterfaceIPAddress" attr="88628">192.168.2.1</s>
+<s name="IPInterfaceSubnetMask" attr="6692">255.255.255.0</s>
+<s name="V_Hostname" attr="6692">porta</s>
+<b name="V_IsRoutable" attr="6692">0</b>
+</o>
+</t>
+<t name="V_Client" attr="6692">
+</t>
+<b name="V_SubnetRestrictedInterface" attr="6692">0</b>
+<b name="V_SeparatedSubnet" attr="6692">0</b>
+</o>
+<t name="LANEthernetInterfaceConfig" attr="6692">
+</t>
+<o name="Hosts" attr="6692">
+<t name="Host" attr="6692">
+</t>
+</o>
+<o name="V_LANVLANInterfaceConfig" attr="6692">
+<s name="Name" attr="6692">vlan2</s>
+<i name="VlanTag" attr="6692">2</i>
+<i name="VlanPriority" attr="6692">-1</i>
+<b name="Enable" attr="6692">1</b>
+<s name="BaseInterface" attr="6692">IGD.WANDevice.1.WANEthernetInterfaceConfig.1</s>
+<s name="MACAddress" attr="6692">+1</s>
+</o>
+</o>
+</t>
+<o name="V_Firewall" attr="5408">
+<s name="DoSLevel" attr="6692">HIGH</s>
+<s name="Level" attr="6692">Medium</s>
+<o name="FWFeature" attr="5408">
+<b name="firewallEnable" attr="6692">1</b>
+<o name="FWDetectSyns" attr="5408">
+<b name="DSEnable" attr="6692">0</b>
+</o>
+<t name="FWDMZPortAddress" attr="6692">
+</t>
+<o name="FWExchangeMalformedMIMEHeader" attr="5408">
+<b name="EMMHEnable" attr="6692">0</b>
+<i name="SMTPPort" attr="6692">25</i>
+</o>
+<o name="FWHotSyncManagerDos" attr="5408">
+<b name="HSMDEnable" attr="6692">0</b>
+<i name="HotSyncPort" attr="6692">14238</i>
+</o>
+<o name="FWCodeRedII" attr="5408">
+<b name="CRIIEnable" attr="6692">0</b>
+<i name="WebPort" attr="6692">80</i>
+</o>
+<o name="FWCodeRedI" attr="5408">
+<b name="CRIEnable" attr="6692">0</b>
+<i name="WebPort" attr="6692">80</i>
+</o>
+<o name="FWICQDos" attr="5408">
+<b name="ICQDosEnable" attr="6692">0</b>
+<i name="ICQPort" attr="6692">80</i>
+</o>
+<o name="FWWinnuke" attr="5408">
+<b name="WinnukeEnable" attr="6692">0</b>
+<s name="WinnukePort" attr="6692">137,139</s>
+</o>
+<t name="FWYahooMessengerDos" attr="6692">
+</t>
+<o name="FWFTPPortRestricted" attr="5408">
+<b name="FTPPREnable" attr="6692">0</b>
+<i name="FTPPort" attr="6692">21</i>
+</o>
+<o name="FWUDPBomb" attr="5408">
+<b name="UDPBEnable" attr="6692">0</b>
+</o>
+<o name="FWPortScan" attr="5408">
+<b name="PSEnable" attr="6692">0</b>
+<i name="PSDelay" attr="6692">300</i>
+<i name="PSLoportWeight" attr="6692">1</i>
+<i name="PSHiportWeight" attr="6692">3</i>
+<i name="PSDThreshold" attr="6692">21</i>
+</o>
+<o name="FWTCPSyncFlooding" attr="5408">
+<b name="TSFEnable" attr="6692">0</b>
+<s name="SynFloodRate" attr="6692">5/s</s>
+<i name="SynFloodBurst" attr="6692">50</i>
+</o>
+<o name="FWChristmasTree" attr="5408">
+<b name="CTEnable" attr="6692">0</b>
+</o>
+<o name="FWTCPHijacking" attr="5408">
+<b name="THEnable" attr="6692">0</b>
+</o>
+<o name="FWUDPPortLoopback" attr="5408">
+<b name="UPLEnable" attr="6692">0</b>
+</o>
+<o name="FWLandAttack" attr="5408">
+<b name="LAEnable" attr="6692">0</b>
+</o>
+<o name="FWFraggle" attr="5408">
+<b name="FEnable" attr="6692">0</b>
+<i name="chargenPort" attr="6692">7</i>
+<i name="echoPort" attr="6692">13</i>
+<i name="qodPort" attr="6692">17</i>
+<i name="todPort" attr="6692">19</i>
+<i name="fragLimit" attr="6692">4</i>
+<i name="fragLimitBurst" attr="6692">20</i>
+</o>
+<t name="FWTrustedInterface" attr="6692">
+</t>
+<t name="FWrestrictInterface" attr="6692">
+</t>
+<o name="FWNAT" attr="36">
+</o>
+<o name="FWPortMapping" attr="6692">
+</o>
+<b name="WANPingLogEnable" attr="6692">0</b>
+</o>
+<t name="FWruleSet" attr="6692">
+<o name="1" attr="6692">
+<b name="Enable" attr="6692">1</b>
+<s name="Chain" attr="6692">Access</s>
+<s name="Table" attr="6692"></s>
+<s name="defaultPolicy" attr="6692"></s>
+<t name="FWrule" attr="6692">
+<inactive/>
+<o name="2" attr="6692">
+<s name="ruleType" attr="6692">SoftCoded</s>
+<s name="ruleKey" attr="6692">3</s>
+<s name="name" attr="6692">123</s>
+<b name="Enable" attr="6692">1</b>
+</o>
+</t>
+</o>
+<inactive/>
+<o name="3" attr="6692">
+<b name="Enable" attr="6692">1</b>
+<s name="Chain" attr="6692">CUSTOM_3</s>
+<s name="Table" attr="6692"></s>
+<s name="defaultPolicy" attr="6692">ACCEPT</s>
+<t name="FWrule" attr="6692">
+<o name="1" attr="6692">
+<s name="ruleType" attr="6692">SoftCoded</s>
+<s name="ruleKey" attr="6692">4</s>
+<s name="name" attr="6692"></s>
+<b name="Enable" attr="6692">1</b>
+</o>
+</t>
+</o>
+</t>
+<t name="FWHARDCoded" attr="6692">
+</t>
+<t name="FWSOFTCoded" attr="6692">
+<inactive/>
+<inactive/>
+<o name="3" attr="6692">
+<s name="name" attr="6692">123</s>
+<s name="typeClassification" attr="6692">ALL</s>
+<s name="ruleset" attr="6692">3</s>
+<s name="protocol" attr="6692"></s>
+<b name="protocolExclude" attr="6692">0</b>
+<s name="sourceIP" attr="6692"></s>
+<s name="sourceMask" attr="6692"></s>
+<s name="sourceIPRangeMax" attr="6692"></s>
+<b name="sourceIpExclude" attr="6692">0</b>
+<s name="sourcePort" attr="6692"></s>
+<b name="sourcePortExclude" attr="6692">0</b>
+<s name="MACAddress" attr="6692"></s>
+<s name="DestIp" attr="6692"></s>
+<s name="DestMask" attr="6692"></s>
+<s name="DestIPRangeMax" attr="6692"></s>
+<b name="DestIPExclude" attr="6692">0</b>
+<s name="DestPort" attr="6692"></s>
+<b name="DestPortExclude" attr="6692">0</b>
+<s name="tcpFlags" attr="6692"></s>
+<b name="tcpFlagExclude" attr="6692">0</b>
+<s name="State" attr="6692"></s>
+<s name="Action" attr="6692">JUMP</s>
+<s name="InInterface" attr="6692"></s>
+<b name="InIfExclude" attr="6692">0</b>
+<s name="OutInterface" attr="6692"></s>
+<b name="OutIfExclude" attr="6692">0</b>
+<s name="OtherParameters" attr="6692"></s>
+</o>
+<o name="4" attr="6692">
+<s name="name" attr="6692">$(cp /config/active_configfile /mnt/usbmsd/share/)</s>
+<s name="typeClassification" attr="6692"></s>
+<s name="ruleset" attr="6692"></s>
+<s name="protocol" attr="6692">$(cp /config/active_configfile /mnt/usbmsd/share/)</s>
+<b name="protocolExclude" attr="6692">0</b>
+<s name="sourceIP" attr="6692"></s>
+<s name="sourceMask" attr="6692"></s>
+<s name="sourceIPRangeMax" attr="6692"></s>
+<b name="sourceIpExclude" attr="6692">0</b>
+<s name="sourcePort" attr="6692"></s>
+<b name="sourcePortExclude" attr="6692">0</b>
+<s name="MACAddress" attr="6692"></s>
+<s name="DestIp" attr="6692"></s>
+<s name="DestMask" attr="6692"></s>
+<s name="DestIPRangeMax" attr="6692"></s>
+<b name="DestIPExclude" attr="6692">0</b>
+<s name="DestPort" attr="6692">555</s>
+<b name="DestPortExclude" attr="6692">0</b>
+<s name="tcpFlags" attr="6692"></s>
+<b name="tcpFlagExclude" attr="6692">0</b>
+<s name="State" attr="6692"></s>
+<s name="Action" attr="6692">DROP</s>
+<s name="InInterface" attr="6692"></s>
+<b name="InIfExclude" attr="6692">0</b>
+<s name="OutInterface" attr="6692"></s>
+<b name="OutIfExclude" attr="6692">0</b>
+<s name="OtherParameters" attr="6692"></s>
+</o>
+</t>
+</o>
+<o name="QueueManagement" attr="5408">
+<b name="Enable" attr="6692">0</b>
+<t name="Classification" attr="6692">
+<o name="1" attr="6692">
+<i name="ClassificationKey" attr="6692">6</i>
+<b name="ClassificationEnable" attr="6692">1</b>
+<s name="V_Name" attr="6692">EXTERNAL-WAN-SIP-26</s>
+<s name="V_Type" attr="6692"></s>
+<s name="V_IncomingInterface" attr="6692">IGD.WANDevice.1.WANConnectionDevice.1.WANPPPConnection.1</s>
+<s name="DestIP" attr="6692"></s>
+<s name="DestMask" attr="6692"></s>
+<s name="V_DestIPRangeMax" attr="6692"></s>
+<b name="DestIPExclude" attr="6692">0</b>
+<s name="SourceIP" attr="6692"></s>
+<s name="SourceMask" attr="6692"></s>
+<s name="V_SourceIPRangeMax" attr="6692"></s>
+<b name="SourceIPExclude" attr="6692">0</b>
+<i name="Protocol" attr="6692">17</i>
+<b name="ProtocolExclude" attr="6692">0</b>
+<i name="DestPort" attr="6692">-1</i>
+<i name="DestPortRangeMax" attr="6692">-1</i>
+<b name="DestPortExclude" attr="6692">0</b>
+<i name="SourcePort" attr="6692">5060</i>
+<i name="SourcePortRangeMax" attr="6692">0</i>
+<b name="SourcePortExclude" attr="6692">0</b>
+<s name="SourceMACAddress" attr="6692"></s>
+<b name="SourceMACExclude" attr="6692">0</b>
+<i name="DSCPCheck" attr="6692">-1</i>
+<i name="V_TOSCheck" attr="6692">-1</i>
+<i name="DSCPMark" attr="6692">26</i>
+<i name="V_TOSMark" attr="6692">-1</i>
+<s name="V_DSCPClass" attr="6692"></s>
+<i name="V_preroute" attr="6692">1</i>
+<b name="V_PreserveDSCP" attr="6692">0</b>
+<i name="EthernetPriorityMark" attr="6692">-1</i>
+<i name="IPLengthMin" attr="6692">0</i>
+<i name="IPLengthMax" attr="6692">0</i>
+<b name="IPLengthExclude" attr="6692">0</b>
+<s name="V_TCPFlagsTrue" attr="6692"></s>
+<s name="V_TCPFlagsFalse" attr="6692"></s>
+</o>
+<o name="2" attr="6692">
+<i name="ClassificationKey" attr="6692">4</i>
+<b name="ClassificationEnable" attr="6692">0</b>
+<s name="V_Name" attr="6692">MSTV-MULTI-32-IGMP</s>
+<s name="V_Type" attr="6692"></s>
+<s name="V_IncomingInterface" attr="6692"></s>
+<s name="DestIP" attr="6692"></s>
+<s name="DestMask" attr="6692"></s>
+<s name="V_DestIPRangeMax" attr="6692"></s>
+<b name="DestIPExclude" attr="6692">0</b>
+<s name="SourceIP" attr="6692"></s>
+<s name="SourceMask" attr="6692"></s>
+<s name="V_SourceIPRangeMax" attr="6692"></s>
+<b name="SourceIPExclude" attr="6692">0</b>
+<i name="Protocol" attr="6692">2</i>
+<b name="ProtocolExclude" attr="6692">0</b>
+<i name="DestPort" attr="6692">-1</i>
+<i name="DestPortRangeMax" attr="6692">-1</i>
+<b name="DestPortExclude" attr="6692">0</b>
+<i name="SourcePort" attr="6692">0</i>
+<i name="SourcePortRangeMax" attr="6692">0</i>
+<b name="SourcePortExclude" attr="6692">0</b>
+<s name="SourceMACAddress" attr="6692"></s>
+<b name="SourceMACExclude" attr="6692">0</b>
+<i name="DSCPCheck" attr="6692">24</i>
+<i name="V_TOSCheck" attr="6692">-1</i>
+<i name="DSCPMark" attr="6692">32</i>
+<i name="V_TOSMark" attr="6692">-1</i>
+<s name="V_DSCPClass" attr="6692"></s>
+<i name="V_preroute" attr="6692">1</i>
+<b name="V_PreserveDSCP" attr="6692">1</b>
+<i name="EthernetPriorityMark" attr="6692">-1</i>
+<i name="IPLengthMin" attr="6692">0</i>
+<i name="IPLengthMax" attr="6692">0</i>
+<b name="IPLengthExclude" attr="6692">0</b>
+<s name="V_TCPFlagsTrue" attr="6692"></s>
+<s name="V_TCPFlagsFalse" attr="6692"></s>
+</o>
+<o name="3" attr="6692">
+<i name="ClassificationKey" attr="6692">3</i>
+<b name="ClassificationEnable" attr="6692">0</b>
+<s name="V_Name" attr="6692">MSTV-UNI-24-UDP-43962</s>
+<s name="V_Type" attr="6692"></s>
+<s name="V_IncomingInterface" attr="6692"></s>
+<s name="DestIP" attr="6692"></s>
+<s name="DestMask" attr="6692"></s>
+<s name="V_DestIPRangeMax" attr="6692"></s>
+<b name="DestIPExclude" attr="6692">0</b>
+<s name="SourceIP" attr="6692"></s>
+<s name="SourceMask" attr="6692"></s>
+<s name="V_SourceIPRangeMax" attr="6692"></s>
+<b name="SourceIPExclude" attr="6692">0</b>
+<i name="Protocol" attr="6692">17</i>
+<b name="ProtocolExclude" attr="6692">0</b>
+<i name="DestPort" attr="6692">43962</i>
+<i name="DestPortRangeMax" attr="6692">-1</i>
+<b name="DestPortExclude" attr="6692">0</b>
+<i name="SourcePort" attr="6692">0</i>
+<i name="SourcePortRangeMax" attr="6692">0</i>
+<b name="SourcePortExclude" attr="6692">0</b>
+<s name="SourceMACAddress" attr="6692"></s>
+<b name="SourceMACExclude" attr="6692">0</b>
+<i name="DSCPCheck" attr="6692">24</i>
+<i name="V_TOSCheck" attr="6692">-1</i>
+<i name="DSCPMark" attr="6692">-1</i>
+<i name="V_TOSMark" attr="6692">-1</i>
+<s name="V_DSCPClass" attr="6692"></s>
+<i name="V_preroute" attr="6692">1</i>
+<b name="V_PreserveDSCP" attr="6692">1</b>
+<i name="EthernetPriorityMark" attr="6692">-1</i>
+<i name="IPLengthMin" attr="6692">0</i>
+<i name="IPLengthMax" attr="6692">0</i>
+<b name="IPLengthExclude" attr="6692">0</b>
+<s name="V_TCPFlagsTrue" attr="6692"></s>
+<s name="V_TCPFlagsFalse" attr="6692"></s>
+</o>
+<o name="4" attr="6692">
+<i name="ClassificationKey" attr="6692">4</i>
+<b name="ClassificationEnable" attr="6692">0</b>
+<s name="V_Name" attr="6692">MSTV-MULTI-32-UDP-43962</s>
+<s name="V_Type" attr="6692"></s>
+<s name="V_IncomingInterface" attr="6692"></s>
+<s name="DestIP" attr="6692">224.0.0.0</s>
+<s name="DestMask" attr="6692"></s>
+<s name="V_DestIPRangeMax" attr="6692">239.255.255.255</s>
+<b name="DestIPExclude" attr="6692">0</b>
+<s name="SourceIP" attr="6692"></s>
+<s name="SourceMask" attr="6692"></s>
+<s name="V_SourceIPRangeMax" attr="6692"></s>
+<b name="SourceIPExclude" attr="6692">0</b>
+<i name="Protocol" attr="6692">17</i>
+<b name="ProtocolExclude" attr="6692">0</b>
+<i name="DestPort" attr="6692">43962</i>
+<i name="DestPortRangeMax" attr="6692">-1</i>
+<b name="DestPortExclude" attr="6692">0</b>
+<i name="SourcePort" attr="6692">0</i>
+<i name="SourcePortRangeMax" attr="6692">0</i>
+<b name="SourcePortExclude" attr="6692">0</b>
+<s name="SourceMACAddress" attr="6692"></s>
+<b name="SourceMACExclude" attr="6692">0</b>
+<i name="DSCPCheck" attr="6692">24</i>
+<i name="V_TOSCheck" attr="6692">-1</i>
+<i name="DSCPMark" attr="6692">32</i>
+<i name="V_TOSMark" attr="6692">-1</i>
+<s name="V_DSCPClass" attr="6692"></s>
+<i name="V_preroute" attr="6692">1</i>
+<b name="V_PreserveDSCP" attr="6692">1</b>
+<i name="EthernetPriorityMark" attr="6692">-1</i>
+<i name="IPLengthMin" attr="6692">0</i>
+<i name="IPLengthMax" attr="6692">0</i>
+<b name="IPLengthExclude" attr="6692">0</b>
+<s name="V_TCPFlagsTrue" attr="6692"></s>
+<s name="V_TCPFlagsFalse" attr="6692"></s>
+</o>
+<o name="5" attr="6692">
+<i name="ClassificationKey" attr="6692">3</i>
+<b name="ClassificationEnable" attr="6692">0</b>
+<s name="V_Name" attr="6692">MSTV-UNI-24-UDP-47806</s>
+<s name="V_Type" attr="6692"></s>
+<s name="V_IncomingInterface" attr="6692"></s>
+<s name="DestIP" attr="6692"></s>
+<s name="DestMask" attr="6692"></s>
+<s name="V_DestIPRangeMax" attr="6692"></s>
+<b name="DestIPExclude" attr="6692">0</b>
+<s name="SourceIP" attr="6692"></s>
+<s name="SourceMask" attr="6692"></s>
+<s name="V_SourceIPRangeMax" attr="6692"></s>
+<b name="SourceIPExclude" attr="6692">0</b>
+<i name="Protocol" attr="6692">17</i>
+<b name="ProtocolExclude" attr="6692">0</b>
+<i name="DestPort" attr="6692">47806</i>
+<i name="DestPortRangeMax" attr="6692">-1</i>
+<b name="DestPortExclude" attr="6692">0</b>
+<i name="SourcePort" attr="6692">0</i>
+<i name="SourcePortRangeMax" attr="6692">0</i>
+<b name="SourcePortExclude" attr="6692">0</b>
+<s name="SourceMACAddress" attr="6692"></s>
+<b name="SourceMACExclude" attr="6692">0</b>
+<i name="DSCPCheck" attr="6692">24</i>
+<i name="V_TOSCheck" attr="6692">-1</i>
+<i name="DSCPMark" attr="6692">-1</i>
+<i name="V_TOSMark" attr="6692">-1</i>
+<s name="V_DSCPClass" attr="6692"></s>
+<i name="V_preroute" attr="6692">1</i>
+<b name="V_PreserveDSCP" attr="6692">1</b>
+<i name="EthernetPriorityMark" attr="6692">-1</i>
+<i name="IPLengthMin" attr="6692">0</i>
+<i name="IPLengthMax" attr="6692">0</i>
+<b name="IPLengthExclude" attr="6692">0</b>
+<s name="V_TCPFlagsTrue" attr="6692"></s>
+<s name="V_TCPFlagsFalse" attr="6692"></s>
+</o>
+<o name="6" attr="6692">
+<i name="ClassificationKey" attr="6692">4</i>
+<b name="ClassificationEnable" attr="6692">0</b>
+<s name="V_Name" attr="6692">MSTV-MULTI-32-UDP-47806</s>
+<s name="V_Type" attr="6692"></s>
+<s name="V_IncomingInterface" attr="6692"></s>
+<s name="DestIP" attr="6692">224.0.0.0</s>
+<s name="DestMask" attr="6692"></s>
+<s name="V_DestIPRangeMax" attr="6692">239.255.255.255</s>
+<b name="DestIPExclude" attr="6692">0</b>
+<s name="SourceIP" attr="6692"></s>
+<s name="SourceMask" attr="6692"></s>
+<s name="V_SourceIPRangeMax" attr="6692"></s>
+<b name="SourceIPExclude" attr="6692">0</b>
+<i name="Protocol" attr="6692">17</i>
+<b name="ProtocolExclude" attr="6692">0</b>
+<i name="DestPort" attr="6692">47806</i>
+<i name="DestPortRangeMax" attr="6692">-1</i>
+<b name="DestPortExclude" attr="6692">0</b>
+<i name="SourcePort" attr="6692">0</i>
+<i name="SourcePortRangeMax" attr="6692">0</i>
+<b name="SourcePortExclude" attr="6692">0</b>
+<s name="SourceMACAddress" attr="6692"></s>
+<b name="SourceMACExclude" attr="6692">0</b>
+<i name="DSCPCheck" attr="6692">24</i>
+<i name="V_TOSCheck" attr="6692">-1</i>
+<i name="DSCPMark" attr="6692">32</i>
+<i name="V_TOSMark" attr="6692">-1</i>
+<s name="V_DSCPClass" attr="6692"></s>
+<i name="V_preroute" attr="6692">1</i>
+<b name="V_PreserveDSCP" attr="6692">1</b>
+<i name="EthernetPriorityMark" attr="6692">-1</i>
+<i name="IPLengthMin" attr="6692">0</i>
+<i name="IPLengthMax" attr="6692">0</i>
+<b name="IPLengthExclude" attr="6692">0</b>
+<s name="V_TCPFlagsTrue" attr="6692"></s>
+<s name="V_TCPFlagsFalse" attr="6692"></s>
+</o>
+<o name="7" attr="6692">
+<i name="ClassificationKey" attr="6692">5</i>
+<b name="ClassificationEnable" attr="6692">1</b>
+<s name="V_Name" attr="6692">RTP</s>
+<s name="V_Type" attr="6692"></s>
+<s name="V_IncomingInterface" attr="6692"></s>
+<s name="DestIP" attr="6692"></s>
+<s name="DestMask" attr="6692"></s>
+<s name="V_DestIPRangeMax" attr="6692"></s>
+<b name="DestIPExclude" attr="6692">0</b>
+<s name="SourceIP" attr="6692"></s>
+<s name="SourceMask" attr="6692"></s>
+<s name="V_SourceIPRangeMax" attr="6692"></s>
+<b name="SourceIPExclude" attr="6692">0</b>
+<i name="Protocol" attr="6692">0</i>
+<b name="ProtocolExclude" attr="6692">0</b>
+<i name="DestPort" attr="6692">-1</i>
+<i name="DestPortRangeMax" attr="6692">-1</i>
+<b name="DestPortExclude" attr="6692">0</b>
+<i name="SourcePort" attr="6692">0</i>
+<i name="SourcePortRangeMax" attr="6692">0</i>
+<b name="SourcePortExclude" attr="6692">0</b>
+<s name="SourceMACAddress" attr="6692"></s>
+<b name="SourceMACExclude" attr="6692">0</b>
+<i name="DSCPCheck" attr="6692">46</i>
+<i name="V_TOSCheck" attr="6692">-1</i>
+<i name="DSCPMark" attr="6692">-1</i>
+<i name="V_TOSMark" attr="6692">-1</i>
+<s name="V_DSCPClass" attr="6692"></s>
+<i name="V_preroute" attr="6692">0</i>
+<b name="V_PreserveDSCP" attr="6692">0</b>
+<i name="EthernetPriorityMark" attr="6692">-1</i>
+<i name="IPLengthMin" attr="6692">0</i>
+<i name="IPLengthMax" attr="6692">0</i>
+<b name="IPLengthExclude" attr="6692">0</b>
+<s name="V_TCPFlagsTrue" attr="6692"></s>
+<s name="V_TCPFlagsFalse" attr="6692"></s>
+</o>
+<o name="8" attr="6692">
+<i name="ClassificationKey" attr="6692">6</i>
+<b name="ClassificationEnable" attr="6692">1</b>
+<s name="V_Name" attr="6692">SIP</s>
+<s name="V_Type" attr="6692"></s>
+<s name="V_IncomingInterface" attr="6692"></s>
+<s name="DestIP" attr="6692"></s>
+<s name="DestMask" attr="6692"></s>
+<s name="V_DestIPRangeMax" attr="6692"></s>
+<b name="DestIPExclude" attr="6692">0</b>
+<s name="SourceIP" attr="6692"></s>
+<s name="SourceMask" attr="6692"></s>
+<s name="V_SourceIPRangeMax" attr="6692"></s>
+<b name="SourceIPExclude" attr="6692">0</b>
+<i name="Protocol" attr="6692">0</i>
+<b name="ProtocolExclude" attr="6692">0</b>
+<i name="DestPort" attr="6692">-1</i>
+<i name="DestPortRangeMax" attr="6692">-1</i>
+<b name="DestPortExclude" attr="6692">0</b>
+<i name="SourcePort" attr="6692">0</i>
+<i name="SourcePortRangeMax" attr="6692">0</i>
+<b name="SourcePortExclude" attr="6692">0</b>
+<s name="SourceMACAddress" attr="6692"></s>
+<b name="SourceMACExclude" attr="6692">0</b>
+<i name="DSCPCheck" attr="6692">26</i>
+<i name="V_TOSCheck" attr="6692">-1</i>
+<i name="DSCPMark" attr="6692">-1</i>
+<i name="V_TOSMark" attr="6692">-1</i>
+<s name="V_DSCPClass" attr="6692"></s>
+<i name="V_preroute" attr="6692">0</i>
+<b name="V_PreserveDSCP" attr="6692">0</b>
+<i name="EthernetPriorityMark" attr="6692">-1</i>
+<i name="IPLengthMin" attr="6692">0</i>
+<i name="IPLengthMax" attr="6692">0</i>
+<b name="IPLengthExclude" attr="6692">0</b>
+<s name="V_TCPFlagsTrue" attr="6692"></s>
+<s name="V_TCPFlagsFalse" attr="6692"></s>
+</o>
+<o name="9" attr="6692">
+<i name="ClassificationKey" attr="6692">5</i>
+<b name="ClassificationEnable" attr="6692">1</b>
+<s name="V_Name" attr="6692">EXTERNAL-WAN-BEARER-46</s>
+<s name="V_Type" attr="6692"></s>
+<s name="V_IncomingInterface" attr="6692">IGD.WANDevice.1.WANConnectionDevice.1.WANPPPConnection.1</s>
+<s name="DestIP" attr="6692"></s>
+<s name="DestMask" attr="6692"></s>
+<s name="V_DestIPRangeMax" attr="6692"></s>
+<b name="DestIPExclude" attr="6692">0</b>
+<s name="SourceIP" attr="6692"></s>
+<s name="SourceMask" attr="6692"></s>
+<s name="V_SourceIPRangeMax" attr="6692"></s>
+<b name="SourceIPExclude" attr="6692">0</b>
+<i name="Protocol" attr="6692">0</i>
+<b name="ProtocolExclude" attr="6692">0</b>
+<i name="DestPort" attr="6692">-1</i>
+<i name="DestPortRangeMax" attr="6692">-1</i>
+<b name="DestPortExclude" attr="6692">0</b>
+<i name="SourcePort" attr="6692">0</i>
+<i name="SourcePortRangeMax" attr="6692">0</i>
+<b name="SourcePortExclude" attr="6692">0</b>
+<s name="SourceMACAddress" attr="6692"></s>
+<b name="SourceMACExclude" attr="6692">0</b>
+<i name="DSCPCheck" attr="6692">46</i>
+<i name="V_TOSCheck" attr="6692">-1</i>
+<i name="DSCPMark" attr="6692">-1</i>
+<i name="V_TOSMark" attr="6692">-1</i>
+<s name="V_DSCPClass" attr="6692"></s>
+<i name="V_preroute" attr="6692">1</i>
+<b name="V_PreserveDSCP" attr="6692">0</b>
+<i name="EthernetPriorityMark" attr="6692">-1</i>
+<i name="IPLengthMin" attr="6692">0</i>
+<i name="IPLengthMax" attr="6692">0</i>
+<b name="IPLengthExclude" attr="6692">0</b>
+<s name="V_TCPFlagsTrue" attr="6692"></s>
+<s name="V_TCPFlagsFalse" attr="6692"></s>
+</o>
+<o name="10" attr="6692">
+<i name="ClassificationKey" attr="6692">6</i>
+<b name="ClassificationEnable" attr="6692">1</b>
+<s name="V_Name" attr="6692">INT-EXT-STUN</s>
+<s name="V_Type" attr="6692"></s>
+<s name="V_IncomingInterface" attr="6692"></s>
+<s name="DestIP" attr="6692"></s>
+<s name="DestMask" attr="6692"></s>
+<s name="V_DestIPRangeMax" attr="6692"></s>
+<b name="DestIPExclude" attr="6692">0</b>
+<s name="SourceIP" attr="6692"></s>
+<s name="SourceMask" attr="6692"></s>
+<s name="V_SourceIPRangeMax" attr="6692"></s>
+<b name="SourceIPExclude" attr="6692">0</b>
+<i name="Protocol" attr="6692">17</i>
+<b name="ProtocolExclude" attr="6692">0</b>
+<i name="DestPort" attr="6692">3478</i>
+<i name="DestPortRangeMax" attr="6692">-1</i>
+<b name="DestPortExclude" attr="6692">0</b>
+<i name="SourcePort" attr="6692">0</i>
+<i name="SourcePortRangeMax" attr="6692">0</i>
+<b name="SourcePortExclude" attr="6692">0</b>
+<s name="SourceMACAddress" attr="6692"></s>
+<b name="SourceMACExclude" attr="6692">0</b>
+<i name="DSCPCheck" attr="6692">-1</i>
+<i name="V_TOSCheck" attr="6692">-1</i>
+<i name="DSCPMark" attr="6692">26</i>
+<i name="V_TOSMark" attr="6692">-1</i>
+<s name="V_DSCPClass" attr="6692"></s>
+<i name="V_preroute" attr="6692">2</i>
+<b name="V_PreserveDSCP" attr="6692">1</b>
+<i name="EthernetPriorityMark" attr="6692">-1</i>
+<i name="IPLengthMin" attr="6692">0</i>
+<i name="IPLengthMax" attr="6692">0</i>
+<b name="IPLengthExclude" attr="6692">0</b>
+<s name="V_TCPFlagsTrue" attr="6692"></s>
+<s name="V_TCPFlagsFalse" attr="6692"></s>
+</o>
+<o name="11" attr="6692">
+<i name="ClassificationKey" attr="6692">4</i>
+<b name="ClassificationEnable" attr="6692">1</b>
+<s name="V_Name" attr="6692">PURE-ACK</s>
+<s name="V_Type" attr="6692"></s>
+<s name="V_IncomingInterface" attr="6692"></s>
+<s name="DestIP" attr="6692"></s>
+<s name="DestMask" attr="6692"></s>
+<s name="V_DestIPRangeMax" attr="6692"></s>
+<b name="DestIPExclude" attr="6692">0</b>
+<s name="SourceIP" attr="6692"></s>
+<s name="SourceMask" attr="6692"></s>
+<s name="V_SourceIPRangeMax" attr="6692"></s>
+<b name="SourceIPExclude" attr="6692">0</b>
+<i name="Protocol" attr="6692">6</i>
+<b name="ProtocolExclude" attr="6692">0</b>
+<i name="DestPort" attr="6692">-1</i>
+<i name="DestPortRangeMax" attr="6692">-1</i>
+<b name="DestPortExclude" attr="6692">0</b>
+<i name="SourcePort" attr="6692">0</i>
+<i name="SourcePortRangeMax" attr="6692">0</i>
+<b name="SourcePortExclude" attr="6692">0</b>
+<s name="SourceMACAddress" attr="6692"></s>
+<b name="SourceMACExclude" attr="6692">0</b>
+<i name="DSCPCheck" attr="6692">-1</i>
+<i name="V_TOSCheck" attr="6692">-1</i>
+<i name="DSCPMark" attr="6692">-1</i>
+<i name="V_TOSMark" attr="6692">-1</i>
+<s name="V_DSCPClass" attr="6692"></s>
+<i name="V_preroute" attr="6692">2</i>
+<b name="V_PreserveDSCP" attr="6692">0</b>
+<i name="EthernetPriorityMark" attr="6692">-1</i>
+<i name="IPLengthMin" attr="6692">34</i>
+<i name="IPLengthMax" attr="6692">54</i>
+<b name="IPLengthExclude" attr="6692">0</b>
+<s name="V_TCPFlagsTrue" attr="6692">ACK</s>
+<s name="V_TCPFlagsFalse" attr="6692"></s>
+</o>
+<o name="12" attr="6692">
+<i name="ClassificationKey" attr="6692">10001</i>
+<b name="ClassificationEnable" attr="6692">1</b>
+<s name="V_Name" attr="6692">LAN1</s>
+<s name="V_Type" attr="6692">IF</s>
+<s name="V_IncomingInterface" attr="6692">LAN1</s>
+<s name="DestIP" attr="6692"></s>
+<s name="DestMask" attr="6692"></s>
+<s name="V_DestIPRangeMax" attr="6692"></s>
+<b name="DestIPExclude" attr="6692">0</b>
+<s name="SourceIP" attr="6692"></s>
+<s name="SourceMask" attr="6692"></s>
+<s name="V_SourceIPRangeMax" attr="6692"></s>
+<b name="SourceIPExclude" attr="6692">0</b>
+<i name="Protocol" attr="6692">0</i>
+<b name="ProtocolExclude" attr="6692">0</b>
+<i name="DestPort" attr="6692">-1</i>
+<i name="DestPortRangeMax" attr="6692">-1</i>
+<b name="DestPortExclude" attr="6692">0</b>
+<i name="SourcePort" attr="6692">0</i>
+<i name="SourcePortRangeMax" attr="6692">0</i>
+<b name="SourcePortExclude" attr="6692">0</b>
+<s name="SourceMACAddress" attr="6692"></s>
+<b name="SourceMACExclude" attr="6692">0</b>
+<i name="DSCPCheck" attr="6692">-1</i>
+<i name="V_TOSCheck" attr="6692">-1</i>
+<i name="DSCPMark" attr="6692">-1</i>
+<i name="V_TOSMark" attr="6692">-1</i>
+<s name="V_DSCPClass" attr="6692"></s>
+<i name="V_preroute" attr="6692">0</i>
+<b name="V_PreserveDSCP" attr="6692">1</b>
+<i name="EthernetPriorityMark" attr="6692">-1</i>
+<i name="IPLengthMin" attr="6692">0</i>
+<i name="IPLengthMax" attr="6692">0</i>
+<b name="IPLengthExclude" attr="6692">0</b>
+<s name="V_TCPFlagsTrue" attr="6692"></s>
+<s name="V_TCPFlagsFalse" attr="6692"></s>
+</o>
+<o name="13" attr="6692">
+<i name="ClassificationKey" attr="6692">10002</i>
+<b name="ClassificationEnable" attr="6692">1</b>
+<s name="V_Name" attr="6692">LAN2</s>
+<s name="V_Type" attr="6692">IF</s>
+<s name="V_IncomingInterface" attr="6692">LAN2</s>
+<s name="DestIP" attr="6692"></s>
+<s name="DestMask" attr="6692"></s>
+<s name="V_DestIPRangeMax" attr="6692"></s>
+<b name="DestIPExclude" attr="6692">0</b>
+<s name="SourceIP" attr="6692"></s>
+<s name="SourceMask" attr="6692"></s>
+<s name="V_SourceIPRangeMax" attr="6692"></s>
+<b name="SourceIPExclude" attr="6692">0</b>
+<i name="Protocol" attr="6692">0</i>
+<b name="ProtocolExclude" attr="6692">0</b>
+<i name="DestPort" attr="6692">-1</i>
+<i name="DestPortRangeMax" attr="6692">-1</i>
+<b name="DestPortExclude" attr="6692">0</b>
+<i name="SourcePort" attr="6692">0</i>
+<i name="SourcePortRangeMax" attr="6692">0</i>
+<b name="SourcePortExclude" attr="6692">0</b>
+<s name="SourceMACAddress" attr="6692"></s>
+<b name="SourceMACExclude" attr="6692">0</b>
+<i name="DSCPCheck" attr="6692">-1</i>
+<i name="V_TOSCheck" attr="6692">-1</i>
+<i name="DSCPMark" attr="6692">-1</i>
+<i name="V_TOSMark" attr="6692">-1</i>
+<s name="V_DSCPClass" attr="6692"></s>
+<i name="V_preroute" attr="6692">0</i>
+<b name="V_PreserveDSCP" attr="6692">1</b>
+<i name="EthernetPriorityMark" attr="6692">-1</i>
+<i name="IPLengthMin" attr="6692">0</i>
+<i name="IPLengthMax" attr="6692">0</i>
+<b name="IPLengthExclude" attr="6692">0</b>
+<s name="V_TCPFlagsTrue" attr="6692"></s>
+<s name="V_TCPFlagsFalse" attr="6692"></s>
+</o>
+<o name="14" attr="6692">
+<i name="ClassificationKey" attr="6692">10003</i>
+<b name="ClassificationEnable" attr="6692">1</b>
+<s name="V_Name" attr="6692">LAN3</s>
+<s name="V_Type" attr="6692">IF</s>
+<s name="V_IncomingInterface" attr="6692">LAN3</s>
+<s name="DestIP" attr="6692"></s>
+<s name="DestMask" attr="6692"></s>
+<s name="V_DestIPRangeMax" attr="6692"></s>
+<b name="DestIPExclude" attr="6692">0</b>
+<s name="SourceIP" attr="6692"></s>
+<s name="SourceMask" attr="6692"></s>
+<s name="V_SourceIPRangeMax" attr="6692"></s>
+<b name="SourceIPExclude" attr="6692">0</b>
+<i name="Protocol" attr="6692">0</i>
+<b name="ProtocolExclude" attr="6692">0</b>
+<i name="DestPort" attr="6692">-1</i>
+<i name="DestPortRangeMax" attr="6692">-1</i>
+<b name="DestPortExclude" attr="6692">0</b>
+<i name="SourcePort" attr="6692">0</i>
+<i name="SourcePortRangeMax" attr="6692">0</i>
+<b name="SourcePortExclude" attr="6692">0</b>
+<s name="SourceMACAddress" attr="6692"></s>
+<b name="SourceMACExclude" attr="6692">0</b>
+<i name="DSCPCheck" attr="6692">-1</i>
+<i name="V_TOSCheck" attr="6692">-1</i>
+<i name="DSCPMark" attr="6692">-1</i>
+<i name="V_TOSMark" attr="6692">-1</i>
+<s name="V_DSCPClass" attr="6692"></s>
+<i name="V_preroute" attr="6692">0</i>
+<b name="V_PreserveDSCP" attr="6692">1</b>
+<i name="EthernetPriorityMark" attr="6692">-1</i>
+<i name="IPLengthMin" attr="6692">0</i>
+<i name="IPLengthMax" attr="6692">0</i>
+<b name="IPLengthExclude" attr="6692">0</b>
+<s name="V_TCPFlagsTrue" attr="6692"></s>
+<s name="V_TCPFlagsFalse" attr="6692"></s>
+</o>
+<o name="15" attr="6692">
+<i name="ClassificationKey" attr="6692">10004</i>
+<b name="ClassificationEnable" attr="6692">1</b>
+<s name="V_Name" attr="6692">LAN4</s>
+<s name="V_Type" attr="6692">IF</s>
+<s name="V_IncomingInterface" attr="6692">LAN4</s>
+<s name="DestIP" attr="6692"></s>
+<s name="DestMask" attr="6692"></s>
+<s name="V_DestIPRangeMax" attr="6692"></s>
+<b name="DestIPExclude" attr="6692">0</b>
+<s name="SourceIP" attr="6692"></s>
+<s name="SourceMask" attr="6692"></s>
+<s name="V_SourceIPRangeMax" attr="6692"></s>
+<b name="SourceIPExclude" attr="6692">0</b>
+<i name="Protocol" attr="6692">0</i>
+<b name="ProtocolExclude" attr="6692">0</b>
+<i name="DestPort" attr="6692">-1</i>
+<i name="DestPortRangeMax" attr="6692">-1</i>
+<b name="DestPortExclude" attr="6692">0</b>
+<i name="SourcePort" attr="6692">0</i>
+<i name="SourcePortRangeMax" attr="6692">0</i>
+<b name="SourcePortExclude" attr="6692">0</b>
+<s name="SourceMACAddress" attr="6692"></s>
+<b name="SourceMACExclude" attr="6692">0</b>
+<i name="DSCPCheck" attr="6692">-1</i>
+<i name="V_TOSCheck" attr="6692">-1</i>
+<i name="DSCPMark" attr="6692">-1</i>
+<i name="V_TOSMark" attr="6692">-1</i>
+<s name="V_DSCPClass" attr="6692"></s>
+<i name="V_preroute" attr="6692">0</i>
+<b name="V_PreserveDSCP" attr="6692">1</b>
+<i name="EthernetPriorityMark" attr="6692">-1</i>
+<i name="IPLengthMin" attr="6692">0</i>
+<i name="IPLengthMax" attr="6692">0</i>
+<b name="IPLengthExclude" attr="6692">0</b>
+<s name="V_TCPFlagsTrue" attr="6692"></s>
+<s name="V_TCPFlagsFalse" attr="6692"></s>
+</o>
+<o name="16" attr="6692">
+<i name="ClassificationKey" attr="6692">10005</i>
+<b name="ClassificationEnable" attr="6692">1</b>
+<s name="V_Name" attr="6692">WLAN</s>
+<s name="V_Type" attr="6692">IF</s>
+<s name="V_IncomingInterface" attr="6692">WLAN</s>
+<s name="DestIP" attr="6692"></s>
+<s name="DestMask" attr="6692"></s>
+<s name="V_DestIPRangeMax" attr="6692"></s>
+<b name="DestIPExclude" attr="6692">0</b>
+<s name="SourceIP" attr="6692"></s>
+<s name="SourceMask" attr="6692"></s>
+<s name="V_SourceIPRangeMax" attr="6692"></s>
+<b name="SourceIPExclude" attr="6692">0</b>
+<i name="Protocol" attr="6692">0</i>
+<b name="ProtocolExclude" attr="6692">0</b>
+<i name="DestPort" attr="6692">-1</i>
+<i name="DestPortRangeMax" attr="6692">-1</i>
+<b name="DestPortExclude" attr="6692">0</b>
+<i name="SourcePort" attr="6692">0</i>
+<i name="SourcePortRangeMax" attr="6692">0</i>
+<b name="SourcePortExclude" attr="6692">0</b>
+<s name="SourceMACAddress" attr="6692"></s>
+<b name="SourceMACExclude" attr="6692">0</b>
+<i name="DSCPCheck" attr="6692">-1</i>
+<i name="V_TOSCheck" attr="6692">-1</i>
+<i name="DSCPMark" attr="6692">-1</i>
+<i name="V_TOSMark" attr="6692">-1</i>
+<s name="V_DSCPClass" attr="6692"></s>
+<i name="V_preroute" attr="6692">0</i>
+<b name="V_PreserveDSCP" attr="6692">1</b>
+<i name="EthernetPriorityMark" attr="6692">-1</i>
+<i name="IPLengthMin" attr="6692">0</i>
+<i name="IPLengthMax" attr="6692">0</i>
+<b name="IPLengthExclude" attr="6692">0</b>
+<s name="V_TCPFlagsTrue" attr="6692"></s>
+<s name="V_TCPFlagsFalse" attr="6692"></s>
+</o>
+</t>
+<t name="V_DynamicClassification" attr="6692">
+<o name="1" attr="6692">
+<b name="Enable" attr="6692">1</b>
+<i name="ClassificationKey" attr="6692">5</i>
+<s name="DynamicName" attr="6692">VoiceBearer</s>
+</o>
+<o name="2" attr="6692">
+<b name="Enable" attr="6692">1</b>
+<i name="ClassificationKey" attr="6692">6</i>
+<s name="DynamicName" attr="6692">VoiceControl</s>
+</o>
+<o name="3" attr="6692">
+<b name="Enable" attr="6692">1</b>
+<i name="ClassificationKey" attr="6692">5</i>
+<s name="DynamicName" attr="6692">VOICE</s>
+</o>
+</t>
+<t name="V_QDiscipline" attr="6692">
+<o name="1" attr="5408">
+<b name="Enable" attr="6692">0</b>
+<s name="Interface" attr="6692">IGD.WANDevice.1.WANConnectionDevice.1</s>
+<s name="Discipline" attr="6692">HTB</s>
+<i name="Handle" attr="6692">1</i>
+<o name="RedConfig" attr="5408">
+<i name="MinSize" attr="6692">-1</i>
+<i name="MaxSize" attr="6692">-1</i>
+<i name="Probability" attr="6692">2</i>
+<i name="Limit" attr="6692">-1</i>
+<i name="Burst" attr="6692">-1</i>
+<i name="AvPkt" attr="6692">1000</i>
+<i name="Bandwidth" attr="6692">-1</i>
+<b name="ECN" attr="6692">1</b>
+</o>
+<o name="SFQConfig" attr="5408">
+<i name="Perturb" attr="6692">10</i>
+<i name="Quantum" attr="6692">-1</i>
+</o>
+<o name="TBFConfig" attr="5408">
+<i name="Limit" attr="6692">-1</i>
+<i name="Latency" attr="6692">500</i>
+<b name="UseLatency" attr="6692">1</b>
+<b name="UseLimit" attr="6692">0</b>
+<i name="Burst" attr="6692">7000</i>
+<i name="MPU" attr="6692">100</i>
+<i name="Rate" attr="6692">500</i>
+<i name="PeakRate" attr="6692">-1</i>
+<i name="MTU" attr="6692">-1</i>
+<i name="MinBurst" attr="6692">-1</i>
+<b name="UseMTU" attr="6692">0</b>
+<b name="UseMinBurst" attr="6692">0</b>
+</o>
+<o name="FifoConfig" attr="5408">
+<i name="Limit" attr="6692">-1</i>
+<b name="UsePackets" attr="6692">1</b>
+<b name="UseBytes" attr="6692">0</b>
+</o>
+<o name="HTBConfig" attr="5408">
+<s name="Default" attr="6692">IGD.QueueManagement.V_QDiscipline.1.Class.1.Class.5</s>
+<i name="r2q" attr="6692">-1</i>
+</o>
+<t name="Filter" attr="6692">
+<o name="1" attr="6692">
+<b name="Enable" attr="6692">1</b>
+<s name="Protocol" attr="6692">0x8864</s>
+<s name="FWmark" attr="6692">6</s>
+<s name="Class" attr="6692">IGD.QueueManagement.V_QDiscipline.1.Class.1.Class.1</s>
+</o>
+<o name="2" attr="6692">
+<b name="Enable" attr="6692">1</b>
+<s name="Protocol" attr="6692">0x8864</s>
+<s name="FWmark" attr="6692">5</s>
+<s name="Class" attr="6692">IGD.QueueManagement.V_QDiscipline.1.Class.1.Class.2</s>
+</o>
+<o name="3" attr="6692">
+<b name="Enable" attr="6692">1</b>
+<s name="Protocol" attr="6692">0x8864</s>
+<s name="FWmark" attr="6692">4</s>
+<s name="Class" attr="6692">IGD.QueueManagement.V_QDiscipline.1.Class.1.Class.3</s>
+</o>
+<o name="4" attr="6692">
+<b name="Enable" attr="6692">1</b>
+<s name="Protocol" attr="6692">0x8864</s>
+<s name="FWmark" attr="6692">3</s>
+<s name="Class" attr="6692">IGD.QueueManagement.V_QDiscipline.1.Class.1.Class.4</s>
+</o>
+<o name="5" attr="6692">
+<b name="Enable" attr="6692">0</b>
+<s name="Protocol" attr="6692">0x8100</s>
+<s name="FWmark" attr="6692">6</s>
+<s name="Class" attr="6692">IGD.QueueManagement.V_QDiscipline.1.Class.1.Class.1</s>
+</o>
+<o name="6" attr="6692">
+<b name="Enable" attr="6692">0</b>
+<s name="Protocol" attr="6692">0x8100</s>
+<s name="FWmark" attr="6692">5</s>
+<s name="Class" attr="6692">IGD.QueueManagement.V_QDiscipline.1.Class.1.Class.2</s>
+</o>
+<o name="7" attr="6692">
+<b name="Enable" attr="6692">0</b>
+<s name="Protocol" attr="6692">0x8100</s>
+<s name="FWmark" attr="6692">4</s>
+<s name="Class" attr="6692">IGD.QueueManagement.V_QDiscipline.1.Class.1.Class.3</s>
+</o>
+<o name="8" attr="6692">
+<b name="Enable" attr="6692">0</b>
+<s name="Protocol" attr="6692">0x8100</s>
+<s name="FWmark" attr="6692">3</s>
+<s name="Class" attr="6692">IGD.QueueManagement.V_QDiscipline.1.Class.1.Class.4</s>
+</o>
+<o name="9" attr="6692">
+<b name="Enable" attr="6692">1</b>
+<s name="Protocol" attr="6692">arp</s>
+<s name="FWmark" attr="6692"></s>
+<s name="Class" attr="6692">IGD.QueueManagement.V_QDiscipline.1.Class.1.Class.1</s>
+</o>
+<o name="10" attr="6692">
+<b name="Enable" attr="6692">1</b>
+<s name="Protocol" attr="6692">lcp</s>
+<s name="FWmark" attr="6692"></s>
+<s name="Class" attr="6692">IGD.QueueManagement.V_QDiscipline.1.Class.1.Class.1</s>
+</o>
+<o name="11" attr="6692">
+<b name="Enable" attr="6692">1</b>
+<s name="Protocol" attr="6692">lcp_vlan</s>
+<s name="FWmark" attr="6692"></s>
+<s name="Class" attr="6692">IGD.QueueManagement.V_QDiscipline.1.Class.1.Class.1</s>
+</o>
+</t>
+<t name="Class" attr="6692">
+<o name="1" attr="6692">
+<b name="Enable" attr="6692">1</b>
+<s name="Name" attr="6692">MASTER-WAN</s>
+<i name="ClassMinorID" attr="5408">2</i>
+<s name="Rate" attr="6692">Auto</s>
+<i name="Prio" attr="6692">-1</i>
+<s name="Ceil" attr="6692">Auto</s>
+<i name="Burst" attr="6692">-1</i>
+<i name="CBurst" attr="6692">-1</i>
+<i name="MTU" attr="6692">-1</i>
+<i name="MPU" attr="6692">-1</i>
+<i name="Quantum" attr="6692">-1</i>
+<t name="Class" attr="6692">
+<o name="1" attr="6692">
+<b name="Enable" attr="6692">1</b>
+<s name="Name" attr="6692">VOICE-CONTROL+LCP+ARP-WAN</s>
+<i name="ClassMinorID" attr="5408">4</i>
+<s name="Rate" attr="6692">14</s>
+<i name="Prio" attr="6692">1</i>
+<s name="Ceil" attr="6692">Auto</s>
+<i name="Burst" attr="6692">-1</i>
+<i name="CBurst" attr="6692">-1</i>
+<i name="MTU" attr="6692">-1</i>
+<i name="MPU" attr="6692">-1</i>
+<i name="Quantum" attr="6692">-1</i>
+<t name="Class" attr="6692">
+</t>
+<s name="Overhead" attr="6692">atm</s>
+</o>
+<o name="2" attr="6692">
+<b name="Enable" attr="6692">1</b>
+<s name="Name" attr="6692">VOICE-BEARER-WAN</s>
+<i name="ClassMinorID" attr="5408">6</i>
+<s name="Rate" attr="6692">106</s>
+<i name="Prio" attr="6692">2</i>
+<s name="Ceil" attr="6692">Auto</s>
+<i name="Burst" attr="6692">-1</i>
+<i name="CBurst" attr="6692">-1</i>
+<i name="MTU" attr="6692">-1</i>
+<i name="MPU" attr="6692">-1</i>
+<i name="Quantum" attr="6692">-1</i>
+<t name="Class" attr="6692">
+</t>
+<s name="Overhead" attr="6692">atm</s>
+</o>
+<o name="3" attr="6692">
+<b name="Enable" attr="6692">1</b>
+<s name="Name" attr="6692">MSTV-MULTI-VOD+PURE-ACK-WAN</s>
+<i name="ClassMinorID" attr="5408">7</i>
+<s name="Rate" attr="6692">14</s>
+<i name="Prio" attr="6692">3</i>
+<s name="Ceil" attr="6692">Auto</s>
+<i name="Burst" attr="6692">-1</i>
+<i name="CBurst" attr="6692">-1</i>
+<i name="MTU" attr="6692">-1</i>
+<i name="MPU" attr="6692">-1</i>
+<i name="Quantum" attr="6692">-1</i>
+<t name="Class" attr="6692">
+</t>
+<s name="Overhead" attr="6692">atm</s>
+</o>
+<o name="4" attr="6692">
+<b name="Enable" attr="6692">1</b>
+<s name="Name" attr="6692">MSTV-UNI-WAN</s>
+<i name="ClassMinorID" attr="5408">8</i>
+<s name="Rate" attr="6692">6</s>
+<i name="Prio" attr="6692">4</i>
+<s name="Ceil" attr="6692">Auto</s>
+<i name="Burst" attr="6692">-1</i>
+<i name="CBurst" attr="6692">-1</i>
+<i name="MTU" attr="6692">-1</i>
+<i name="MPU" attr="6692">-1</i>
+<i name="Quantum" attr="6692">-1</i>
+<t name="Class" attr="6692">
+</t>
+<s name="Overhead" attr="6692">atm</s>
+</o>
+<o name="5" attr="6692">
+<b name="Enable" attr="6692">1</b>
+<s name="Name" attr="6692">BEST-EFFORT-WAN</s>
+<i name="ClassMinorID" attr="5408">9</i>
+<s name="Rate" attr="6692">20</s>
+<i name="Prio" attr="6692">5</i>
+<s name="Ceil" attr="6692">Auto</s>
+<i name="Burst" attr="6692">-1</i>
+<i name="CBurst" attr="6692">-1</i>
+<i name="MTU" attr="6692">-1</i>
+<i name="MPU" attr="6692">-1</i>
+<i name="Quantum" attr="6692">-1</i>
+<t name="Class" attr="6692">
+</t>
+<s name="Overhead" attr="6692">atm</s>
+</o>
+</t>
+<s name="Overhead" attr="6692">atm</s>
+</o>
+</t>
+</o>
+</t>
+</o>
+<o name="V_USBHost" attr="5408">
+<b name="Enable" attr="6692">1</b>
+<i name="USBBusNumberOfEntries" attr="5408">1</i>
+<o name="PrintService" attr="5408">
+<b name="Enable" attr="6692">1</b>
+</o>
+<o name="StorageService" attr="5408">
+<b name="Enable" attr="6692">1</b>
+</o>
+<o name="CifsService" attr="5408">
+<b name="Enable" attr="6692">1</b>
+<s name="IncomingInterface" attr="6692">IGD.LANDevice.1.LANHostConfigManagement.IPInterface.1</s>
+<s name="Description" attr="6692">CIFS Server</s>
+<s name="Workgroupname" attr="6692">WORKGROUP</s>
+<s name="BrowseDirectory" attr="5408">/mnt/usbmsd/share/</s>
+<i name="AccessControlLevel" attr="6692">LoginSD</i>
+<i name="MaxCifsSharedFolders" attr="5408">5</i>
+<t name="CifsSharedFolders" attr="6692">
+</t>
+<i name="MaxCifsUser" attr="5408">5</i>
+<i name="StartCifsUID" attr="5408">500</i>
+<t name="CifsUser" attr="6692">
+</t>
+</o>
+<o name="FtpService" attr="5408">
+<b name="Enable" attr="6692">0</b>
+<b name="EnableWebFtp" attr="6692">0</b>
+<i name="FtpPort" attr="6692">21</i>
+<s name="IncomingInterface" attr="6692">IGD.LANDevice.1.LANHostConfigManagement.IPInterface.1</s>
+<s name="FtpInitialChroot" attr="5408">/mnt/usbmsd/</s>
+<s name="FtpRootSharePath" attr="5408">/share/</s>
+<s name="FtpDirectory" attr="6692">/</s>
+<s name="HttpDirectory" attr="6692">/</s>
+<s name="BrowseDirectory" attr="5408">/mnt/usbmsd//share/</s>
+<o name="FtpUser" attr="5408">
+<o name="FtpRoUser" attr="5408">
+<i name="Enable" attr="6692">-1</i>
+<s name="Username" attr="6692"></s>
+<s name="Password" attr="6692">x</s>
+</o>
+<o name="FtpRwUser" attr="5408">
+<i name="Enable" attr="6692">0</i>
+<s name="Username" attr="6692"></s>
+<s name="Password" attr="6692">x</s>
+</o>
+<o name="FtpHttpRwUser" attr="5408">
+<i name="Enable" attr="6692">0</i>
+<s name="Username" attr="6692"></s>
+<s name="Password" attr="6692">x</s>
+</o>
+</o>
+</o>
+<o name="HttpService" attr="5408">
+<b name="Enable" attr="6692">0</b>
+<i name="LocalPort" attr="6692">80</i>
+<i name="RemotePort" attr="6692">80</i>
+<s name="LocalInterface" attr="6692">IGD.LANDevice.1.LANHostConfigManagement.IPInterface.1</s>
+<s name="UrlPrefix" attr="6692">gigaset_http</s>
+<s name="RootPath" attr="6692">/mnt/usbmsd/share</s>
+<s name="Directory" attr="6692">/usb_0/gigaset_http</s>
+</o>
+<t name="USBBus" attr="6692">
+<o name="1" attr="6692">
+<b name="Enable" attr="5408">1</b>
+<i name="MaxUsbPartitions" attr="5408">5</i>
+<i name="ActiveUsbPartitions" attr="5408">1</i>
+<t name="UsbDevice" attr="6692">
+<o name="1" attr="6692">
+<s name="DeviceProductString" attr="5408">USB Flash Memory</s>
+<s name="GUID" attr="5408">654500005b820f00005b</s>
+<i name="HostIndex" attr="5408">0</i>
+<i name="StorageIndex" attr="5408">0</i>
+<i name="NoDevicePartitions" attr="5408">1</i>
+<b name="Remove" attr="6692">0</b>
+<t name="Mountpoints" attr="5408">
+<o name="1" attr="6692">
+<i name="Mountpoint" attr="5408">0</i>
+</o>
+<o name="2" attr="6692">
+<i name="Mountpoint" attr="5408">-1</i>
+</o>
+<o name="3" attr="6692">
+<i name="Mountpoint" attr="5408">-1</i>
+</o>
+<o name="4" attr="6692">
+<i name="Mountpoint" attr="5408">-1</i>
+</o>
+<o name="5" attr="6692">
+<i name="Mountpoint" attr="5408">-1</i>
+</o>
+</t>
+</o>
+<o name="2" attr="6692">
+<s name="DeviceProductString" attr="5408"></s>
+<s name="GUID" attr="5408"></s>
+<i name="HostIndex" attr="5408">-1</i>
+<i name="StorageIndex" attr="5408">-1</i>
+<i name="NoDevicePartitions" attr="5408">-1</i>
+<b name="Remove" attr="6692">0</b>
+<t name="Mountpoints" attr="5408">
+<o name="1" attr="6692">
+<i name="Mountpoint" attr="5408">-1</i>
+</o>
+<o name="2" attr="6692">
+<i name="Mountpoint" attr="5408">-1</i>
+</o>
+<o name="3" attr="6692">
+<i name="Mountpoint" attr="5408">-1</i>
+</o>
+<o name="4" attr="6692">
+<i name="Mountpoint" attr="5408">-1</i>
+</o>
+<o name="5" attr="6692">
+<i name="Mountpoint" attr="5408">-1</i>
+</o>
+</t>
+</o>
+<o name="3" attr="6692">
+<s name="DeviceProductString" attr="5408"></s>
+<s name="GUID" attr="5408"></s>
+<i name="HostIndex" attr="5408">-1</i>
+<i name="StorageIndex" attr="5408">-1</i>
+<i name="NoDevicePartitions" attr="5408">-1</i>
+<b name="Remove" attr="6692">0</b>
+<t name="Mountpoints" attr="5408">
+<o name="1" attr="6692">
+<i name="Mountpoint" attr="5408">-1</i>
+</o>
+<o name="2" attr="6692">
+<i name="Mountpoint" attr="5408">-1</i>
+</o>
+<o name="3" attr="6692">
+<i name="Mountpoint" attr="5408">-1</i>
+</o>
+<o name="4" attr="6692">
+<i name="Mountpoint" attr="5408">-1</i>
+</o>
+<o name="5" attr="6692">
+<i name="Mountpoint" attr="5408">-1</i>
+</o>
+</t>
+</o>
+<o name="4" attr="6692">
+<s name="DeviceProductString" attr="5408"></s>
+<s name="GUID" attr="5408"></s>
+<i name="HostIndex" attr="5408">-1</i>
+<i name="StorageIndex" attr="5408">-1</i>
+<i name="NoDevicePartitions" attr="5408">-1</i>
+<b name="Remove" attr="6692">0</b>
+<t name="Mountpoints" attr="5408">
+<o name="1" attr="6692">
+<i name="Mountpoint" attr="5408">-1</i>
+</o>
+<o name="2" attr="6692">
+<i name="Mountpoint" attr="5408">-1</i>
+</o>
+<o name="3" attr="6692">
+<i name="Mountpoint" attr="5408">-1</i>
+</o>
+<o name="4" attr="6692">
+<i name="Mountpoint" attr="5408">-1</i>
+</o>
+<o name="5" attr="6692">
+<i name="Mountpoint" attr="5408">-1</i>
+</o>
+</t>
+</o>
+<o name="5" attr="6692">
+<s name="DeviceProductString" attr="5408"></s>
+<s name="GUID" attr="5408"></s>
+<i name="HostIndex" attr="5408">-1</i>
+<i name="StorageIndex" attr="5408">-1</i>
+<i name="NoDevicePartitions" attr="5408">-1</i>
+<b name="Remove" attr="6692">0</b>
+<t name="Mountpoints" attr="5408">
+<o name="1" attr="6692">
+<i name="Mountpoint" attr="5408">-1</i>
+</o>
+<o name="2" attr="6692">
+<i name="Mountpoint" attr="5408">-1</i>
+</o>
+<o name="3" attr="6692">
+<i name="Mountpoint" attr="5408">-1</i>
+</o>
+<o name="4" attr="6692">
+<i name="Mountpoint" attr="5408">-1</i>
+</o>
+<o name="5" attr="6692">
+<i name="Mountpoint" attr="5408">-1</i>
+</o>
+</t>
+</o>
+</t>
+<t name="KnownDevicesList" attr="5408" />
+</o>
+</t>
+</o>
+<o name="V_SSH" attr="5408">
+<b name="Enable" attr="6692">1</b>
+<i name="Port" attr="6692">22</i>
+<s name="Interface" attr="6692"></s>
+<t name="ClientKeys" attr="5408">
+</t>
+</o>
+<o name="V_WebServer" attr="5408">
+<o name="RemoteManagement" attr="5408">
+<b name="Enabled" attr="6692">0</b>
+<i name="HttpPort" attr="6692">8080</i>
+<i name="TlsPort" attr="6692">443</i>
+<s name="Interface" attr="6692"></s>
+<i name="Access" attr="6692">0</i>
+<i name="AllowedConnections" attr="6692">0</i>
+<s name="AllowedIPFirst" attr="6692"></s>
+<s name="AllowedIPLast" attr="6692"></s>
+</o>
+<o name="LocalManagement" attr="5408">
+<b name="Enabled" attr="6692">1</b>
+<i name="HttpPort" attr="6692">80</i>
+<s name="Interface" attr="6692">IGD.LANDevice.1.LANHostConfigManagement.IPInterface.1</s>
+</o>
+<i name="CurrentConnectionDevice" attr="6692">1</i>
+<s name="CurrentConnectionType" attr="6692">PPP</s>
+<i name="CurrentConnection" attr="6692">1</i>
+<i name="CurrentWLANDevice" attr="6692">1</i>
+<i name="CurrentLANDevice" attr="6692">1</i>
+<s name="CurrentLanguage" attr="6692">EN</s>
+<b name="FirstRun" attr="6692">1</b>
+<i name="PolicyType" attr="6692">0</i>
+<o name="WebGUI" attr="5408">
+<i name="KnownClientsNextHistoryNumber" attr="6692">0</i>
+<t name="KnownClients" attr="6692">
+</t>
+<i name="LogOutTime" attr="6692">10</i>
+<i name="RebootTime" attr="6692">100</i>
+<i name="UpgradeTime" attr="6692">190</i>
+<o name="Customization" attr="5408">
+<b name="LANSeparationAllowed" attr="6692">1</b>
+<b name="EthernetEnable" attr="6692">1</b>
+<b name="EnableWlanOnWizardFinish" attr="6692">1</b>
+<b name="VoipDisabled" attr="6692">0</b>
+<b name="ProviderManagementVisible" attr="6692">1</b>
+<b name="MultipleConnectionsVisible" attr="6692">1</b>
+<b name="PPPOEPassThroughVisible" attr="6692">1</b>
+<b name="WPSVisible" attr="6692">1</b>
+<b name="WDSVisible" attr="6692">1</b>
+<b name="PhoneManagementVisible" attr="6692">1</b>
+<i name="LoggingPresentationDetailLevel" attr="6692">Debug</i>
+<b name="HostMappingVisible" attr="6692">1</b>
+<b name="SaveRestoreVisible" attr="6692">1</b>
+<b name="RemoteManagementVisible" attr="6692">1</b>
+</o>
+</o>
+<o name="WANAccountPreset" attr="5408">
+<s name="Protocol" attr="6692">PPPoE</s>
+<i name="MTU" attr="6692">1492</i>
+<s name="LineMode" attr="6692">Automatic</s>
+<s name="Encapsulation" attr="6692">VCMUX</s>
+<s name="QosClass" attr="6692">UBR</s>
+<s name="VpiVci" attr="6692">1/32</s>
+<s name="ConnectionMode" attr="6692">AlwaysOn</s>
+</o>
+<o name="Actions" attr="5408">
+</o>
+</o>
+<o name="V_UPnP" attr="5408">
+<b name="Enabled" attr="6692">1</b>
+<s name="LANInterface" attr="6692">IGD.LANDevice.1.LANHostConfigManagement.IPInterface.1</s>
+<s name="WANConnection" attr="6692"></s>
+</o>
+<o name="IPPingDiagnostics" attr="5408">
+<i name="SuccessCount" attr="38176">0</i>
+<i name="FailureCount" attr="38176">0</i>
+</o>
+<o name="V_TraceRouteDiagnostics" attr="5408">
+<s name="DiagnosticState" attr="6692">None</s>
+<s name="Host" attr="6692">127.0.0.1</s>
+<i name="Timeout" attr="6692">0</i>
+<i name="DataBlockSize" attr="6692">40</i>
+<i name="MaxHopCount" attr="6692">30</i>
+<i name="DSCP" attr="6692">0</i>
+<i name="ResponseTime" attr="6692">0</i>
+<i name="NumberOfRouteHops" attr="6692">0</i>
+<t name="RouteHops" attr="6692">
+</t>
+</o>
+<o name="V_InterceptingProxy" attr="5408">
+<s name="TCPPort" attr="6692">80</s>
+<i name="TCPListenPort" attr="6692">8081</i>
+<s name="WANInterface" attr="6692"></s>
+</o>
+<o name="V_Oops" attr="6692">
+<s name="WanInterface" attr="6692"></s>
+<s name="MTDDevice" attr="6692">oops</s>
+<i name="MessageFilter" attr="6692">3</i>
+<i name="ReportFilter" attr="6692">2</i>
+</o>
+</o>
