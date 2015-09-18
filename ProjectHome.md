@@ -1,0 +1,1 @@
+basic files for openwrt on gigaset sx76x
